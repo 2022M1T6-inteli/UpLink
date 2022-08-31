@@ -33,7 +33,7 @@ O jogo Zero to Hero, desenvolvido por alunos do Instituto de Tecnologia e Lidera
 
 💡 De um a dois parágrafos sobre o que é seu projeto e o que ele faz.
 <br><br>
-Meu projeto ajuda estudantes inteli a configurarem seus githubs.
+Um jogo educativo, divertido e simples de uma forma que o funcionário consiga aprender mais facilmente utilizando uma forma descontraída de adquirir conhecimento com o intuito de auxiliar a Dell na transição desse novo modelo. Esse jogo será exploratório, com perguntas e minigames, onde o integrante irá adquirir as competências necessárias para que o mesmo consiga passar de fase.
 <br><br>
 May the force be with you!
 <br><br>
