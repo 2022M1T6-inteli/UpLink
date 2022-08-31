@@ -4,11 +4,18 @@
 <a href= "https://www.inteli.edu.br/"><img src="https://www.inteli.edu.br/wp-content/uploads/2021/08/20172028/marca_1-2.png" alt="Inteli - Instituto de Tecnologia e Liderança" border="0"></a>
 </p>
 
-# Nome do Projeto
+# Zero To Hero: Becoming Dell
 
-## Nome do Grupo
+## UpLink
 
-## Integrantes: <a href="https://www.linkedin.com/in/victorbarq/">Goku Sayajin</a>, <a href="https://www.linkedin.com/in/victorbarq/">Saitama One</a>, <a href="https://www.linkedin.com/in/victorbarq/">Ikki de Fenix</a>, <a href="https://www.linkedin.com/in/victorbarq/">Yusuke Urameshi</a>, <a href="https://www.linkedin.com/in/victorbarq/">Roronoa Zoro</a>
+## Integrantes: <a href="https://www.linkedin.com/in/victorbarq/">Arthur Nisa de Paula Souza	
+</a>, <a href="https://www.linkedin.com/in/victorbarq/">Esther Hikari Kimura Nunes	
+</a>, <a href="https://www.linkedin.com/in/victorbarq/">Felipe Martins Moura	
+</a>, <a href="https://www.linkedin.com/in/victorbarq/">Yusuke Urameshi</a>, <a href="https://www.linkedin.com/in/victorbarq/">Henrique Rodrigues de Godoy	
+</a>, <a href="https://www.linkedin.com/in/victorbarq/">Luiz Fernando Covas		
+</a>,<a href="https://www.linkedin.com/in/victorbarq/">Vivian Midori Shibata	
+</a>,<a href="https://www.linkedin.com/in/victorbarq/">Yuri Freitas Angelo Toledo		
+</a>,
 
 ## Descrição
 
