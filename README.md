@@ -8,14 +8,15 @@
 
 ## UpLink
 
-## Integrantes: <a href="https://www.linkedin.com/in/victorbarq/">Arthur Nisa de Paula Souza	
-</a> <a href="https://www.linkedin.com/in/victorbarq/">Esther Hikari Kimura Nunes	
-</a>, <a href="https://www.linkedin.com/in/victorbarq/">Felipe Martins Moura	
-</a>, <a href="https://www.linkedin.com/in/victorbarq/">Yusuke Urameshi</a>, <a href="https://www.linkedin.com/in/victorbarq/">Henrique Rodrigues de Godoy	
-</a>, <a href="https://www.linkedin.com/in/victorbarq/">Luiz Fernando Covas		
-</a>,<a href="https://www.linkedin.com/in/victorbarq/">Vivian Midori Shibata	
-</a>,<a href="https://www.linkedin.com/in/victorbarq/">Yuri Freitas Angelo Toledo		
-</a>,
+## Integrantes: 
+<a href="https://www.linkedin.com/in/victorbarq/">Arthur Nisa de Paula Souza</a>,
+<a href="https://www.linkedin.com/in/victorbarq/">Esther Hikari Kimura Nunes</a>,
+<a href="https://www.linkedin.com/in/victorbarq/">Felipe Martins Moura</a>,
+<a href="https://www.linkedin.com/in/victorbarq/">Yusuke Urameshi</a>, 
+<a href="https://www.linkedin.com/in/victorbarq/">Henrique Rodrigues de Godoy	</a>,
+<a href="https://www.linkedin.com/in/victorbarq/">Luiz Fernando Covas</a>,
+<a href="https://www.linkedin.com/in/victorbarq/">Vivian Midori Shibata	</a>,
+<a href="https://www.linkedin.com/in/victorbarq/">Yuri Freitas Angelo Toledo</a>,
 
 ## Descrição
 
