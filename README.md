@@ -22,7 +22,8 @@
 
 📜 Descrição curta sobre o que seu projeto faz.
 <br><br>
-Tornar a mudança do modelo de negócio entre sistema de projeto para sistema de produto de uma forma descontraída, eficaz e efetiva para os novos e antigos funcionários da Dell.
+
+O jogo Zero to Hero, desenvolvido por alunos do Instituto de Tecnologia e Liderança, visa atender os interesses da sua empresa parceira - a Dell - no objetivo de capacitar e mensurar a maturidade dos funcionários quanto ao novo modelo de desenvolvimento de software, chamado 'Modelo por Produtos'. Nesse sentido, o programa tem o intuito de não só capacitar o colaborador, mas mensurar o aprendizado adquirido por ele, a fim de definir a maturidade do time como um todo. O jogo se passará em 2030 em	um mundo apocalíptico, onde a população foi infectada por um vírus que leva as pessoas a terem um pensamento retrógrado e o jogador terá que desenvolver um antídoto. Esse antídoto é uma mudança de mindset, se referindo a mudança cultural que a Dell deseja intensificar nos seus processos.
 <br><br>
 <p align="center">
 <img src="https://pix4free.org/assets/library/2021-01-20/originals/game.jpg" alt="NOME DO JOGO" border="0">
