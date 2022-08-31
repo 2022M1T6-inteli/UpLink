@@ -22,7 +22,7 @@
 
 📜 Descrição curta sobre o que seu projeto faz.
 <br><br>
-Meu projeto é um exemplo de como utilizar o github.
+Tornar a mudança do modelo de negócio entre sistema de projeto para sistema de produto de uma forma descontraída, eficaz e efetiva para os novos e antigos funcionários da Dell.
 <br><br>
 <p align="center">
 <img src="https://pix4free.org/assets/library/2021-01-20/originals/game.jpg" alt="NOME DO JOGO" border="0">
