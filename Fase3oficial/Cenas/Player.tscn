@@ -99,7 +99,7 @@ hframes = 24
 vframes = 2
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-polygon = PoolVector2Array( -13, -7, -15, -5, -15, 2, -11, 9, -14, 12, -14, 16, -7, 21, -4, 21, 0, 16, 2, 9, 4, 3, 6, 2, 6, -5, -4, -9, -11, -9 )
+polygon = PoolVector2Array( -13, -4, -15, -4, -15, 2, -11, 9, -14, 12, -14, 16, -7, 21, -4, 21, 0, 16, 2, 9, 4, 3, 6, 2, 4, -3, -3, -4, -10, -4 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/Baixo = SubResource( 3 )
