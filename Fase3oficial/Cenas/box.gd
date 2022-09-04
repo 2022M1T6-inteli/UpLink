@@ -10,6 +10,12 @@ var finished = false
 
 func _ready():
 	load_dialogo()
+
+func _process(delta):
+	print("Finished", finished)
+	if finished and Input.is_action_pressed("ui_select"):
+		queue_free()
+		Global.stop = false
 	
 func load_dialogo():
 	if dialogo_index < dialogo.size():
@@ -26,5 +32,7 @@ func load_dialogo():
 		dialogo_index +=1
 		
 func _on_Tween_tween_completed(object, key):
-	finished = true
+	if Global.stars == 0:
+		finished = true
+
 	
