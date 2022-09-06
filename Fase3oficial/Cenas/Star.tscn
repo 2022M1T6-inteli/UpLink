@@ -51,7 +51,6 @@ radius = 12.0
 height = 2.0
 
 [node name="Star" type="Area2D"]
-position = Vector2( 40, 34 )
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
