@@ -16,7 +16,7 @@ run/main_scene="res://Cenas/Menu.tscn"
 [autoload]
 
 PauseMenu="*res://Cenas/PauseMenu.tscn"
-Global="*res://Scripts/Global.gd"
+Global="*res://global.gd"
 
 [display]
 

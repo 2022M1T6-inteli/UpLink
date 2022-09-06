@@ -10,6 +10,10 @@ script/source = "extends Node2D
 
 func _on_Area2D2_body_entered(body):
 	get_tree().change_scene(\"res://Cenas/mapaprovisorio.tscn\")
+
+
+func _on_Area2D_body_entered(body):
+	get_tree().change_scene(\"res://Cenas/mapaginasiofase1.tscn\")
 "
 
 [sub_resource type="CapsuleShape2D" id=1]
@@ -225,7 +229,7 @@ __meta__ = {
 position = Vector2( 204, 297 )
 shape = SubResource( 14 )
 
-[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
 [connection signal="body_entered" from="Area2D2" to="Area2D2" method="_on_Area2D_body_entered"]
 [connection signal="body_entered" from="Area2D3" to="Area2D3" method="_on_Area2D_body_entered"]
 [connection signal="body_entered" from="Area2D4" to="Area2D4" method="_on_Area2D_body_entered"]
