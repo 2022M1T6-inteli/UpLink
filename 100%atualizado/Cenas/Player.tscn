@@ -1,0 +1,116 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Cenas/KinematicBody2D.gd" type="Script" id=1]
+[ext_resource path="res://Images/Player.png" type="Texture" id=2]
+[ext_resource path="res://Images/light.png" type="Texture" id=3]
+
+[sub_resource type="Animation" id=3]
+resource_name = "Baixo"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("Player:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 42, 47 ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "Cima"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("Player:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 30, 35 ]
+}
+
+[sub_resource type="Animation" id=7]
+resource_name = "Direita"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("Player:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 24, 29 ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "Esquerda"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("Player:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 36, 41 ]
+}
+
+[sub_resource type="Animation" id=6]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Player:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+
+[node name="Player" type="KinematicBody2D"]
+position = Vector2( 27, 524 )
+collision_layer = 257
+collision_mask = 257
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Player" type="Sprite" parent="."]
+position = Vector2( -4.5, 7.56 )
+scale = Vector2( 0.42, 0.42 )
+texture = ExtResource( 2 )
+hframes = 24
+vframes = 2
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PoolVector2Array( -13, -4, -15, -4, -15, 2, -11, 9, -14, 12, -14, 16, -7, 21, -4, 21, 0, 16, 2, 9, 4, 3, 6, 2, 4, -3, -3, -4, -10, -4 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/Baixo = SubResource( 3 )
+anims/Cima = SubResource( 4 )
+anims/Direita = SubResource( 7 )
+anims/Esquerda = SubResource( 5 )
+anims/RESET = SubResource( 6 )
+
+[node name="Light2D" type="Light2D" parent="."]
+texture = ExtResource( 3 )
+texture_scale = 0.5
