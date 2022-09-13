@@ -14,12 +14,16 @@ extents = Vector2( 20.3125, 36 )
 script = ExtResource( 5 )
 
 [node name="MapaMedio" type="Sprite" parent="."]
-position = Vector2( 508, 306 )
-scale = Vector2( 1.02148, 1.22656 )
+position = Vector2( 500, 251 )
 texture = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="Area2D" type="Area2D" parent="MapaMedio"]
 position = Vector2( 497, 69 )
+collision_layer = 256
+collision_mask = 256
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MapaMedio/Area2D"]
 position = Vector2( -5, -61 )
@@ -27,6 +31,8 @@ shape = SubResource( 11 )
 
 [node name="Area2D2" type="Area2D" parent="MapaMedio"]
 position = Vector2( -482, 60 )
+collision_layer = 256
+collision_mask = 256
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MapaMedio/Area2D2"]
 position = Vector2( 1, -57 )
@@ -36,7 +42,7 @@ shape = SubResource( 12 )
 position = Vector2( -497, -248 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="MapaMedio/StaticBody2D"]
-polygon = PoolVector2Array( 0, 210, 205, 185, 204, 106, 384, 105, 384, 151, 343, 151, 343, 184, 376, 184, 377, 152, 419, 152, 419, 187, 541, 188, 540, 153, 578, 153, 577, 105, 718, 105, 718, 231, 1003, 216, 999, -1, 0, 3 )
+polygon = PoolVector2Array( 0, 210, -0.315488, 291.21, 1.64245, 214.573, 205, 185, 204, 106, 384, 105, 384, 151, 343, 151, 343, 184, 376, 184, 377, 152, 419, 152, 419, 187, 541, 188, 540, 153, 578, 153, 577, 105, 718, 105, 718, 231, 1003, 216, 1003.13, 297.732, 999, -1, 0, 3 )
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="MapaMedio"]
 position = Vector2( -497, -248 )
@@ -62,65 +68,80 @@ position = Vector2( -497, -248 )
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="MapaMedio/StaticBody2D5"]
 polygon = PoolVector2Array( 344, 232, 344, 264, 377, 264, 378, 232 )
 
-[node name="Node2D3" parent="." instance=ExtResource( 4 )]
-position = Vector2( 573, 306 )
-scale = Vector2( -0.521099, 0.521919 )
+[node name="Node2D3" parent="MapaMedio" instance=ExtResource( 4 )]
+position = Vector2( 63.6331, 0 )
+rotation = 3.14159
+scale = Vector2( 0.510141, -0.425514 )
 
-[node name="Node2D4" parent="." instance=ExtResource( 4 )]
-position = Vector2( 409, 208 )
-scale = Vector2( -0.521099, 0.521919 )
+[node name="Node2D4" parent="MapaMedio" instance=ExtResource( 4 )]
+position = Vector2( -96.9182, -79.8983 )
+rotation = 3.14159
+scale = Vector2( 0.510141, -0.425514 )
 
-[node name="Node2D5" parent="." instance=ExtResource( 4 )]
-position = Vector2( 490, 355 )
-scale = Vector2( -0.521099, 0.521919 )
+[node name="Node2D5" parent="MapaMedio" instance=ExtResource( 4 )]
+position = Vector2( -17.6215, 39.9491 )
+rotation = 3.14159
+scale = Vector2( 0.510141, -0.425514 )
 
-[node name="Node2D6" parent="." instance=ExtResource( 4 )]
-position = Vector2( 491, 306 )
-scale = Vector2( -0.521099, 0.521919 )
+[node name="Node2D6" parent="MapaMedio" instance=ExtResource( 4 )]
+position = Vector2( -16.6425, 0 )
+rotation = 3.14159
+scale = Vector2( 0.510141, -0.425514 )
 
-[node name="Node2D7" parent="." instance=ExtResource( 4 )]
-position = Vector2( 573, 256 )
-scale = Vector2( -0.521099, 0.521919 )
+[node name="Node2D7" parent="MapaMedio" instance=ExtResource( 4 )]
+position = Vector2( 63.6331, -40.7644 )
+rotation = 3.14159
+scale = Vector2( 0.510141, -0.425514 )
 
-[node name="Node2D8" parent="." instance=ExtResource( 4 )]
-position = Vector2( 532, 256 )
-scale = Vector2( -0.521099, 0.521919 )
+[node name="Node2D8" parent="MapaMedio" instance=ExtResource( 4 )]
+position = Vector2( 23.4953, -40.7644 )
+rotation = 3.14159
+scale = Vector2( 0.510141, -0.425514 )
 
-[node name="Node2D9" parent="." instance=ExtResource( 4 )]
-position = Vector2( 572, 208 )
-scale = Vector2( -0.521099, 0.521919 )
+[node name="Node2D9" parent="MapaMedio" instance=ExtResource( 4 )]
+position = Vector2( 62.6542, -79.8983 )
+rotation = 3.14159
+scale = Vector2( 0.510141, -0.425514 )
 
-[node name="Node2D10" parent="." instance=ExtResource( 4 )]
-position = Vector2( 532, 355 )
-scale = Vector2( -0.521099, 0.521919 )
+[node name="Node2D10" parent="MapaMedio" instance=ExtResource( 4 )]
+position = Vector2( 23.4953, 39.9491 )
+rotation = 3.14159
+scale = Vector2( 0.510141, -0.425514 )
 
-[node name="Node2D11" parent="." instance=ExtResource( 4 )]
-position = Vector2( 492, 403 )
-scale = Vector2( -0.521099, 0.521919 )
+[node name="Node2D11" parent="MapaMedio" instance=ExtResource( 4 )]
+position = Vector2( -15.6635, 79.083 )
+rotation = 3.14159
+scale = Vector2( 0.510141, -0.425514 )
 
-[node name="Node2D12" parent="." instance=ExtResource( 4 )]
-position = Vector2( 450, 256 )
-scale = Vector2( -0.521099, 0.521919 )
+[node name="Node2D12" parent="MapaMedio" instance=ExtResource( 4 )]
+position = Vector2( -56.7804, -40.7644 )
+rotation = 3.14159
+scale = Vector2( 0.510141, -0.425514 )
 
-[node name="Node2D13" parent="." instance=ExtResource( 4 )]
-position = Vector2( 451, 355 )
-scale = Vector2( -0.521099, 0.521919 )
+[node name="Node2D13" parent="MapaMedio" instance=ExtResource( 4 )]
+position = Vector2( -55.8014, 39.9491 )
+rotation = 3.14159
+scale = Vector2( 0.510141, -0.425514 )
 
-[node name="Node2D14" parent="." instance=ExtResource( 4 )]
-position = Vector2( 408, 355 )
-scale = Vector2( -0.521099, 0.521919 )
+[node name="Node2D14" parent="MapaMedio" instance=ExtResource( 4 )]
+position = Vector2( -97.8972, 39.9491 )
+rotation = 3.14159
+scale = Vector2( 0.510141, -0.425514 )
 
-[node name="Node2D15" parent="." instance=ExtResource( 4 )]
-position = Vector2( 409, 306 )
-scale = Vector2( -0.521099, 0.521919 )
+[node name="Node2D15" parent="MapaMedio" instance=ExtResource( 4 )]
+position = Vector2( -96.9182, 0 )
+rotation = 3.14159
+scale = Vector2( 0.510141, -0.425514 )
 
-[node name="Node2D16" parent="." instance=ExtResource( 4 )]
-position = Vector2( 409, 256 )
-scale = Vector2( -0.521099, 0.521919 )
+[node name="Node2D16" parent="MapaMedio" instance=ExtResource( 4 )]
+position = Vector2( -96.9182, -40.7644 )
+rotation = 3.14159
+scale = Vector2( 0.510141, -0.425514 )
 
-[node name="Node2D17" parent="." instance=ExtResource( 4 )]
-position = Vector2( 572, 355 )
-scale = Vector2( -0.521099, 0.521919 )
+[node name="Node2D17" parent="MapaMedio" instance=ExtResource( 4 )]
+position = Vector2( 62.6542, 39.9491 )
+rotation = 3.14159
+scale = Vector2( 0.510141, -0.425514 )
 
 [connection signal="body_entered" from="MapaMedio/Area2D" to="." method="_on_Area2D_body_entered"]
 [connection signal="body_entered" from="MapaMedio/Area2D2" to="." method="_on_Area2D2_body_entered"]

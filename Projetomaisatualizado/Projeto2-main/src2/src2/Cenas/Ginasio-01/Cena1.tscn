@@ -17,7 +17,6 @@ script = ExtResource( 3 )
 
 [node name="Labirinto1" type="Sprite" parent="."]
 position = Vector2( 0, 0.873651 )
-scale = Vector2( 0.496124, 0.586071 )
 texture = ExtResource( 1 )
 offset = Vector2( 1032, 506.863 )
 

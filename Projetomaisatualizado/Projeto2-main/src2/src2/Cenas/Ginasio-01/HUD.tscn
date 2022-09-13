@@ -1,99 +1,8 @@
 [gd_scene load_steps=6 format=2]
 
+[ext_resource path="res://Cenas/Ginasio-01/HUD_global.gd" type="Script" id=1]
 [ext_resource path="res://Images/Dialogo/DialogueBox.png" type="Texture" id=2]
-[ext_resource path="res://Scripts/Outros/Balao1.gd" type="Script" id=3]
-
-[sub_resource type="GDScript" id=5]
-script/source = "extends CanvasLayer
-#
-#export onready var box = $box
-#
-##Bloco de código acima tem função apenas de tornar de fácil acesso e processamento as cenas que serão exigidas e exibidas durante a fase
-#
-#onready var preEstrelaPreta = preload(\"res://Cenas/Outros/Estrelas/EstrelaPreta.tscn\")
-#onready var preEstrelaInventario = preload(\"res://Cenas/Outros/Estrelas/Estrelinha.tscn\")
-#onready var preBalao = preload(\"res://Scripts/Outros/balao1.gd\")
-#
-##Os 3 Blocos abaixo criam variáveis que assumem a posição de cada elemento através de um vetor posição, em tempo de execução
-#
-#var estrelaPretaPosition1 = Vector2(983, 37)
-#var estrelaPretaPosition2 = Vector2(935, 37)
-#var estrelaPretaPosition3 = Vector2(887, 37)
-#
-##Acima temos a declaração de variáveis correspondentes a cada elemento utilizado na tela
-#
-#var estrelaInventario1
-#var estrelaInventario2
-#var estrelaInventario3
-#var estrelaPreta1
-#var estrelaPreta2
-#var estrelaPreta3
-#
-##Declaração de variáveis responsáveis por para o jogo
-#
-#var stop = false
-#var openDialogue = false
-#var stars = 3
-#
-##Através da função genérica \"iniciarX\", a variável de cada objeto puxa sua respectiva cena e sua respectiva posição
-#
-#func iniciarBalao():
-#	var balao = preBalao.instance()
-#	return balao
-#
-#
-#func iniciarEstrelaPreta(posicao):
-#	var estrela = preEstrelaPreta.instance()
-#	estrela.position = posicao
-#	return estrela
-#
-#func iniciarEstrelaInventario(posicao):
-#	var estrela = preEstrelaInventario.instance()
-#	estrela.position = posicao
-#	return estrela
-#
-#
-#func _ready():
-#
-##Ao chamarmos a função genérica \"iniciaX\" fazemos com que cada elemento tenha uma variável respectiva
-#
-#	estrelaPreta1 = iniciarEstrelaPreta(estrelaPretaPosition1)
-#	estrelaPreta2 = iniciarEstrelaPreta(estrelaPretaPosition2)
-#	estrelaPreta3 = iniciarEstrelaPreta(estrelaPretaPosition3)
-#
-#	estrelaInventario1 = iniciarEstrelaInventario(estrelaPretaPosition1)
-#	estrelaInventario2 = iniciarEstrelaInventario(estrelaPretaPosition2)
-#	estrelaInventario3 = iniciarEstrelaInventario(estrelaPretaPosition3)
-#
-#
-#	#Com o método add_child(), fazemos com que todos os elementos criados sejam representados em tela
-#	add_child(estrelaPreta1)
-#	add_child(estrelaPreta2)
-#	add_child(estrelaPreta3)
-#
-#
-#	add_child(estrelaInventario1)
-#	estrelaInventario1.hide()
-#	add_child(estrelaInventario2)
-#	estrelaInventario2.hide()
-#	add_child(estrelaInventario3)
-#	estrelaInventario3.hide()
-#
-#
-#
-##	HUD_ginasio_01.stars = 3 #Contador de estrelas
-#
-#	#Função com lógica para identificar se alguma estrela foi coletada
-#func _process(delta):
-#
-#	if HUD_ginasio_01.stars == 2:
-#		estrelaInventario3.show()
-#	if HUD_ginasio_01.stars == 1:
-#		estrelaInventario2.show()
-#	if HUD_ginasio_01.stars == 0:
-#		estrelaInventario1.show()
-	
-"
+[ext_resource path="res://Scripts/Outros/Balao.gd" type="Script" id=3]
 
 [sub_resource type="DynamicFontData" id=3]
 font_path = "res://Fonte/watterlen/Watterlen.ttf"
@@ -103,7 +12,7 @@ size = 26
 font_data = SubResource( 3 )
 
 [node name="HUD" type="CanvasLayer"]
-script = SubResource( 5 )
+script = ExtResource( 1 )
 
 [node name="box" type="Control" parent="."]
 margin_right = 1024.0

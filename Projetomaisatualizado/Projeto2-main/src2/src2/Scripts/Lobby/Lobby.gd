@@ -13,13 +13,13 @@ func _ready():
 	player.camera.zoom.x = 2
 	player.camera.zoom.y = 2
 	player.scale = Vector2 (2, 2)
+	hud_global.controleEstrelaMapa(false)
 	
 #Função responsável por fazer com que variável receba o nó chamando a cena correta e definindo sua posição
 func inciarPlayer(posicao):
 	var player = prePlayer.instance()
 	player.position = posicao
 	return player
-
 
 #Funções abaixo são responsáveis por fazer com que ao entrar em uma area2D, o player seja direcionado para uma nova cena respectiva à área
 

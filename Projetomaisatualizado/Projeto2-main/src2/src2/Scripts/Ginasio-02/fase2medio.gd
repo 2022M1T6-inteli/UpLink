@@ -16,6 +16,18 @@ func _ready():
 	player = iniciarPlayer(playerPosition)
 	
 	add_child(player)
+	
+	player.camera.limit_left = 0
+	player.camera.limit_bottom = 492
+	player.camera.limit_top = 0
+	player.camera.limit_right = 1010
+	player.camera.zoom = Vector2(0.5, 0.5)
+	
+func _process(delta):
+	if Global.count >= 14:
+		Global.fase1 = true
+	else: 
+		Global.fase1 = false
 
 #Funções que indicam a próxima fase e o mapa anterior
 
@@ -25,6 +37,4 @@ func _on_Area2D2_body_entered(body):
 func _on_Area2D_body_entered(body):
 	if Global.fase1 == true:
 		get_tree().change_scene("res://Cenas/Ginasio-02/fase2dificil.tscn")
-	else:
-		print("nn terminou") #fazer com balao de fala
 	

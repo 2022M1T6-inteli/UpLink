@@ -3,6 +3,7 @@ extends KinematicBody2D
 export onready var lanterna = $Lanterna
 export onready var camera = $Camera
 
+
 #Inicialização de valores a serem usados na movimentação do personagem
 
 const aceleracao = 300
@@ -25,7 +26,6 @@ func _physics_process(delta):
 	else:
 		$Lanterna.visible = true
 	
-	
 	if input_vector != Vector2.ZERO:
 		if input_vector.x != 0:
 			if input_vector.x > 0:
@@ -37,16 +37,15 @@ func _physics_process(delta):
 					animationPlayer.play("Baixo")
 				else: 
 					animationPlayer.play("Cima")
-		velocidade = velocidade.move_toward(input_vector * velocidade_Max, aceleracao * delta)
+		velocidade = velocidade.move_toward(input_vector * velocidade_Max, 100)
 	else: 
 		animationPlayer.play("paradodireita")
-		velocidade = velocidade.move_toward(Vector2.ZERO, atrito * delta)
+		velocidade = velocidade.move_toward(Vector2.ZERO, 100)
 
 	velocidade = move_and_slide(velocidade)
 
-func _ready():
-	position.x = Global.checkpoint_pos
-
+#func _ready():
+#	position.x = Global.checkpoint_pos
 	
 func hit_checkpoint():
 	Global.checkpoint_pos = position.x

@@ -14,120 +14,130 @@ extents = Vector2( 19.1563, 36.5 )
 script = ExtResource( 5 )
 
 [node name="MapaDificil" type="Sprite" parent="."]
-position = Vector2( 513, 300 )
-scale = Vector2( 1.01758, 1.17188 )
+position = Vector2( 510, 258 )
 texture = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
 
-[node name="Node2D" parent="." instance=ExtResource( 2 )]
-position = Vector2( 417, 228 )
-scale = Vector2( 0.536932, 0.673402 )
+[node name="Node2D" parent="MapaDificil" instance=ExtResource( 2 )]
+position = Vector2( -94.3415, -61.4397 )
+scale = Vector2( 0.527656, 0.574634 )
 
-[node name="Node2D2" parent="." instance=ExtResource( 2 )]
-position = Vector2( 496, 271 )
-scale = Vector2( 0.567273, 0.661027 )
+[node name="Node2D2" parent="MapaDificil" instance=ExtResource( 2 )]
+position = Vector2( -16.7063, -24.7466 )
+scale = Vector2( 0.557473, 0.564074 )
 
-[node name="Node2D3" parent="." instance=ExtResource( 2 )]
-position = Vector2( 496, 319 )
+[node name="Node2D3" parent="MapaDificil" instance=ExtResource( 2 )]
+position = Vector2( -16.7063, 16.2133 )
 rotation = 3.14159
-scale = Vector2( 0.552258, -0.66715 )
+scale = Vector2( 0.542717, -0.569299 )
 
-[node name="Node2D5" parent="." instance=ExtResource( 2 )]
-position = Vector2( 538, 271 )
+[node name="Node2D5" parent="MapaDificil" instance=ExtResource( 2 )]
+position = Vector2( 24.5681, -24.7466 )
 rotation = 3.14159
-scale = Vector2( 0.552258, -0.66715 )
+scale = Vector2( 0.542717, -0.569299 )
 
-[node name="Node2D6" parent="." instance=ExtResource( 2 )]
-position = Vector2( 577, 271 )
+[node name="Node2D6" parent="MapaDificil" instance=ExtResource( 2 )]
+position = Vector2( 62.8943, -24.7466 )
 rotation = 3.14159
-scale = Vector2( 0.552258, -0.66715 )
+scale = Vector2( 0.542717, -0.569299 )
 
-[node name="Node2D7" parent="." instance=ExtResource( 2 )]
-position = Vector2( 578, 319 )
+[node name="Node2D7" parent="MapaDificil" instance=ExtResource( 2 )]
+position = Vector2( 63.877, 16.2133 )
 rotation = 3.14159
-scale = Vector2( 0.552258, -0.66715 )
+scale = Vector2( 0.542717, -0.569299 )
 
-[node name="Node2D8" parent="." instance=ExtResource( 2 )]
-position = Vector2( 416, 319 )
+[node name="Node2D8" parent="MapaDificil" instance=ExtResource( 2 )]
+position = Vector2( -95.3242, 16.2133 )
 rotation = 3.14159
-scale = Vector2( 0.552258, -0.66715 )
+scale = Vector2( 0.542717, -0.569299 )
 
-[node name="Node2D9" parent="." instance=ExtResource( 2 )]
-position = Vector2( 457, 319 )
+[node name="Node2D9" parent="MapaDificil" instance=ExtResource( 2 )]
+position = Vector2( -55.0325, 16.2133 )
 rotation = 3.14159
-scale = Vector2( 0.552258, -0.66715 )
+scale = Vector2( 0.542717, -0.569299 )
 
-[node name="Node2D10" parent="." instance=ExtResource( 2 )]
-position = Vector2( 456, 365 )
+[node name="Node2D10" parent="MapaDificil" instance=ExtResource( 2 )]
+position = Vector2( -56.0153, 55.4664 )
 rotation = 3.14159
-scale = Vector2( 0.552258, -0.66715 )
+scale = Vector2( 0.542717, -0.569299 )
 
-[node name="Node2D11" parent="." instance=ExtResource( 2 )]
-position = Vector2( 456, 411 )
+[node name="Node2D11" parent="MapaDificil" instance=ExtResource( 2 )]
+position = Vector2( -56.0153, 94.7196 )
 rotation = 3.14159
-scale = Vector2( 0.552258, -0.66715 )
+scale = Vector2( 0.542717, -0.569299 )
 
-[node name="Node2D12" parent="." instance=ExtResource( 2 )]
-position = Vector2( 495, 411 )
+[node name="Node2D12" parent="MapaDificil" instance=ExtResource( 2 )]
+position = Vector2( -17.689, 94.7196 )
 rotation = 3.14159
-scale = Vector2( 0.552258, -0.66715 )
+scale = Vector2( 0.542717, -0.569299 )
 
-[node name="Node2D13" parent="." instance=ExtResource( 2 )]
-position = Vector2( 536, 411 )
+[node name="Node2D13" parent="MapaDificil" instance=ExtResource( 2 )]
+position = Vector2( 22.6027, 94.7196 )
 rotation = 3.14159
-scale = Vector2( 0.552258, -0.66715 )
+scale = Vector2( 0.542717, -0.569299 )
 
-[node name="Node2D14" parent="." instance=ExtResource( 2 )]
-position = Vector2( 416, 272 )
+[node name="Node2D14" parent="MapaDificil" instance=ExtResource( 2 )]
+position = Vector2( -95.3242, -23.8932 )
 rotation = 3.14159
-scale = Vector2( 0.552258, -0.66715 )
+scale = Vector2( 0.542717, -0.569299 )
 
-[node name="Node2D15" parent="." instance=ExtResource( 2 )]
-position = Vector2( 536, 319 )
+[node name="Node2D15" parent="MapaDificil" instance=ExtResource( 2 )]
+position = Vector2( 22.6027, 16.2133 )
 rotation = 3.14159
-scale = Vector2( 0.552258, -0.66715 )
+scale = Vector2( 0.542717, -0.569299 )
 
-[node name="Node2D16" parent="." instance=ExtResource( 2 )]
-position = Vector2( 577, 411 )
+[node name="Node2D16" parent="MapaDificil" instance=ExtResource( 2 )]
+position = Vector2( 62.8943, 94.7196 )
 rotation = 3.14159
-scale = Vector2( 0.552258, -0.66715 )
+scale = Vector2( 0.542717, -0.569299 )
 
-[node name="Node2D17" parent="." instance=ExtResource( 2 )]
-position = Vector2( 496, 225 )
+[node name="Node2D17" parent="MapaDificil" instance=ExtResource( 2 )]
+position = Vector2( -16.7063, -63.9997 )
 rotation = 3.14159
-scale = Vector2( 0.552258, -0.66715 )
+scale = Vector2( 0.542717, -0.569299 )
 
-[node name="Area2D" type="Area2D" parent="."]
-position = Vector2( 1001, 315 )
+[node name="Area2D" type="Area2D" parent="MapaDificil"]
+position = Vector2( 479.569, 12.7999 )
+scale = Vector2( 0.982724, 0.85333 )
+collision_layer = 256
+collision_mask = 256
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MapaDificil/Area2D"]
 position = Vector2( 11, -3 )
 shape = SubResource( 11 )
 
-[node name="Area2D2" type="Area2D" parent="."]
-position = Vector2( 15, 308 )
+[node name="Area2D2" type="Area2D" parent="MapaDificil"]
+position = Vector2( -489.396, 6.82664 )
+scale = Vector2( 0.982724, 0.85333 )
+collision_layer = 256
+collision_mask = 256
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MapaDificil/Area2D2"]
 position = Vector2( 4.84375, -3.5 )
 shape = SubResource( 12 )
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
+[node name="StaticBody2D" type="StaticBody2D" parent="MapaDificil"]
+position = Vector2( -504.137, -255.999 )
+scale = Vector2( 0.982724, 0.85333 )
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
-polygon = PoolVector2Array( -1, 329, 215, 329, 215, 482, 359, 483, 358, 253, 396, 253, 396, 341, 435, 341, 435, 392, 398, 392, 398, 431, 555, 431, 555, 480, 737, 481, 736, 337, 756, 337, 1026, 337, 1026, 601, 0, 600 )
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="MapaDificil/StaticBody2D"]
+polygon = PoolVector2Array( -1, 329, 215, 329, 215, 482, 359, 483, 358, 253, 396, 253, 396, 341, 435, 341, 435, 392, 398, 392, 398, 431, 555, 431, 555, 480, 737, 481, 736, 337, 756, 337, 1026, 337, 1026, 601, 983.848, 600.959, 0, 600 )
 
-[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+[node name="StaticBody2D2" type="StaticBody2D" parent="MapaDificil"]
+position = Vector2( -504.137, -255.999 )
+scale = Vector2( 0.982724, 0.85333 )
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D2"]
-polygon = PoolVector2Array( 0, 271, 216, 270, 216, 132, 358, 132, 357, 205, 439, 205, 440, 297, 473, 297, 474, 203, 519, 203, 519, 248, 561, 248, 561, 205, 597, 204, 598, 300, 637, 300, 637, 132, 737, 132, 737, 281, 1026, 281, 1025, 0, 0, 1 )
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="MapaDificil/StaticBody2D2"]
+polygon = PoolVector2Array( 0, 271, 216, 270, 216, 132, 358, 132, 357, 205, 439, 205, 440, 297, 473, 297, 474, 203, 519, 203, 519, 248, 561, 248, 561, 205, 597, 204, 598, 300, 637, 300, 637, 132, 737, 132, 737, 281, 1026, 281, 1027, 339, 1025, 0, 0, 1, 0, 329 )
 
-[node name="StaticBody2D3" type="StaticBody2D" parent="."]
+[node name="StaticBody2D3" type="StaticBody2D" parent="MapaDificil"]
+position = Vector2( -504.137, -255.999 )
+scale = Vector2( 0.982724, 0.85333 )
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D3"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="MapaDificil/StaticBody2D3"]
 polygon = PoolVector2Array( 479, 341, 479, 391, 601, 390, 601, 439, 644, 439, 643, 338 )
 
-[node name="StaticBody2D4" type="StaticBody2D" parent="."]
-
-[node name="StaticBody2D5" type="StaticBody2D" parent="."]
-
-[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
-[connection signal="body_entered" from="Area2D2" to="." method="_on_Area2D2_body_entered"]
+[connection signal="body_entered" from="MapaDificil/Area2D" to="." method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="MapaDificil/Area2D2" to="." method="_on_Area2D2_body_entered"]

@@ -15,8 +15,7 @@ __meta__ = {
 }
 
 [node name="Labirinto3" type="Sprite" parent="."]
-position = Vector2( 512, 300 )
-scale = Vector2( 0.496, 0.586 )
+position = Vector2( 1030, 513 )
 texture = ExtResource( 1 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Labirinto3"]
@@ -62,15 +61,15 @@ scale = Vector2( 2.00981, 1.72973 )
 position = Vector2( 13, 4 )
 shape = SubResource( 1 )
 
-[node name="CanvasModulate" type="CanvasModulate" parent="Labirinto3"]
-position = Vector2( -1030.03, -518.919 )
-scale = Vector2( 2.00981, 1.72973 )
-color = Color( 0.0705882, 0.0862745, 0.0980392, 1 )
-
 [node name="Camera2D" type="Camera2D" parent="Labirinto3"]
 
 [node name="CanvasLayer" parent="." instance=ExtResource( 3 )]
 
 [node name="CanvasLayer2" parent="." instance=ExtResource( 4 )]
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+position = Vector2( -0.0300293, -5.91901 )
+scale = Vector2( 2.00981, 1.72973 )
+color = Color( 0.0705882, 0.0862745, 0.0980392, 1 )
 
 [connection signal="body_entered" from="Labirinto3/Area2D" to="." method="_on_Area2D_body_entered"]
