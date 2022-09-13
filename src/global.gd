@@ -1,19 +1,18 @@
 extends Node
 
+var count = 0
 
 var stop = false
 var openDialogue = false
 var stars = 3
 
 
-var count = 0
 var fase1 = false
 
+var texto = ['a', 'b', 'c', 'd']
 
 func _process(delta):
-	if count >= 14:
-		fase1 = true
-	else: 
-		fase1 = false
+	print(get_node())
+
 
 
