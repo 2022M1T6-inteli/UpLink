@@ -1,9 +1,11 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Images/Labirinto3.png" type="Texture" id=1]
 [ext_resource path="res://Scripts/Ginasio-01/Cena3.gd" type="Script" id=2]
 [ext_resource path="res://Cenas/Outros/Transição_in.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Cenas/Outros/Transição_out.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Sons/DarkScene.mp3" type="AudioStream" id=5]
+[ext_resource path="res://Sons/level_completed.wav" type="AudioStream" id=6]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -63,13 +65,19 @@ shape = SubResource( 1 )
 
 [node name="Camera2D" type="Camera2D" parent="Labirinto3"]
 
-[node name="CanvasLayer" parent="." instance=ExtResource( 3 )]
-
 [node name="CanvasLayer2" parent="." instance=ExtResource( 4 )]
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 position = Vector2( -0.0300293, -5.91901 )
 scale = Vector2( 2.00981, 1.72973 )
 color = Color( 0.0705882, 0.0862745, 0.0980392, 1 )
+
+[node name="DarkScene3" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 5 )
+
+[node name="CanvasLayer" parent="." instance=ExtResource( 3 )]
+
+[node name="LevelCompleted" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 6 )
 
 [connection signal="body_entered" from="Labirinto3/Area2D" to="." method="_on_Area2D_body_entered"]

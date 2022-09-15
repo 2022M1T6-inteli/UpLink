@@ -6,6 +6,9 @@ var playerPosition = Vector2(0, 340)
 var player
 
 func _ready():
+	$SoundLobby.play()
+	$Park.play()
+	
 	#inicialização da variável como nó e criação desse nó Player
 	player = inciarPlayer(playerPosition)
 	add_child(player)

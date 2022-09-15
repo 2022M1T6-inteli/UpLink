@@ -13,6 +13,7 @@ func iniciarPlayer(posicao):
 	return player
 
 func _ready():
+	$SoundX.play()
 #	$Player/Camera.current = false
 
 	player = iniciarPlayer(playerPosition)

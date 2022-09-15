@@ -11,8 +11,7 @@ var fase1 = false
 
 var texto = ['a', 'b', 'c', 'd']
 
-func _process(delta):
-	print(get_node())
+
 
 
 

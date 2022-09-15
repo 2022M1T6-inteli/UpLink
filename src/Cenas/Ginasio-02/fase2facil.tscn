@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Images/MapaFacil.png" type="Texture" id=1]
 [ext_resource path="res://Cenas/Ginasio-02/MinigameBola.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Sons/SoundX.mp3" type="AudioStream" id=3]
 [ext_resource path="res://Scripts/Ginasio-02/fase2facil.gd" type="Script" id=5]
 
 [sub_resource type="RectangleShape2D" id=12]
@@ -137,6 +138,9 @@ scale = Vector2( 0.500678, -0.517076 )
 [node name="Node2D14" parent="MapaFacil2" instance=ExtResource( 2 )]
 position = Vector2( 32.1829, 102.4 )
 scale = Vector2( 0.500678, -0.517076 )
+
+[node name="SoundX" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 3 )
 
 [connection signal="body_entered" from="MapaFacil2/Area2D2" to="." method="_on_Area2D2_body_entered"]
 [connection signal="body_entered" from="MapaFacil2/Area2D" to="." method="_on_Area2D_body_entered"]

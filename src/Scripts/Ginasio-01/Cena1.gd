@@ -20,6 +20,7 @@ var player
 
 #Através da função genérica "iniciarX", a variável de cada objeto puxa sua respectiva cena e sua respectiva posição
 func _ready():
+	$DarkScene.play()
 	estrela1 = iniciarEstrela(estrelaPosition1)
 	estrela2 = iniciarEstrela(estrelaPosition2)
 	estrela3 = iniciarEstrela(estrelaPosition3)
@@ -64,7 +65,9 @@ func iniciarPlayer(posicao):
 	return player
 	
 func _on_Area2D_body_entered(body):
-	get_tree().change_scene("res://Cenas/Ginasio-01/Cena2.tscn")
+		get_tree().change_scene("res://Cenas/Ginasio-01/Cena2.tscn")
+		
+		
 	
 #Ao chamarmos a função genérica "iniciaX" fazemos com que cada elemento tenha uma variável respectiva
 	

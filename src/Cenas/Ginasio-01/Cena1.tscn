@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Images/Labirinto1.png" type="Texture" id=1]
 [ext_resource path="res://Cenas/Outros/Balao.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scripts/Ginasio-01/Cena1.gd" type="Script" id=3]
 [ext_resource path="res://Cenas/Outros/Transição_in.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Cenas/Outros/Transição_out.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Sons/DarkScene.mp3" type="AudioStream" id=6]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 21.375, 18 )
@@ -78,5 +79,8 @@ color = Color( 0.0705882, 0.0862745, 0.0980392, 1 )
 [node name="CanvasLayer" parent="." instance=ExtResource( 4 )]
 
 [node name="CanvasLayer2" parent="." instance=ExtResource( 5 )]
+
+[node name="DarkScene" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 6 )
 
 [connection signal="body_entered" from="Labirinto1/Area2D" to="." method="_on_Area2D_body_entered"]

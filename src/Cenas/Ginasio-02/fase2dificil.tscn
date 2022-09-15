@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Images/MapaDificil.png" type="Texture" id=1]
 [ext_resource path="res://Cenas/Ginasio-02/MinigameBola.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Sons/SoundX.mp3" type="AudioStream" id=3]
 [ext_resource path="res://Scripts/Ginasio-02/fase2dificil.gd" type="Script" id=5]
 
 [sub_resource type="RectangleShape2D" id=11]
@@ -138,6 +139,9 @@ scale = Vector2( 0.982724, 0.85333 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="MapaDificil/StaticBody2D3"]
 polygon = PoolVector2Array( 479, 341, 479, 391, 601, 390, 601, 439, 644, 439, 643, 338 )
+
+[node name="SoundX" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 3 )
 
 [connection signal="body_entered" from="MapaDificil/Area2D" to="." method="_on_Area2D_body_entered"]
 [connection signal="body_entered" from="MapaDificil/Area2D2" to="." method="_on_Area2D2_body_entered"]
