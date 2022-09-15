@@ -4,17 +4,26 @@
 <a href= "https://www.inteli.edu.br/"><img src="https://www.inteli.edu.br/wp-content/uploads/2021/08/20172028/marca_1-2.png" alt="Inteli - Instituto de Tecnologia e Liderança" border="0"></a>
 </p>
 
-# Nome do Projeto
+# Zero To Hero: Becoming Dell
 
-## Nome do Grupo
+## UpLink
 
-## Integrantes: <a href="https://www.linkedin.com/in/victorbarq/">Goku Sayajin</a>, <a href="https://www.linkedin.com/in/victorbarq/">Saitama One</a>, <a href="https://www.linkedin.com/in/victorbarq/">Ikki de Fenix</a>, <a href="https://www.linkedin.com/in/victorbarq/">Yusuke Urameshi</a>, <a href="https://www.linkedin.com/in/victorbarq/">Roronoa Zoro</a>
+## Integrantes: 
+<a href="https://www.linkedin.com/in/victorbarq/">Arthur Nisa de Paula Souza</a>,
+<a href="https://www.linkedin.com/in/victorbarq/">Esther Hikari Kimura Nunes</a>,
+<a href="https://www.linkedin.com/in/victorbarq/">Felipe Martins Moura</a>,
+<a href="https://www.linkedin.com/in/victorbarq/">Yusuke Urameshi</a>, 
+<a href="https://www.linkedin.com/in/victorbarq/">Henrique Rodrigues de Godoy	</a>,
+<a href="https://www.linkedin.com/in/victorbarq/">Luiz Fernando Covas</a>,
+<a href="https://www.linkedin.com/in/victorbarq/">Vivian Midori Shibata	</a>,
+<a href="https://www.linkedin.com/in/victorbarq/">Yuri Freitas Angelo Toledo</a>,
 
 ## Descrição
 
 📜 Descrição curta sobre o que seu projeto faz.
 <br><br>
-Meu projeto é um exemplo de como utilizar o github.
+
+O jogo Zero to Hero, desenvolvido por alunos do Instituto de Tecnologia e Liderança, visa atender os interesses da sua empresa parceira - a Dell - no objetivo de capacitar e mensurar a maturidade dos funcionários quanto ao novo modelo de desenvolvimento de software, chamado 'Modelo por Produtos'. Nesse sentido, o programa tem o intuito de não só capacitar o colaborador, mas mensurar o aprendizado adquirido por ele, a fim de definir a maturidade do time como um todo. O jogo se passará em 2030 em	um mundo apocalíptico, onde a população foi infectada por um vírus que leva as pessoas a terem um pensamento retrógrado e o jogador terá que desenvolver um antídoto. Esse antídoto é uma mudança de mindset, se referindo a mudança cultural que a Dell deseja intensificar nos seus processos.
 <br><br>
 <p align="center">
 <img src="https://pix4free.org/assets/library/2021-01-20/originals/game.jpg" alt="NOME DO JOGO" border="0">
@@ -24,7 +33,7 @@ Meu projeto é um exemplo de como utilizar o github.
 
 💡 De um a dois parágrafos sobre o que é seu projeto e o que ele faz.
 <br><br>
-Meu projeto ajuda estudantes inteli a configurarem seus githubs.
+Um jogo educativo, divertido e simples de uma forma que o funcionário consiga aprender mais facilmente utilizando uma forma descontraída de adquirir conhecimento com o intuito de auxiliar a Dell na transição desse novo modelo. Esse jogo será exploratório, com perguntas e minigames, onde o integrante irá adquirir as competências necessárias para que o mesmo consiga passar de fase.
 <br><br>
 May the force be with you!
 <br><br>
