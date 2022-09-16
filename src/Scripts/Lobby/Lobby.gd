@@ -4,6 +4,8 @@ onready var prePlayer = preload("res://Cenas/Outros/Player/Player.tscn")
 
 var player
 
+var playerPosition = Vector2(0, 340)
+
 func _ready():
 	$SoundLobby.play()
 	$Park.play()
@@ -67,6 +69,6 @@ func _on_Area2D3_body_entered(body):
 	$Area2D3/Sprite.visible = false
 	print(Global.a13)
 	
-func _process(delta):
-	if(Global.foi == true):
-		get_tree().change_scene("res://Cenas/Ginasio-02/Ginasio02_fase01.tscn")
+#func _process(delta):
+#	if(Global.foi == true):
+#		get_tree().change_scene("res://Cenas/Ginasio-02/Ginasio02_fase01.tscn")

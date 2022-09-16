@@ -9,13 +9,13 @@ onready var dialogo = [
 #var dialogo_index = 0
 #var finished = false  #Variável para indicar quando o texto acaba de carregar no Balão
 
-func _ready():
+#func _ready():
 	#teste()
 	#print($RichTextLabel.text)
 	#$RichTextLabel = 'cccc'
 	#print(get_node('RichTextLabel'))
 	#print($RichTextLabel.bbcode_text)
-	print($RichTextLabel)
+#	print($RichTextLabel)
 	#print(a)
 	#print(dialogo)
 	#load_dialogo()
