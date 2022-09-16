@@ -1,0 +1,56 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Cenas/Ginasio-01/teste2.gd" type="Script" id=1]
+[ext_resource path="res://Images/Dialogo/DialogueBox.png" type="Texture" id=2]
+
+[sub_resource type="DynamicFontData" id=5]
+font_path = "res://Fontes/ConnectionII.otf"
+
+[sub_resource type="DynamicFont" id=4]
+size = 28
+font_data = SubResource( 5 )
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_left = 182.0
+margin_top = 103.0
+margin_right = 879.0
+margin_bottom = 492.0
+texture = ExtResource( 2 )
+expand = true
+
+[node name="ColorRect" type="ColorRect" parent="TextureRect"]
+margin_left = 34.0
+margin_top = 61.0
+margin_right = 665.0
+margin_bottom = 332.0
+color = Color( 0.145098, 0.152941, 0.192157, 0.85098 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+margin_left = 226.0
+margin_top = 176.0
+margin_right = 839.0
+margin_bottom = 434.0
+custom_colors/default_color = Color( 1, 1, 1, 1 )
+custom_colors/selection_color = Color( 0.964706, 0.945098, 0.945098, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = SubResource( 4 )
+bbcode_enabled = true
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Tween" type="Tween" parent="."]
+
+[node name="Label" type="Label" parent="."]
+margin_left = 257.0
+margin_top = 181.0
+margin_right = 797.0
+margin_bottom = 399.0
