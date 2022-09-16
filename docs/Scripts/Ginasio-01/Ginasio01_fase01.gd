@@ -3,7 +3,7 @@ extends Node2D
 #As linhas de código abaixo tem função apenas de tornar de fácil acesso e processamento as cenas que serão exigidas e exibidas durante a fase
 onready var preEstrela = preload("res://Cenas/Outros/Estrelas/Star.tscn")
 onready var prePlayer = preload("res://Cenas/Outros/Player/Player.tscn")
-onready var preBalao = preload("res://Cenas/Outros/Balao.tscn").instance()
+#onready var preBalao = preload("res://Cenas/Outros/Balao.tscn").instance()
 onready var hud = preload("res://Cenas/Ginasio-01/Ginasio01_HUD.tscn")
 
 #As linhas de codigo abaixo criam variáveis que assumem a posição de cada elemento através de um vetor posição
@@ -42,11 +42,11 @@ func _ready():
 func _process(delta):
 	player.lanterna.texture_scale = Global.percentVisionGinasio01
 	
-	if Global.openDialogue:
-		$CanvasModulate.visible = false
-		add_child(preBalao)
-		Global.stop = true
-		Global.openDialogue = false
+	#if Global.openDialogue:
+	#	$CanvasModulate.visible = false
+	#	add_child(preBalao)
+	#	Global.stop = true
+	#	Global.openDialogue = false
 
 func iniciarEstrela(posicao):
 	var estrela = preEstrela.instance()

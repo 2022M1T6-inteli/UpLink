@@ -22,10 +22,6 @@ func _physics_process(delta):
 	input_vector.y = Input.get_action_strength("ui_down") - Input.get_action_strength("ui_up")
 	input_vector = input_vector.normalized()
 	
-	if Global.stars == 0:
-		$Lanterna.visible = false
-	else:
-		$Lanterna.visible = true
 	
 	if input_vector != Vector2.ZERO:
 		if input_vector.x != 0:
@@ -40,7 +36,7 @@ func _physics_process(delta):
 					animationPlayer.play("Cima")
 		velocidade = velocidade.move_toward(input_vector * velocidade_Max, 100)
 	else: 
-		animationPlayer.play("paradodireita")
+		#animationPlayer.play("paradodireita")
 		velocidade = velocidade.move_toward(Vector2.ZERO, 100)
 
 	velocidade = move_and_slide(velocidade)

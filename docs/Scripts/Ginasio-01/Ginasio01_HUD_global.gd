@@ -1,11 +1,11 @@
 extends CanvasLayer
 
-export onready var box = $box
+#export onready var box = $box
 #Bloco de código acima tem função apenas de tornar de fácil acesso e processamento as cenas que serão exigidas e exibidas durante a fase
 
 onready var preEstrelaPreta = preload("res://Cenas/Outros/Estrelas/EstrelaPreta.tscn")
 onready var preEstrelaPreenchida = preload("res://Cenas/Outros/Estrelas/Estrelinha.tscn")
-onready var preBalao = preload("res://Cenas/Outros/balao.tscn").instance()
+#onready var preBalao = preload("res://Cenas/Outros/Balao.tscn").instance()
 
 #Os 3 Blocos abaixo criam variáveis que assumem a posição de cada elemento através de um vetor posição, em tempo de execução
 var estrelaPosition1 = Vector2(887, 37)
@@ -19,7 +19,7 @@ var estrelaPreta1
 var estrelaPreta2
 var estrelaPreta3
 
-var openDialogue = false
+#var openDialogue = false
 
 #Através da função genérica "iniciarX", a variável de cada objeto puxa sua respectiva cena e sua respectiva posição
 
@@ -59,7 +59,6 @@ func resetEstrelasPreenchidas():
 	add_child(estrelaPreta1)
 	add_child(estrelaPreta2)
 	add_child(estrelaPreta3)
-
 #	if  Input.is_action_pressed("ui_select"):
 #		queue_free()
 #		Global.stop = false
