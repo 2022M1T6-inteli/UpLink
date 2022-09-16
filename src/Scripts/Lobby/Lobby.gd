@@ -12,10 +12,8 @@ func _ready():
 	player = inciarPlayer(Global.playerPosition)
 	add_child(player)
 	player.camera.current = true
-	player.camera.zoom.x = 2
-	player.camera.zoom.y = 2
-	player.scale = Vector2 (2, 2)
-	hud_global.controleEstrelaMapa(false)
+	player.camera.zoom.x = 1.5
+	player.camera.zoom.y = 1.5
 	
 #Função responsável por fazer com que variável receba o nó chamando a cena correta e definindo sua posição
 func inciarPlayer(posicao):
@@ -26,15 +24,15 @@ func inciarPlayer(posicao):
 #Funções abaixo são responsáveis por fazer com que ao entrar em uma area2D, o player seja direcionado para uma nova cena respectiva à área
 
 func _on_Ginasio_01_body_entered(body):
-	get_tree().change_scene("res://Cenas/Ginasio-01/Cena1.tscn")
+	get_tree().change_scene("res://Cenas/Ginasio-01/Ginasio01_fase01.tscn")
 	Global.playerPosition = Vector2(783, 1370)
 
 func _on_Ginasio_02_body_entered(body):
-	get_tree().change_scene("res://Cenas/Ginasio-02/fase2facil.tscn")
+	get_tree().change_scene("res://Cenas/Ginasio-02/Ginasio02_fase01.tscn")
 	Global.playerPosition = Vector2(1230, -1220)
 
 func _on_Ginasio_03_body_entered(body):
-	get_tree().change_scene("res://Cenas/Ginasio-03/ginasio3-fase01.tscn")
+	get_tree().change_scene("res://Cenas/Ginasio-03/Ginasio03_fase01.tscn")
 	Global.playerPosition = Vector2(1889, -118)
 
 
@@ -71,4 +69,4 @@ func _on_Area2D3_body_entered(body):
 	
 func _process(delta):
 	if(Global.foi == true):
-		get_tree().change_scene("res://Cenas/Ginasio-02/fase2facil.tscn")
+		get_tree().change_scene("res://Cenas/Ginasio-02/Ginasio02_fase01.tscn")

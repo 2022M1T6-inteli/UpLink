@@ -17,6 +17,9 @@ var a12 = 0
 var a13 = 0
 var foi = false 
 
+var numStars = 0
+var percentVisionGinasio01 = 0.3
+
 func _physics_process(delta):
 	if(a11 > 0 && a12 > 0 && a13 > 0):
 		foi = true 
