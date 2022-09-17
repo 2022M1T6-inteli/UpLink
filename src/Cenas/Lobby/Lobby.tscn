@@ -1,9 +1,10 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Images/Lobby/mapajogo.png" type="Texture" id=1]
 [ext_resource path="res://Scripts/Lobby/Lobby.gd" type="Script" id=2]
 [ext_resource path="res://Sons/LobbySound.mp3" type="AudioStream" id=3]
 [ext_resource path="res://Sons/Park.mp3" type="AudioStream" id=4]
+[ext_resource path="res://Images/Book.svg" type="Texture" id=5]
 
 [sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 29.5, 23.5 )
@@ -32,10 +33,14 @@ extents = Vector2( 16.5, 16.5 )
 [sub_resource type="RectangleShape2D" id=9]
 extents = Vector2( 32, 20.5 )
 
+[sub_resource type="RectangleShape2D" id=10]
+extents = Vector2( 22, 17 )
+
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 2 )
 
 [node name="Mapajogo" type="Sprite" parent="."]
+position = Vector2( 3, 18 )
 texture = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
@@ -1248,6 +1253,60 @@ stream = ExtResource( 3 )
 [node name="Park" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 4 )
 
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2( 34, 1073 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Area2D"]
+position = Vector2( -33, 135 )
+scale = Vector2( 0.116071, 0.0916031 )
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( -33, 134 )
+shape = SubResource( 10 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Area2D2" type="Area2D" parent="."]
+position = Vector2( 161, 1074 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Area2D2"]
+position = Vector2( -33, 135 )
+scale = Vector2( 0.116071, 0.0916031 )
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
+position = Vector2( -33, 134 )
+shape = SubResource( 10 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Area2D3" type="Area2D" parent="."]
+position = Vector2( 297, 1079 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Area2D3"]
+position = Vector2( -33, 135 )
+scale = Vector2( 0.116071, 0.0916031 )
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D3"]
+position = Vector2( -33, 134 )
+shape = SubResource( 10 )
+__meta__ = {
+"_edit_group_": true
+}
+
 [connection signal="body_entered" from="Mapajogo/Ginasio_01" to="." method="_on_Ginasio_01_body_entered"]
 [connection signal="body_entered" from="Mapajogo/Ginasio_02" to="." method="_on_Ginasio_02_body_entered"]
 [connection signal="body_entered" from="Mapajogo/Ginasio_03" to="." method="_on_Ginasio_03_body_entered"]
@@ -1256,3 +1315,8 @@ stream = ExtResource( 4 )
 [connection signal="body_entered" from="Mapajogo/Market" to="." method="_on_Market_body_entered"]
 [connection signal="body_entered" from="Mapajogo/Store" to="." method="_on_Area2D_body_entered"]
 [connection signal="body_entered" from="Mapajogo/Office" to="." method="_on_Office_body_entered"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Area2D2" to="." method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Area2D2" to="." method="_on_Area2D2_body_entered"]
+[connection signal="body_entered" from="Area2D3" to="." method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Area2D3" to="." method="_on_Area2D3_body_entered"]

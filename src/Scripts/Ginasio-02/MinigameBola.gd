@@ -8,6 +8,7 @@ var Passe
 #Função para fazer com que os pisos sejam alterados na ordem "X", "O" e triângulo
 
 func _on_Area2D_body_entered(body):
+	$Pown.play() 
 	if ($Area2D/X.visible):
 		$Area2D/X.visible = false  
 		$Area2D/T.visible = false

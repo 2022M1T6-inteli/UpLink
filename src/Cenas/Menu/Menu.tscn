@@ -59,7 +59,7 @@ position = Vector2( 600.375, 1.52588e-05 )
 texture = ExtResource( 6 )
 
 [node name="Hero" type="Sprite" parent="TextureRect/Zero"]
-position = Vector2( 210.131, 273.381 )
+position = Vector2( 205.938, 286.427 )
 texture = ExtResource( 7 )
 
 [node name="MenuSound" type="AudioStreamPlayer2D" parent="TextureRect"]

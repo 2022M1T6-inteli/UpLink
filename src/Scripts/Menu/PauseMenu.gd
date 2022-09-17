@@ -9,7 +9,7 @@ func _input(event):
 	if event.is_action_pressed("pause"):
 		set_visible(!get_tree().paused)
 		get_tree().paused = !get_tree().paused
-
+		
 #Função que f
 func set_visible(is_visible):
 	for node in get_children():
@@ -17,8 +17,9 @@ func set_visible(is_visible):
 
 #Função que desativa a visibilidade da cena PauseMenu
 func _on_Resume_button_up():
-	set_visible(!get_tree().paused)
-	get_tree().paused = !get_tree().paused
+	#set_visible(!get_tree().paused)
+	#get_tree().paused = !get_tree().paused
+	get_tree().paused = false
 	set_visible(false)
 
 #Função que faz com que ao apertar o botão Quit, o jogo feche

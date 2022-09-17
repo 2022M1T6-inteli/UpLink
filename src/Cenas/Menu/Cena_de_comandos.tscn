@@ -74,6 +74,5 @@ Walk down - Arrow down"
 align = 1
 autowrap = true
 uppercase = true
-percent_visible = -0.0128205
 
 [connection signal="pressed" from="TextureButton" to="." method="_on_TextureButton_pressed"]
