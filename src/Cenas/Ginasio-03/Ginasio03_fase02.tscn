@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Scripts/Ginasio-03/Ginasio03_fase02.gd" type="Script" id=1]
-[ext_resource path="res://Images/Gym3Fase2.png" type="Texture" id=2]
+[ext_resource path="res://Images/Ginasio-03/Ginasio03_fase02.png" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 204.474, 998.421 )

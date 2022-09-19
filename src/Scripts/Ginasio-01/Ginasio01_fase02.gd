@@ -22,7 +22,7 @@ var player
 #Através da função genérica "iniciarX", a variável de cada objeto puxa sua respectiva cena e sua respectiva posição
 func _ready():
 	Global.numStars = 0
-	$DarkScene2.play()
+	#$DarkScene2.play()
 	estrela1 = iniciarEstrela(estrelaPosition1)
 	estrela2 = iniciarEstrela(estrelaPosition2)
 	estrela3 = iniciarEstrela(estrelaPosition3)

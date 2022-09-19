@@ -1,8 +1,8 @@
 [gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Scripts/Outros/Player/Player.gd" type="Script" id=1]
-[ext_resource path="res://Images/light.png" type="Texture" id=2]
-[ext_resource path="res://Images/Player.png" type="Texture" id=3]
+[ext_resource path="res://Images/Outros/Light.png" type="Texture" id=2]
+[ext_resource path="res://Images/Outros/Player.png" type="Texture" id=3]
 [ext_resource path="res://Cenas/Outros/Balao.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Cenas/Outros/Balao2.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Cenas/Outros/Balao3.tscn" type="PackedScene" id=6]

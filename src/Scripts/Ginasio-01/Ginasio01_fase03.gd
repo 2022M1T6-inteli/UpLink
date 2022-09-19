@@ -22,7 +22,7 @@ var player
 #Através da função genérica "iniciarX", a variável de cada objeto puxa sua respectiva cena e sua respectiva posição
 func _ready():
 	Global.numStars = 0
-	$DarkScene3.play()
+	#$DarkScene3.play()
 	estrela1 = iniciarEstrela(estrelaPosition1)
 	estrela2 = iniciarEstrela(estrelaPosition2)
 	estrela3 = iniciarEstrela(estrelaPosition3)
@@ -58,7 +58,7 @@ func iniciarPlayer(posicao):
 	return player
 	
 func _on_Area2D_body_entered(body):
-	$DarkScene3.playing = false
-	$LevelCompleted.play()
+	#$DarkScene3.playing = false
+	#$LevelCompleted.play()
 	get_tree().change_scene("res://Cenas/Lobby/Lobby.tscn")
 	hud_ginasio01.desativarHUDGinasio01()

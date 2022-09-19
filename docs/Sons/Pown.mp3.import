@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Pown.mp3-35f12eb994acb67feaec14b616533000.mp3str"
+
+[deps]
+
+source_file="res://Sons/Pown.mp3"
+dest_files=[ "res://.import/Pown.mp3-35f12eb994acb67feaec14b616533000.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

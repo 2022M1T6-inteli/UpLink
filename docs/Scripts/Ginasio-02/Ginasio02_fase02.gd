@@ -13,7 +13,7 @@ func iniciarPlayer(posicao):
 	return player
 	
 func _ready():
-	$SoundX.play()
+	#$SoundX.play()
 	player = iniciarPlayer(playerPosition)
 	
 	add_child(player)

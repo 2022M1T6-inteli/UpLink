@@ -4,7 +4,7 @@
 [ext_resource path="res://Scripts/Lobby/Lobby.gd" type="Script" id=2]
 [ext_resource path="res://Sons/LobbySound.mp3" type="AudioStream" id=3]
 [ext_resource path="res://Sons/Park.mp3" type="AudioStream" id=4]
-[ext_resource path="res://Images/Book.svg" type="Texture" id=5]
+[ext_resource path="res://Images/Outros/Book.svg" type="Texture" id=5]
 
 [sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 29.5, 23.5 )

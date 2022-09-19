@@ -23,7 +23,7 @@ var player
 func _ready():
 	hud_ginasio01.ativarHUDGinasio01()
 	Global.numStars = 0
-	$DarkScene.play()
+	#$DarkScene.play()
 	estrela1 = iniciarEstrela(estrelaPosition1)
 	estrela2 = iniciarEstrela(estrelaPosition2)
 	estrela3 = iniciarEstrela(estrelaPosition3)
