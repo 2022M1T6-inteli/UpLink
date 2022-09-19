@@ -19,10 +19,10 @@ func _ready():
 	add_child(player)
 	
 	player.camera.limit_left = 0
-	player.camera.limit_bottom = 492
+	player.camera.limit_bottom = 735
 	player.camera.limit_top = 0
-	player.camera.limit_right = 1010
-	player.camera.zoom = Vector2(0.5, 0.5)
+	player.camera.limit_right = 1500
+	player.camera.zoom = Vector2(1, 1)
 	
 func _process(delta):
 	if Global.count >= 14:

@@ -38,4 +38,5 @@ func iniciarNPC1(posicao):
 
 
 func _on_Area2D_body_entered(body):
-	get_tree().change_scene("res://Cenas/Lobby/Lobby.tscn")
+	if body.name == "Player":
+		get_tree().change_scene("res://Cenas/Lobby/Lobby.tscn")

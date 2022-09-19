@@ -21,10 +21,10 @@ func _ready():
 	
 	
 	player.camera.limit_left = 0
-	player.camera.limit_bottom = 492
+	player.camera.limit_bottom = 736
 	player.camera.limit_top = 0
-	player.camera.limit_right = 1010
-	player.camera.zoom = Vector2(0.5, 0.5)
+	player.camera.limit_right = 1504
+	player.camera.zoom = Vector2(1, 1)
 	
 
 func _process(delta):

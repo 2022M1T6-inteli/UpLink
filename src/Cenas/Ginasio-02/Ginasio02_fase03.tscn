@@ -15,7 +15,8 @@ extents = Vector2( 19.1563, 36.5 )
 script = ExtResource( 5 )
 
 [node name="MapaDificil" type="Sprite" parent="."]
-position = Vector2( 510, 258 )
+position = Vector2( 757, 384 )
+scale = Vector2( 1.5, 1.5 )
 texture = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
@@ -131,7 +132,7 @@ position = Vector2( -504.137, -255.999 )
 scale = Vector2( 0.982724, 0.85333 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="MapaDificil/StaticBody2D2"]
-polygon = PoolVector2Array( 0, 271, 216, 270, 216, 132, 358, 132, 357, 205, 439, 205, 440, 297, 473, 297, 474, 203, 519, 203, 519, 248, 561, 248, 561, 205, 597, 204, 598, 300, 637, 300, 637, 132, 737, 132, 737, 281, 1026, 281, 1027, 339, 1025, 0, 0, 1, 0, 329 )
+polygon = PoolVector2Array( 0, 271, 216, 270, 216.545, 143.749, 357.649, 143.749, 357, 205, 439, 205, 440, 297, 473, 297, 474, 203, 519, 203, 519, 248, 561, 248, 561, 205, 597, 204, 598, 300, 637, 300, 639.858, 143.749, 737.545, 143.749, 737, 281, 1026, 281, 1027, 339, 1025, 0, 0, 1, 0, 329 )
 
 [node name="StaticBody2D3" type="StaticBody2D" parent="MapaDificil"]
 position = Vector2( -504.137, -255.999 )

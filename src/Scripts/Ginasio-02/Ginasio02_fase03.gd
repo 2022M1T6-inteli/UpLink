@@ -3,7 +3,7 @@ extends Node2D
 onready var prePlayer = preload("res://Cenas/Outros/Player/Player.tscn")
 
 
-var playerPosition = Vector2(70, 290)
+var playerPosition = Vector2(50, 380)
 
 var player
 
@@ -21,10 +21,10 @@ func _ready():
 	add_child(player)
 	
 	player.camera.limit_left = 0
-	player.camera.limit_bottom = 480
+	player.camera.limit_bottom = 768
 	player.camera.limit_top = 0
-	player.camera.limit_right = 1010
-	player.camera.zoom = Vector2(0.5, 0.5)
+	player.camera.limit_right = 1512
+	player.camera.zoom = Vector2(1, 1)
 	
 func _process(delta):
 	if Global.count >= 14:
