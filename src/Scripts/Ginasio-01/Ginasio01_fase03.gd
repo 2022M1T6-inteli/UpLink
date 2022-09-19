@@ -60,5 +60,5 @@ func iniciarPlayer(posicao):
 func _on_Area2D_body_entered(body):
 	#$DarkScene3.playing = false
 	#$LevelCompleted.play()
-	get_tree().change_scene("res://Cenas/Lobby/Lobby.tscn")
+	get_tree().change_scene("res://Cenas/Ginasio-01/Ginasio01_pre_boss_fight.tscn")
 	hud_ginasio01.desativarHUDGinasio01()

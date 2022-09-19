@@ -36,4 +36,4 @@ func _process(delta):
 	
 func _on_Area2D_body_entered(body):
 	if Global.fase1 == true:
-		get_tree().change_scene("res://Cenas/Lobby/Lobby.tscn")
+		get_tree().change_scene("res://Cenas/Ginasio-02/Ginasio02_pre_boss_fight.tscn")
