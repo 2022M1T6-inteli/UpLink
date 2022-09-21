@@ -70,7 +70,7 @@ shape = SubResource( 1 )
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 position = Vector2( -0.0300293, -5.91901 )
 scale = Vector2( 2.00981, 1.72973 )
-color = Color( 0.0705882, 0.0862745, 0.0980392, 1 )
+color = Color( 0, 0, 0, 1 )
 
 [node name="DarkScene3" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 2 )

@@ -1,25 +1,22 @@
 extends Node2D
 
-#As linhas de código abaixo tem função apenas de tornar de fácil acesso e processamento as cenas que serão exigidas e exibidas durante a fase
-onready var preEstrela = preload("res://Cenas/Outros/Estrelas/Star.tscn")
+# ACESSANDO E PROCESSANDO AS CENAS QUE SERÃO EXIGIDAS E EXIBIDAS DURANTE A FASE
 onready var prePlayer = preload("res://Cenas/Outros/Player/Player.tscn")
 onready var balao = preload("res://Cenas/Outros/Conteudo/Conteudo.tscn").instance()
 onready var hud = preload("res://Cenas/Ginasio-01/Ginasio01_HUD.tscn")
-onready var livro = preload("res://Cenas/Outros/Books/LivroPreenchidoAbsorver.tscn").instance()
+onready var preLivro = preload("res://Cenas/Outros/Books/LivroPreenchidoAbsorver.tscn")
 
-#As linhas de codigo abaixo criam variáveis que assumem a posição de cada elemento através de um vetor posição
-var estrelaPosition1 = Vector2(80, 50)
-var estrelaPosition2 = Vector2(840, 795)
-var estrelaPosition3 = Vector2(1330, 170)
+# DEFININDO A POSIÇÃO DO PLAYER E DOS LIVROS QUE SERÃO CONSUMIDOS
 var playerPosition = Vector2(12,878)
-var livroPosition1 = Vector2 (700, 900)
+var livroPosition1 = Vector2(700, 900)
+var livroPosition2 = Vector2(705, 900)
+var livroPosition3 = Vector2(708, 900)
+var livroPosition4 = Vector2(710, 900)
+var livroPosition5 = Vector2(713, 900)
 
-#Abaixo temos a declaração de variáveis correspondentes a cada elemento utilizado na tela
-var estrela1
-var estrela2
-var estrela3
-
+# DECLARANDO VARIÁVEIS
 var player
+var livro
 
 var statusBalaoUm = true
 var statusBalaoDois = true
@@ -28,20 +25,29 @@ var statusBalaoQuatro = true
 var statusBalaoCinco = true
 
 var livro1
+var livro2
+var livro3
+var livro4
+var livro5
 
-#Através da função genérica "iniciarX", a variável de cada objeto puxa sua respectiva cena e sua respectiva posição
+
 func _ready():
+#	 ATIVANDO O HUD DO GINÁSIO
 	hud_ginasio01.ativarHUDGinasio01()
 	Global.numLivros = 0
 	#$DarkScene.play()
-	estrela1 = iniciarEstrela(estrelaPosition1)
-	estrela2 = iniciarEstrela(estrelaPosition2)
-	estrela3 = iniciarEstrela(estrelaPosition3)
 	
+#	 INSTANCIANDO E INSERINDO OUTRAS CENAS NA FASE
 	livro1 = iniciarLivro(livroPosition1)
+	livro2 = iniciarLivro(livroPosition2)
+	livro3 = iniciarLivro(livroPosition3)
+	livro4 = iniciarLivro(livroPosition4)
+	livro5 = iniciarLivro(livroPosition5)
+	
 	
 	player = iniciarPlayer(playerPosition)
-		
+	
+#	 ALTERANDO PROPRIEDADES DO PLAYER PARA SEREM RELATIVAS AO MAPA
 	player.lanterna.enabled = true
 	player.camera.limit_left = 0
 	player.camera.limit_bottom = 1023
@@ -51,33 +57,32 @@ func _ready():
 
 
 func _process(delta):
+#	 AUMENTANDO O RANGE DA LANTERNA DE ACORDO COM A VARIÁVEL GLOBAL
 	player.lanterna.texture_scale = Global.percentVisionGinasio01
-	
-
-func iniciarEstrela(posicao):
-	var estrela = preEstrela.instance()
-	estrela.position = posicao
-	add_child(estrela)
-	return estrela
 
 
+# FUNÇÃO PARA INSTANCIAR O PLAYER
 func iniciarPlayer(posicao):
 	var player = prePlayer.instance()
 	player.position = posicao
 	add_child(player)
 	return player
 
+# FUNÇÃO PARA INSTANCIAR O LIVRO
 func iniciarLivro(posicao):
+	livro = preLivro.instance()
 	livro.position = posicao
 	add_child(livro)
 	return livro
 
+# FUNÇÕES PARA COLETA DO LIVRO E EXIBIÇÃO DO BALÃO
 func _on_LivroBalaoUm_body_entered(body):
 	if statusBalaoUm == true:
 		add_child(balao)
 		balao.load_dialogo('teste2')
 		statusBalaoUm = false
 
+# FUNÇÃO PARA MUDAR DE CENA NA SAÍDA
 func _on_Area2D_body_entered(body):
 	get_tree().change_scene("res://Cenas/Ginasio-01/Ginasio01_fase02.tscn")
-	hud_ginasio01.resetEstrelasPreenchidas()
+	hud_ginasio01.resetLivrosPreenchidos()
