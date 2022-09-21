@@ -52,7 +52,7 @@ collision_layer = 256
 collision_mask = 256
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Labirinto1/Area2D"]
-position = Vector2( 1021.92, 39.1127 )
+position = Vector2( 414.488, 466.004 )
 shape = SubResource( 1 )
 
 [node name="Control" parent="Labirinto1" instance=ExtResource( 4 )]
@@ -63,9 +63,12 @@ margin_right = -2.03149
 margin_bottom = -6.84949
 
 [node name="LivroBalaoUm" type="Area2D" parent="Labirinto1"]
+collision_layer = 256
+collision_mask = 256
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Labirinto1/LivroBalaoUm"]
-position = Vector2( 440, 783.126 )
+light_mask = 256
+position = Vector2( 248, 63.1264 )
 shape = SubResource( 3 )
 
 [node name="LivroBalaoDois" type="Area2D" parent="Labirinto1"]
@@ -85,8 +88,9 @@ shape = SubResource( 3 )
 [node name="LivroCinco" type="CollisionShape2D" parent="Labirinto1/LivroBalaoCinco"]
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
+visible = false
 position = Vector2( 512, 300 )
-color = Color( 0.0705882, 0.0862745, 0.0980392, 1 )
+color = Color( 0, 0, 0, 1 )
 
 [node name="DarkScene" type="AudioStreamPlayer2D" parent="."]
 visible = false
