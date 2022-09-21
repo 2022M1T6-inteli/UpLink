@@ -18,7 +18,6 @@ run/main_scene="res://Cenas/Menu/Menu.tscn"
 Global="*res://Global.gd"
 hud_ginasio01="*res://Scripts/Ginasio-01/Ginasio01_HUD_global.gd"
 PauseMenu="*res://Cenas/Menu/PauseMenu.tscn"
-teste="res://Cenas/Ginasio-01/teste.gd"
 
 [display]
 

@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="StreamTexture" id=1]
+flags = 4
+load_path = "res://.import/Livro_IconPreto.png-d7834871effc10e34ac22890c72caf11.stex"
+
+[node name="Sprite" type="Sprite"]
+scale = Vector2( 0.025, 0.025 )
+texture = SubResource( 1 )
