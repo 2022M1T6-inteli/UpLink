@@ -22,8 +22,6 @@ void fragment() {
 
 [sub_resource type="ShaderMaterial" id=2]
 shader = SubResource( 1 )
-shader_param/progress = null
-shader_param/diamondPixelSize = 10.0
 
 [node name="CanvasLayer" type="CanvasLayer"]
 script = ExtResource( 2 )

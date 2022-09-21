@@ -2,16 +2,18 @@ extends Node2D
 
 onready var preEstrela = preload("res://Cenas/Outros/Estrelas/Star.tscn")
 onready var prePlayer = preload("res://Cenas/Outros/Player/Player.tscn")
+onready var balao = preload("res://Cenas/Outros/Conteudo/Conteudo.tscn").instance()
 
-var estrelaPosition1 = Vector2(77, -300 )
-var estrelaPosition2 = Vector2(73, 201 )
-var estrelaPosition3 = Vector2(196, 360  )
+var estrelaPosition1 = Vector2(308, 1061)
+var estrelaPosition2 = Vector2(566,622)
+var estrelaPosition3 = Vector2(398, 846)
 var playerPosition = Vector2(525,215)
 
 var estrela1
 var estrela2
 var estrela3
 var player
+var statusTutorial = true
 
 func iniciarEstrela(posicao):
 	var estrela = preEstrela.instance()
@@ -43,7 +45,41 @@ func inciarPlayer(posicao):
 
 func _on_Area2D_body_entered(body):
 	if body.name == "Player":
-		get_tree().reload_current_scene()
+#		get_tree().reload_current_scene()
+		player.position = playerPosition
 
 func _on_End_body_entered(body):
 	get_tree().change_scene("res://Cenas/Ginasio-03/Ginasio03_fase03.tscn")
+
+#colocar pergunta 1 ao iniciar
+
+func _on_Area2D0_body_entered(body):
+	add_child(balao)
+	balao.load_Instru('ginasio3fase20')
+
+func _on_Area2D1_body_entered(body):
+	add_child(balao)
+	balao.load_Instru('ginasio3fase21')
+	#tirar pergunta 1 e colocar pergunta 2
+
+func _on_Area2D2_body_entered(body):
+	add_child(balao)
+	balao.load_Instru('ginasio3fase22')
+	#tirar pergunta 2 e colocar pergunta 3
+
+func _on_Area2D3_body_entered(body):
+	add_child(balao)
+	balao.load_Instru('ginasio3fase23')
+	#tirar pergunta 3 e colocar pergunta 4
+
+func _on_Area2D4_body_entered(body):
+	add_child(balao)
+	balao.load_Instru('ginasio3fase24')
+	#tirar pergunta 4
+
+func _on_Area2D6_body_entered(body):
+	if statusTutorial == true:
+		add_child(balao)
+		balao.load_Instru('Tutorial')
+		statusTutorial = false 
+
