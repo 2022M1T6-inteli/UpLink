@@ -103,7 +103,7 @@ func transition_dialogo(condition):
 func transition_instru(condition):
 	if condition: 
 		$Instru/TweenInstru.interpolate_property(
-			$Instru/RichTextLabelInstru, "percent_visible", 0,1,1.5,
+			$Instru/RichTextLabelInstru, "percent_visible", 0,1,2.5,
 			Tween.TRANS_LINEAR, Tween.EASE_IN_OUT
 		)
 		$Instru/TweenInstru.start()
