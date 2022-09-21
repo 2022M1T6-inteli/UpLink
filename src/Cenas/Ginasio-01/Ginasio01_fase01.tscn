@@ -93,8 +93,10 @@ visible = false
 stream = ExtResource( 2 )
 
 [node name="CanvasLayer" parent="." instance=ExtResource( 6 )]
+visible = false
 
 [node name="CanvasLayer2" parent="." instance=ExtResource( 5 )]
+visible = false
 
 [connection signal="body_entered" from="Labirinto1/Area2D" to="." method="_on_Area2D_body_entered"]
 [connection signal="body_entered" from="Labirinto1/LivroBalaoUm" to="." method="_on_LivroBalaoUm_body_entered"]

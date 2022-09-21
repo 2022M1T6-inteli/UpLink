@@ -23,9 +23,6 @@ __meta__ = {
 position = Vector2( 437, 813 )
 scale = Vector2( 0.65, 0.65 )
 texture = ExtResource( 2 )
-__meta__ = {
-"_edit_group_": true
-}
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Gym3Fas1"]
 position = Vector2( -673.684, -1255.26 )
@@ -70,47 +67,47 @@ collision_layer = 256
 collision_mask = 256
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Gym3Fas1/Area2D"]
-position = Vector2( -67.7056, -385.312 )
+position = Vector2( -205.486, -386.964 )
 shape = SubResource( 2 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Gym3Fas1/Area2D"]
-position = Vector2( -202.632, 92.1053 )
+position = Vector2( -171.64, -226.964 )
 shape = SubResource( 2 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Gym3Fas1/Area2D"]
-position = Vector2( -65.7895, 93.4211 )
+position = Vector2( -217.794, -213.117 )
 shape = SubResource( 2 )
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="Gym3Fas1/Area2D"]
-position = Vector2( -69.7369, -236.842 )
+position = Vector2( -191.64, -214.656 )
 shape = SubResource( 2 )
 
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="Gym3Fas1/Area2D"]
-position = Vector2( 205.263, -69.7368 )
+position = Vector2( -150.101, -165.425 )
 shape = SubResource( 2 )
 
 [node name="CollisionShape2D6" type="CollisionShape2D" parent="Gym3Fas1/Area2D"]
-position = Vector2( 202.632, -232.895 )
+position = Vector2( -176.255, -197.733 )
 shape = SubResource( 2 )
 
 [node name="CollisionShape2D7" type="CollisionShape2D" parent="Gym3Fas1/Area2D"]
-position = Vector2( 202.632, -385.526 )
+position = Vector2( -207.024, -94.6559 )
 shape = SubResource( 2 )
 
 [node name="CollisionShape2D8" type="CollisionShape2D" parent="Gym3Fas1/Area2D"]
-position = Vector2( 65.7895, 421.053 )
+position = Vector2( -180.871, 3.80566 )
 shape = SubResource( 2 )
 
 [node name="CollisionShape2D9" type="CollisionShape2D" parent="Gym3Fas1/Area2D"]
-position = Vector2( -69.7369, 421.053 )
+position = Vector2( -194.717, 54.575 )
 shape = SubResource( 2 )
 
 [node name="CollisionShape2D10" type="CollisionShape2D" parent="Gym3Fas1/Area2D"]
-position = Vector2( 202.632, 751.316 )
+position = Vector2( -159.332, 49.9595 )
 shape = SubResource( 2 )
 
 [node name="CollisionShape2D11" type="CollisionShape2D" parent="Gym3Fas1/Area2D"]
-position = Vector2( -202.632, 750 )
+position = Vector2( -188.563, 185.344 )
 shape = SubResource( 2 )
 
 [connection signal="body_entered" from="Gym3Fas1/End" to="." method="_on_End_body_entered"]

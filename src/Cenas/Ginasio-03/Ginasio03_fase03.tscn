@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Scripts/Ginasio-03/Ginasio03_fase03.gd" type="Script" id=1]
 [ext_resource path="res://Images/Ginasio-03/Ginasio03_fase03.png" type="Texture" id=2]
+[ext_resource path="res://Cenas/Outros/Balao.tscn" type="PackedScene" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -11,6 +12,12 @@ extents = Vector2( 56.773, 75.3027 )
 [sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 566.5, 177 )
 
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 48.5, 56.5 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 311.5, 70.5 )
+
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 1 )
 __meta__ = {
@@ -19,7 +26,7 @@ __meta__ = {
 }
 
 [node name="MapaGym3Fase3" type="Sprite" parent="."]
-position = Vector2( 489, 926 )
+position = Vector2( 498, 932 )
 scale = Vector2( 0.65, 0.65 )
 texture = ExtResource( 2 )
 __meta__ = {
@@ -62,47 +69,47 @@ collision_layer = 256
 collision_mask = 256
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MapaGym3Fase3/Area2D"]
-position = Vector2( 357, 1060 )
+position = Vector2( 361.2, 1201.09 )
 shape = SubResource( 2 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="MapaGym3Fase3/Area2D"]
-position = Vector2( 568, 1062 )
+position = Vector2( 570.492, 916.969 )
 shape = SubResource( 2 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="MapaGym3Fase3/Area2D"]
-position = Vector2( 676, 1059 )
+position = Vector2( 786.8, 908.784 )
 shape = SubResource( 2 )
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="MapaGym3Fase3/Area2D"]
-position = Vector2( 567, 767 )
+position = Vector2( 785.63, 614.138 )
 shape = SubResource( 2 )
 
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="MapaGym3Fase3/Area2D"]
-position = Vector2( 570, 1206 )
+position = Vector2( 458.246, 1198.75 )
 shape = SubResource( 2 )
 
 [node name="CollisionShape2D6" type="CollisionShape2D" parent="MapaGym3Fase3/Area2D"]
-position = Vector2( 786, 624 )
+position = Vector2( 687.415, 619.984 )
 shape = SubResource( 2 )
 
 [node name="CollisionShape2D7" type="CollisionShape2D" parent="MapaGym3Fase3/Area2D"]
-position = Vector2( 786, 769 )
+position = Vector2( 460.584, 915.8 )
 shape = SubResource( 2 )
 
 [node name="CollisionShape2D8" type="CollisionShape2D" parent="MapaGym3Fase3/Area2D"]
-position = Vector2( 675.227, 471 )
+position = Vector2( 460.584, 325.338 )
 shape = SubResource( 2 )
 
 [node name="CollisionShape2D9" type="CollisionShape2D" parent="MapaGym3Fase3/Area2D"]
-position = Vector2( 785, 473 )
+position = Vector2( 572.83, 615.307 )
 shape = SubResource( 2 )
 
 [node name="CollisionShape2D10" type="CollisionShape2D" parent="MapaGym3Fase3/Area2D"]
-position = Vector2( 464, 474 )
+position = Vector2( 357.692, 328.846 )
 shape = SubResource( 2 )
 
 [node name="CollisionShape2D11" type="CollisionShape2D" parent="MapaGym3Fase3/Area2D"]
-position = Vector2( 464, 327 )
+position = Vector2( 566.984, 326.507 )
 shape = SubResource( 2 )
 
 [node name="CollisionShape2D12" type="CollisionShape2D" parent="MapaGym3Fase3/Area2D"]
@@ -122,15 +129,15 @@ position = Vector2( 676, 1208 )
 shape = SubResource( 2 )
 
 [node name="CollisionShape2D16" type="CollisionShape2D" parent="MapaGym3Fase3/Area2D"]
-position = Vector2( 566, 1355 )
+position = Vector2( 786.799, 1198.75 )
 shape = SubResource( 2 )
 
 [node name="CollisionShape2D17" type="CollisionShape2D" parent="MapaGym3Fase3/Area2D"]
-position = Vector2( 459, 1352 )
+position = Vector2( 576.338, 1489.89 )
 shape = SubResource( 2 )
 
 [node name="CollisionShape2D18" type="CollisionShape2D" parent="MapaGym3Fase3/Area2D"]
-position = Vector2( 355, 1351 )
+position = Vector2( 683.907, 1495.74 )
 shape = SubResource( 2 )
 
 [node name="CollisionShape2D19" type="CollisionShape2D" parent="MapaGym3Fase3/Area2D"]
@@ -138,7 +145,7 @@ position = Vector2( 361, 1501 )
 shape = SubResource( 2 )
 
 [node name="CollisionShape2D20" type="CollisionShape2D" parent="MapaGym3Fase3/Area2D"]
-position = Vector2( 462, 1502 )
+position = Vector2( 789.138, 1494.57 )
 shape = SubResource( 2 )
 
 [node name="End" type="Area2D" parent="MapaGym3Fase3"]
@@ -151,5 +158,74 @@ collision_mask = 256
 position = Vector2( 570.5, 1990 )
 shape = SubResource( 3 )
 
+[node name="Area2D1" type="Area2D" parent="."]
+position = Vector2( 562, 374 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D1"]
+position = Vector2( 26.5, 32.5 )
+shape = SubResource( 4 )
+
+[node name="Area2D2" type="Area2D" parent="."]
+position = Vector2( 279, 626 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
+position = Vector2( 26.5, 32.5 )
+shape = SubResource( 4 )
+
+[node name="Area2D3" type="Area2D" parent="."]
+position = Vector2( 568, 873 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D3"]
+position = Vector2( 26.5, 32.5 )
+shape = SubResource( 4 )
+
+[node name="Area2D4" type="Area2D" parent="."]
+position = Vector2( 466, 1130 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D4"]
+position = Vector2( 26.5, 32.5 )
+shape = SubResource( 4 )
+
+[node name="Area2D5" type="Area2D" parent="."]
+position = Vector2( 372, 1371 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D5"]
+position = Vector2( 26.5, 32.5 )
+shape = SubResource( 4 )
+
+[node name="Control" parent="." instance=ExtResource( 3 )]
+visible = false
+margin_left = 369.969
+margin_top = 1364.15
+margin_right = 369.969
+margin_bottom = 1364.15
+
+[node name="Area2D0" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D0"]
+position = Vector2( 499, 90.5 )
+shape = SubResource( 5 )
+
 [connection signal="body_entered" from="MapaGym3Fase3/Area2D" to="." method="_on_Area2D_body_entered"]
 [connection signal="body_entered" from="MapaGym3Fase3/End" to="." method="_on_End_body_entered"]
+[connection signal="body_entered" from="Area2D1" to="." method="_on_Area2D1_body_entered"]
+[connection signal="body_entered" from="Area2D2" to="." method="_on_Area2D2_body_entered"]
+[connection signal="body_entered" from="Area2D3" to="." method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Area2D4" to="." method="_on_Area2D4_body_entered"]
+[connection signal="body_entered" from="Area2D5" to="." method="_on_Area2D5_body_entered"]
+[connection signal="body_entered" from="Area2D0" to="." method="_on_Area2D0_body_entered"]

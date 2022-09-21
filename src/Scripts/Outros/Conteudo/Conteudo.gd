@@ -2,8 +2,10 @@ extends CanvasLayer
 
 var finishedBalao = false
 var finishedDialogo = false
+var finishedInstru = false 
 var balaoActive = false
 var dialogoActive = false
+var instruActive= false
 
 func _input(event):
 	
@@ -17,6 +19,12 @@ func _input(event):
 		getNextSpeakDialogo()
 	elif event.is_action_pressed("ui_select") and finishedDialogo == false and dialogoActive:
 		transition_dialogo(false)
+		
+		
+	if event.is_action_pressed("ui_select") and finishedInstru and instruActive:
+		getNextSpeakInstru()
+	elif event.is_action_pressed("ui_select") and finishedInstru == false and instruActive:
+		transition_instru(false)
 
 
 func getNextSpeakBalao():
@@ -27,6 +35,9 @@ func getNextSpeakDialogo():
 	Global.indexDialogo += 1
 	load_dialogo(Global.keyDialogo)
 
+func getNextSpeakInstru():
+	Global.indexInstru += 1
+	load_balao(Global.keyInstru)
 
 func load_balao(key):
 	$Balao.visible = true
@@ -55,7 +66,20 @@ func load_dialogo(key):
 		dialogoActive = false
 		$Dialogo.visible = false
 		Global.stop = false
-
+		
+func load_Instru(key):
+	$Instru.visible = true
+	if Global.indexInstru < Global.dialogo[key].size():
+		instruActive = true
+		finishedInstru = false
+		$Instru/RichTextLabelInstru.bbcode_text = Global.dialogo[key][Global.indexInstru]
+		transition_instru(true)
+		Global.stop = false
+	else:
+		Global.indexDialogo = 0
+		dialogoActive = false
+		$Instru.visible = false
+		Global.stop = false
 
 func transition_balao(condition):
 	if condition:
@@ -76,7 +100,13 @@ func transition_dialogo(condition):
 		)
 		$Dialogo/TweenDialogo.start()
 		
-		
+func transition_instru(condition):
+	if condition: 
+		$Instru/TweenInstru.interpolate_property(
+			$Instru/RichTextLabelInstru, "percent_visible", 0,1,1.5,
+			Tween.TRANS_LINEAR, Tween.EASE_IN_OUT
+		)
+		$Instru/TweenInstru.start()
 		
 func _process(delta):
 	if $Balao/RichTextLabelBalao.percent_visible >= 0.9:
@@ -84,3 +114,6 @@ func _process(delta):
 		
 	if $Dialogo/RichTextLabelDialogo.percent_visible >= 0.9:
 		finishedDialogo = true
+		
+	if $Instru/RichTextLabelInstru.percent_visible >= 0.9:
+		finishedInstru = true 

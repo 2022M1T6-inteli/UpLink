@@ -2,6 +2,7 @@ extends Node2D
 
 onready var preEstrela = preload("res://Cenas/Outros/Estrelas/Star.tscn")
 onready var prePlayer = preload("res://Cenas/Outros/Player/Player.tscn")
+onready var balao = preload("res://Cenas/Outros/Conteudo/Conteudo.tscn").instance()
 
 var estrelaPosition1 = Vector2(678, 770 )
 var estrelaPosition2 = Vector2(356, 1200 )
@@ -44,8 +45,41 @@ func inciarPlayer(posicao):
 func _on_Area2D_body_entered(body):
 	if body.name == "Player":
 		get_tree().reload_current_scene()
-		get_tree().change_scene("res://Cenas/Ginasio-03/Ginasio03_pre_boss_fight.tscn")
+		#fechar dialogo pergunta
+		#abrir nova pergunta de dialogo
 
-#func _on_End_body_entered(body):
-#	get_tree().change_scene("res://Cenas/Lobby/Lobby.tscn")
+func _on_End_body_entered(body):
+	get_tree().change_scene("res://Cenas/Lobby/Lobby.tscn")
+
+#ao entrar colocar pergunta 1
+
+func _on_Area2D0_body_entered(body):
+	add_child(balao)
+	balao.load_Instru('ginasio3fase30')
+
+func _on_Area2D1_body_entered(body):
+	add_child(balao)
+	balao.load_Instru('ginasio3fase21')
+	# tirar pergunta e colocar pergunta 2 
+	
+func _on_Area2D2_body_entered(body):
+	add_child(balao)
+	balao.load_Instru('ginasio3fase22')
+	# tirar pergunta 2 e colocar pergunta 3
+	
+func _on_Area2D3_body_entered(body):
+	add_child(balao)
+	balao.load_Instru('ginasio3fase23')
+	# tirar pergunta 3 e colocar pergunta 4
+
+func _on_Area2D4_body_entered(body):
+	add_child(balao)
+	balao.load_Instru('ginasio3fase24')
+	# tirar pergunta 4 e colocar pergunta 5
+
+func _on_Area2D5_body_entered(body): # nn util só teste
+	add_child(balao)
+	balao.load_Instru('ginasio3fase25')
+	# tirar pergunta 5
+
 
