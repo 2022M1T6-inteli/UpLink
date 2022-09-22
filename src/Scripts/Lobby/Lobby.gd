@@ -94,10 +94,6 @@ func _on_Area2D02_body_entered(body):
 	$Area2D02/Sprite.visible = false 
 	print(Global.a13)
 
-func _on_Area2D03_body_entered(body):
-	Global.a14 += 1 
-	$Area2D03/Sprite.visible = false 
-	print(Global.a14)
 
 
 
