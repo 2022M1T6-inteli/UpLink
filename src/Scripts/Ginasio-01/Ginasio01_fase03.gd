@@ -65,3 +65,6 @@ func _on_Area2D_body_entered(body):
 	#$LevelCompleted.play()
 	get_tree().change_scene("res://Cenas/Ginasio-01/Ginasio01_pre_boss_fight.tscn")
 	hud_ginasio01.desativarHUDGinasio01()
+	Global.numLivros = 0
+	
+	Global.dinamicaLobbyCondition = false

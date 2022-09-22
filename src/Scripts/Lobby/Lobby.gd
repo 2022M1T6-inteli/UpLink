@@ -1,12 +1,56 @@
 extends Node2D
 #Preparação da cena e variável Player que será chamada e posição definida
 onready var prePlayer = preload("res://Cenas/Outros/Player/Player.tscn")
+onready var preLivro = preload("res://Cenas/Outros/Books/LivroPreenchidoAbsorver.tscn")
 
 var player
+var livro
 
 var playerPosition = Vector2(0, 340)
 
+var livroPosition1 = Vector2(80, 783)
+var livroPosition2 = Vector2(462, 79)
+var livroPosition3 = Vector2(976, 74)
+var livroPosition4 = Vector2(1590, 73)
+var livroPosition5 = Vector2(2000, 69)
+
+var statusBalaoUm = true
+var statusBalaoDois = true
+var statusBalaoTres = true
+var statusBalaoQuatro = true
+var statusBalaoCinco = true
+
+var livro1
+var livro2
+var livro3
+var livro4
+var livro5
+
+
+func ativarDinamicaLivros():
+	Global.numLivros = 0
+	hud_ginasio01.ativarHUDGinasio01()
+	
+#	 INSTANCIANDO E INSERINDO OUTRAS CENAS NA FASE
+	livro1 = iniciarLivro(livroPosition1)
+	livro2 = iniciarLivro(livroPosition2)
+	livro3 = iniciarLivro(livroPosition3)
+	livro4 = iniciarLivro(livroPosition4)
+	livro5 = iniciarLivro(livroPosition5)
+
+
+
+# FUNÇÃO PARA INSTANCIAR O LIVRO
+func iniciarLivro(posicao):
+	livro = preLivro.instance()
+	livro.position = posicao
+	add_child(livro)
+	return livro
+	
+	
 func _ready():
+	if Global.dinamicaLobbyCondition:
+		ativarDinamicaLivros()
 	#$SoundLobby.play()
 	#$Park.play()
 	
@@ -31,7 +75,7 @@ func inciarPlayer(posicao):
 
 func _on_Ginasio_01_body_entered(body):
 	Global.playerPosition = Vector2(783, 1370)
-	if Global.foi == true:
+	if Global.numLivros == 5:
 		get_tree().change_scene("res://Cenas/Ginasio-01/Ginasio01_fase01.tscn")
 	else: 
 		pass

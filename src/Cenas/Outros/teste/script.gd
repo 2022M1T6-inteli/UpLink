@@ -1,7 +1,173 @@
 extends Node
 
 
-onready var dialogo = {'language': 'eng' }
+onready var dialogo = {'language': {'pt-br': 'teste',
+'eng': {
+	'intro': ['There was a time, where everything was peaceful. The people were content, the system was working fine, and the ambiance seemed to be just perfect.
+	Though, everyone knows that such harmonious, splendid times don’t last forever. And so, a catastrophe came.
+	No one knows from where it came, no one knows when it started, and no one knew what was truly happening.
+	“What happened to our ever so glorious island?” The people couldn’t help but wonder…'],
+	
+	'talk': {
+		'before': {
+			'fala1' : ['Oh, you’re finally awake! Are you okay?']
+			'fala2' : ['Yes? I think that I’m fine']
+			'fala3' : ['That’s good, that’s really good! Let’s hope for it to continue like this~!']
+			'fala4' : ['What’s happening here?']
+			'fala5' : ['Oh! Perhaps you had a memory loss due to the shock of the current events. But no one actually knows what is happening, the only information that we have is that people started acting strange out of nowhere… is a rebellion happening?! We’re doomed if that’s the case! Oh, and by the way, I’m —! It’s a pleasure to meet you, Dellman! Even though we already know each other… well, details!']
+			'fala6' : ['So, the people have no idea what’s happening… we’re not in a good situation here… maybe I should try to find out myself what’s happening here? It doesn’t seem like a bad idea but… what if something happens to me in the process? With my memory problems, I’m the most clueless here…)
+(if you try to get out of the building it will say: “Maybe I shouldn’t get out yet, who knows what’s happening out there? I don’t want to risk it for now…']
+			'fala7' : ['I have no idea what’s happening here… can’t anybody save me or wake me up already?']
+			'fala8' : ['I have a family… what’s going to happen to them…?']
+			'fala9' : ['We are all lost and doomed']
+			
+			'fala10' : ['Don’t talk to me']
+			'fala11' : ['Do you have any idea about what’s happening here?']
+			'fala12' : ['It depends, what can you offer me in return? *People are just too loud']
+			'fala13' : ['Hah… that’s better!']
+			'fala14' : ['So, now can you tell me about what you know?']
+			'fala15' : ['Indeed, now that my mind is clearer! I believe that it all started a while ago. I’ve noticed that people have unusual behavior while working, so naturally, I decided to investigate more upon it. My main findings were: 
+1- People that were usually active, creative, and open in their decisions began to close themselves and ignore what others said. 
+2- The ones who were collaborative, started behaving like, pardon the frugal wording, “pricks”.
+3- Everyone started to work for their own selves and benefits, individualism, in every sense of the word.
+So, in simple words, this is not something that’s happened out of nowhere, rather, it’s something that’s been created and spread across the whole island
+']
+			'fala16' : ['What do you mean with that?']
+			
+			'fala17' : ['Hello~!']
+			'fala18' : ['Hello! Do you perhaps know what’s happening?']
+			'fala19' : ['Oh, that! Yeah, after all, everyone is talking about that! It’s just like they say! The walls have ears~!']
+			'fala20' : ['All… right..? Could you elaborate on that?']
+			'fala21' : ['Oh, of course, dear~! I’ve heard all around that people are getting crazy everywhere! The more time, the crazier you get! Shouting, laughing, crying, screaming! It’s daunting, my darling. But, it is what it is.']
+			'fala22' : ['Alright, thanks for your help, ma’m']
+			'fala23' : ['It’s always a pleasure, darling~!']
+			
+			'fala24' : ['Hello! Do you have any clue? Of our situation, I mean']
+			'fala25' : ['Hi! Well, I heard that the Mentors were dealing with the problem and that they would come up with an answer soon… Aside from that, I don’t think that I know much else.']
+			'fala26' : ['Thanks for your information!']
+			'fala27' : ['Glad to help']
+			
+			'fala28' : ['Hello, how are you?']
+			'fala29' : ['Hii! I am good, and you, Dellman?']
+			'fala30' : ['I am good! Do you have any useful info?']
+			'fala31' : ['Well, the ones who can help us the most right now, are the ones who are currently not in this room. I hope that they will arrive soon.']
+			'fala32' : ['Should I leave']
+			
+			'fala33' : ['I see that we could gather everyone in here, that’s a relief.']
+			'fala34' : ['Of course, even my last resort planning is pretty splendid and well calculated!']
+			'fala35' : ['Well, of course, without my knowledge, your so-called “ever so good plan” would not have worked!”']
+			'fala36' : ['Enough of this nonsense! Everyone here knows that without my ability to see beyond things you all would be still debating about whether you should do this or that! In the worst case scenario, you would all be dead already!']
+			'fala37' : ['Vision, you always act as if the world revolves around you, what you do not know is that this might be your demise']
+			'fala38' : ['Without a proper planning, you’re just a useless daydreamer.']
+			'fala39' : ['What did you two just said?']
+			
+			'fala41' : ['I have some documentation to finish and analysis to make, so I will be taking my leave']
+			'fala42' : ['Well, I’m seeing that this meaningless conversation will lead me nowhere, so I’ll go organize my schedules and find different ways to do things']
+			'fala43' : ['Haaaah… they really cannot see what’s in front of their noses. We’ll never get to a CURE without a consensus.” (Vision gives a last scan through the room with his eyes, and leaves.']
+			'fala44' : ['… Well… since the Mentors weren’t of much help, I suppose that I can disclose some information to you: as you might have noticed, our situation is pretty dire. We are dealing with a virus, more precisely, the ——, which is making everyone of the island strange: they have a retrograde thinking and are completely ignoring our so precious clients’ opinions. This seems like a powerful virus because before we knew it, it spread like wildfire!”
+“And… as you’ve seen, our last hopes rely on that group, the three Mentors, which the disagreement of opinions made them go separate ways… my worst fear is that they are starting to get infected as well..! What should we do?
+']
+			'fala45' : ['Well, we’re facing a pretty hard situation here… but let’s keep it cool for now, panicking will only get things worse.']
+			'fala46' : ['You are right, Dellman. I should try to think straight for now… Oh! Yeah! I remember that I tried to make an MVP of a possible antibiotic! Although, it’s nothing nearly completion… it’s all that I could do while the Mentors were arguing.']
+			'fala47' : ['Where is it?']
+			'fala48' : ['It’s in that room over there! It’s on top of a table beside a book']
+			'fala49' : ['Oh! You found it!']
+			'fala50' : ['… That book… that’s what will happen to our island if we can’t control the virus?']
+			'fala51' : ['Sadly… yes…']
+			'fala52' : ['… … … What can I do to help?']
+			'fala53' : ['You want to help?? Well, truth is that we have to accept any kind of help that we can, given the situation… Alright! You can try to gather the knowledge about Lean, XP, and UX that ended up getting lost around the island with all the confusion! Take the opportunity to learn more about them as well, you’ll need it in order to find a cure for this virus!”']
+			
+			'fala54' : ['You go find the lost books and papers. After collecting them all, Cloud appears']
+			'fala55' : ['It looks like you could gather them all! Nice job!']
+			'fala56' : ['What should I do now?']
+			'fala57' : ['Oh! You can try to find the mentor of vision!']
+			'fala58' : ['Oh, of course! She’s in the farthest left! You’ll find a teleportation machine near the residential area! You’re doing great! If you need anything, I’ll be here!']
+		}
+		'ginasio1': {
+			'pre0' : {
+				'prefala1' : ['Here is the Gym of the Mentor of Knowledge! (Vision - name here) based on her own preference, she decided to make her gym a labyrinth! Inside, you will find 3 stars that you have to collect in order to pass to the next phase - there are 3 phases in total. She is a very polite and friendly person, with the amazing ability to see the whole picture and where we should go next. Anyways, good luck!']
+				'prefala2' : ['You… you are that little blue guy from the library… if you’re here to face me, then first you’ll have to prove your worth to me. If you can learn and surpass me in my area of expertise, then I’ll consider listening to what you have to say']
+			}
+			'fase1' : { 
+				'boss1' : ['I’m sorry. My vision must have gotten blurry over time. I should apologize for the troubles that I caused, so I’m deeply sorry!']
+				'boss2' : ['It’s all right! Everyone makes mistakes, the important part is how you deal with them! Right, Dellman?']
+				'boss3' : ['Yes, I believe so too. I’m glad that we could treat your condition!']
+				'boss4' : ['No, it’s me who should be thankful! My view has never been more clear now!']
+				'boss5' : ['We have no time to waste now! Dellman, could you create another MVP of the antidote??']
+				'boss6' : ['Oh, yes! Here it is.” (You hand the antidote to Cloud)']
+				'boss7' : ['Hmm… it seems good… but not enough yet… There are other key components missing still, we need to continue our journey! Let’s find the next mentor,KPIs!']
+				'boss8' : ['Wait! Before you go, I wanted to offer my help in this. After you can cure the others, come and find me in the main building: The Dell Edifice. There, we can work together to put an end to this!']
+				'boss9' : ['Yay! We could cure Vision! Now, for we to get to the gym of KPIs, we need to go to —']
+				'boss10' : ['Alright then, lets go!']
+			}
+		}
+		'ginasio2': {
+			'pre1' : {
+				'prefala3' : ['Here is the Gym of the Mentor of KPIs! (KPIs - name here) is a very… well… demanding kind of guy, so he decided to make his gym a stepping stone labyrinth! Though… Theres one problem… you cant see where you should step or not! As you may already know, inside you will find 3 stars that you have to collect in order to pass to the next phase - there are 3 phases in total. Hes a very serious and eloquent person, attentive to all the details, a perfectionist. Anyways, good luck']
+				'prefala4' : ['Who dares to interfere, when I am in the middle of my research? You must be  gormless to waltz your way in thinking that you can act however you may see fit. I am most certainly not allowing that!']
+			}
+			'fase1' : {
+				'boss11' : ['I… apologize. I was not in my right senses. Therefore, I ask for your forgiveness, the way that I conducted was deplorable and unjustified']
+				'boss12' : ['Such eloquent talking! No need to apologize, there are times that you just want to stick to your beliefs and your past experiences.']
+				'boss13' : ['There is no harm in wanting to focus or follow what you know, but you should always be open and consider others opinions']
+				'boss14' : ['I am relieved to have such empathetic companions, this is a real blessing. I offer you my gratitude for understanding all my misbehavior, and also for everything that you ve done for me.']
+				'boss15' : ['Now I have to offer YOU my apologies, we have to check the MVP in order to verify whether it is plausible now!']
+				'boss16' : ['I never knew that Cloud could speak like that']
+				'boss17' : ['I approve of that form of speech!']
+				'boss18' : ['No time to waste, no time to waste! Let me look at the MVP!']
+				'boss19' : ['Wow! It’s so carefully well made! But still… it doesn’t seem to be good enough yet…']
+				'boss20' : ['What’s missing now?']
+				'boss21' : ['The validation… Yes! The validation of your knowledge!']
+				'boss22' : ['We need to get to the Mentor of RB and validate! There is no time! Oh, if you excuse me, I will go first']
+				'boss23' : ['I don t know what s up with this guy… I apologize in Cloud is stead, he is rushing to get the antidote finished']
+				'boss24' : ['Could you please go to The Dell Edifice? Vision asked us to gather everyone up there. That is… if you want to help us…']
+				'boss25' : ['I would be more than happy to assist you in this matter.']
+				'boss26' : ['You have my thanks! I have to go now!']
+				'boss27' : ['Now that we treated KPIs, the one that is left is RB! For we to get to the gym of Validation, we need to go to —']
+				'boss28' : ['So we got to the last one, then what are we waiting for? Let's go!']
+			}
+		}
+		'ginasio3' {
+			'pre2' : {
+				'prefala4' : ['Here is the Gym of the Mentor of Validation! (RB - name here) is a very organized, and yet, all over the place kind of woman, so she decided to make her gym a… how do I explain it? It is a puzzle where you have to transform all the symbols into a circle! Just like the other, there are 3 phases in total. She loves to think about the various paths and ways to do the same thing. Anyways, good luck!']
+			}
+			'fase1' : {
+				'boss29' : {"Who are you? Whatever, it doesn’t matter. You’re useless to me if you don’t know how to swiftly create a well calculated plan, considering that changes will most definitely occur, you should adapt your plans accordingly! Go back to where you belong if you can’t even organize yourself!"}
+				'boss30' : {"Oh! That was a heck of a ride! Oh well, it looks like I was the one who ended up losing my way in the end. I guess it happens! Anyways, I hope that you can forgive me! As I was the one who lost my way.'}	
+				'boss31' : {'It is all right! Everyone gets lost sometimes, the most important thing is to never lose sight of your heart's reason!'}
+				'boss32' : {'Yes, Cloud is right. What’s good now is that you are not infected anymore!'}
+				'boss33' : {'Yes, thanks for worrying about me!'}
+				'boss34' : {'There's no time to waste! Here's something that I made in order to see if the MVP of the antidote is good enough or not!'}
+				'boss35' : {'Did you create this now??'}
+				'boss36' : {'In the meantime that you were trying to cure the Mentors, I worked on this little thing here! Let 's see now! *Cloud puts the MVP inside the machine* And..! What..? How is it still not enough…'}
+				'boss37' : {'What happened??'}
+				'boss38' : {'Even with all of the knowledge from the Mentors… the antidote is still not complete…'}
+				'boss39' : {'How is that possible… what should we do now?'}
+				'boss40' : {'Something seems to be smelling fishy, care to explain what's happening?'}
+				'boss41' : {'The antidote that we were working hard to finish is not completed yet, even after all that we've done…'}
+				'boss42' : {'Oh, is that it? And you're willing to give up just 'cause of that?'}
+				'boss43' : {'What? But we've done everything that we could!'}
+				'boss44' : {'If there's no solution to a problem, then consider it solved! But this problem does have a solution, no?'}
+				'boss45' : {'What…? (then you remember the other Mentors and that they're waiting at The Dell Edifice) Oh, yes! Vision and KPIs are waiting in The Dell Edifice! We can gather our knowledge to create a proper cure to this!'}
+				'boss46' : {'OoooOOOooooOOooH~!!!'}
+				'boss47' : {'That's the spirit! My boy!'}
+				'boss48' : {'So what are we waiting for?! Let’s go talk to Vision and KPIs! No time, no time!” (Cloud goes rushing through the door'}
+				'boss49' : {'He seems to be very enthusiastic about it now! It's important to not lose that shine in his eyes! haha'}
+				'boss50' : {'Oh well… I’m sorry on his behalf, he’s very worried and he’s trying to find this cure asap'}
+				'boss51' : {'It’s alright, it’s not like I haven’t known him for a lifetime already to not know how he behaves, lol'}
+				'boss52' : {'Then, could you please go to The Dell Edifice with us? Vision and RB are already waiting there, so that we can gather our forces and make a proper cure!'}
+				'boss53' : {'My, of course I will help! Give me the butter and the knife and I’ll get the bread, so that we can create the perfect antidote!'}
+				'boss54' : {'All… right..?'}
+			
+		}
+	}
+}
+
+}
+
+}
+
+
 
 var scenes = [
 	{
