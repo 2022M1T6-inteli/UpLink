@@ -98,38 +98,37 @@ margin_right = 823.0
 margin_bottom = 551.0
 
 [node name="Instru" type="Control" parent="."]
-visible = false
 margin_right = 1027.0
 margin_bottom = 608.0
 
 [node name="TextureInstru" type="TextureRect" parent="Instru"]
-margin_left = -6.0
-margin_top = -20.0
-margin_right = 346.0
-margin_bottom = 222.0
+margin_left = -2.0
+margin_top = -9.0
+margin_right = 272.0
+margin_bottom = 126.0
 texture = ExtResource( 1 )
 expand = true
 
 [node name="ColorRectInstru" type="ColorRect" parent="Instru/TextureInstru"]
-margin_left = 15.0
-margin_top = 35.0
-margin_right = 336.0
-margin_bottom = 206.0
+margin_left = 11.0
+margin_top = 19.0
+margin_right = 261.0
+margin_bottom = 115.0
 color = Color( 0.145098, 0.152941, 0.192157, 0.85098 )
 
 [node name="RichTextLabelInstru" type="RichTextLabel" parent="Instru"]
-margin_left = 20.0
-margin_top = 28.0
-margin_right = 297.0
-margin_bottom = 165.0
+margin_left = 14.0
+margin_top = 10.0
+margin_right = 259.0
+margin_bottom = 107.0
 
 [node name="TweenInstru" type="Tween" parent="Instru"]
 
 [node name="LabelInstru" type="Label" parent="Instru"]
-margin_left = 14.0
-margin_top = 17.0
-margin_right = 326.0
-margin_bottom = 185.0
+margin_left = 15.0
+margin_top = 13.0
+margin_right = 252.0
+margin_bottom = 104.0
 
 [connection signal="tween_completed" from="Balao/TweenBalao" to="." method="_on_TweenBalao_tween_completed"]
 [connection signal="tween_started" from="Balao/TweenBalao" to="." method="_on_TweenBalao_tween_started"]

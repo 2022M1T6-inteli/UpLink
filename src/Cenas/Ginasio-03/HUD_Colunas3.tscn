@@ -1,0 +1,50 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Fontes/DroidSans.tres" type="DynamicFont" id=1]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+
+[node name="Control" type="Control" parent="."]
+margin_left = 278.0
+margin_right = 732.0
+margin_bottom = 605.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control"]
+margin_left = -12.0
+margin_top = 6.0
+margin_right = 81.0
+margin_bottom = 38.0
+custom_fonts/normal_font = ExtResource( 1 )
+text = "Vision"
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="Control"]
+margin_left = 69.0
+margin_top = 8.0
+margin_right = 181.0
+margin_bottom = 40.0
+custom_fonts/normal_font = ExtResource( 1 )
+text = "Backlog"
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="Control"]
+margin_left = 163.0
+margin_top = 7.0
+margin_right = 300.0
+margin_bottom = 39.0
+custom_fonts/normal_font = ExtResource( 1 )
+text = "Roadmap"
+
+[node name="RichTextLabel4" type="RichTextLabel" parent="Control"]
+margin_left = 269.0
+margin_top = 3.0
+margin_right = 362.0
+margin_bottom = 46.0
+custom_fonts/normal_font = ExtResource( 1 )
+text = "Data Driven"
+
+[node name="RichTextLabel5" type="RichTextLabel" parent="Control"]
+margin_left = 361.0
+margin_top = 3.0
+margin_right = 499.0
+margin_bottom = 35.0
+custom_fonts/normal_font = ExtResource( 1 )
+text = "Stakeholder"
