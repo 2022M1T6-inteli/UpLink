@@ -3,6 +3,8 @@ extends Node2D
 onready var prePlayer = preload("res://Cenas/Outros/Player/Player.tscn")
 onready var preLivro = preload("res://Cenas/Outros/Books/LivroPreenchidoAbsorver.tscn")
 
+onready var balao = preload("res://Cenas/Outros/Conteudo/Conteudo.tscn").instance()
+
 var player
 var livro
 
@@ -88,7 +90,6 @@ func _on_Ginasio_03_body_entered(body):
 	get_tree().change_scene("res://Cenas/Ginasio-03/Ginasio03_fase01.tscn")
 	Global.playerPosition = Vector2(1889, -118)
 
-
 func _on_Biblioteca1_body_entered(body):
 	get_tree().change_scene("res://Cenas/Biblioteca/Library.tscn")
 	Global.playerPosition = Vector2(-4, -87)
@@ -122,7 +123,7 @@ func _on_Area2D3_body_entered(body):
 	
 #func _process(delta):
 #	if(Global.foi == true):
-#		get_tree().change_scene("res://Cenas/Ginasio-02/Ginasio02_fase01.tscn")
+#		
 func _on_Area2D00_body_entered(body):
 	Global.a11 += 1
 	$Area2D00/Sprite.visible = false
@@ -138,11 +139,15 @@ func _on_Area2D02_body_entered(body):
 	$Area2D02/Sprite.visible = false 
 	print(Global.a13)
 
+func _on_Area2Dginasio1_body_entered(body):
+	if Global.numLivros == 5:
+		get_tree().change_scene("res://Cenas/Ginasio-02/Ginasio02_fase01.tscn")
+	elif  Global.numLivros < 5: 
+		add_child(balao)
+		balao.load_Instru('lobbyginasio1')
+	
 
 
 
-
-
-
-
-
+func _on_Area2Dginasio1_body_exited(body):
+	remove_child(balao)

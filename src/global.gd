@@ -58,7 +58,15 @@ onready var dialogo = {
 	'ginasio3fase33': ["quatro pergunta asdaoishdikasbduoansdibasdn"],
 	'ginasio3fase34': ["VOCE CONSEGUIU YOU MADE, CONGRATUALATIONS YOU MADE IT, JUST DO IT MAKE YOUR DREAMS COME TRUE JUST DO IT YOU DO IT CONGRATULATIONS CONGRATULATIONS"],
 	'ginasio3fase35': ["VOCE CONSEGUIU YOU MADE, CONGRATUALATIONS YOU MADE IT, JUST DO IT MAKE YOUR DREAMS COME TRUE JUST DO IT YOU DO IT CONGRATULATIONS CONGRATULATIONS"],
-	'teste': ['outracoisa']
+	'teste': ['outracoisa'],
+	'UserKP': ["Essa dimensão acompanha e armazena métricas de usuário "],	
+	'Buss': ["Essa dimensão é responsável por criar um roadmap baseado em resultados a partir da maturidade nível 2"],
+	 'Quali': ["Prioriza encontrar e resolver bugs antes de adicionar recursos"],
+	'Dev': ["Desenvolve maneiras de iteração automática"],	
+	'Stake': ["Quem da inputs importantes ao product team para futuras iterações"],	
+	'Visao': ["Responsável pela visualização dos objetivos, como a implementação de uma Growth Broad"],	
+	'Data': ["Toma decisões baseadas em dados"],
+	'lobbyginasio1' : ["Para conseguir entrar nesta fase é necessario que você colete todos os livros espalhados ao redor do mapa"]
 }
 
 
