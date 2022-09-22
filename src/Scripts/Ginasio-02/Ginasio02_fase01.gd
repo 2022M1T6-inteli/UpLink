@@ -1,7 +1,11 @@
 extends Node2D
 
 onready var prePlayer = preload("res://Cenas/Outros/Player/Player.tscn")
+onready var balao = preload("res://Cenas/Outros/Conteudo/Conteudo.tscn").instance()
 
+func _on_Area2D2_body_entered(body):
+	add_child(balao)
+	balao.load_Instru('ginasio2fase1')
 
 var playerPosition = Vector2(50, 290)
 
@@ -39,3 +43,4 @@ func _on_Area2D_body_entered(body):
 	if Global.fase1 == true:
 		get_tree().change_scene("res://Cenas/Ginasio-02/Ginasio02_fase02.tscn")
 	
+

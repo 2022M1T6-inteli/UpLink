@@ -72,6 +72,7 @@ func ativarHUDGinasio01():
 	
 # FUNÇÃO PARA DESATIVAR A HUD NO GINASIO
 func desativarHUDGinasio01():
+	queue_free()
 	remove_child(LivroPreto1)
 	remove_child(LivroPreto2)
 	remove_child(LivroPreto3)

@@ -42,6 +42,9 @@ onready var dialogo = {
 	#, 'teste 3 de dicionario']
 	],
 	'Tutorial': ["Neste jogo, cada coluna representa uma dimensão. Assim que as dicas forem apresentadas, pise no quadrado que mais se encaixa com a dica"],
+	'ginasio2fase1' : ["relaxa 1 ginasio 2 fase1"],
+	'ginasio2fase2' : ["relaxa 1 ginasio 2 fase2"],
+	'ginasio2fase3' : ["relaxa 1 ginasio 2 fase3"],
 	'ginasio3fase20': ["um pergunta asdaoishdikasbduoansdibasdn"],
 	'ginasio3fase21': ["dois pergunta asdaoishdikasbduoansdibasdn"],
 	'ginasio3fase22': ["tres pergunta asdaoishdikasbduoansdibasdn"],

@@ -8,6 +8,7 @@
 [ext_resource path="res://Cenas/Outros/Transição_out.tscn" type="PackedScene" id=6]
 
 [sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 14.9512, 13.8751 )
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 27.5, 26 )
@@ -63,7 +64,7 @@ position = Vector2( 1017.97, -434.162 )
 scale = Vector2( 2.00981, 1.72973 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Labirinto3/Area2D"]
-position = Vector2( 13, 4 )
+position = Vector2( -823.943, 231.922 )
 shape = SubResource( 1 )
 
 [node name="Camera2D" type="Camera2D" parent="Labirinto3"]

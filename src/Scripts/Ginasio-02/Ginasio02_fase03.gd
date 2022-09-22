@@ -1,6 +1,11 @@
 extends Node2D
 
 onready var prePlayer = preload("res://Cenas/Outros/Player/Player.tscn")
+onready var balao = preload("res://Cenas/Outros/Conteudo/Conteudo.tscn").instance()
+
+func _on_Area2D2_body_entered(body):
+	add_child(balao)
+	balao.load_Instru('ginasio2fase3')
 
 
 var playerPosition = Vector2(50, 380)
