@@ -1,0 +1,43 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Fontes/DroidSans.tres" type="DynamicFont" id=1]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+
+[node name="Control" type="Control" parent="."]
+margin_right = 1025.0
+margin_bottom = 607.0
+rect_pivot_offset = Vector2( -473, 222 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control"]
+margin_left = 314.0
+margin_top = 1.0
+margin_right = 399.0
+margin_bottom = 41.0
+custom_fonts/normal_font = ExtResource( 1 )
+text = "User KPI"
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="Control"]
+margin_left = 426.0
+margin_top = -2.0
+margin_right = 511.0
+margin_bottom = 38.0
+custom_fonts/normal_font = ExtResource( 1 )
+text = "Quality
+KPI"
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="Control"]
+margin_left = 641.0
+margin_right = 726.0
+margin_bottom = 40.0
+custom_fonts/normal_font = ExtResource( 1 )
+text = "Dev
+KPI"
+
+[node name="RichTextLabel4" type="RichTextLabel" parent="Control"]
+margin_left = 538.0
+margin_right = 623.0
+margin_bottom = 40.0
+custom_fonts/normal_font = ExtResource( 1 )
+text = "Bussines
+KPI"

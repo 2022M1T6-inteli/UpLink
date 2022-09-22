@@ -3,6 +3,7 @@ extends Node2D
 onready var preEstrela = preload("res://Cenas/Outros/Estrelas/Star.tscn")
 onready var prePlayer = preload("res://Cenas/Outros/Player/Player.tscn")
 onready var balao = preload("res://Cenas/Outros/Conteudo/Conteudo.tscn").instance()
+onready var hud_colunas2 = preload("res://Cenas/Ginasio-03/HUD_Colunas2.tscn").instance()
 
 var estrelaPosition1 = Vector2(308, 1061)
 var estrelaPosition2 = Vector2(566,622)
@@ -30,6 +31,7 @@ func _ready():
 	add_child(estrela2)
 	add_child(estrela3)
 	add_child(player)
+	add_child(hud_colunas2)
 	
 	player.camera.current = true
 	player.camera.limit_left = 0
@@ -74,7 +76,7 @@ func _on_Area2D3_body_entered(body):
 
 func _on_Area2D4_body_entered(body):
 	add_child(balao)
-	balao.load_Instru('ginasio3fase24')
+	balao.load_Instru('ginasio3fase34')
 	#tirar pergunta 4
 
 func _on_Area2D6_body_entered(body):

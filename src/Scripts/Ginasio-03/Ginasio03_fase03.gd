@@ -3,6 +3,7 @@ extends Node2D
 onready var preEstrela = preload("res://Cenas/Outros/Estrelas/Star.tscn")
 onready var prePlayer = preload("res://Cenas/Outros/Player/Player.tscn")
 onready var balao = preload("res://Cenas/Outros/Conteudo/Conteudo.tscn").instance()
+onready var hud_colunas3 = preload("res://Cenas/Ginasio-03/HUD_Colunas3.tscn").instance()
 
 var estrelaPosition1 = Vector2(678, 770 )
 var estrelaPosition2 = Vector2(356, 1200 )
@@ -25,16 +26,17 @@ func _ready():
 	estrela3 = iniciarEstrela(estrelaPosition3)
 	player = inciarPlayer(playerPosition)
 	
+	add_child(hud_colunas3)
 	add_child(estrela1)
 	add_child(estrela2)
 	add_child(estrela3)
 	add_child(player)
 	
 	player.camera.current = true
-	player.camera.limit_left = 0
+	player.camera.limit_left = 82
 	player.camera.limit_bottom = 2860
 	player.camera.limit_top = 0
-	player.camera.limit_right = 978
+	player.camera.limit_right = 958
 	player.camera.zoom = Vector2(0.855, 0.855)
 	
 func inciarPlayer(posicao):
@@ -55,7 +57,7 @@ func _on_End_body_entered(body):
 
 func _on_Area2D0_body_entered(body):
 	add_child(balao)
-	balao.load_Instru('Stake')
+	balao.load_Instru('Data')
 
 func _on_Area2D1_body_entered(body):
 	add_child(balao)
@@ -64,7 +66,7 @@ func _on_Area2D1_body_entered(body):
 	
 func _on_Area2D2_body_entered(body):
 	add_child(balao)
-	balao.load_Instru('Data')
+	balao.load_Instru('Stake')
 	# tirar pergunta 2 e colocar pergunta 3
 	
 func _on_Area2D3_body_entered(body):
@@ -79,7 +81,7 @@ func _on_Area2D4_body_entered(body):
 
 func _on_Area2D5_body_entered(body): # nn util só teste
 	add_child(balao)
-	balao.load_Instru('ginasio3fase25')
+	balao.load_Instru('ginasio3fase35')
 	# tirar pergunta 5
 
 

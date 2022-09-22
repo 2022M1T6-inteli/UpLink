@@ -2,6 +2,8 @@ extends Node2D
 
 onready var preEstrela = preload("res://Cenas/Outros/Estrelas/Star.tscn")
 onready var prePlayer = preload("res://Cenas/Outros/Player/Player.tscn")
+onready var balao = preload("res://Cenas/Outros/Conteudo/Conteudo.tscn").instance()
+onready var hud_colunas1 = preload("res://Cenas/Ginasio-03/HUD_Colunas1.tscn").instance()
 
 var estrelaPosition1 = Vector2(351, 846 )
 var estrelaPosition2 = Vector2(570, 1097 )
@@ -29,6 +31,7 @@ func _ready():
 	add_child(estrela2)
 	add_child(estrela3)
 	add_child(player)
+	add_child(hud_colunas1)
 	
 	player.camera.current = true
 	
@@ -50,3 +53,23 @@ func _on_Area2D_body_entered(body):
 
 func _on_End_body_entered(body):
 	get_tree().change_scene("res://Cenas/Ginasio-03/Ginasio03_fase02.tscn")
+
+func _on_Area2D1_body_entered(body):
+	add_child(balao)
+	balao.load_Instru('DD')
+
+func _on_Area2D2_body_entered(body):
+	add_child(balao)
+	balao.load_Instru('Lean')
+
+func _on_Area2D3_body_entered(body):
+	add_child(balao)
+	balao.load_Instru('Human')
+
+func _on_Area2D4_body_entered(body):
+	add_child(balao)
+	balao.load_Instru('XP')
+
+func _on_Area2D5_body_entered(body):
+	add_child(balao)
+	balao.load_Instru('ginasio3fase34')
