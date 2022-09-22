@@ -55,26 +55,26 @@ func _on_End_body_entered(body):
 
 func _on_Area2D0_body_entered(body):
 	add_child(balao)
-	balao.load_Instru('ginasio3fase30')
+	balao.load_Instru('Stake')
 
 func _on_Area2D1_body_entered(body):
 	add_child(balao)
-	balao.load_Instru('ginasio3fase21')
+	balao.load_Instru('Visao')
 	# tirar pergunta e colocar pergunta 2 
 	
 func _on_Area2D2_body_entered(body):
 	add_child(balao)
-	balao.load_Instru('ginasio3fase22')
+	balao.load_Instru('Data')
 	# tirar pergunta 2 e colocar pergunta 3
 	
 func _on_Area2D3_body_entered(body):
 	add_child(balao)
-	balao.load_Instru('ginasio3fase23')
+	balao.load_Instru('Road')
 	# tirar pergunta 3 e colocar pergunta 4
 
 func _on_Area2D4_body_entered(body):
 	add_child(balao)
-	balao.load_Instru('ginasio3fase24')
+	balao.load_Instru('Back')
 	# tirar pergunta 4 e colocar pergunta 5
 
 func _on_Area2D5_body_entered(body): # nn util só teste

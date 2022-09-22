@@ -13,7 +13,7 @@ extents = Vector2( 56.773, 75.3027 )
 extents = Vector2( 566.5, 177 )
 
 [sub_resource type="RectangleShape2D" id=4]
-extents = Vector2( 48.5, 56.5 )
+extents = Vector2( 45, 53 )
 
 [sub_resource type="RectangleShape2D" id=5]
 extents = Vector2( 311.5, 70.5 )
@@ -159,17 +159,17 @@ position = Vector2( 570.5, 1990 )
 shape = SubResource( 3 )
 
 [node name="Area2D1" type="Area2D" parent="."]
-position = Vector2( 562, 374 )
+position = Vector2( 562, 380 )
 __meta__ = {
 "_edit_group_": true
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D1"]
-position = Vector2( 26.5, 32.5 )
+position = Vector2( 23, 29 )
 shape = SubResource( 4 )
 
 [node name="Area2D2" type="Area2D" parent="."]
-position = Vector2( 279, 626 )
+position = Vector2( 284, 627 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -179,7 +179,7 @@ position = Vector2( 26.5, 32.5 )
 shape = SubResource( 4 )
 
 [node name="Area2D3" type="Area2D" parent="."]
-position = Vector2( 568, 873 )
+position = Vector2( 562, 876 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -189,7 +189,7 @@ position = Vector2( 26.5, 32.5 )
 shape = SubResource( 4 )
 
 [node name="Area2D4" type="Area2D" parent="."]
-position = Vector2( 466, 1130 )
+position = Vector2( 466, 1124 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -199,7 +199,7 @@ position = Vector2( 26.5, 32.5 )
 shape = SubResource( 4 )
 
 [node name="Area2D5" type="Area2D" parent="."]
-position = Vector2( 372, 1371 )
+position = Vector2( 378, 1383 )
 __meta__ = {
 "_edit_group_": true
 }
