@@ -15,6 +15,7 @@ var texto = ['a', 'b', 'c', 'd']
 var a11 = 0
 var a12 = 0
 var a13 = 0
+var a14 = 0 
 var foi = false 
 
 var numLivros = 0
@@ -22,7 +23,7 @@ var numStars = 0
 var percentVisionGinasio01 = 0.3
 
 func _physics_process(delta):
-	if(a11 > 0 && a12 > 0 && a13 > 0):
+	if(a11 > 0 && a12 > 0 && a13 > 0 & a14 > 0):
 		foi = true 
 		
 var keyDialogo = 'teste2'

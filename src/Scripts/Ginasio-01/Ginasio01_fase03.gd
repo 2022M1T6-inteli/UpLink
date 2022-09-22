@@ -8,7 +8,11 @@ onready var livro = preload("res://Cenas/Outros/Books/LivroPreenchidoAbsorver.ts
 
 # DEFININDO A POSIÇÃO DO PLAYER E DOS LIVROS QUE SERÃO CONSUMIDOS
 var playerPosition = Vector2(12,878)
-var livroPosition1 = Vector2(700, 900)
+var livroPosition1 = Vector2(608, 526)
+var livroPosition2 = Vector2(608, 736)
+var livroPosition3 = Vector2(1100, 326)
+var livroPosition4 = Vector2(1288, 326)
+var livroPosition5 = Vector2(1680, 256)
 
 # DECLARANDO VARIÁVEIS
 var player

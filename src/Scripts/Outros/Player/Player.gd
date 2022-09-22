@@ -39,6 +39,7 @@ func _physics_process(delta):
 			velocidade = velocidade.move_toward(input_vector * velocidade_Max, 100)
 		else: 
 			#animationPlayer.play("paradodireita")
+			animationPlayer.stop()
 			velocidade = velocidade.move_toward(Vector2.ZERO, 100)
 
 		velocidade = move_and_slide(velocidade)

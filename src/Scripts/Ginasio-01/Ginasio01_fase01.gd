@@ -8,11 +8,12 @@ onready var preLivro = preload("res://Cenas/Outros/Books/LivroPreenchidoAbsorver
 
 # DEFININDO A POSIÇÃO DO PLAYER E DOS LIVROS QUE SERÃO CONSUMIDOS
 var playerPosition = Vector2(12,878)
-var livroPosition1 = Vector2(700, 900)
-var livroPosition2 = Vector2(705, 900)
-var livroPosition3 = Vector2(708, 900)
-var livroPosition4 = Vector2(710, 900)
-var livroPosition5 = Vector2(713, 900)
+
+var livroPosition1 = Vector2(80, 783)
+var livroPosition2 = Vector2(462, 79)
+var livroPosition3 = Vector2(976, 74)
+var livroPosition4 = Vector2(1590, 73)
+var livroPosition5 = Vector2(2000, 69)
 
 # DECLARANDO VARIÁVEIS
 var player
@@ -75,6 +76,14 @@ func iniciarLivro(posicao):
 	add_child(livro)
 	return livro
 
+# FUNÇÃO PARA MUDAR DE CENA NA SAÍDA
+func _on_Area2D_body_entered(body):
+	if Global.numLivros == 5:
+		get_tree().change_scene("res://Cenas/Ginasio-01/Ginasio01_fase02.tscn")
+		hud_ginasio01.resetLivrosPreenchidos()
+	else: 
+		pass #colocar para chamar o balao aparecendo determinada fala
+	
 # FUNÇÕES PARA COLETA DO LIVRO E EXIBIÇÃO DO BALÃO
 func _on_LivroBalaoUm_body_entered(body):
 	if statusBalaoUm == true:
@@ -82,7 +91,26 @@ func _on_LivroBalaoUm_body_entered(body):
 		balao.load_dialogo('teste2')
 		statusBalaoUm = false
 
-# FUNÇÃO PARA MUDAR DE CENA NA SAÍDA
-func _on_Area2D_body_entered(body):
-	get_tree().change_scene("res://Cenas/Ginasio-01/Ginasio01_fase02.tscn")
-	hud_ginasio01.resetLivrosPreenchidos()
+func _on_LivroBalaoDois_body_entered(body):
+	if statusBalaoDois == true:
+		add_child(balao)
+		balao.load_dialogo('teste2')
+		statusBalaoDois = false
+		
+func _on_LivroBalaoTres_body_entered(body):
+	if statusBalaoTres == true:
+		add_child(balao)
+		balao.load_dialogo('teste2')
+		statusBalaoTres = false
+		
+func _on_LivroBalaoQuatro_body_entered(body):
+	if statusBalaoQuatro == true:
+		add_child(balao)
+		balao.load_dialogo('teste2')
+		statusBalaoQuatro = false
+		
+func _on_LivroBalaoCinco_body_entered(body):
+	if statusBalaoCinco == true:
+		add_child(balao)
+		balao.load_dialogo('teste2')
+		statusBalaoCinco = false

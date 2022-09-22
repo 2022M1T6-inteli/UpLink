@@ -25,9 +25,16 @@ func inciarPlayer(posicao):
 
 #Funções abaixo são responsáveis por fazer com que ao entrar em uma area2D, o player seja direcionado para uma nova cena respectiva à área
 
+#func _on_Ginasio_01_body_entered(body):
+#	get_tree().change_scene("res://Cenas/Ginasio-01/Ginasio01_fase01.tscn")
+#	Global.playerPosition = Vector2(783, 1370)
+
 func _on_Ginasio_01_body_entered(body):
-	get_tree().change_scene("res://Cenas/Ginasio-01/Ginasio01_fase01.tscn")
 	Global.playerPosition = Vector2(783, 1370)
+	if Global.foi == true:
+		get_tree().change_scene("res://Cenas/Ginasio-01/Ginasio01_fase01.tscn")
+	else: 
+		pass
 
 func _on_Ginasio_02_body_entered(body):
 	get_tree().change_scene("res://Cenas/Ginasio-02/Ginasio02_fase01.tscn")
@@ -72,3 +79,30 @@ func _on_Area2D3_body_entered(body):
 #func _process(delta):
 #	if(Global.foi == true):
 #		get_tree().change_scene("res://Cenas/Ginasio-02/Ginasio02_fase01.tscn")
+func _on_Area2D00_body_entered(body):
+	Global.a11 += 1
+	$Area2D00/Sprite.visible = false
+	print(Global.a11)
+
+func _on_Area2D01_body_entered(body):
+	Global.a12 += 1
+	$Area2D01/Sprite.visible = false 
+	print(Global.a12)
+
+func _on_Area2D02_body_entered(body):
+	Global.a13 += 1
+	$Area2D02/Sprite.visible = false 
+	print(Global.a13)
+
+func _on_Area2D03_body_entered(body):
+	Global.a14 += 1 
+	$Area2D03/Sprite.visible = false 
+	print(Global.a14)
+
+
+
+
+
+
+
+

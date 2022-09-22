@@ -42,9 +42,6 @@ script = ExtResource( 2 )
 [node name="Mapajogo" type="Sprite" parent="."]
 position = Vector2( 3, 18 )
 texture = ExtResource( 1 )
-__meta__ = {
-"_edit_group_": true
-}
 
 [node name="Poste" type="StaticBody2D" parent="Mapajogo"]
 
@@ -1253,54 +1250,51 @@ stream = ExtResource( 3 )
 [node name="Park" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 4 )
 
-[node name="Area2D" type="Area2D" parent="."]
-position = Vector2( 34, 1073 )
+[node name="Area2D00" type="Area2D" parent="."]
+position = Vector2( 40, 1075 )
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="Sprite" type="Sprite" parent="Area2D"]
+[node name="Sprite" type="Sprite" parent="Area2D00"]
 position = Vector2( -33, 135 )
 scale = Vector2( 0.116071, 0.0916031 )
 texture = ExtResource( 5 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D00"]
 position = Vector2( -33, 134 )
 shape = SubResource( 10 )
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="Area2D2" type="Area2D" parent="."]
+[node name="Area2D01" type="Area2D" parent="."]
 position = Vector2( 161, 1074 )
-__meta__ = {
-"_edit_group_": true
-}
 
-[node name="Sprite" type="Sprite" parent="Area2D2"]
+[node name="Sprite" type="Sprite" parent="Area2D01"]
 position = Vector2( -33, 135 )
 scale = Vector2( 0.116071, 0.0916031 )
 texture = ExtResource( 5 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D01"]
 position = Vector2( -33, 134 )
 shape = SubResource( 10 )
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="Area2D3" type="Area2D" parent="."]
+[node name="Area2D02" type="Area2D" parent="."]
 position = Vector2( 297, 1079 )
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="Sprite" type="Sprite" parent="Area2D3"]
+[node name="Sprite" type="Sprite" parent="Area2D02"]
 position = Vector2( -33, 135 )
 scale = Vector2( 0.116071, 0.0916031 )
 texture = ExtResource( 5 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D3"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D02"]
 position = Vector2( -33, 134 )
 shape = SubResource( 10 )
 __meta__ = {
@@ -1315,8 +1309,6 @@ __meta__ = {
 [connection signal="body_entered" from="Mapajogo/Market" to="." method="_on_Market_body_entered"]
 [connection signal="body_entered" from="Mapajogo/Store" to="." method="_on_Area2D_body_entered"]
 [connection signal="body_entered" from="Mapajogo/Office" to="." method="_on_Office_body_entered"]
-[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
-[connection signal="body_entered" from="Area2D2" to="." method="_on_Area2D_body_entered"]
-[connection signal="body_entered" from="Area2D2" to="." method="_on_Area2D2_body_entered"]
-[connection signal="body_entered" from="Area2D3" to="." method="_on_Area2D_body_entered"]
-[connection signal="body_entered" from="Area2D3" to="." method="_on_Area2D3_body_entered"]
+[connection signal="body_entered" from="Area2D00" to="." method="_on_Area2D00_body_entered"]
+[connection signal="body_entered" from="Area2D01" to="." method="_on_Area2D01_body_entered"]
+[connection signal="body_entered" from="Area2D02" to="." method="_on_Area2D02_body_entered"]

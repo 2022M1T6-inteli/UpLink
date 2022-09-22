@@ -7,7 +7,11 @@ onready var hud = preload("res://Cenas/Ginasio-01/Ginasio01_HUD.tscn")
 onready var livro = preload("res://Cenas/Outros/Books/LivroPreenchidoAbsorver.tscn").instance()
 
 # DEFININDO A POSIÇÃO DO PLAYER E DOS LIVROS QUE SERÃO CONSUMIDOS
-var livroPosition1 = Vector2 (700, 900)
+var livroPosition1 = Vector2(1370, 752)
+var livroPosition2 = Vector2(432, 616)
+var livroPosition3 = Vector2(520, 56)
+var livroPosition4 = Vector2(896, 200)
+var livroPosition5 = Vector2(2008, 256)
 var playerPosition = Vector2(45, 710)
 
 # DECLARANDO VARIÁVEIS
