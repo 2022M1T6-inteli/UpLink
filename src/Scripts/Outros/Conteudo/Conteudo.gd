@@ -29,22 +29,22 @@ func _input(event):
 
 func getNextSpeakBalao():
 	Global.indexBalao += 1
-	load_balao(Global.keyBalao)
+	load_balao()
 
 func getNextSpeakDialogo():
 	Global.indexDialogo += 1
-	load_dialogo(Global.keyDialogo)
+	load_dialogo()
 
 func getNextSpeakInstru():
 	Global.indexInstru += 1
-	load_balao(Global.keyInstru)
+	load_Instru()
 
-func load_balao(key):
+func load_balao():
 	$Balao.visible = true
-	if Global.indexBalao < Global.dialogo[key].size():
+	if Global.indexBalao < Global.current_dialogo.size():
 		balaoActive = true
 		finishedBalao = false
-		$Balao/RichTextLabelBalao.bbcode_text = Global.dialogo[key][Global.indexBalao]
+		$Balao/RichTextLabelBalao.bbcode_text = Global.current_dialogo[Global.indexBalao]
 		transition_balao(true)
 		Global.stop = true
 	else:
@@ -53,12 +53,12 @@ func load_balao(key):
 		$Balao.visible = false
 		Global.stop = false
 		
-func load_dialogo(key):
+func load_dialogo():
 	$Dialogo.visible = true
-	if Global.indexDialogo < Global.dialogo[key].size():
+	if Global.indexDialogo < Global.current_dialogo.size():
 		dialogoActive = true
 		finishedDialogo = false
-		$Dialogo/RichTextLabelDialogo.bbcode_text = Global.dialogo[key][Global.indexDialogo]
+		$Dialogo/RichTextLabelDialogo.bbcode_text = String(Global.current_dialogo[Global.indexDialogo])
 		transition_dialogo(true)
 		Global.stop = true
 	else:
@@ -67,12 +67,12 @@ func load_dialogo(key):
 		$Dialogo.visible = false
 		Global.stop = false
 		
-func load_Instru(key):
+func load_Instru():
 	$Instru.visible = true
-	if Global.indexInstru < Global.dialogo[key].size():
+	if Global.indexInstru < Global.current_dialogo.size():
 		instruActive = true
 		finishedInstru = false
-		$Instru/RichTextLabelInstru.bbcode_text = Global.dialogo[key][Global.indexInstru]
+		$Instru/RichTextLabelInstru.bbcode_text = Global.current_dialogo[Global.indexInstru]
 		transition_instru(true)
 		Global.stop = false
 	else:

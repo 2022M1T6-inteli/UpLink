@@ -98,6 +98,7 @@ margin_right = 823.0
 margin_bottom = 551.0
 
 [node name="Instru" type="Control" parent="."]
+visible = false
 margin_right = 1027.0
 margin_bottom = 608.0
 

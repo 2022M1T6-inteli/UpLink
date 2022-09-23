@@ -12,10 +12,10 @@ extents = Vector2( 29.5, 23.5 )
 extents = Vector2( 30.5, 47.5 )
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 23.75, 23.25 )
+extents = Vector2( 66.375, 70.25 )
 
 [sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 33.25, 27 )
+extents = Vector2( 31.125, 49 )
 
 [sub_resource type="RectangleShape2D" id=5]
 extents = Vector2( 20.5, 21.5 )
@@ -33,7 +33,7 @@ extents = Vector2( 16.5, 16.5 )
 extents = Vector2( 32, 20.5 )
 
 [sub_resource type="RectangleShape2D" id=10]
-extents = Vector2( 28.3125, 46.375 )
+extents = Vector2( 53.5002, 46.375 )
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 2 )
@@ -931,7 +931,7 @@ polygon = PoolVector2Array( -448, 1931, -449, 2048, -896, 2046, -895, 2367, -407
 [node name="StaticBody2D7" type="StaticBody2D" parent="Mapajogo"]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/StaticBody2D7"]
-polygon = PoolVector2Array( 2559, 202, 2563, 833, 2562, 833, 2494, 833, 2493, 786, 2434, 786, 2434, 831, 2399, 831, 2399, 785, 2336, 784, 2338, 831, 2301, 830, 2302, 787, 2241, 786, 2240, 929, 2220, 929, 2220, 1090, 2176, 1090, 2177, 1152, 1920, 1152, 1921, 1472, 1600, 1471, 1599, 1792, 1279, 1791, 1281, 1406, 1307, 1406, 1307, 1390, 1300, 1390, 1300, 1343, 1339, 1343, 1339, 1314, 1308, 1314, 1308, 1304, 1310, 1295, 1304, 1288, 1296, 1286, 1289, 1288, 1282, 1294, 1282, 1304, 1284, 1305, 1284, 1314, 1252, 1314, 1253, 1343, 1291, 1343, 1291, 1390, 1281, 1390, 1281, 1378, 958, 1378, 942, 1443, 806, 1443, 806, 1504, 758, 1503, 759, 1440, 350, 1441, 352, 2110, 358, 2131, 388, 2142, 434, 2134, 441, 2110, 441, 2050, 485, 2050, 485, 2110, 542, 2110, 543, 2202, 515, 2201, 516, 2267, 545.26, 2267.04, 548, 2399, 572, 2399, 571, 2383, 565, 2382, 564, 2332, 939, 2334, 958, 2334, 959, 2112, 1280, 2112, 1274, 1801, 1593, 1805, 1925, 1477, 2563, 833 )
+polygon = PoolVector2Array( 2559, -767, 2563, 833, 2562, 833, 2494, 833, 2493, 786, 2434, 786, 2434, 831, 2399, 831, 2399, 785, 2336, 784, 2338, 831, 2301, 830, 2302, 787, 2241, 786, 2240, 929, 2220, 929, 2220, 1090, 2176, 1090, 2177, 1152, 1920, 1152, 1921, 1472, 1600, 1471, 1599, 1792, 1279, 1791, 1281, 1406, 1307, 1406, 1307, 1390, 1300, 1390, 1300, 1343, 1339, 1343, 1339, 1314, 1308, 1314, 1308, 1304, 1310, 1295, 1304, 1288, 1296, 1286, 1289, 1288, 1282, 1294, 1282, 1304, 1284, 1305, 1284, 1314, 1252, 1314, 1253, 1343, 1291, 1343, 1291, 1390, 1281, 1390, 1281, 1378, 958, 1378, 942, 1443, 806, 1443, 806, 1504, 758, 1503, 759, 1440, 350, 1441, 352, 2110, 358, 2131, 388, 2142, 434, 2134, 441, 2110, 441, 2050, 485, 2050, 485, 2110, 542, 2110, 543, 2202, 515, 2201, 516, 2267, 545.26, 2267.04, 549, 2394, 572, 2393, 571, 2383, 565, 2382, 564, 2332, 939, 2334, 958, 2334, 959, 2112, 1280, 2112, 1274, 1801, 1593, 1805, 1925, 1477, 2563, 833 )
 
 [node name="StaticBody2D8" type="StaticBody2D" parent="Mapajogo"]
 
@@ -1179,7 +1179,7 @@ position = Vector2( 1234, -1297 )
 shape = SubResource( 2 )
 
 [node name="Change_ginasio_03" type="CollisionShape2D" parent="Mapajogo/Ginasio_02"]
-position = Vector2( 1330, -1295.25 )
+position = Vector2( -2370, 503 )
 shape = SubResource( 2 )
 
 [node name="Ginasio_03" type="Area2D" parent="Mapajogo"]
@@ -1187,7 +1187,7 @@ collision_layer = 256
 collision_mask = 256
 
 [node name="Change_ginasio_03" type="CollisionShape2D" parent="Mapajogo/Ginasio_03"]
-position = Vector2( 1889.75, -189 )
+position = Vector2( 779, 1493 )
 shape = SubResource( 3 )
 
 [node name="Change_ginasio_04" type="CollisionShape2D" parent="Mapajogo/Ginasio_03"]
@@ -1253,7 +1253,7 @@ stream = ExtResource( 4 )
 position = Vector2( 3, 18 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2Dginasio1"]
-position = Vector2( 785.688, 1483.63 )
+position = Vector2( -1738, 499 )
 shape = SubResource( 10 )
 
 [connection signal="body_entered" from="Mapajogo/Ginasio_01" to="." method="_on_Ginasio_01_body_entered"]

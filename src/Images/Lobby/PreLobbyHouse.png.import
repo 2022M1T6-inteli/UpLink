@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Store.jpg-5bf9929bdad08bc2b2515a06b6f6b9d9.stex"
+path="res://.import/PreLobbyHouse.png-86b933a7dd3bbcee6da01dd9d77f69ad.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Images/Outros/Store.jpg"
-dest_files=[ "res://.import/Store.jpg-5bf9929bdad08bc2b2515a06b6f6b9d9.stex" ]
+source_file="res://Images/Lobby/PreLobbyHouse.png"
+dest_files=[ "res://.import/PreLobbyHouse.png-86b933a7dd3bbcee6da01dd9d77f69ad.stex" ]
 
 [params]
 
