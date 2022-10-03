@@ -9,10 +9,10 @@
 extents = Vector2( 29.5, 23.5 )
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 30.5, 47.5 )
+extents = Vector2( 20, 41.25 )
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 66.375, 70.25 )
+extents = Vector2( 20.1875, 30.625 )
 
 [sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 31.125, 49 )
@@ -32,8 +32,8 @@ extents = Vector2( 16.5, 16.5 )
 [sub_resource type="RectangleShape2D" id=9]
 extents = Vector2( 32, 20.5 )
 
-[sub_resource type="RectangleShape2D" id=10]
-extents = Vector2( 53.5002, 46.375 )
+[sub_resource type="RectangleShape2D" id=11]
+extents = Vector2( 20.1875, 21.2816 )
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 2 )
@@ -1163,11 +1163,7 @@ collision_layer = 256
 collision_mask = 256
 
 [node name="Change_ginasio_01" type="CollisionShape2D" parent="Mapajogo/Ginasio_01"]
-position = Vector2( 783.5, 1487.5 )
-shape = SubResource( 1 )
-
-[node name="Change_ginasio_02" type="CollisionShape2D" parent="Mapajogo/Ginasio_01"]
-position = Vector2( 464, 2081 )
+position = Vector2( -1743, 476.75 )
 shape = SubResource( 1 )
 
 [node name="Ginasio_02" type="Area2D" parent="Mapajogo"]
@@ -1175,11 +1171,19 @@ collision_layer = 256
 collision_mask = 256
 
 [node name="Change_ginasio_02" type="CollisionShape2D" parent="Mapajogo/Ginasio_02"]
-position = Vector2( 1234, -1297 )
+position = Vector2( 1330, -1281 )
 shape = SubResource( 2 )
 
 [node name="Change_ginasio_03" type="CollisionShape2D" parent="Mapajogo/Ginasio_02"]
-position = Vector2( -2370, 503 )
+position = Vector2( 1237, -1282 )
+shape = SubResource( 2 )
+
+[node name="Change_ginasio_04" type="CollisionShape2D" parent="Mapajogo/Ginasio_02"]
+position = Vector2( 1941, -934 )
+shape = SubResource( 2 )
+
+[node name="Change_ginasio_05" type="CollisionShape2D" parent="Mapajogo/Ginasio_02"]
+position = Vector2( 1845, -935 )
 shape = SubResource( 2 )
 
 [node name="Ginasio_03" type="Area2D" parent="Mapajogo"]
@@ -1191,7 +1195,7 @@ position = Vector2( 779, 1493 )
 shape = SubResource( 3 )
 
 [node name="Change_ginasio_04" type="CollisionShape2D" parent="Mapajogo/Ginasio_03"]
-position = Vector2( 2368, -188 )
+position = Vector2( 466, 2074 )
 shape = SubResource( 3 )
 
 [node name="Biblioteca1" type="Area2D" parent="Mapajogo"]
@@ -1249,12 +1253,52 @@ stream = ExtResource( 3 )
 [node name="Park" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 4 )
 
-[node name="Area2Dginasio1" type="Area2D" parent="."]
-position = Vector2( 3, 18 )
+[node name="LivroBalaoUm" type="Area2D" parent="."]
+position = Vector2( 80, 783 )
+collision_layer = 4
+collision_mask = 256
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2Dginasio1"]
-position = Vector2( -1738, 499 )
-shape = SubResource( 10 )
+[node name="LivroUm" type="CollisionShape2D" parent="LivroBalaoUm"]
+shape = SubResource( 11 )
+disabled = true
+
+[node name="LivroBalaoDois" type="Area2D" parent="."]
+position = Vector2( 462, 74 )
+collision_layer = 4
+collision_mask = 256
+
+[node name="LivroDois" type="CollisionShape2D" parent="LivroBalaoDois"]
+position = Vector2( -1.8125, 3.2816 )
+shape = SubResource( 11 )
+disabled = true
+
+[node name="LivroBalaoTres" type="Area2D" parent="."]
+position = Vector2( 976, 74 )
+collision_layer = 4
+collision_mask = 256
+
+[node name="LivroTres" type="CollisionShape2D" parent="LivroBalaoTres"]
+shape = SubResource( 11 )
+disabled = true
+
+[node name="LivroBalaoQuatro" type="Area2D" parent="."]
+position = Vector2( 1590, 74 )
+collision_layer = 4
+collision_mask = 256
+
+[node name="LivroQuatro" type="CollisionShape2D" parent="LivroBalaoQuatro"]
+shape = SubResource( 11 )
+disabled = true
+
+[node name="LivroBalaoCinco" type="Area2D" parent="."]
+position = Vector2( 2000, 69 )
+collision_layer = 4
+collision_mask = 256
+
+[node name="LivroCinco" type="CollisionShape2D" parent="LivroBalaoCinco"]
+position = Vector2( 4.125, 0 )
+shape = SubResource( 11 )
+disabled = true
 
 [connection signal="body_entered" from="Mapajogo/Ginasio_01" to="." method="_on_Ginasio_01_body_entered"]
 [connection signal="body_entered" from="Mapajogo/Ginasio_02" to="." method="_on_Ginasio_02_body_entered"]
@@ -1264,5 +1308,8 @@ shape = SubResource( 10 )
 [connection signal="body_entered" from="Mapajogo/Market" to="." method="_on_Market_body_entered"]
 [connection signal="body_entered" from="Mapajogo/Store" to="." method="_on_Area2D_body_entered"]
 [connection signal="body_entered" from="Mapajogo/Office" to="." method="_on_Office_body_entered"]
-[connection signal="body_entered" from="Area2Dginasio1" to="." method="_on_Area2Dginasio1_body_entered"]
-[connection signal="body_exited" from="Area2Dginasio1" to="." method="_on_Area2Dginasio1_body_exited"]
+[connection signal="body_entered" from="LivroBalaoUm" to="." method="_on_LivroBalaoUm_body_entered"]
+[connection signal="body_entered" from="LivroBalaoDois" to="." method="_on_LivroBalaoDois_body_entered"]
+[connection signal="body_entered" from="LivroBalaoTres" to="." method="_on_LivroBalaoTres_body_entered"]
+[connection signal="body_entered" from="LivroBalaoQuatro" to="." method="_on_LivroBalaoQuatro_body_entered"]
+[connection signal="body_entered" from="LivroBalaoCinco" to="." method="_on_LivroBalaoCinco_body_entered"]

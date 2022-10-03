@@ -30,6 +30,6 @@ func load_dialogo():
 		queue_free()
 		dialogo_index +=1
 		
-func _on_Tween_tween_completed(object, key):
-	if Global.stars == 0:
-		finished = true
+#func _on_Tween_tween_completed(object, key):
+#	if Global.stars == 0:
+#		finished = true

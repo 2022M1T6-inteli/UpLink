@@ -67,24 +67,32 @@ position = Vector2( 1033, 145 )
 shape = SubResource( 1 )
 
 [node name="LivroBalaoUm" type="Area2D" parent="Labirinto2"]
+collision_layer = 4
+collision_mask = 256
 
 [node name="LivroUm" type="CollisionShape2D" parent="Labirinto2/LivroBalaoUm"]
 position = Vector2( 323, 235 )
 shape = SubResource( 3 )
 
 [node name="LivroBalaoDois" type="Area2D" parent="Labirinto2"]
+collision_layer = 4
+collision_mask = 256
 
 [node name="LivroDois" type="CollisionShape2D" parent="Labirinto2/LivroBalaoDois"]
 position = Vector2( -617, 105 )
 shape = SubResource( 4 )
 
 [node name="LivroBalaoTres" type="Area2D" parent="Labirinto2"]
+collision_layer = 4
+collision_mask = 256
 
 [node name="LivroTres" type="CollisionShape2D" parent="Labirinto2/LivroBalaoTres"]
 position = Vector2( -524, -458 )
 shape = SubResource( 5 )
 
 [node name="LivroBalaoQuatro" type="Area2D" parent="Labirinto2"]
+collision_layer = 4
+collision_mask = 256
 
 [node name="LivroQuatro" type="CollisionShape2D" parent="Labirinto2/LivroBalaoQuatro"]
 position = Vector2( -145, -314 )
@@ -92,6 +100,8 @@ shape = SubResource( 6 )
 
 [node name="LivroBalaoCinto" type="Area2D" parent="Labirinto2"]
 position = Vector2( -30, 12 )
+collision_layer = 4
+collision_mask = 256
 
 [node name="LivroCinco" type="CollisionShape2D" parent="Labirinto2/LivroBalaoCinto"]
 position = Vector2( 998, -268 )
@@ -102,7 +112,6 @@ shape = SubResource( 7 )
 [node name="CanvasLayer2" parent="." instance=ExtResource( 4 )]
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
-visible = false
 position = Vector2( 4.85999, -4.93103 )
 scale = Vector2( 2.02663, 1.73266 )
 color = Color( 0, 0, 0, 1 )
@@ -111,3 +120,8 @@ color = Color( 0, 0, 0, 1 )
 stream = ExtResource( 5 )
 
 [connection signal="body_entered" from="Labirinto2/Area2D" to="." method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Labirinto2/LivroBalaoUm" to="." method="_on_LivroBalaoUm_body_entered"]
+[connection signal="body_entered" from="Labirinto2/LivroBalaoDois" to="." method="_on_LivroBalaoDois_body_entered"]
+[connection signal="body_entered" from="Labirinto2/LivroBalaoTres" to="." method="_on_LivroBalaoTres_body_entered"]
+[connection signal="body_entered" from="Labirinto2/LivroBalaoQuatro" to="." method="_on_LivroBalaoQuatro_body_entered"]
+[connection signal="body_entered" from="Labirinto2/LivroBalaoCinto" to="." method="_on_LivroBalaoCinto_body_entered"]

@@ -7,24 +7,22 @@ var balaoActive = false
 var dialogoActive = false
 var instruActive= false
 
+
 func _input(event):
-	
-	if event.is_action_pressed("ui_select") and finishedBalao and balaoActive:
+	if event.is_action_pressed("ui_select") and balaoActive: #and finishedBalao
 		getNextSpeakBalao()
-	elif event.is_action_pressed("ui_select") and finishedBalao == false and balaoActive:
-		transition_balao(false)
+#	elif event.is_action_pressed("ui_select") and finishedBalao == false and balaoActive:
+#		transition_balao(false)
 		
-		
-	if event.is_action_pressed("ui_select") and finishedDialogo and dialogoActive:
+	if event.is_action_pressed("ui_select") and dialogoActive: # and finishedDialogo
 		getNextSpeakDialogo()
-	elif event.is_action_pressed("ui_select") and finishedDialogo == false and dialogoActive:
-		transition_dialogo(false)
+#	elif event.is_action_pressed("ui_select") and finishedDialogo == false and dialogoActive:
+#		transition_dialogo(false)
 		
-		
-	if event.is_action_pressed("ui_select") and finishedInstru and instruActive:
-		getNextSpeakInstru()
-	elif event.is_action_pressed("ui_select") and finishedInstru == false and instruActive:
-		transition_instru(false)
+#	if event.is_action_pressed("ui_select") and finishedInstru and instruActive:
+#		getNextSpeakInstru()
+#	elif event.is_action_pressed("ui_select") and finishedInstru == false and instruActive:
+#		transition_instru(false)
 
 
 func getNextSpeakBalao():
@@ -35,9 +33,9 @@ func getNextSpeakDialogo():
 	Global.indexDialogo += 1
 	load_dialogo()
 
-func getNextSpeakInstru():
-	Global.indexInstru += 1
-	load_Instru()
+#func getNextSpeakInstru():
+#	Global.indexInstru += 1
+#	load_Instru()
 
 func load_balao():
 	$Balao.visible = true
@@ -72,19 +70,19 @@ func load_Instru():
 	if Global.indexInstru < Global.current_dialogo.size():
 		instruActive = true
 		finishedInstru = false
-		$Instru/RichTextLabelInstru.bbcode_text = Global.current_dialogo[Global.indexInstru]
+		$Instru/RichTextLabelInstru.bbcode_text = String(Global.current_dialogo[Global.indexInstru])
 		transition_instru(true)
-		Global.stop = false
 	else:
 		Global.indexDialogo = 0
 		dialogoActive = false
 		$Instru.visible = false
 		Global.stop = false
 
+
 func transition_balao(condition):
 	if condition:
 		$Balao/TweenBalao.interpolate_property(
-			$Balao/RichTextLabelBalao, "percent_visible", 0,1,4,
+			$Balao/RichTextLabelBalao, "percent_visible", 0,1,1.5,
 			Tween.TRANS_LINEAR, Tween.EASE_IN_OUT
 		)
 		$Balao/TweenBalao.start()
@@ -92,10 +90,10 @@ func transition_balao(condition):
 		#$Balao/TweenBalao.stop($Balao/TweenBalao)
 		#$Balao/RichTextLabelBalao.percent_visible = 1
 	
-func transition_dialogo(condition):
+func transition_dialogo(condition): #função que determina a forma que o texto é exibido
 	if condition:
 		$Dialogo/TweenDialogo.interpolate_property(
-			$Dialogo/RichTextLabelDialogo, "percent_visible", 0,1,4,
+			$Dialogo/RichTextLabelDialogo, "percent_visible", 0,1,1.5,
 			Tween.TRANS_LINEAR, Tween.EASE_IN_OUT
 		)
 		$Dialogo/TweenDialogo.start()
@@ -103,17 +101,19 @@ func transition_dialogo(condition):
 func transition_instru(condition):
 	if condition: 
 		$Instru/TweenInstru.interpolate_property(
-			$Instru/RichTextLabelInstru, "percent_visible", 0,1,2.5,
+			$Instru/RichTextLabelInstru, "percent_visible", 0,1, 1,
 			Tween.TRANS_LINEAR, Tween.EASE_IN_OUT
 		)
 		$Instru/TweenInstru.start()
 		
 func _process(delta):
-	if $Balao/RichTextLabelBalao.percent_visible >= 0.9:
-		finishedBalao = true
-		
-	if $Dialogo/RichTextLabelDialogo.percent_visible >= 0.9:
-		finishedDialogo = true
-		
-	if $Instru/RichTextLabelInstru.percent_visible >= 0.9:
-		finishedInstru = true 
+	
+	pass
+#	if $Balao/RichTextLabelBalao.percent_visible >= 0.9:
+#		finishedBalao = true
+#
+#	if $Dialogo/RichTextLabelDialogo.percent_visible >= 0.9:
+#		finishedDialogo = true
+#
+#	if $Instru/RichTextLabelInstru.percent_visible >= 0.9:
+#		finishedInstru = true 

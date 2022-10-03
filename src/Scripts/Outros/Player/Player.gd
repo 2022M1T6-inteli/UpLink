@@ -8,7 +8,8 @@ export onready var camera = $Camera
 
 const aceleracao = 300
 const atrito = 20000
-const velocidade_Max = 240
+const velocidade_Max = 300
+#const velocidade_Max = 800
 
 var velocidade = Vector2.ZERO 
 

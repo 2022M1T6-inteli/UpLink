@@ -31,5 +31,5 @@ func load_dialogo():
 		dialogo_index +=1
 		
 func _on_Tween_tween_completed(object, key):
-	if Global.stars == 0:
+	if Global.numLivros == 0:
 		finished = true

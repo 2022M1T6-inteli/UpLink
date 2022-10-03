@@ -6,7 +6,7 @@
 [ext_resource path="res://Scripts/Ginasio-02/Ginasio02_fase01.gd" type="Script" id=5]
 
 [sub_resource type="RectangleShape2D" id=12]
-extents = Vector2( 20.3125, 36 )
+extents = Vector2( 23.2658, 36 )
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 5 )
@@ -52,12 +52,12 @@ scale = Vector2( 0.975239, 0.812698 )
 position = Vector2( 7, 0 )
 shape = SubResource( 12 )
 
-[node name="Area2D" type="Area2D" parent="MapaFacil2"]
+[node name="ChangeFase02" type="Area2D" parent="MapaFacil2"]
 position = Vector2( 473.966, 17.8793 )
 scale = Vector2( 0.975239, 0.812698 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="MapaFacil2/Area2D"]
-position = Vector2( 16, 2 )
+[node name="ChangeFase02" type="CollisionShape2D" parent="MapaFacil2/ChangeFase02"]
+position = Vector2( 13.0468, 1.99994 )
 shape = SubResource( 12 )
 
 [node name="Node2D" parent="MapaFacil2" instance=ExtResource( 2 )]
@@ -120,4 +120,5 @@ scale = Vector2( 0.500678, -0.517076 )
 stream = ExtResource( 3 )
 
 [connection signal="body_entered" from="MapaFacil2/Area2D2" to="." method="_on_Area2D2_body_entered"]
-[connection signal="body_entered" from="MapaFacil2/Area2D" to="." method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="MapaFacil2/ChangeFase02" to="." method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="MapaFacil2/ChangeFase02" to="." method="_on_ChangeFase02_body_entered"]

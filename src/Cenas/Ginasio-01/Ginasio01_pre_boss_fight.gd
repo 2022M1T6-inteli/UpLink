@@ -2,6 +2,7 @@ extends Node2D
 
 onready var prePlayer = preload("res://Cenas/Outros/Player/Player.tscn")
 onready var preNPC1 = preload("res://Cenas/NPC's/NPC1.tscn")
+onready var conteudo = preload("res://Cenas/Outros/Conteudo/Conteudo.tscn").instance()
 
 var playerPosition = Vector2(16,310)
 var NPC1Position = Vector2(927, 320)
@@ -10,14 +11,19 @@ var player
 var NPC1
 
 func _ready():
-	#$AudioStreamPlayer2D.play()
+	$AudioStreamPlayer2D.play()
 	player = iniciarPlayer(playerPosition)
 	NPC1 = iniciarNPC1(NPC1Position)
 	
 #	hud_global.controleEstrelaMapa(false)
+	add_child(conteudo)
+	Global.current_dialogo = Global.dialogo["language"]["eng"]["instructions"]["mentor"]
+	conteudo.load_Instru()
 	
 	add_child(player)
 	add_child(NPC1)
+	Global.playerPosition = Vector2(-1760, 608)
+	Global.dinamicaLobbyCondition = false
 	
 	player.lanterna.enabled = false
 	player.camera.limit_left = 0
@@ -40,3 +46,5 @@ func iniciarNPC1(posicao):
 func _on_Area2D_body_entered(body):
 	if body.name == "Player":
 		get_tree().change_scene("res://Cenas/Lobby/Lobby.tscn")
+		Global.preGinasio = "Ginasio02"
+		Global.Gin01_enabled = false

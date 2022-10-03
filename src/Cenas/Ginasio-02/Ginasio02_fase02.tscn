@@ -22,12 +22,12 @@ position = Vector2( 746, 373 )
 scale = Vector2( 1.5, 1.5 )
 texture = ExtResource( 3 )
 
-[node name="Area2D" type="Area2D" parent="MapaMedio"]
+[node name="ChangeFase03" type="Area2D" parent="MapaMedio"]
 position = Vector2( 497, 69 )
 collision_layer = 256
 collision_mask = 256
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="MapaMedio/Area2D"]
+[node name="ChangeFase03" type="CollisionShape2D" parent="MapaMedio/ChangeFase03"]
 position = Vector2( -5, -61 )
 shape = SubResource( 11 )
 
@@ -155,5 +155,6 @@ shape = SubResource( 13 )
 [node name="SoundX" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 4 )
 
-[connection signal="body_entered" from="MapaMedio/Area2D" to="." method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="MapaMedio/ChangeFase03" to="." method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="MapaMedio/ChangeFase03" to="." method="_on_ChangeFase03_body_entered"]
 [connection signal="body_entered" from="MapaMedio/Area2D2" to="." method="_on_Area2D2_body_entered"]

@@ -13,10 +13,12 @@ font_data = SubResource( 5 )
 [node name="Control" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+rect_scale = Vector2( 2, 2 )
 
 [node name="box" type="Control" parent="."]
 margin_right = 1024.0
 margin_bottom = 614.0
+rect_scale = Vector2( 2, 2 )
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
@@ -29,6 +31,9 @@ margin_right = 879.0
 margin_bottom = 492.0
 texture = ExtResource( 2 )
 expand = true
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="ColorRect" type="ColorRect" parent="box/TextureRect"]
 margin_left = 34.0

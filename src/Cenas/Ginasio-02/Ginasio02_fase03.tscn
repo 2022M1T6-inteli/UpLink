@@ -100,13 +100,13 @@ position = Vector2( -16.7063, -63.9997 )
 rotation = 3.14159
 scale = Vector2( 0.542717, -0.569299 )
 
-[node name="Area2D" type="Area2D" parent="MapaDificil"]
+[node name="ChangePreBoss" type="Area2D" parent="MapaDificil"]
 position = Vector2( 479.569, 12.7999 )
 scale = Vector2( 0.982724, 0.85333 )
 collision_layer = 256
 collision_mask = 256
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="MapaDificil/Area2D"]
+[node name="ChangePreBoss" type="CollisionShape2D" parent="MapaDificil/ChangePreBoss"]
 position = Vector2( 11, -3 )
 shape = SubResource( 11 )
 
@@ -144,5 +144,6 @@ polygon = PoolVector2Array( 479, 341, 479, 391, 601, 390, 601, 439, 644, 439, 64
 [node name="SoundX" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 3 )
 
-[connection signal="body_entered" from="MapaDificil/Area2D" to="." method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="MapaDificil/ChangePreBoss" to="." method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="MapaDificil/ChangePreBoss" to="." method="_on_ChangePreBoss_body_entered"]
 [connection signal="body_entered" from="MapaDificil/Area2D2" to="." method="_on_Area2D2_body_entered"]
