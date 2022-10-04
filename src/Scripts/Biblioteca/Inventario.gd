@@ -61,3 +61,6 @@ func _on_Button_10_pressed():
 
 func _on_Button_1_pressed():
 	get_tree().change_scene("res://Cenas/Biblioteca/ProductModel/Introduction.tscn")
+
+func _on_quit_pressed():
+	get_tree().change_scene("res://Cenas/Lobby/Lobby.tscn")

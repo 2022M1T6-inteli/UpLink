@@ -59,10 +59,10 @@ rect_scale = Vector2( 1.2, 1.2 )
 texture = ExtResource( 3 )
 
 [node name="quit" type="Button" parent="."]
-margin_left = 938.0
-margin_top = 21.0
-margin_right = 1000.0
-margin_bottom = 77.0
+margin_left = 491.0
+margin_top = 448.0
+margin_right = 553.0
+margin_bottom = 504.0
 icon = ExtResource( 6 )
 flat = true
 

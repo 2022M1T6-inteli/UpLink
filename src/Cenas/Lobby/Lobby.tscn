@@ -9,13 +9,12 @@
 extents = Vector2( 29.5, 23.5 )
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 20, 41.25 )
+extents = Vector2( 122.5, 49.125 )
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 20.1875, 30.625 )
+extents = Vector2( 171.225, 30.625 )
 
-[sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 31.125, 49 )
+[sub_resource type="ConcavePolygonShape2D" id=12]
 
 [sub_resource type="RectangleShape2D" id=5]
 extents = Vector2( 20.5, 21.5 )
@@ -1163,7 +1162,7 @@ collision_layer = 256
 collision_mask = 256
 
 [node name="Change_ginasio_01" type="CollisionShape2D" parent="Mapajogo/Ginasio_01"]
-position = Vector2( -1743, 476.75 )
+position = Vector2( -1696.5, 511.125 )
 shape = SubResource( 1 )
 
 [node name="Ginasio_02" type="Area2D" parent="Mapajogo"]
@@ -1175,7 +1174,7 @@ position = Vector2( 1330, -1281 )
 shape = SubResource( 2 )
 
 [node name="Change_ginasio_03" type="CollisionShape2D" parent="Mapajogo/Ginasio_02"]
-position = Vector2( 1237, -1282 )
+position = Vector2( 1468.55, -1280 )
 shape = SubResource( 2 )
 
 [node name="Change_ginasio_04" type="CollisionShape2D" parent="Mapajogo/Ginasio_02"]
@@ -1183,20 +1182,16 @@ position = Vector2( 1941, -934 )
 shape = SubResource( 2 )
 
 [node name="Change_ginasio_05" type="CollisionShape2D" parent="Mapajogo/Ginasio_02"]
-position = Vector2( 1845, -935 )
+position = Vector2( 1960.22, -928 )
 shape = SubResource( 2 )
 
 [node name="Ginasio_03" type="Area2D" parent="Mapajogo"]
 collision_layer = 256
 collision_mask = 256
 
-[node name="Change_ginasio_03" type="CollisionShape2D" parent="Mapajogo/Ginasio_03"]
-position = Vector2( 779, 1493 )
-shape = SubResource( 3 )
-
 [node name="Change_ginasio_04" type="CollisionShape2D" parent="Mapajogo/Ginasio_03"]
-position = Vector2( 466, 2074 )
-shape = SubResource( 3 )
+position = Vector2( 818.938, 1779 )
+shape = SubResource( 12 )
 
 [node name="Biblioteca1" type="Area2D" parent="Mapajogo"]
 position = Vector2( -270, -261 )
@@ -1247,6 +1242,16 @@ shape = SubResource( 8 )
 position = Vector2( 0, -2010.5 )
 shape = SubResource( 9 )
 
+[node name="Label" type="Label" parent="Mapajogo"]
+margin_left = -232.0
+margin_top = -337.0
+margin_right = -174.0
+margin_bottom = -312.0
+rect_scale = Vector2( 2, 2 )
+text = "Library"
+align = 1
+valign = 1
+
 [node name="SoundLobby" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 3 )
 
@@ -1268,7 +1273,7 @@ collision_layer = 4
 collision_mask = 256
 
 [node name="LivroDois" type="CollisionShape2D" parent="LivroBalaoDois"]
-position = Vector2( -1.8125, 3.2816 )
+position = Vector2( 0, -9.53674e-07 )
 shape = SubResource( 11 )
 disabled = true
 

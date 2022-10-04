@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Livro_Icon.png-0078bc900d0f14c72522d2a65cd8f58e.stex"
+path="res://.import/Livro_Icon.png-101797315f07ce6aae47307cec50f7bc.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Cenas/Outros/Books/Livro_Icon.png"
-dest_files=[ "res://.import/Livro_Icon.png-0078bc900d0f14c72522d2a65cd8f58e.stex" ]
+source_file="res://Images/Outros/Dinamica_livros/Livro_Icon.png"
+dest_files=[ "res://.import/Livro_Icon.png-101797315f07ce6aae47307cec50f7bc.stex" ]
 
 [params]
 

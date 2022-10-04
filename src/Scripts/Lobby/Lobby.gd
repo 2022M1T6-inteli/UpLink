@@ -30,7 +30,6 @@ var livro5
 
 var statusDynamic = true
 
-
 func ativarDinamicaLivros():
 	Global.numLivros = 0
 	hud_ginasio01.ativarHUDGinasio01()
@@ -42,14 +41,12 @@ func ativarDinamicaLivros():
 	livro4 = iniciarLivro(livroPosition4)
 	livro5 = iniciarLivro(livroPosition5)
 
-
 # FUNÇÃO PARA INSTANCIAR O LIVRO
 func iniciarLivro(posicao):
 	livro = preLivro.instance()
 	livro.position = posicao
 	add_child(livro)
 	return livro
-	
 	
 func _ready():
 	if Global.dinamicaLobbyCondition:
@@ -83,7 +80,6 @@ func _ready():
 		Global.current_dialogo = Global.dialogo["language"]["eng"]["instructions"]["instrucAfterGym2"]
 		conteudo.load_Instru()
 
-
 #Função responsável por fazer com que variável receba o nó chamando a cena correta e definindo sua posição
 func iniciarPlayer(posicao):
 	var player = prePlayer.instance()
@@ -98,7 +94,11 @@ func _process(delta):
 		add_child(conteudo)
 		Global.current_dialogo = Global.dialogo["language"]["eng"]["instructions"]["collectedBooksLobby"]
 		conteudo.load_Instru()
-
+		
+func _on_Office_body_entered(body):
+	if Global.ginasio3final > 0:
+		get_tree().change_scene("res://Cenas/Ginasio-01/Ginasio01_fase02.tscn")
+		Global.playerPosition = Vector2(45, -1929)
 
 #Funções abaixo são para transições de cenas para os ginásios e demais espaços
 func _on_Ginasio_01_body_entered(body):
@@ -130,11 +130,10 @@ func _on_Market_body_entered(body):
 	get_tree().change_scene("res://Cenas/Outros/Market.tscn")
 	Global.playerPosition = Vector2(2207, 703)
 
-func _on_Office_body_entered(body):
-	get_tree().change_scene("res://Cenas/Office/Office.tscn")
-	Global.playerPosition = Vector2(45, -1929)
+#func _on_Office_body_entered(body):
+#	get_tree().change_scene("res://Cenas/Office/Office.tscn")
+#	Global.playerPosition = Vector2(45, -1929)
 	
-
 #funçoes abaixo são para chamar o conteúdo do dicionario na tela quando o player coletar os livros
 func _on_LivroBalaoUm_body_entered(player): #livro de baixo
 	if statusBalaoUm == true:
@@ -168,7 +167,6 @@ func _on_LivroBalaoQuatro_body_entered(body):
 		conteudo.load_balao()
 		statusBalaoQuatro = false
 		
-
 func _on_LivroBalaoCinco_body_entered(body):
 	if statusBalaoCinco == true:
 		Global.numLivrosLobby+=1
@@ -176,6 +174,7 @@ func _on_LivroBalaoCinco_body_entered(body):
 		Global.current_dialogo = Global.dialogo["language"]["eng"]["dialogo"]["contentLobby"]["doubleDiamond"]
 		conteudo.load_balao()
 		statusBalaoCinco = false
+		
 
 		
 	

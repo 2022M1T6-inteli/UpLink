@@ -3,7 +3,7 @@ extends Node2D
 onready var prePlayer = preload("res://Cenas/Outros/Player/Player.tscn")
 onready var preNPC1 = preload("res://Cenas/NPC's/NPC1.tscn")
 
-var playerPosition = Vector2(16,310)
+var playerPosition = Vector2(1400,310)
 var NPC1Position = Vector2(927, 320)
 
 var player
@@ -36,6 +36,6 @@ func iniciarNPC1(posicao):
 	NPC1.position = posicao
 	return NPC1
 
-
 func _on_Area2D_body_entered(body):
+	Global.ginasio3final += 1
 	get_tree().change_scene("res://Cenas/Lobby/Lobby.tscn")

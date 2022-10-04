@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Cenas/Outros/Books/LivroPreenchidoAbsorver.gd" type="Script" id=1]
-[ext_resource path="res://Cenas/Outros/Books/Livro_Icon.png" type="Texture" id=2]
+[ext_resource path="res://Images/Outros/Light.png" type="Texture" id=3]
+[ext_resource path="res://Images/Outros/Livro_Icon.png" type="Texture" id=4]
 
 [sub_resource type="Animation" id=1]
 length = 0.001
@@ -49,16 +50,20 @@ tracks/0/keys = {
 [node name="LivroPreenchidoAbsorver" type="Area2D"]
 script = ExtResource( 1 )
 
-[node name="LivroPreenchidoAbsorver" type="Sprite" parent="."]
-scale = Vector2( 0.04, 0.04 )
-texture = ExtResource( 2 )
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="LivroPreenchidoAbsorver"]
-anims/RESET = SubResource( 1 )
-anims/Star = SubResource( 2 )
-
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 polygon = PoolVector2Array( -24, 0, 0, 24, 24, 8, 16, -8, 0, -24, -24, -8 )
+
+[node name="Light2D" type="Light2D" parent="."]
+texture = ExtResource( 3 )
+texture_scale = 0.15
+
+[node name="LivroPreenchidoAbsorver2" type="Sprite" parent="."]
+scale = Vector2( 0.04, 0.04 )
+texture = ExtResource( 4 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="LivroPreenchidoAbsorver2"]
+anims/RESET = SubResource( 1 )
+anims/Star = SubResource( 2 )
 
 [connection signal="body_entered" from="." to="." method="_on_Area2D_body_entered"]
 [connection signal="body_entered" from="." to="." method="_on_LivroPreenchidoAbsorver_body_entered"]

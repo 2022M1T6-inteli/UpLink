@@ -25,6 +25,7 @@ var numLivros = 0
 var numLivrosLobby=0
 var percentVisionGinasio01 = 0.3
 
+var ginasio3final = 0
 
 var keyDialogo = 'teste2' # keydialogo chama as falas das cenas
 var indexDialogo = 0

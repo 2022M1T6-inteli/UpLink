@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Images/Menu/1.png" type="Texture" id=1]
 [ext_resource path="res://Scripts/Biblioteca/Inventario.gd" type="Script" id=2]
@@ -12,6 +12,7 @@
 [ext_resource path="res://Images/TextureInventario/11.Deploymentkpistext.png" type="Texture" id=10]
 [ext_resource path="res://Images/TextureInventario/5.RoadmapText.png" type="Texture" id=11]
 [ext_resource path="res://Images/TextureInventario/ProductModel.png" type="Texture" id=12]
+[ext_resource path="res://Images/ProductModel/X.png" type="Texture" id=13]
 
 [sub_resource type="Shader" id=1]
 code = "shader_type canvas_item;
@@ -144,6 +145,13 @@ custom_constants/hseparation = 20
 icon = ExtResource( 5 )
 flat = true
 
+[node name="quit" type="Button" parent="."]
+margin_left = 474.0
+margin_top = 536.0
+margin_right = 536.0
+margin_bottom = 592.0
+icon = ExtResource( 13 )
+
 [connection signal="pressed" from="Coluna_1/Button_1" to="." method="_on_Button_1_pressed"]
 [connection signal="pressed" from="Coluna_1/Button_2" to="." method="_on_Button_2_pressed"]
 [connection signal="pressed" from="Coluna_1/Button_3" to="." method="_on_Button_3_pressed"]
@@ -154,3 +162,4 @@ flat = true
 [connection signal="pressed" from="Coluna_2/Button_8" to="." method="_on_Button_8_pressed"]
 [connection signal="pressed" from="Coluna_2/Button_9" to="." method="_on_Button_9_pressed"]
 [connection signal="pressed" from="Coluna_2/Button_10" to="." method="_on_Button_10_pressed"]
+[connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]
