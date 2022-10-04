@@ -1,0 +1,154 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Images/Ginasio-03/Mapa Gym3Fase3.png" type="Texture" id=1]
+[ext_resource path="res://Scripts/Ginasio-03/ginasio3-fase03.gd" type="Script" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 56.773, 75.3027 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 566.5, 177 )
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_horizontal_guides_": [  ],
+"_edit_vertical_guides_": [ 1513.0 ]
+}
+
+[node name="MapaGym3Fase3" type="Sprite" parent="."]
+position = Vector2( 761, 1438 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="MapaGym3Fase3"]
+position = Vector2( -559.211, -125 )
+scale = Vector2( 20.9395, 101.221 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MapaGym3Fase3/StaticBody2D"]
+position = Vector2( 6.10352e-05, 0 )
+shape = SubResource( 1 )
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="MapaGym3Fase3"]
+position = Vector2( 543.421, -130.263 )
+scale = Vector2( 20.9395, 101.221 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MapaGym3Fase3/StaticBody2D2"]
+position = Vector2( 6.10352e-05, 0 )
+shape = SubResource( 1 )
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="MapaGym3Fase3"]
+position = Vector2( -755.263, -1425 )
+scale = Vector2( 1.31579, 1.31579 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="MapaGym3Fase3/StaticBody2D3"]
+polygon = PoolVector2Array( 1, 2165, 1145, 2164, 1147, -2, 1, 0, -4, 2166, -8, 2167, -6, -7, 1159, -11, 1157, 2172 )
+
+[node name="Area2D" type="Area2D" parent="MapaGym3Fase3"]
+position = Vector2( -755.263, -1425 )
+scale = Vector2( 1.31579, 1.31579 )
+collision_layer = 256
+collision_mask = 256
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MapaGym3Fase3/Area2D"]
+position = Vector2( 357, 1060 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="MapaGym3Fase3/Area2D"]
+position = Vector2( 568, 1062 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="MapaGym3Fase3/Area2D"]
+position = Vector2( 676, 1059 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="MapaGym3Fase3/Area2D"]
+position = Vector2( 567, 767 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="MapaGym3Fase3/Area2D"]
+position = Vector2( 570, 1206 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="MapaGym3Fase3/Area2D"]
+position = Vector2( 786, 624 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="MapaGym3Fase3/Area2D"]
+position = Vector2( 786, 769 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="MapaGym3Fase3/Area2D"]
+position = Vector2( 675.227, 471 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="MapaGym3Fase3/Area2D"]
+position = Vector2( 785, 473 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="MapaGym3Fase3/Area2D"]
+position = Vector2( 464, 474 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="MapaGym3Fase3/Area2D"]
+position = Vector2( 464, 327 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D12" type="CollisionShape2D" parent="MapaGym3Fase3/Area2D"]
+position = Vector2( 463, 619 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D13" type="CollisionShape2D" parent="MapaGym3Fase3/Area2D"]
+position = Vector2( 787, 325 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D14" type="CollisionShape2D" parent="MapaGym3Fase3/Area2D"]
+position = Vector2( 357, 915 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D15" type="CollisionShape2D" parent="MapaGym3Fase3/Area2D"]
+position = Vector2( 676, 1208 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D16" type="CollisionShape2D" parent="MapaGym3Fase3/Area2D"]
+position = Vector2( 566, 1355 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D17" type="CollisionShape2D" parent="MapaGym3Fase3/Area2D"]
+position = Vector2( 459, 1352 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D18" type="CollisionShape2D" parent="MapaGym3Fase3/Area2D"]
+position = Vector2( 355, 1351 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D19" type="CollisionShape2D" parent="MapaGym3Fase3/Area2D"]
+position = Vector2( 361, 1501 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D20" type="CollisionShape2D" parent="MapaGym3Fase3/Area2D"]
+position = Vector2( 462, 1502 )
+shape = SubResource( 2 )
+
+[node name="End" type="Area2D" parent="MapaGym3Fase3"]
+position = Vector2( -755.263, -1425 )
+scale = Vector2( 1.31579, 1.31579 )
+collision_layer = 256
+collision_mask = 256
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MapaGym3Fase3/End"]
+position = Vector2( 570.5, 1990 )
+shape = SubResource( 3 )
+
+[connection signal="body_entered" from="MapaGym3Fase3/Area2D" to="." method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="MapaGym3Fase3/End" to="." method="_on_End_body_entered"]

@@ -1,0 +1,53 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Images/Labirinto1.png" type="Texture" id=2]
+[ext_resource path="res://Cenas/Cena1.gd" type="Script" id=3]
+[ext_resource path="res://Cenas/Balão.tscn" type="PackedScene" id=4]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 21.375, 18 )
+
+[node name="Cena1" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="Labirinto1" type="Sprite" parent="."]
+position = Vector2( 2, 4 )
+scale = Vector2( 0.492248, 0.583984 )
+texture = ExtResource( 2 )
+offset = Vector2( 1032, 506.863 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PoolVector2Array( 681, 492, 620, 492, 620, 378, 681, 378, 683, 362, 620, 360, 621, 254, 683, 254, 682, 240, 619, 239, 619, 213, 544, 213, 544, 306, 560, 306, 560, 225, 601, 226, 602, 434, 544, 435, 544, 451, 601, 451, 601, 507, 682, 507 )
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D2"]
+polygon = PoolVector2Array( 4, 548, 283, 548, 284, 427, 451, 427, 451, 496, 339, 497, 338, 484, 436, 484, 435, 441, 302, 441, 303, 547, 489, 547, 490, 376, 247, 376, 247, 432, 60, 432, 60, 417, 229, 417, 229, 310, 117, 310, 117, 212, 246, 212, 246, 261, 227, 260, 227, 225, 131, 225, 131, 296, 245, 296, 246, 360, 283, 360, 283, 218, 300, 218, 303, 359, 572, 362, 571, 378, 509, 377, 509, 546, 545, 546, 548, 499, 564, 499, 565, 549, 718, 549, 721, 441, 657, 441, 656, 427, 721, 427, 722, 310, 656, 310, 656, 297, 722, 297, 721, 222, 818, 221, 816, 511, 798, 512, 802, 413, 767, 412, 767, 399, 802, 399, 802, 292, 767, 292, 767, 280, 801, 278, 801, 235, 739, 235, 739, 343, 770, 343, 769, 357, 737, 357, 738, 465, 769, 465, 769, 481, 739, 480, 740, 547, 853, 549, 853, 343, 959, 343, 960, 506, 902, 506, 902, 404, 920, 404, 920, 489, 947, 490, 945, 357, 869, 358, 874, 548, 1015, 548, 1014, 563, 3, 562 )
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D3"]
+polygon = PoolVector2Array( 245, 497, 4, 496, 3, 1, 1016, 0, 1016, 13, 874, 12, 875, 119, 856, 119, 857, 13, 819, 12, 818, 119, 801, 119, 800, 14, 571, 13, 572, 120, 551, 120, 551, 12, 268, 13, 267, 98, 347, 97, 346, 59, 364, 59, 365, 98, 443, 97, 444, 59, 460, 60, 461, 114, 250, 113, 249, 7, 20, 6, 20, 52, 140, 52, 142, 37, 158, 37, 158, 67, 124, 67, 124, 119, 107, 120, 108, 68, 20, 68, 21, 480, 243, 481 )
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D4"]
+polygon = PoolVector2Array( 187, 376, 60, 377, 60, 157, 193, 157, 193, 67, 212, 67, 212, 156, 498, 156, 499, 59, 517, 58, 517, 157, 606, 157, 607, 53, 707, 53, 708, 119, 690, 119, 690, 68, 622, 68, 625, 155, 743, 154, 744, 58, 762, 58, 763, 155, 912, 156, 913, 59, 928, 59, 929, 128, 968, 127, 969, 142, 928, 143, 927, 170, 872, 172, 872, 278, 1000, 276, 1001, 227, 910, 228, 910, 213, 1000, 212, 1001, 59, 1016, 60, 1015, 546, 999, 546, 1000, 291, 854, 292, 854, 172, 690, 171, 690, 212, 673, 212, 675, 172, 508, 170, 507, 320, 395, 320, 393, 212, 459, 213, 458, 278, 443, 278, 443, 225, 409, 226, 409, 304, 490, 304, 491, 171, 359, 171, 358, 324, 339, 325, 338, 171, 75, 172, 76, 361, 188, 362 )
+
+[node name="Control" parent="." instance=ExtResource( 4 )]
+visible = false
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 256
+collision_mask = 256
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 1023, 44 )
+shape = SubResource( 1 )
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+color = Color( 0.0705882, 0.0862745, 0.0980392, 1 )
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
