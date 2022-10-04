@@ -29,7 +29,7 @@ void fragment() {
 
 [sub_resource type="ShaderMaterial" id=2]
 shader = SubResource( 1 )
-shader_param/scroll_speed = null
+shader_param/scroll_speed = 0.05
 
 [node name="Node2D" type="Node2D"]
 

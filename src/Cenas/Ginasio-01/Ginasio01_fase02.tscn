@@ -13,16 +13,16 @@ extents = Vector2( 27.5, 64 )
 extents = Vector2( 21.375, 18 )
 
 [sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 31, 26 )
+extents = Vector2( 25, 23 )
 
 [sub_resource type="RectangleShape2D" id=4]
-extents = Vector2( 29, 24.5 )
+extents = Vector2( 25.5, 24.5 )
 
 [sub_resource type="RectangleShape2D" id=5]
-extents = Vector2( 26, 24 )
+extents = Vector2( 21.5, 17 )
 
 [sub_resource type="RectangleShape2D" id=6]
-extents = Vector2( 32, 26 )
+extents = Vector2( 24, 22.5 )
 
 [sub_resource type="RectangleShape2D" id=7]
 extents = Vector2( 20.5, 22.5 )
@@ -71,7 +71,7 @@ collision_layer = 4
 collision_mask = 256
 
 [node name="LivroUm" type="CollisionShape2D" parent="Labirinto2/LivroBalaoUm"]
-position = Vector2( 323, 235 )
+position = Vector2( 324, 235 )
 shape = SubResource( 3 )
 
 [node name="LivroBalaoDois" type="Area2D" parent="Labirinto2"]
@@ -79,7 +79,7 @@ collision_layer = 4
 collision_mask = 256
 
 [node name="LivroDois" type="CollisionShape2D" parent="Labirinto2/LivroBalaoDois"]
-position = Vector2( -617, 105 )
+position = Vector2( -610.5, 105 )
 shape = SubResource( 4 )
 
 [node name="LivroBalaoTres" type="Area2D" parent="Labirinto2"]
@@ -87,7 +87,7 @@ collision_layer = 4
 collision_mask = 256
 
 [node name="LivroTres" type="CollisionShape2D" parent="Labirinto2/LivroBalaoTres"]
-position = Vector2( -524, -458 )
+position = Vector2( -519.5, -460 )
 shape = SubResource( 5 )
 
 [node name="LivroBalaoQuatro" type="Area2D" parent="Labirinto2"]
@@ -95,7 +95,7 @@ collision_layer = 4
 collision_mask = 256
 
 [node name="LivroQuatro" type="CollisionShape2D" parent="Labirinto2/LivroBalaoQuatro"]
-position = Vector2( -145, -314 )
+position = Vector2( -152, -313.5 )
 shape = SubResource( 6 )
 
 [node name="LivroBalaoCinto" type="Area2D" parent="Labirinto2"]
@@ -108,10 +108,8 @@ position = Vector2( 998, -268 )
 shape = SubResource( 7 )
 
 [node name="CanvasLayer" parent="." instance=ExtResource( 3 )]
-visible = false
 
 [node name="CanvasLayer2" parent="." instance=ExtResource( 4 )]
-visible = false
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 position = Vector2( 4.85999, -4.93103 )

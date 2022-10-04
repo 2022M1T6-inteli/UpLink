@@ -14,11 +14,13 @@ pause_mode = 2
 script = ExtResource( 8 )
 
 [node name="ColorRect" type="ColorRect" parent="."]
+pause_mode = 2
 anchor_right = 1.0
 anchor_bottom = 1.0
 color = Color( 0.145098, 0.152941, 0.192157, 0.85098 )
 
 [node name="Pause2" type="Sprite" parent="."]
+pause_mode = 2
 modulate = Color( 0.815686, 0.831373, 0.858824, 1 )
 self_modulate = Color( 0.494118, 0.494118, 0.494118, 1 )
 position = Vector2( 200, 187 )
@@ -27,12 +29,14 @@ texture = ExtResource( 6 )
 offset = Vector2( 370.238, -34.4507 )
 
 [node name="Pause" type="Sprite" parent="."]
+pause_mode = 2
 position = Vector2( 200, 183 )
 scale = Vector2( 0.8427, 0.841783 )
 texture = ExtResource( 6 )
 offset = Vector2( 370.238, -34.4507 )
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
+pause_mode = 2
 margin_left = 368.0
 margin_top = 256.0
 margin_right = 868.0
@@ -40,6 +44,7 @@ margin_bottom = 664.0
 rect_scale = Vector2( 0.605285, 0.604379 )
 
 [node name="Resume" type="TextureButton" parent="VBoxContainer"]
+pause_mode = 2
 margin_right = 500.0
 margin_bottom = 200.0
 texture_normal = ExtResource( 7 )
@@ -47,11 +52,13 @@ texture_pressed = ExtResource( 1 )
 texture_hover = ExtResource( 5 )
 
 [node name="Control" type="Control" parent="VBoxContainer"]
+pause_mode = 2
 margin_top = 204.0
 margin_right = 500.0
 margin_bottom = 204.0
 
 [node name="Quit" type="TextureButton" parent="VBoxContainer"]
+pause_mode = 2
 margin_top = 208.0
 margin_right = 500.0
 margin_bottom = 408.0

@@ -33,7 +33,7 @@ var livro5
 
 #Através da função genérica "iniciarX", a variável de cada objeto puxa sua respectiva cena e sua respectiva posição
 func _ready():
-	#$DarkScene3.play()
+	$DarkScene3.play()
 	#ATIVANDO O HUD DO GINÁSIO
 	hud_ginasio01.ativarHUDGinasio01()
 	Global.numLivros = 0

@@ -17,13 +17,13 @@ extents = Vector2( 27.5, 26 )
 extents = Vector2( 28.5, 21 )
 
 [sub_resource type="RectangleShape2D" id=4]
-extents = Vector2( 24, 23.5 )
+extents = Vector2( 26.5, 23.75 )
 
 [sub_resource type="RectangleShape2D" id=5]
 extents = Vector2( 29, 23.5 )
 
 [sub_resource type="RectangleShape2D" id=6]
-extents = Vector2( 24, 22 )
+extents = Vector2( 25.5, 25.5 )
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 1 )
@@ -90,7 +90,7 @@ collision_layer = 4
 collision_mask = 256
 
 [node name="LivroTres" type="CollisionShape2D" parent="Labirinto3/LivroBalaoTres"]
-position = Vector2( 69, -192 )
+position = Vector2( 71.5, -191.75 )
 shape = SubResource( 4 )
 
 [node name="LivroBalaoQuatro" type="Area2D" parent="Labirinto3"]
@@ -106,11 +106,10 @@ collision_layer = 4
 collision_mask = 256
 
 [node name="LivroCinco" type="CollisionShape2D" parent="Labirinto3/LivroBalaoCinco"]
-position = Vector2( 651, -258 )
+position = Vector2( 649.5, -254.5 )
 shape = SubResource( 6 )
 
 [node name="CanvasLayer2" parent="." instance=ExtResource( 6 )]
-visible = false
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 position = Vector2( -0.0300293, -5.91901 )
@@ -121,7 +120,6 @@ color = Color( 0, 0, 0, 1 )
 stream = ExtResource( 2 )
 
 [node name="CanvasLayer" parent="." instance=ExtResource( 5 )]
-visible = false
 
 [node name="LevelCompleted" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 3 )

@@ -55,9 +55,10 @@ func _on_End_body_entered(body):
 #colocar pergunta 1 ao iniciar
 
 func _on_Area2D0_body_entered(body):
-	add_child(conteudo)
-#	conteudo.load_Instru('UserKP')
+	#add_child(conteudo)
+	#conteudo.load_Instru('UserKP')
 	conteudo.load_Instru()
+
 
 func _on_Area2D1_body_entered(body):
 	pass
@@ -77,7 +78,7 @@ func _on_Area2D3_body_entered(body):
 
 func _on_Area2D4_body_entered(body):
 	add_child(conteudo)
-	conteudo.load_Instru('ginasio3fase34')
+	conteudo.load_Instru('ginasio3fase3')
 
 func _on_Area2D6_body_entered(body):
 	if statusTutorial == true:

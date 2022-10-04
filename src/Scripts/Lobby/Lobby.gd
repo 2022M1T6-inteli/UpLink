@@ -96,8 +96,8 @@ func _process(delta):
 		conteudo.load_Instru()
 		
 func _on_Office_body_entered(body):
-	if Global.ginasio3final > 0:
-		get_tree().change_scene("res://Cenas/Ginasio-01/Ginasio01_fase02.tscn")
+	if Global.ginasio3final > 1:
+		get_tree().change_scene("res://Cenas/Outros/Credits.tscn")
 		Global.playerPosition = Vector2(45, -1929)
 
 #Funções abaixo são para transições de cenas para os ginásios e demais espaços

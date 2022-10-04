@@ -148,13 +148,13 @@ shape = SubResource( 4 )
 [node name="Area2D0" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D0"]
-position = Vector2( 436.5, 374.688 )
+position = Vector2( 436, 372 )
 shape = SubResource( 5 )
 
 [node name="Area2D6" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D6"]
-position = Vector2( 432, 229.5 )
+position = Vector2( 452, 233 )
 shape = SubResource( 6 )
 
 [connection signal="body_entered" from="Gym3Fase2/Area2D" to="." method="_on_Area2D_body_entered"]

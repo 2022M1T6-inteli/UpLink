@@ -54,12 +54,12 @@ func _on_Area2D_body_entered(body):
 		get_tree().reload_current_scene()
 
 func _on_End_body_entered(body):
-	get_tree().change_scene("res://Cenas/Ginasio-03/Ginasio03_fase02.tscn")
+	get_tree().change_scene("res://Cenas/Lobby/Lobby.tscn")
 
 func _on_Area2D1_body_entered(body):
 #	balao.load_Instru('DD')
 	add_child(conteudo)
-	Global.current_dialogo = Global.dialogo["language"]["eng"]["instrucao"]["Gym03"]["Content"]["doubleDiamond"]
+	global.current_dialogo = global.dialogo["language"]["eng"]["dialogo"]["contentLobby"]["doubleDiamond"]
 	conteudo.load_Instru()
 
 func _on_Area2D2_body_entered(body):

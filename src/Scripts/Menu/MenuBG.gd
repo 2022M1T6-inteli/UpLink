@@ -4,7 +4,7 @@ export(float) var scroll_speed = 0.03
 #para fazer o scroll
 
 func _ready():
-	#$MenuSound.play()
+	$MenuSound.play()
 	self.material.set_shader_param( "scroll_speed", scroll_speed)
 
 #sair do jogo
