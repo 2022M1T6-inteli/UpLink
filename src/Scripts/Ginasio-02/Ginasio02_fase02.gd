@@ -23,7 +23,7 @@ func _ready():
 	add_child(player)
 	
 	add_child(conteudo)
-	Global.current_dialogo = Global.dialogo["language"]["eng"]["dialogo"]["instruGym2Level1"]["talk01"]
+	Global.current_dialogo = Global.dialogo["language"]["eng"]["dialogo"]["instruGym2Level2"]["talk01"]
 	conteudo.load_Instru()
 	
 	player.camera.limit_left = 0
@@ -32,8 +32,14 @@ func _ready():
 	player.camera.limit_right = 1500
 	player.camera.zoom = Vector2(1, 1)
 	
+	Global.countX = 15
+	Global.countO = 0
+	Global.countT = 0
+	Global.countMov = 0
+	
+	
 func _process(delta):
-	if Global.count >= 14:
+	if Global.countX <= 1 and Global.countT  >= 9 :
 		Global.Gin02Fase03Enabled = true
 
 #Funções que indicam a próxima fase e o mapa anterior
@@ -42,7 +48,7 @@ func _process(delta):
 func _on_ChangeFase03_body_entered(body):
 	if Global.Gin02Fase03Enabled == true:
 		get_tree().change_scene("res://Cenas/Ginasio-02/Ginasio02_fase03.tscn")
-		Global.count = 0
+		Global.countMov = 0
 	else: 
 		add_child(conteudo)
 		Global.current_dialogo = Global.dialogo["language"]["eng"]["dialogo"]["instruGym2Level1"]["talk02"]

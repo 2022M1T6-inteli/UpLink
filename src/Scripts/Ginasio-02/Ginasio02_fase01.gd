@@ -32,6 +32,12 @@ func _ready():
 	player.camera.limit_right = 1504
 	player.camera.zoom = Vector2(1, 1)
 	
+	Global.countX = 14
+	Global.countO = 0
+	Global.countO = 0
+	Global.countMov = 0
+	
+	
 
 	add_child(conteudo)
 	Global.current_dialogo = Global.dialogo["language"]["eng"]["dialogo"]["instruGym2Level1"]["talk01"]
@@ -39,7 +45,7 @@ func _ready():
 
 	
 func _process(delta):
-	if Global.count >= 14:
+	if Global.countX <= 2 and Global.countT >= 7:
 		Global.Gin02Fase02Enabled = true
 
 
@@ -48,7 +54,7 @@ func _process(delta):
 func _on_ChangeFase02_body_entered(body):
 	if Global.Gin02Fase02Enabled == true:
 		get_tree().change_scene("res://Cenas/Ginasio-02/Ginasio02_fase02.tscn")
-		Global.count = 0
+		Global.countMov = 0
 	else: 
 		add_child(conteudo)
 		Global.current_dialogo = Global.dialogo["language"]["eng"]["dialogo"]["instruGym2Level1"]["talk02"]

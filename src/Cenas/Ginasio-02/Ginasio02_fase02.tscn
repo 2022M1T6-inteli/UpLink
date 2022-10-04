@@ -165,6 +165,6 @@ shape = SubResource( 13 )
 [node name="SoundX" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 4 )
 
-[connection signal="body_entered" from="MapaMedio/ChangeFase03" to="." method="_on_ChangeFase03_body_entered"]
 [connection signal="body_entered" from="MapaMedio/ChangeFase03" to="." method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="MapaMedio/ChangeFase03" to="." method="_on_ChangeFase03_body_entered"]
 [connection signal="body_entered" from="MapaMedio/Area2D2" to="." method="_on_Area2D2_body_entered"]

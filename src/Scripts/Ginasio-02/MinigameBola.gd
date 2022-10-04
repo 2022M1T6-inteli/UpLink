@@ -12,11 +12,17 @@ func _on_Area2D_body_entered(body):
 		$Area2D/X.visible = false  
 		$Area2D/T.visible = false
 		$Area2D/O.visible = true 
-		Global.count += 1
+		Global.countX -= 1
+		Global.countO += 1
 	elif ($Area2D/O.visible):
 		$Area2D/O.visible = false
 		$Area2D/T.visible = true 
-		Global.count -= 1
+		Global.countO -= 1
+		Global.countT += 1
 	else: 
 		$Area2D/X.visible = true 
 		$Area2D/O.visible = true 
+		Global.countT -= 1
+		Global.countX += 1
+
+	Global.countMov += 1

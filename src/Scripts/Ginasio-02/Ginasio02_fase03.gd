@@ -21,7 +21,7 @@ func _ready():
 	add_child(player)
 	
 	add_child(conteudo)
-	Global.current_dialogo = Global.dialogo["language"]["eng"]["dialogo"]["instruGym2Level1"]["talk01"]
+	Global.current_dialogo = Global.dialogo["language"]["eng"]["dialogo"]["instruGym2Level3"]["talk01"]
 	conteudo.load_Instru()
 	
 	player.camera.limit_left = 0
@@ -30,9 +30,17 @@ func _ready():
 	player.camera.limit_right = 1512
 	player.camera.zoom = Vector2(1, 1)
 	
+	Global.countX = 16
+	Global.countO = 0
+	Global.countT = 0
+	Global.countMov = 0
+	
 func _process(delta):
-	if Global.count >= 14:
+	if Global.countX == 0 and Global.countT >= 12 and Global.countMov <= 50:
 		Global.Gin02preBoss = true
+		
+	if Global.countMov > 50:
+		get_tree().change_scene("res://Cenas/Ginasio-02/GameOverGym2Fase3.tscn")
 
 #Funções que indicam a próxima fase e o mapa anterior
 	

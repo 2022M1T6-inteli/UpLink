@@ -52,7 +52,10 @@ var current_dialogo
 var Gin02Fase02Enabled = false
 var Gin02Fase03Enabled = false
 var Gin02preBoss = false
-var count = 0
+var countX = 0
+var countO = 0
+var countT = 0
+var countMov = 0
 
 onready var caminhoDialogo # n foi o tony
 
@@ -197,10 +200,16 @@ onready var dialogo = {"language": {"pt-br": "teste",
 									"star5": ["Você sabia que na maturidade 4 de data driven é esperado que você aproveite as informações para melhorar seu Growt Board?"]
 								},
 								"instruGym2Level1": {
-									"talk01": ["Deixe todos os módulos em círculo"],
+									"talk01": ["Elimine quase completamente os Bugs: até 2 bugs.\nColete os feedbacks dos usuários: Pelo menos 7 feedbacks."],
 #									"talk01": ["Elimine quase completamente os Bugs: até 2 bugs \nColete os feedbacks dos usuários: Pelo menos 7 feedbacks"],
 									"talk02": ["Resolva o desafio antes de ir para a próxima fase"]
 									
+								},
+								"instruGym2Level2": {
+									"talk01": ["Elimine quase completamente os Bugs: até 1 bug.\nColete os feedbacks dos usuários: Pelo menos 9 feedbacks.\nMantenha a velocidade de desenvolvimento: termine em até 2 min."]
+								},
+								"instruGym2Level3": {
+									"talk01": ["Elimine completamente os Bugs.\nColete os feedbacks dos usuários: Pelo menos 12 feedbacks.\nMantenha a velocidade de desenvolvimento: termine em até 1 min.\nObedeça as métricas e termine em até 30 movimentos."]
 								},
 								"preBoss01": {
 									"talk01": ["VISION", "You… you are that little blue guy from the library… if you’re here to face me, then first you’ll have to prove your worth to me. If you can learn and surpass me in my area of expertise, then I’ll consider listening to what you have to say"],
