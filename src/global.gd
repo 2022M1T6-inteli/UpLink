@@ -25,6 +25,7 @@ var numLivros = 0
 var numLivrosLobby=0
 var percentVisionGinasio01 = 0.3
 
+var ginasio3final = 0
 
 var keyDialogo = 'teste2' # keydialogo chama as falas das cenas
 var indexDialogo = 0
@@ -62,13 +63,13 @@ onready var dialogo = {"language": {"pt-br": "teste",
 									  "No one knows from where it came, no one knows when it started, and no one knew what was truly happening.",
 									  "“What happened to our ever so glorious island?” The people couldn’t help but wonder…"],
 							"instructions": {
-								"collectBooksLobby":["Agora você deverá explorar o mapa e coletar cinco livros, com isso você entendera o modelo de produtos, suas inspirações e seu modo de trabalho."],
-								"collectedBooksLobby":["Parabéns!! Agora que você achou os livros vá até uma casa no lado esquerdo do mapa, lá você encontrara o ginásio 1 e seu mentor"],
-								"gym1":["Parabéns! Você está no ginásio 1, dentro do ginásio 1, existem 3 labirintos que você devera atravessar, ao longo do trajeto você aprenderá um pouco das maturidades de vision, roadmap, backlog, stakeholders e data driven"],
+								"collectBooksLobby":["Agora você deverá explorar o mapa e coletar cinco livros, com isso aprenderá sobre o modelo de produtos, suas inspirações e seu modo de trabalho."],
+								"collectedBooksLobby":["Parabéns!! Agora que você achou os livros vá até uma casa no lado esquerdo do mapa, lá você encontrará o ginásio 1 e seu mentor."],
+								"gym1":["Parabéns! Você está no ginásio 1, dentro do ginásio 1, existem 3 labirintos que você deverá atravessar, ao longo do trajeto você aprenderá um pouco das maturidades de vision, roadmap, backlog, stakeholders e data driven"],
 								"gym1-outros": ["Colete os 5 livros e ache o fim do labirinto"],
 								"instrucAfterGym1":["Agora procure um prédio de dois andares no canto superior direito, lá você entrara no ginásio 2 e encontrara seu mentor"],
 								"gym2":["Parabéns! Você chegou no ginásio 2, o ginásio 2 tem 3 fases, para passar de fase você terá que completar o puzzle, sem as métricas dos seus mentores você não conseguira"],
-								"instrucAfterGym2":["Agora procure um canteiro de obras, lá está o ginásio 3 e seu mentor"],
+								"instrucAfterGym2":["Agora procure um canteiro de obras na parte central inferior do mapa, lá está o ginásio 3 e seu mentor"],
 								"gym3":["Parabéns! Você chegou no ginásio 3, o ginásio 3 tem 3 fases e para completar as fases você deve atravessar o mapa, mas cuidado que dependendo de onde você pisar, você morre. \n\nPara saber o caminho correto você deve ouvir os conselhos do seu mentor, mas ele não te dará o caminho apenas te dará dicas"],
 								"mentor": ["Fale com o mentor"]
 										},
@@ -186,14 +187,14 @@ onready var dialogo = {"language": {"pt-br": "teste",
 									"star2": ["Você sabia que a única maturidade em que não recebemos os insights dos stakeholders é a maturidade 1?"],
 									"star3": ["Você sabia que uma das ações mais básicas para se atingir o nível 2 na maturidade de stakeholders é mapeando os stakeholders do seu produto?"],
 									"star4": ["Você sabia que a partir do 3 nível de maturidade dos stakeholder's, é necessário você aplicar consistentemente os princípios do build-measure-learn para evoluir para o nível 4"],
-									"star5": ["Você sabia que o principal resultado esperado na maturidade 1 da dimensão backlog e ter o backlog nas métricas de TFS/Jira e Volatilidade/Velocidade do Time de Produto?"]
+									"star5": ["Você sabia que o principal resultado esperado na maturidade 1 da dimensão backlog é ter o backlog nas métricas de TFS/Jira e Volatilidade/Velocidade do Time de Produto?"]
 								},
 								"contentGym1Level3":{
 									"star1": ["Você sabia que a partir do nível 3 de maturidade do backlog, uma equipe pode usar as métricas de backlog para conversar com os stakeholder's?"],
 									"star2": ["Você sabia que após uma equipe atingir o nível de maturidade  4, para ela continuar nesse nível ela precisa fazer Data storytelling leveraging backlog metrics"],
 									"star3": ["Você sabia que apenas no nível de maturidade 1 do data driven, os KPI's de produto são dados de referência relevantes para a equipe de produtos?"],
 									"star4": ["Você sabia que em todas as maturidades do data driven é esperado uma atualização do roadmap e OGSM's?"],
-									"star5": ["Você sabia que na maturidade 4 de data driven e esperado que você aproveite as informações para melhorar seu Growt Board?"]
+									"star5": ["Você sabia que na maturidade 4 de data driven é esperado que você aproveite as informações para melhorar seu Growt Board?"]
 								},
 								"instruGym2Level1": {
 									"talk01": ["Deixe todos os módulos em círculo"],

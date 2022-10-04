@@ -108,8 +108,10 @@ position = Vector2( 998, -268 )
 shape = SubResource( 7 )
 
 [node name="CanvasLayer" parent="." instance=ExtResource( 3 )]
+visible = false
 
 [node name="CanvasLayer2" parent="." instance=ExtResource( 4 )]
+visible = false
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 position = Vector2( 4.85999, -4.93103 )

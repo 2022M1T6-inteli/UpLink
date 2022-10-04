@@ -44,7 +44,6 @@ func _ready():
 	
 	#adicionando o balao de instrução para dizer ao player o próximo passo dentro do jogo
 
-	
 func inciarPlayer(posicao):
 	var player = prePlayer.instance()
 	player.position = posicao

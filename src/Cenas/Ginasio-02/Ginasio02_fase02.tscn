@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Scripts/Ginasio-02/Ginasio02_fase02.gd" type="Script" id=1]
 [ext_resource path="res://Cenas/Ginasio-02/MinigameBola.tscn" type="PackedScene" id=2]
@@ -10,6 +10,9 @@ extents = Vector2( 20.3125, 36 )
 
 [sub_resource type="RectangleShape2D" id=12]
 extents = Vector2( 20.3125, 36 )
+
+[sub_resource type="RectangleShape2D" id=14]
+extents = Vector2( 16.3333, 36.6667 )
 
 [sub_resource type="RectangleShape2D" id=13]
 extents = Vector2( 56.3333, 15.6667 )
@@ -146,15 +149,22 @@ position = Vector2( 62.6542, 39.9491 )
 rotation = 3.14159
 scale = Vector2( 0.510141, -0.425514 )
 
+[node name="StaticBody2D7" type="StaticBody2D" parent="MapaMedio"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MapaMedio/StaticBody2D7"]
+position = Vector2( 105, -22 )
+shape = SubResource( 14 )
+
 [node name="StaticBody2D6" type="StaticBody2D" parent="MapaMedio"]
+position = Vector2( 66.6667, -46.6667 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MapaMedio/StaticBody2D6"]
-position = Vector2( 65, 80 )
+position = Vector2( -0.666626, 127.333 )
 shape = SubResource( 13 )
 
 [node name="SoundX" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 4 )
 
-[connection signal="body_entered" from="MapaMedio/ChangeFase03" to="." method="_on_Area2D_body_entered"]
 [connection signal="body_entered" from="MapaMedio/ChangeFase03" to="." method="_on_ChangeFase03_body_entered"]
+[connection signal="body_entered" from="MapaMedio/ChangeFase03" to="." method="_on_Area2D_body_entered"]
 [connection signal="body_entered" from="MapaMedio/Area2D2" to="." method="_on_Area2D2_body_entered"]

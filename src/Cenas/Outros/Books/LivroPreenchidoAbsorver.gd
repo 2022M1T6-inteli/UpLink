@@ -1,7 +1,7 @@
 extends Area2D
 
 func _ready():
-	$LivroPreenchidoAbsorver/AnimationPlayer.play("Star")
+	$LivroPreenchidoAbsorver2/AnimationPlayer.play("Star")
 	
 func _on_LivroPreenchidoAbsorver_body_entered(body):
 	if body.name == "Player":

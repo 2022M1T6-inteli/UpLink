@@ -9,12 +9,12 @@ var instruActive= false
 
 
 func _input(event):
-	if event.is_action_pressed("ui_select") and balaoActive: #and finishedBalao
+	if event.is_action_pressed("ui_accept") and balaoActive: #and finishedBalao
 		getNextSpeakBalao()
 #	elif event.is_action_pressed("ui_select") and finishedBalao == false and balaoActive:
 #		transition_balao(false)
 		
-	if event.is_action_pressed("ui_select") and dialogoActive: # and finishedDialogo
+	if event.is_action_pressed("ui_accept") and dialogoActive: # and finishedDialogo
 		getNextSpeakDialogo()
 #	elif event.is_action_pressed("ui_select") and finishedDialogo == false and dialogoActive:
 #		transition_dialogo(false)
