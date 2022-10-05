@@ -13,7 +13,7 @@ extents = Vector2( 63.0921, 84.6053 )
 extents = Vector2( 511, 107 )
 
 [sub_resource type="RectangleShape2D" id=4]
-extents = Vector2( 39.25, 48.875 )
+extents = Vector2( 39.25, 21.3672 )
 
 [sub_resource type="RectangleShape2D" id=5]
 extents = Vector2( 162.5, 19.1563 )
@@ -124,25 +124,25 @@ collision_layer = 256
 collision_mask = 256
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D1"]
-position = Vector2( 307, 622 )
+position = Vector2( 307, 634.938 )
 shape = SubResource( 4 )
 
 [node name="Area2D2" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
-position = Vector2( 479, 839 )
+position = Vector2( 479, 845.469 )
 shape = SubResource( 4 )
 
 [node name="Area2D3" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D3"]
-position = Vector2( 391, 1057 )
+position = Vector2( 391, 1061.73 )
 shape = SubResource( 4 )
 
 [node name="Area2D4" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D4"]
-position = Vector2( 564, 1269 )
+position = Vector2( 564, 1272.37 )
 shape = SubResource( 4 )
 
 [node name="Area2D0" type="Area2D" parent="."]

@@ -13,10 +13,10 @@ extents = Vector2( 193.882, 703.026 )
 extents = Vector2( 69.0214, 82.6809 )
 
 [sub_resource type="RectangleShape2D" id=4]
-extents = Vector2( 167.625, 63 )
+extents = Vector2( 167.625, 25.5 )
 
 [sub_resource type="RectangleShape2D" id=5]
-extents = Vector2( 57.875, 39.125 )
+extents = Vector2( 33.7188, 24.2813 )
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 1 )
@@ -129,31 +129,31 @@ shape = SubResource( 2 )
 
 [node name="CollisionShape2D12" type="CollisionShape2D" parent="Gym3Fas1/Area2D"]
 light_mask = 256
-position = Vector2( -77.7935, 582.267 )
+position = Vector2( -194.717, 580.729 )
 shape = SubResource( 2 )
 
 [node name="Area2D1" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D1"]
-position = Vector2( 439, 334 )
+position = Vector2( 439, 371.5 )
 shape = SubResource( 4 )
 
 [node name="Area2D2" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
-position = Vector2( 485, 622.125 )
+position = Vector2( 485, 629.125 )
 shape = SubResource( 5 )
 
 [node name="Area2D3" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D3"]
-position = Vector2( 321, 833 )
+position = Vector2( 308.563, 836.563 )
 shape = SubResource( 5 )
 
 [node name="Area2D4" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D4"]
-position = Vector2( 544, 1042 )
+position = Vector2( 555.719, 1046.28 )
 shape = SubResource( 5 )
 
 [node name="Area2D5" type="Area2D" parent="."]

@@ -120,5 +120,5 @@ scale = Vector2( 0.500678, -0.517076 )
 stream = ExtResource( 3 )
 
 [connection signal="body_entered" from="MapaFacil2/Area2D2" to="." method="_on_Area2D2_body_entered"]
-[connection signal="body_entered" from="MapaFacil2/ChangeFase02" to="." method="_on_ChangeFase02_body_entered"]
 [connection signal="body_entered" from="MapaFacil2/ChangeFase02" to="." method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="MapaFacil2/ChangeFase02" to="." method="_on_ChangeFase02_body_entered"]
