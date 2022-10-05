@@ -3,8 +3,8 @@ extends Node2D
 onready var prePlayer = preload("res://Cenas/Outros/Player/Player.tscn")
 onready var preNPC1 = preload("res://Cenas/NPC's/NPC1.tscn")
 
-var playerPosition = Vector2(1400,310)
-var NPC1Position = Vector2(927, 320)
+var playerPosition = Vector2(688,720) #688,720 
+var NPC1Position = Vector2(10, 1117) #10 1117
 
 var player
 var NPC1
@@ -20,11 +20,11 @@ func _ready():
 	add_child(NPC1)
 	
 	player.lanterna.enabled = false
-	player.camera.limit_left = 0
-	player.camera.limit_bottom = 697
-	player.camera.limit_top = 0
-	player.camera.limit_right = 1023
-	player.camera.zoom = Vector2(1, 1)
+	#player.camera.limit_left = 0
+	#player.camera.limit_bottom = 697
+	#player.camera.limit_top = 0
+	#player.camera.limit_right = 1023
+	#player.camera.zoom = Vector2(1, 1)
 	
 func iniciarPlayer(posicao):
 	var player = prePlayer.instance()
@@ -39,3 +39,7 @@ func iniciarNPC1(posicao):
 func _on_Area2D_body_entered(body):
 	Global.ginasio3final += 1
 	get_tree().change_scene("res://Cenas/Lobby/Lobby.tscn")
+	Global.preGinasio = "Ginasio<3"
+	Global.Gin03_enabled = false 
+	Global.dinamicaLobbyCondition = false
+	

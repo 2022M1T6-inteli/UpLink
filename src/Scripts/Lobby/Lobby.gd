@@ -79,7 +79,11 @@ func _ready():
 		add_child(conteudo)
 		Global.current_dialogo = Global.dialogo["language"]["eng"]["instructions"]["instrucAfterGym2"]
 		conteudo.load_Instru()
-
+	elif Global.preGinasio == "Ginasio<3":
+		add_child(conteudo)
+		Global.current_dialogo = Global.dialogo["language"]["eng"]["instructions"]["instrucAfterGym3"]
+		conteudo.load_Instru()
+	
 #Função responsável por fazer com que variável receba o nó chamando a cena correta e definindo sua posição
 func iniciarPlayer(posicao):
 	var player = prePlayer.instance()
@@ -96,9 +100,13 @@ func _process(delta):
 		conteudo.load_Instru()
 		
 func _on_Office_body_entered(body):
-	if Global.ginasio3final > 1:
+	if Global.preGinasio == "Ginasio<3": 
 		get_tree().change_scene("res://Cenas/Outros/Credits.tscn")
 		Global.playerPosition = Vector2(45, -1929)
+	else: 
+		add_child(conteudo)
+		Global.current_dialogo = Global.dialogo["language"]["eng"]["instructions"]["cantbuilding"]
+		conteudo.load_Instru()
 
 #Funções abaixo são para transições de cenas para os ginásios e demais espaços
 func _on_Ginasio_01_body_entered(body):
@@ -107,7 +115,7 @@ func _on_Ginasio_01_body_entered(body):
 	if Global.numLivrosLobby >= 5 and statusDynamic == false and Global.Gin01_enabled == true:
 		hud_ginasio01.resetLivrosPreenchidos()
 		get_tree().change_scene("res://Cenas/Ginasio-01/Ginasio01_fase01.tscn")
-		Global.dinamicaLobbyCondition = false
+		Global.dinamicaLobbyCondition = false 
 
 func _on_Ginasio_02_body_entered(body):
 	if Global.Gin01_enabled == false:
@@ -116,7 +124,7 @@ func _on_Ginasio_02_body_entered(body):
 
 func _on_Ginasio_03_body_entered(body):
 	if Global.Gin02_enabled == false:
-		get_tree().change_scene("res://Cenas/Ginasio-03/Ginasio03_fase01.tscn")
+		get_tree().change_scene("res://Cenas/Ginasio-03/Ginasio03_fase03.tscn")
 		Global.playerPosition = Vector2(1889, -118)
 
 func _on_Biblioteca1_body_entered(body):

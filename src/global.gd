@@ -1,6 +1,5 @@
 extends Node
 
-
 var stop = false
 
 var playerPosition =  Vector2(0, 340)
@@ -52,6 +51,7 @@ var current_dialogo
 var Gin02Fase02Enabled = false
 var Gin02Fase03Enabled = false
 var Gin02preBoss = false
+
 var countX = 0
 var countO = 0
 var countT = 0
@@ -75,8 +75,12 @@ onready var dialogo = {"language": {"pt-br": "teste",
 								"instrucAfterGym1":["Agora procure um prédio de dois andares no canto superior direito, lá você entrara no ginásio 2 e encontrara seu mentor"],
 								"gym2":["Parabéns! Você chegou no ginásio 2, o ginásio 2 tem 3 fases, para passar de fase você terá que completar o puzzle, sem as métricas dos seus mentores você não conseguira"],
 								"instrucAfterGym2":["Agora procure um canteiro de obras na parte central inferior do mapa, lá está o ginásio 3 e seu mentor"],
-								"gym3":["Parabéns! Você chegou no ginásio 3, o ginásio 3 tem 3 fases e para completar as fases você deve atravessar o mapa, mas cuidado que dependendo de onde você pisar, você morre. \n\nPara saber o caminho correto você deve ouvir os conselhos do seu mentor, mas ele não te dará o caminho apenas te dará dicas"],
-								"mentor": ["Fale com o mentor"]
+								"gym3Level01":["Parabéns! Você chegou no ginásio 3, o ginásio 3 tem 3 fases e para completar as fases você deve atravessar o mapa, mas cuidado que dependendo de onde você pisar, você morre. \n\nPara saber o caminho correto você deve ouvir os conselhos do seu mentor, mas ele não te dará o caminho apenas te dará dicas. \n\nNessa fase as instruções são sobre lean, extreme programming, double diamond e human centered designed"],
+								"mentor": ["Fale com o mentor"],
+								"gym3Level02":["Parabéns! Você chegou na fase 2, agora as instruções são sobre vision, roadmap, bakclog, data drive e stakeholders. \n\nContinue seguido as dicas"],
+								"gym3Level03":["Parabéns! Você chegou na fase 3, agora as instruções são sobre os kpi's (quality, user, business e deployment). \n\nContinue seguido as dicas"],
+								'instrucAfterGym3': ["é nois goiaba"],
+								'cantbuilding' : ["nn pode entrar nn mané"],
 										},
 							"dialogo": {
 								"context": {
@@ -202,16 +206,70 @@ onready var dialogo = {"language": {"pt-br": "teste",
 									"star5": ["Você sabia que na maturidade 4 de data driven é esperado que você aproveite as informações para melhorar seu Growt Board?"]
 								},
 								"instruGym2Level1": {
-									"talk01": ["Elimine quase completamente os Bugs: até 2 bugs.\nColete os feedbacks dos usuários: Pelo menos 7 feedbacks. \n Bugs = X e feedback = △"],
+									"talk01": ["Parabéns! Você chegou no ginásio 2, esse ginásio são 3 fases e o objetivos deles é resolver um puzzle de acordo com as métricas do quality KPI's.\nSegue abaixo as instruções:\n\nElimine quase completamente os Bugs: até 1 bug.\nColete os feedbacks dos usuários: Pelo menos 9 feedbacks. \n Bugs = X e feedback = triângulos"],
 #									"talk01": ["Elimine quase completamente os Bugs: até 2 bugs \nColete os feedbacks dos usuários: Pelo menos 7 feedbacks"],
 									"talk02": ["Resolva o desafio antes de ir para a próxima fase"]
 									
 								},
 								"instruGym2Level2": {
-									"talk01": ["Elimine quase completamente os Bugs: até 1 bug.\nColete os feedbacks dos usuários: Pelo menos 9 feedbacks. \n Bugs = X e feedback = △"]
+									"talk01": ["Elimine quase completamente os Bugs: até 1 bug.\nColete os feedbacks dos usuários: Pelo menos 9 feedbacks. \n Bugs = X e feedback = triângulo"]
 								},
 								"instruGym2Level3": {
-									"talk01": ["Elimine completamente os Bugs.\nColete os feedbacks dos usuários: Pelo menos 12 feedbacks.\n Bugs = X e feedback = △"]
+									"talk01": ["Atenção! Nessa fase você terá apenas 50 movimentos para eliminar completamente os Bugs.\nColete os feedbacks dos usuários: Pelo menos 12 feedbacks.\n Bugs = X e feedback = triângulo"]
+								},
+								"instructionsGym3":{
+									"doubleDiamond": {
+										"instrucaoUm": ["Divergir e convergir para descobrir, divergir e convergir para construir"],
+										"instrucaoDois": ["Descobrir os melhores problemas -> construir as melhores soluções -> iterar com o usuário baseado em kpi's -> MVP "],
+									},
+									"lean": {
+										"instrucaoUm": ["Reduzir o risco de construir a coisa errada enquanto se muda direção confortavelmente"],
+										"instrucaoDois": ["Decisões orientadas por dados"],
+									},
+									"humanCenterDesigned": {
+										"instrucaoUm": ["Garantir que o software resolva um problema real para usuários reais de uma forma desejável, ou seja, com um design, estrutura e a finalidade claros e fáceis de usar"],
+										"instrucaoDois": ["Criação de protótipo"],
+									},
+									"XP": {
+										"instrucaoUm": ["Metodologia para conseguir construir softwares funcionais em uma velocidade e qualidade consistentes, mesmo suscetíveis à  recorrentes mudança de requisitos."],
+										"instrucaoDois": ["Integrações continuas "],
+									},
+									"kpiBusiness": {
+										"instrucaoUm": ["Essa dimensão é responsável por criar um roadmap baseado em resultados a partir da maturidade nível 2"],
+										"instrucaoDois": [""],
+									},
+									"userKpi":{
+										"instrucaoUm": ["Essa dimensão acompanha o usuário de diversas maneiras, criando métricas para avaliar sua experiência com o produto"],
+										"instrucaoDois": ["Pegar Arthur"],
+									},
+									"kpiQuality": {
+										"instrucaoUm": ["Prioriza encontrar e resolver bugs antes de adicionar recursos"],
+										"instrucaoDois": ["Equipe usa defeitos de produção para impulsionar adoção de práticas que melhorem a qualidade na todos os estágios de desenvolvimento, por exemplo, Test Driven Desenvolvimento, descoberta e enquadramento"],
+									},
+									"kpiDeployment": {
+										"instrucaoUm": ["Desenvolve maneiras de iteração automática"],
+										"instrucaoDois": [""],
+									},
+									"Stakeholders": {
+										"instrucaoUm": ["Quem da inputs importantes ao product team para futuras iterações"],
+										"instrucaoDois": [""],
+									},
+									"Visao": {
+										"instrucaoUm": ["Responsável pela visualização dos objetivos, como a implementação de uma Growth Broad"],
+										"instrucaoDois": [""],
+									},
+									"Data": {
+										"instrucaoUm": ["Toma decisões baseadas em dados"],
+										"instrucaoDois": [""],
+									},
+									"Road": {
+										"instrucaoUm": ["Mapeia os objetivos da equipe, levando em consideração Outcome-Based"],
+										"instrucaoDois": [""],
+									},
+									"Back": {
+										"instrucaoUm": ["Acompanha o volume e a volatilidade de user stories."],
+										"instrucaoDois": [""],
+									},
 								},
 								"preBoss01": {
 									"talk01": ["VISION", "You… you are that little blue guy from the library… if you’re here to face me, then first you’ll have to prove your worth to me. If you can learn and surpass me in my area of expertise, then I’ll consider listening to what you have to say"],
@@ -429,6 +487,7 @@ onready var dialogo = {"language": {"pt-br": "teste",
 										"instrucaoUm": ["Essa dimensão é responsável por criar um roadmap baseado em resultados a partir da maturidade nível 2"],
 										"instrucaoDois": [""],
 									},
+									
 									"kpiQuality": {
 										"instrucaoUm": ["Prioriza encontrar e resolver bugs antes de adicionar recursos"],
 										"instrucaoDois": [""],
