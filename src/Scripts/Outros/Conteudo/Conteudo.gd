@@ -7,7 +7,6 @@ var balaoActive = false
 var dialogoActive = false
 var instruActive= false
 
-
 func _input(event):
 	if event.is_action_pressed("ui_accept") and balaoActive: #and finishedBalao
 		getNextSpeakBalao()
@@ -23,7 +22,6 @@ func _input(event):
 #		getNextSpeakInstru()
 #	elif event.is_action_pressed("ui_select") and finishedInstru == false and instruActive:
 #		transition_instru(false)
-
 
 func getNextSpeakBalao():
 	Global.indexBalao += 1
@@ -107,8 +105,8 @@ func transition_instru(condition):
 		$Instru/TweenInstru.start()
 		
 func _process(delta):
-	
 	pass
+	
 #	if $Balao/RichTextLabelBalao.percent_visible >= 0.9:
 #		finishedBalao = true
 #

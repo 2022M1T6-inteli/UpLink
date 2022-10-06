@@ -157,6 +157,34 @@ shape = SubResource( 5 )
 position = Vector2( 452, 233 )
 shape = SubResource( 6 )
 
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = 268.0
+margin_top = 571.0
+margin_right = 602.0
+margin_bottom = 674.0
+color = Color( 0.984314, 0.819608, 0.760784, 0.509804 )
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+margin_left = 271.0
+margin_top = 789.0
+margin_right = 605.0
+margin_bottom = 892.0
+color = Color( 0.984314, 0.819608, 0.760784, 0.509804 )
+
+[node name="ColorRect3" type="ColorRect" parent="."]
+margin_left = 271.0
+margin_top = 1005.0
+margin_right = 605.0
+margin_bottom = 1108.0
+color = Color( 0.984314, 0.819608, 0.760784, 0.509804 )
+
+[node name="ColorRect4" type="ColorRect" parent="."]
+margin_left = 271.0
+margin_top = 1222.0
+margin_right = 605.0
+margin_bottom = 1325.0
+color = Color( 0.984314, 0.819608, 0.760784, 0.509804 )
+
 [connection signal="body_entered" from="Gym3Fase2/Area2D" to="." method="_on_Area2D_body_entered"]
 [connection signal="body_entered" from="Gym3Fase2/End" to="." method="_on_End_body_entered"]
 [connection signal="body_entered" from="Area2D1" to="." method="_on_Area2D1_body_entered"]

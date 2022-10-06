@@ -32,7 +32,7 @@ script = ExtResource( 3 )
 stream = ExtResource( 2 )
 
 [node name="BossFight" type="Sprite" parent="."]
-position = Vector2( 688, 720 )
+position = Vector2( 672, 708 )
 texture = ExtResource( 1 )
 
 [node name="Area2D" type="Area2D" parent="BossFight"]
@@ -70,3 +70,4 @@ position = Vector2( 0, -720 )
 shape = SubResource( 7 )
 
 [connection signal="body_entered" from="BossFight/Area2D" to="." method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="BossFight/Area2D" to="." method="_on_Area2D_body_exited"]

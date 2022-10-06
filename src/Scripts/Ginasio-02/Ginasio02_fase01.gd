@@ -13,6 +13,10 @@ func _input(event):
 	if event.is_action_pressed("pause"):
 		set_visible(!get_tree().paused)
 		get_tree().paused = !get_tree().paused
+		remove_child(conteudo)
+	if 	Global.resume_pause == true:
+		add_child(conteudo)
+		Global.resume_pause = false 
 
 func iniciarPlayer(posicao):
 	var player = prePlayer.instance()
@@ -25,7 +29,7 @@ func _ready():
 	player = iniciarPlayer(playerPosition)
 
 	add_child(player)
-	
+	Global.stepGin = 2
 	#adicionando o balao de instrução para dizer ao player o próximo passo dentro do jogo
 	add_child(conteudo)
 	Global.current_dialogo = Global.dialogo["language"]["eng"]["instructions"]["gym2"]
@@ -42,12 +46,15 @@ func _ready():
 	Global.countO = 0
 	Global.countMov = 0
 	
-	
 
 	add_child(conteudo)
 	Global.current_dialogo = Global.dialogo["language"]["eng"]["dialogo"]["instruGym2Level1"]["talk01"]
-	conteudo.load_Instru()
+	conteudo.load_balao()
 
+
+	add_child(conteudo)
+	Global.current_dialogo = Global.dialogo["language"]["eng"]["dialogo"]["instruGym2Level1"]["talk03"]
+	conteudo.load_Instru()
 	
 func _process(delta):
 	if Global.countX <= 2 and Global.countT >= 7:
@@ -57,21 +64,14 @@ func _process(delta):
 #Funções que indicam a próxima fase e o mapa anterior
 
 func _on_ChangeFase02_body_entered(body):
-	if Global.Gin02Fase02Enabled == true:
+	if Global.Gin02Fase02Enabled == true and body.name == "Player":
 		get_tree().change_scene("res://Cenas/Ginasio-02/Ginasio02_fase02.tscn")
 		Global.countMov = 0
 	else: 
-		add_child(conteudo)
-		Global.current_dialogo = Global.dialogo["language"]["eng"]["dialogo"]["instruGym2Level1"]["talk02"]
-		#"Resolva o desafio antes de ir para a próxima fase"
-		conteudo.load_balao()
+		if body.name == "Player":
+			add_child(conteudo)
+			Global.current_dialogo = Global.dialogo["language"]["eng"]["dialogo"]["instruGym2Level1"]["talk02"]
+			#"Resolva o desafio antes de ir para a próxima fase"
+			conteudo.load_balao()
 
-func _input(event):
-	if event.is_action_pressed("pause"):
-#		set_visible(!get_tree().paused)
-#		get_tree().paused = !get_tree().paused
-		remove_child(conteudo)
-	if 	Global.resume_pause == true:
-		add_child(conteudo)
-		Global.resume_pause = false 
 		

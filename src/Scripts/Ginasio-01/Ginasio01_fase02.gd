@@ -19,6 +19,10 @@ func _input(event):
 	if event.is_action_pressed("pause"):
 		set_visible(!get_tree().paused)
 		get_tree().paused = !get_tree().paused
+		remove_child(conteudo)
+	if 	Global.resume_pause == true:
+		add_child(conteudo)
+		Global.resume_pause = false 
 
 
 # DECLARANDO VARIÁVEIS
@@ -130,11 +134,4 @@ func _on_LivroBalaoCinto_body_entered(body):
 		conteudo.load_balao()
 		statusBalaoCinco = false
 
-func _input(event):
-	if event.is_action_pressed("pause"):
-#		set_visible(!get_tree().paused)
-#		get_tree().paused = !get_tree().paused
-		remove_child(conteudo)
-	if 	Global.resume_pause == true:
-		add_child(conteudo)
-		Global.resume_pause = false 
+

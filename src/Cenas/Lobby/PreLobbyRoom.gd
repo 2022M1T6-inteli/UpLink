@@ -114,7 +114,13 @@ func _on_NPC4_body_entered(body):
 
 
 func _on_PreLobbyHouse_body_entered(body):
-	if body.name == "Player" and Global.statusPreLobby:
+	if body.name == "Player":
+		print(Global.statusTalkNPC)
+		print(Global.statusTalkNPC1)
+		print(Global.statusTalkNPC2)
+		print(Global.statusTalkNPC3)
+		print(Global.statusTalkNPC4)
+	if body.name == "Player" and Global.statusPreLobby == true:
 		get_tree().change_scene("res://Cenas/Lobby/PreLobbyHouse.tscn")
 	elif body.name == "Player" and Global.statusPreLobby == false:
 		add_child(balao)

@@ -49,6 +49,14 @@ func iniciarLivro(posicao):
 	return livro
 	
 func _ready():
+	$SoundLobby.play()
+	$Park.play()
+	#inicialização da variável como nó e criação desse nó Player
+	player = iniciarPlayer(Global.playerPosition)
+	add_child(player)
+	player.camera.current = true
+	player.camera.zoom.x = 1.5
+	player.camera.zoom.y = 1.5
 	if Global.dinamicaLobbyCondition:
 		add_child(conteudo)
 		ativarDinamicaLivros()
@@ -60,15 +68,8 @@ func _ready():
 		$LivroBalaoTres/LivroTres.disabled = false
 		$LivroBalaoQuatro/LivroQuatro.disabled = false
 		$LivroBalaoCinco/LivroCinco.disabled = false
-		
-	$SoundLobby.play()
-	$Park.play()
-	#inicialização da variável como nó e criação desse nó Player
-	player = iniciarPlayer(Global.playerPosition)
-	add_child(player)
-	player.camera.current = true
-	player.camera.zoom.x = 1.5
-	player.camera.zoom.y = 1.5
+	
+
 	
 	if Global.preGinasio == "Ginasio02":
 		add_child(conteudo)
@@ -91,7 +92,7 @@ func _ready():
 		statusBalaoTres = false
 		statusBalaoQuatro = false
 		statusBalaoCinco = false
-		
+
 #Função responsável por fazer com que variável receba o nó chamando a cena correta e definindo sua posição
 func iniciarPlayer(posicao):
 	var player = prePlayer.instance()
@@ -117,6 +118,7 @@ func _on_Office_body_entered(body):
 		add_child(conteudo)
 		Global.current_dialogo = Global.dialogo["language"]["eng"]["instructions"]["cantbuilding"]
 		conteudo.load_Instru()
+		
 #Funções abaixo são para transições de cenas para os ginásios e demais espaços
 func _on_Ginasio_01_body_entered(body):
 	Global.playerPosition = Vector2(783, 1370)
@@ -132,7 +134,7 @@ func _on_Ginasio_02_body_entered(body):
 		
 func _on_Ginasio_03_body_entered(body):
 	if Global.Gin02_enabled == false:
-		get_tree().change_scene("res://Cenas/Ginasio-03/Ginasio03_fase03.tscn")
+		get_tree().change_scene("res://Cenas/Ginasio-03/Ginasio03_fase01.tscn")
 		Global.playerPosition = Vector2(1889, -118)
 		
 func _on_Biblioteca1_body_entered(body):

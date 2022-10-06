@@ -12,7 +12,11 @@ func _input(event):
 	if event.is_action_pressed("pause"):
 		set_visible(!get_tree().paused)
 		get_tree().paused = !get_tree().paused
-
+		remove_child(conteudo)
+	if 	Global.resume_pause == true:
+		add_child(conteudo)
+		Global.resume_pause = false 
+		
 var estrela1
 var estrela2
 var estrela3
@@ -21,7 +25,7 @@ var statusTutorial = true
 
 
 func _ready():
-
+	Global.stepGin = 3
 	player = inciarPlayer(playerPosition)
 	
 	add_child(estrela1)
@@ -39,7 +43,7 @@ func _ready():
 	
 	add_child(conteudo)
 	Global.current_dialogo = Global.dialogo["language"]["eng"]["instructions"]["gym3Level03"]
-	conteudo.load_Instru()
+	conteudo.load_balao()
 	
 func inciarPlayer(posicao):
 	var player = prePlayer.instance()
@@ -51,46 +55,37 @@ func _on_Area2D_body_entered(body):
 		player.position = playerPosition
 
 func _on_End_body_entered(body):
-	get_tree().change_scene("res://Cenas/Outros/TurnBasedCombat.tscn")
+	get_tree().change_scene("res://Cenas/Ginasio-03/Ginasio03_fase02.tscn")
 
 #colocar pergunta 1 ao iniciar
 
 func _on_Area2D0_body_entered(body):
 	add_child(conteudo) 
 	Global.current_dialogo = Global.dialogo["language"]["eng"]["dialogo"]["instructionsGym3"]["userKpi"]["instrucaoUm"]
-	conteudo.load_balao()
+	conteudo.load_Instru()
 
 func _on_Area2D1_body_entered(body):
 	add_child(conteudo)
 	Global.current_dialogo = Global.dialogo["language"]["eng"]["dialogo"]["instructionsGym3"]["kpiBusiness"]["instrucaoUm"]
-	conteudo.load_balao()
+	conteudo.load_Instru()
 	
 func _on_Area2D2_body_entered(body):
 	add_child(conteudo)
 	Global.current_dialogo = Global.dialogo["language"]["eng"]["dialogo"]["instructionsGym3"]["kpiQuality"]["instrucaoUm"]
-	conteudo.load_balao()
+	conteudo.load_Instru()
 
 func _on_Area2D3_body_entered(body):
 	add_child(conteudo)
 	Global.current_dialogo = Global.dialogo["language"]["eng"]["dialogo"]["instructionsGym3"]["kpiDeployment"]["instrucaoUm"]
-	conteudo.load_balao()
+	conteudo.load_Instru()
 
 func _on_Area2D4_body_entered(body):
 	add_child(conteudo)
 	Global.current_dialogo = Global.dialogo["language"]["eng"]["dialogo"]["instructionsGym3"]["kpiQuality"]["instrucaoDois"]
-	conteudo.load_balao()
+	conteudo.load_Instru()
 
 func _on_Area2D6_body_entered(body):
 	if statusTutorial == true:
 		add_child(conteudo)
 #		conteudo.load_Instru('Tutorial')
 		statusTutorial = false 
-
-func _input(event):
-	if event.is_action_pressed("pause"):
-#		set_visible(!get_tree().paused)
-#		get_tree().paused = !get_tree().paused
-		remove_child(conteudo)
-	if 	Global.resume_pause == true:
-		add_child(conteudo)
-		Global.resume_pause = false 

@@ -5,7 +5,7 @@
 
 [resource]
 script = ExtResource( 1 )
-name = "Mentor1"
+name = "Mentor2"
 texture = ExtResource( 2 )
 health = 1000
 damage = 50

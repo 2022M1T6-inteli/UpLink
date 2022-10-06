@@ -13,6 +13,10 @@ func _input(event):
 	if event.is_action_pressed("pause"):
 		set_visible(!get_tree().paused)
 		get_tree().paused = !get_tree().paused
+		remove_child(conteudo)
+	if 	Global.resume_pause == true:
+		add_child(conteudo)
+		Global.resume_pause = false 
 
 var livroPosition1 = Vector2(80, 783)
 var livroPosition2 = Vector2(462, 79)
@@ -141,11 +145,11 @@ func _on_LivroBalaoCinco_body_entered(body):
 		conteudo.load_balao()
 		statusBalaoCinco = false
 		
-func _input(event):
-	if event.is_action_pressed("pause"):
-#		set_visible(!get_tree().paused)
-#		get_tree().paused = !get_tree().paused
-		remove_child(conteudo)
-	if 	Global.resume_pause == true:
-		add_child(conteudo)
-		Global.resume_pause = false 
+#func _input(event):
+#	if event.is_action_pressed("pause"):
+##		set_visible(!get_tree().paused)
+##		get_tree().paused = !get_tree().paused
+#		remove_child(conteudo)
+#	if 	Global.resume_pause == true:
+#		add_child(conteudo)
+#		Global.resume_pause = false 

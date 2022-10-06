@@ -1,12 +1,11 @@
+
+
 extends Node2D
 
 export(Resource) var enemy = null #exportando o "Mentor"
 
-
 var current_Dellman_health = 0
 var current_enemy_health = 0
-
-
 
 enum QuestionType {TEXT, IMAGE, VIDEO, AUDIO}
 
@@ -51,13 +50,11 @@ func enemy_turn(): #chamando a vez do mento
 
 func load_quiz() -> void:
 	
-	if index >= bd_Quiz.bd.size() or current_Dellman_health==0:
+	if index >= bd_Quiz.bd.size() or current_Dellman_health == 0:
 		print("Acabaram as perguntas")
 		game_over()
 		return # comando para sair da função
 		
-	
-
 	question_texts.text = str(quiz_shuffle[index].question_info) # declarando que question_text vai receber a var bd do nosso bd_quiz, precisamos declarar qual o item e fazemos pelo index, depois pegamos o texto através da question_info definada no script "res_question" que exporta as variaves das perguntas
 	print(question_texts)
 	
@@ -108,6 +105,33 @@ func game_over() -> void: #arrumar
 	$game_over.show() 
 	$game_over/txt_result.text=str(correct, "/", bd_Quiz.bd.size())
 
-
 func _on_button_restart_pressed():
 	get_tree().reload_current_scene()
+	
+func _process(delta):
+	if current_enemy_health <= 0:
+		Global.ginasio3final += 1
+		print(Global.stepGin)
+		if Global.stepGin == 1:
+			Global.stepGin01PreBoss = 2
+			Global.playerPosition = Vector2(850, 352)
+			get_tree().change_scene("res://Cenas/Ginasio-01/Ginasio01_pre_boss_fight.tscn")
+			Global.stepGin = 2
+			
+		elif Global.stepGin == 2:
+			Global.stepGin02PreBoss = 2
+			Global.playerPosition = Vector2(850, 352)
+			get_tree().change_scene("res://Cenas/Ginasio-02/Ginasio02_pre_boss_fight.tscn")
+			Global.stepGin = 3
+			
+		elif Global.stepGin == 3:
+			Global.stepGin03PreBoss = 2
+			Global.playerPosition = Vector2(672, 1328)
+			get_tree().change_scene("res://Cenas/Ginasio-03/Ginasio03_pre_boss_fight.tscn")
+			
+#			get_tree().change_scene("res://Cenas/Lobby/Lobby.tscn")
+#			Global.preGinasio = "Ginasio<3"
+#			Global.Gin03_enabled = false
+#			Global.dinamicaLobbyCondition = false
+		
+#

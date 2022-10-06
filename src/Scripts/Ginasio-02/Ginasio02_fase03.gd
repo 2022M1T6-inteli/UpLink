@@ -17,6 +17,10 @@ func _input(event):
 	if event.is_action_pressed("pause"):
 		set_visible(!get_tree().paused)
 		get_tree().paused = !get_tree().paused
+		remove_child(conteudo)
+	if 	Global.resume_pause == true:
+		add_child(conteudo)
+		Global.resume_pause = false 
 
 func _ready():
 	$SoundX.play()
@@ -59,11 +63,4 @@ func _on_ChangePreBoss_body_entered(body):
 		Global.current_dialogo = Global.dialogo["language"]["eng"]["dialogo"]["instruGym2Level1"]["talk02"]
 		conteudo.load_balao()
 		
-func _input(event):
-	if event.is_action_pressed("pause"):
-#		set_visible(!get_tree().paused)
-#		get_tree().paused = !get_tree().paused
-		remove_child(conteudo)
-	if 	Global.resume_pause == true:
-		add_child(conteudo)
-		Global.resume_pause = false 
+

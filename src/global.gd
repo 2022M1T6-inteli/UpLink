@@ -59,13 +59,15 @@ var countMov = 0
 
 var count = 0
 
+
+
 #variaveis boss fiht
-var current_health = 3600
-var total_health = 3600
-var damage1 = 100
-var damage2 = 30
-var damage3 = 40
-var damage4 = 100
+var current_health = 300
+var total_health = 300
+var damage1 = 250
+var damage2 = 250
+var damage3 = 250
+var damage4 = 250
 
 onready var caminhoDialogo # n foi o tony
 
@@ -77,6 +79,14 @@ onready var stepPreLobbyHouse = 1
 var statusPreLobbyHouseTalkNPCs = true
 var preLobbystatusTalkNPC = true
 
+var stepLobby = 1
+
+var stepGin = 1
+
+var stepGin01PreBoss = 1
+var stepGin02PreBoss = 1
+var stepGin03PreBoss = 1
+
 onready var dialogo = {"preLobbyRoomInstru01": ["Fale com todas as pessoas da sala"],
 						"preLobbyRoomInstru02": ["Vá para a sala no lado direito"],
 						"preLobbyRoomBlocked": ["Fale com todas as pessoas da sala antes de sair da casa"],
@@ -87,8 +97,7 @@ onready var dialogo = {"preLobbyRoomInstru01": ["Fale com todas as pessoas da sa
 						"preLobbyInstructionCloudStatus": ["Fale com o Cloud antes de falar com os mentores"],
 						"preLobbyInstructionOutsideBook": ["Saia da casa na porta de baixo para procurar os livros"],
 						"instructionInit": ["Saia da sala pela porta"],
-						
-						
+						"stepLobby2": ["Vá para o prédio da Dell na parte superior do mapa."],
 						
 						"language": {"pt-br": "teste",
 						"eng": {
@@ -108,14 +117,8 @@ onready var dialogo = {"preLobbyRoomInstru01": ["Fale com todas as pessoas da sa
 								"mentor": ["Fale com o mentor"],
 								"gym3Level02":["Parabéns! Você chegou na fase 2, agora as instruções são sobre vision, roadmap, bakclog, data drive e stakeholders. \n\nContinue seguido as dicas"],
 								"gym3Level03":["Parabéns! Você chegou na fase 3, agora as instruções são sobre os kpi's (quality, user, business e deployment). \n\nContinue seguido as dicas"],
-<<<<<<< HEAD
-								'instrucAfterGym3': ["é nois goiaba"],
-								'cantbuilding' : ["nn pode entrar nn mané"],
-								
-=======
 								"instrucAfterGym3": ["Parabéns! você concluiu todos os ginásios, agora você precisa ir ao preédio da Dell na parte superior do mapa"],
 								"cantbuilding" : ["Você precisa concluir os ginásios para poder entrar no prédio da Dell"],
->>>>>>> 8579987b8aaf9eb05a7da9b508c403880afaf08c
 										},
 							"dialogo": {
 								"context": {
@@ -239,9 +242,10 @@ onready var dialogo = {"preLobbyRoomInstru01": ["Fale com todas as pessoas da sa
 									"star5": ["Você sabia que na maturidade 4 de data driven é esperado que você aproveite as informações para melhorar seu Growt Board?"]
 								},
 								"instruGym2Level1": {
-									"talk01": ["Parabéns! Você chegou no ginásio 2, esse ginásio são 3 fases e o objetivos deles é resolver um puzzle de acordo com as métricas do quality KPI's.\nSegue abaixo as instruções:\n\nElimine quase completamente os Bugs: até 1 bug.\nColete os feedbacks dos usuários: Pelo menos 9 feedbacks. \n Bugs = X e feedback = triângulos"],
+									"talk01": ["Parabéns! Você chegou no ginásio 2, esse ginásio são 3 fases e o objetivos deles é resolver um puzzle de acordo com as métricas do quality KPI's."],
 #									"talk01": ["Elimine quase completamente os Bugs: até 2 bugs \nColete os feedbacks dos usuários: Pelo menos 7 feedbacks"],
-									"talk02": ["Resolva o desafio antes de ir para a próxima fase"]
+									"talk02": ["Resolva o desafio antes de ir para a próxima fase"],
+									"talk03": ["Elimine quase completamente os Bugs: até 1 bug e colete os feedbacks dos usuários: Pelo menos 9 feedbacks. \n Bugs = X e feedback = triângulos"],
 									
 								},
 								"instruGym2Level2": {
@@ -305,7 +309,8 @@ onready var dialogo = {"preLobbyRoomInstru01": ["Fale com todas as pessoas da sa
 									},
 								},
 								"preBoss01": {
-									"talk01": ["VISION", "You… you are that little blue guy from the library… if you’re here to face me, then first you’ll have to prove your worth to me. If you can learn and surpass me in my area of expertise, then I’ll consider listening to what you have to say"],
+									"talk01": [["VISION", "You… you are that little blue guy from the library… if you’re here to face me, then first you’ll have to prove your worth to me."],
+												["VISION", "If you can learn and surpass me in my area of expertise, then I’ll consider listening to what you have to say"]],
 									"talk02": [["VISION", "I’m sorry. My vision must have gotten blurry over time. I should apologize for the troubles that I caused, so I’m deeply sorry!"],
 											   ["Dellman", "It’s all right! Everyone makes mistakes, the important part is how you deal with them!  I’m glad that we could treat your condition!"],
 											   ["VISION", "No, it’s me who should be thankful! My view has never been more clear now!"],
@@ -320,7 +325,8 @@ onready var dialogo = {"preLobbyRoomInstru01": ["Fale com todas as pessoas da sa
 											   ]
 								},
 								"preBoss02": {
-									"talk01": ["KPIs", "Who dares to interfere, when I am in the middle of my research? You must be  gormless to waltz your way in thinking that you can act however you may see fit. I am most certainly not allowing that!"],
+									"talk01": [["KPIs", "Who dares to interfere, when I am in the middle of my research?"],
+									["KPIs","You must be  gormless to waltz your way in thinking that you can act however you may see fit. I am most certainly not allowing that!"]],
 									"talk02": [
 										["KPIs", "I… apologize. I was not in my right senses. Therefore, I ask for your forgiveness, the way that I conducted was deplorable and unjustified."],
 										["CLOUD", "Such eloquent talking! No need to apologize, there are times that you just want to stick to your beliefs and your past experiences."],
@@ -345,7 +351,7 @@ onready var dialogo = {"preLobbyRoomInstru01": ["Fale com todas as pessoas da sa
 									]
 								},
 								"preBoss03": {
-									"talk01": ["RB", "Who are you? Whatever, it doesn’t matter. You’re useless to me if you don’t know how to swiftly create a well calculated plan, considering that changes will most definitely occur, you should adapt your plans accordingly! Go back to where you belong if you can’t even organize yourself!"],
+									"talk01": [["RB", "Who are you? Whatever, it doesn’t matter. You’re useless to me if you don’t know how to swiftly create a well calculated plan, considering that changes will most definitely occur, you should adapt your plans accordingly! Go back to where you belong if you can’t even organize yourself!"]],
 									"talk02": [
 										["RB", "Oh! That was a heck of a ride! Oh well, it looks like I was the one who ended up losing my way in the end. I guess it happens! Anyways, I hope that you can forgive me! As I was the one who lost my way."],
 										["CLOUD", "It’s all right! Everyone gets lost sometimes, the most important thing is to never lose sight of your heart's reason!"],

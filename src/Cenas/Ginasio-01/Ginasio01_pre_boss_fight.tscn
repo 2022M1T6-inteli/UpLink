@@ -30,3 +30,4 @@ shape = SubResource( 1 )
 stream = ExtResource( 2 )
 
 [connection signal="body_entered" from="BossFight/Area2D" to="." method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="BossFight/Area2D" to="." method="_on_Area2D_body_exited"]

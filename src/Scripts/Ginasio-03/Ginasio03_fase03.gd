@@ -14,6 +14,10 @@ func _input(event):
 	if event.is_action_pressed("pause"):
 		set_visible(!get_tree().paused)
 		get_tree().paused = !get_tree().paused
+		remove_child(conteudo)
+	if 	Global.resume_pause == true:
+		add_child(conteudo)
+		Global.resume_pause = false 
 
 func _ready():
 
@@ -31,7 +35,7 @@ func _ready():
 	
 	add_child(conteudo)
 	Global.current_dialogo = Global.dialogo["language"]["eng"]["instructions"]["gym3Level02"]
-	conteudo.load_Instru()
+	conteudo.load_balao()
 	
 	
 func inciarPlayer(posicao):
@@ -46,47 +50,39 @@ func _on_Area2D_body_entered(body):
 		#abrir nova pergunta de dialogo
 
 func _on_End_body_entered(body):
-	get_tree().change_scene("res://Cenas/Ginasio-03/Ginasio03_fase01.tscn")
+	get_tree().change_scene("res://Cenas/Ginasio-03/Ginasio03_fase03.tscn")
 
 #ao entrar colocar pergunta 1
 
 func _on_Area2D0_body_entered(body):
 	add_child(conteudo) 
 	Global.current_dialogo = Global.dialogo["language"]["eng"]["dialogo"]["instructionsGym3"]["Data"]["instrucaoUm"]
-	conteudo.load_balao()
+	conteudo.load_Instru()
 
 func _on_Area2D1_body_entered(body):
 	add_child(conteudo) 
 	Global.current_dialogo = Global.dialogo["language"]["eng"]["dialogo"]["instructionsGym3"]["Visao"]["instrucaoUm"]
-	conteudo.load_balao()
+	conteudo.load_Instru()
 	
 func _on_Area2D2_body_entered(body):
 	add_child(conteudo) 
 	Global.current_dialogo = Global.dialogo["language"]["eng"]["dialogo"]["instructionsGym3"]["Stakeholders"]["instrucaoUm"]
-	conteudo.load_balao()
+	conteudo.load_Instru()
 	
 func _on_Area2D3_body_entered(body):
 	add_child(conteudo) 
 	Global.current_dialogo = Global.dialogo["language"]["eng"]["dialogo"]["instructionsGym3"]["Road"]["instrucaoUm"]
-	conteudo.load_balao()
+	conteudo.load_Instru()
 
 func _on_Area2D4_body_entered(body):
 	add_child(conteudo) 
 	Global.current_dialogo = Global.dialogo["language"]["eng"]["dialogo"]["instructionsGym3"]["Back"]["instrucaoUm"]
-	conteudo.load_balao()
+	conteudo.load_Instru()
 
 #func _on_Area2D5_body_entered(body): # nn util só teste
 #	add_child(balao)
 #	balao.load_Instru('ginasio3fase35')
 #	# tirar pergunta 5
 
-func _input(event):
-	if event.is_action_pressed("pause"):
-#		set_visible(!get_tree().paused)
-#		get_tree().paused = !get_tree().paused
-		remove_child(conteudo)
-	if 	Global.resume_pause == true:
-		add_child(conteudo)
-		Global.resume_pause = false 
 
 

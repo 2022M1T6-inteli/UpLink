@@ -13,6 +13,10 @@ func _input(event):
 	if event.is_action_pressed("pause"):
 		set_visible(!get_tree().paused)
 		get_tree().paused = !get_tree().paused
+		remove_child(conteudo)
+	if 	Global.resume_pause == true:
+		add_child(conteudo)
+		Global.resume_pause = false 
 
 func _ready():
 	
@@ -34,7 +38,7 @@ func _ready():
 
 	add_child(conteudo)
 	Global.current_dialogo = Global.dialogo["language"]["eng"]["instructions"]["gym3Level01"]
-	conteudo.load_Instru()
+	conteudo.load_balao()
 
 func inciarPlayer(posicao):
 	var player = prePlayer.instance()
@@ -46,36 +50,30 @@ func _on_Area2D_body_entered(body):
 		get_tree().reload_current_scene()
 
 func _on_End_body_entered(body):
-	get_tree().change_scene("res://Cenas/Ginasio-03/Ginasio03_fase02.tscn")
+	
+	get_tree().change_scene("res://Cenas/Outros/TurnBasedCombat.tscn")
 
 func _on_Area2D1_body_entered(body):
 	add_child(conteudo) 
 	Global.current_dialogo = Global.dialogo["language"]["eng"]["dialogo"]["instructionsGym3"]["doubleDiamond"]["instrucaoUm"]
-	conteudo.load_balao()
+	conteudo.load_Instru()
 
 func _on_Area2D2_body_entered(body):
 	add_child(conteudo) 
 	Global.current_dialogo = Global.dialogo["language"]["eng"]["dialogo"]["instructionsGym3"]["lean"]["instrucaoUm"]
-	conteudo.load_balao()
+	conteudo.load_Instru()
 
 func _on_Area2D3_body_entered(body):
 	add_child(conteudo) 
 	Global.current_dialogo = Global.dialogo["language"]["eng"]["dialogo"]["instructionsGym3"]["humanCenterDesigned"]["instrucaoUm"]
-	conteudo.load_balao()
+	conteudo.load_Instru()
 
 func _on_Area2D4_body_entered(body):
 	add_child(conteudo) 
 	Global.current_dialogo = Global.dialogo["language"]["eng"]["dialogo"]["instructionsGym3"]["XP"]["instrucaoDois"]
-	conteudo.load_balao()
+	conteudo.load_Instru()
 
-func _input(event):
-	if event.is_action_pressed("pause"):
-#		set_visible(!get_tree().paused)
-#		get_tree().paused = !get_tree().paused
-		remove_child(conteudo)
-	if 	Global.resume_pause == true:
-		add_child(conteudo)
-		Global.resume_pause = false 
+
 	
 
 #func _on_Area2D5_body_entered(body):
