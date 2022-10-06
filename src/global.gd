@@ -59,6 +59,14 @@ var countMov = 0
 
 var count = 0
 
+#variaveis boss fiht
+var current_health = 3600
+var total_health = 3600
+var damage1 = 100
+var damage2 = 30
+var damage3 = 40
+var damage4 = 100
+
 onready var caminhoDialogo # n foi o tony
 
 var resume_pause = false
@@ -90,19 +98,24 @@ onready var dialogo = {"preLobbyRoomInstru01": ["Fale com todas as pessoas da sa
 									  "“What happened to our ever so glorious island?” The people couldn’t help but wonder…"],
 							"instructions": {
 								"collectBooksLobby":["Agora você deverá explorar o mapa e coletar cinco livros, com isso aprenderá sobre o modelo de produtos, suas inspirações e seu modo de trabalho."],
-								"collectedBooksLobby":["Parabéns!! Agora que você achou os livros vá até uma casa no lado esquerdo do mapa, lá você encontrará o ginásio 1 e seu mentor."],
+								"collectedBooksLobby":["Parabéns!! Agora que você achou os livros, a biblioteca no centro do mapa foi desbloqueada, de maneira que você poderá aprender mais sobre os temas abordados durante sua aventura, vá até uma casa no lado esquerdo do mapa, , lá você encontrará o ginásio 1 e seu mentor."],
 								"gym1":["Parabéns! Você está no ginásio 1, dentro do ginásio 1, existem 3 labirintos que você deverá atravessar, ao longo do trajeto você aprenderá um pouco das maturidades de vision, roadmap, backlog, stakeholders e data driven"],
 								"gym1-outros": ["Colete os 5 livros e ache o fim do labirinto"],
-								"instrucAfterGym1":["Agora procure um prédio de dois andares no canto superior direito, lá você entrara no ginásio 2 e encontrara seu mentor"],
+								"instrucAfterGym1":["Agora procure um prédio de dois andares no canto superior direito, lá você entrará no ginásio 2 e encontrará seu mentor"],
 								"gym2":["Parabéns! Você chegou no ginásio 2, o ginásio 2 tem 3 fases, para passar de fase você terá que completar o puzzle, sem as métricas dos seus mentores você não conseguira"],
 								"instrucAfterGym2":["Agora procure um canteiro de obras na parte central inferior do mapa, lá está o ginásio 3 e seu mentor"],
 								"gym3Level01":["Parabéns! Você chegou no ginásio 3, o ginásio 3 tem 3 fases e para completar as fases você deve atravessar o mapa, mas cuidado que dependendo de onde você pisar, você morre. \n\nPara saber o caminho correto você deve ouvir os conselhos do seu mentor, mas ele não te dará o caminho apenas te dará dicas. \n\nNessa fase as instruções são sobre lean, extreme programming, double diamond e human centered designed"],
 								"mentor": ["Fale com o mentor"],
 								"gym3Level02":["Parabéns! Você chegou na fase 2, agora as instruções são sobre vision, roadmap, bakclog, data drive e stakeholders. \n\nContinue seguido as dicas"],
 								"gym3Level03":["Parabéns! Você chegou na fase 3, agora as instruções são sobre os kpi's (quality, user, business e deployment). \n\nContinue seguido as dicas"],
+<<<<<<< HEAD
 								'instrucAfterGym3': ["é nois goiaba"],
 								'cantbuilding' : ["nn pode entrar nn mané"],
 								
+=======
+								"instrucAfterGym3": ["Parabéns! você concluiu todos os ginásios, agora você precisa ir ao preédio da Dell na parte superior do mapa"],
+								"cantbuilding" : ["Você precisa concluir os ginásios para poder entrar no prédio da Dell"],
+>>>>>>> 8579987b8aaf9eb05a7da9b508c403880afaf08c
 										},
 							"dialogo": {
 								"context": {

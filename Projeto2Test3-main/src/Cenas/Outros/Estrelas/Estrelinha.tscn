@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Images/Ginasio-01/Estrela_amarela.png" type="Texture" id=1]
+
+[node name="Estrelinha" type="Sprite"]
+position = Vector2( 964, 32 )
+scale = Vector2( 0.031, 0.031 )
+texture = ExtResource( 1 )

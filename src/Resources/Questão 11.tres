@@ -1,0 +1,10 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Scripts/Quiz/resource_quesions.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+question_info = "Which is not a recommended next step to reach maturity level 2 in User KPIs?"
+type = 0
+options = [ "Gathering user KPIs by gathering and translating input from users", "Analyzing an application heat map to understand feature usage.", "Socializing User KPIs and metrics with the Product Team.", "Conducting historical data analysis to baseline User KPIs" ]
+correct = "Analyzing an application heat map to understand feature usage."

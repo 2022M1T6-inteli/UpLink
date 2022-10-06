@@ -9,6 +9,11 @@ var playerPosition = Vector2(50, 290)
 
 var player
 
+func _input(event):
+	if event.is_action_pressed("pause"):
+		set_visible(!get_tree().paused)
+		get_tree().paused = !get_tree().paused
+
 func iniciarPlayer(posicao):
 	var player = prePlayer.instance()
 	player.position = playerPosition

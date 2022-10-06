@@ -2,10 +2,10 @@ extends Control
 
 # Adicione mais dialogos na caixa copiando o exemplo abaixo.
 var dialog = [
-	'As pessoas de Dell Island estão sendo misteriosamente infectadas por um poderoso neurovírus que está controlando suas mentes. ',
-	'Nosso herói, Dellman, precisa encontrar uma cura para o vírus e restaurar a paz em Dell Island.', "À medida que o problema aumenta, nosso herói precisa entrar em uma aventura para passar pelos três ginásios e adquirir o conhecimento que ele precisa produzir a cura.",
-	"Que, no processo, ele aprenderá mais sobre o conceito de modelo de produto para que possa enfrentar cada Mentor e superá-los.",
-	"Finalmente, seus conhecimentos, habilidades e atitudes serão postos à prova em um desafio prático, onde a cura será desenvolvida para que Dell Island possa ser salva."
+	'The people from Dell Island are mysteriously getting infected by a powerful neuro-virus that is controlling their minds. ',
+	'Our hero, Dellman, needs to find a cure for the virus and restore the peace in Dell Island.', "As the problem gets bigger, our hero needs to go into an adventure to pass the three gyms and acquire the knowledge that he needs to produce the cure.",
+	"Which, in the process, he will learn more about the concept of product model so that he can confront each Mentor and surpass them.",
+	"At last, his knowledge, abilities, and attitude will be put into test in a practical challenge, where the cure will be developed so that Dell Island can be saved."
 	]
 
 var dialog_index = 0

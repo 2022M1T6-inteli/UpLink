@@ -1,0 +1,10 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Scripts/Quiz/resource_quesions.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+question_info = "Which option below best describes the key expected outcomes from Backlog maturity level 1?"
+type = 0
+options = [ "The backlog itself in TFS/Jira and Volatility/Velocity metrics from the Product Team.", "Outcome based Roadmap", "Product Vision Document", "Sprint plan for the Quarter" ]
+correct = "The backlog itself in TFS/Jira and Volatility/Velocity metrics from the Product Team"

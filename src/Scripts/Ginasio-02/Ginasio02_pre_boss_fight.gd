@@ -10,6 +10,11 @@ var NPC1Position = Vector2(927, 320)
 var player
 var NPC1
 
+func _input(event):
+	if event.is_action_pressed("pause"):
+		set_visible(!get_tree().paused)
+		get_tree().paused = !get_tree().paused
+
 func _ready():
 	$AudioStreamPlayer2D.play()
 	player = iniciarPlayer(playerPosition)

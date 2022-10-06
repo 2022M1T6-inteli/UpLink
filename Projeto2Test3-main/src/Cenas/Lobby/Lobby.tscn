@@ -1,0 +1,1573 @@
+[gd_scene load_steps=19 format=2]
+
+[ext_resource path="res://Images/Lobby/mapajogo.png" type="Texture" id=1]
+[ext_resource path="res://Scripts/Lobby/Lobby.gd" type="Script" id=2]
+[ext_resource path="res://Sons/LobbySound.mp3" type="AudioStream" id=3]
+[ext_resource path="res://Sons/Park.mp3" type="AudioStream" id=4]
+[ext_resource path="res://Images/Menu/1.png" type="Texture" id=5]
+[ext_resource path="res://Cenas/Lobby/Fundo1.gd" type="Script" id=6]
+
+[sub_resource type="Shader" id=13]
+code = "shader_type canvas_item;
+uniform float scroll_speed;
+void fragment() {
+	vec2 shifteduv = UV;
+	shifteduv.x += TIME * scroll_speed;
+	vec4 col = texture(TEXTURE,shifteduv);
+	COLOR = col;
+}"
+
+[sub_resource type="ShaderMaterial" id=14]
+shader = SubResource( 13 )
+shader_param/scroll_speed = 0.02
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 29.5, 23.5 )
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 122.5, 49.125 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 171.225, 30.625 )
+
+[sub_resource type="RectangleShape2D" id=15]
+extents = Vector2( 29, 48.5 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 20.5, 21.5 )
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 47, 24 )
+
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 19, 22 )
+
+[sub_resource type="RectangleShape2D" id=8]
+extents = Vector2( 16.5, 16.5 )
+
+[sub_resource type="RectangleShape2D" id=9]
+extents = Vector2( 32, 20.5 )
+
+[sub_resource type="RectangleShape2D" id=11]
+extents = Vector2( 20.1875, 21.2816 )
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="Fundo1" type="TextureRect" parent="."]
+material = SubResource( 14 )
+margin_left = -4000.0
+margin_top = -3335.0
+margin_right = -2080.0
+margin_bottom = -2255.0
+texture = ExtResource( 5 )
+stretch_mode = 2
+script = ExtResource( 6 )
+
+[node name="Fundo15" type="TextureRect" parent="Fundo1"]
+material = SubResource( 14 )
+margin_left = 3840.0
+margin_top = 2160.0
+margin_right = 5760.0
+margin_bottom = 3240.0
+texture = ExtResource( 5 )
+stretch_mode = 2
+script = ExtResource( 6 )
+
+[node name="Fundo16" type="TextureRect" parent="Fundo1"]
+material = SubResource( 14 )
+margin_left = 3840.0
+margin_top = 3240.0
+margin_right = 5760.0
+margin_bottom = 4320.0
+texture = ExtResource( 5 )
+stretch_mode = 2
+script = ExtResource( 6 )
+
+[node name="Fundo17" type="TextureRect" parent="Fundo1"]
+material = SubResource( 14 )
+margin_left = 3840.0
+margin_top = 4320.0
+margin_right = 5760.0
+margin_bottom = 5400.0
+texture = ExtResource( 5 )
+stretch_mode = 2
+script = ExtResource( 6 )
+
+[node name="Fundo18" type="TextureRect" parent="Fundo1"]
+material = SubResource( 14 )
+margin_left = 3840.0
+margin_top = 5400.0
+margin_right = 5760.0
+margin_bottom = 6480.0
+texture = ExtResource( 5 )
+stretch_mode = 2
+script = ExtResource( 6 )
+
+[node name="Fundo19" type="TextureRect" parent="Fundo1"]
+material = SubResource( 14 )
+margin_left = 5760.0
+margin_right = 7680.0
+margin_bottom = 1080.0
+texture = ExtResource( 5 )
+stretch_mode = 2
+script = ExtResource( 6 )
+
+[node name="Fundo20" type="TextureRect" parent="Fundo1"]
+material = SubResource( 14 )
+margin_left = 5760.0
+margin_top = 1080.0
+margin_right = 7680.0
+margin_bottom = 2160.0
+texture = ExtResource( 5 )
+stretch_mode = 2
+script = ExtResource( 6 )
+
+[node name="Fundo21" type="TextureRect" parent="Fundo1"]
+material = SubResource( 14 )
+margin_left = 5760.0
+margin_top = 2160.0
+margin_right = 7680.0
+margin_bottom = 3240.0
+texture = ExtResource( 5 )
+stretch_mode = 2
+script = ExtResource( 6 )
+
+[node name="Fundo22" type="TextureRect" parent="Fundo1"]
+material = SubResource( 14 )
+margin_left = 5760.0
+margin_top = 3240.0
+margin_right = 7680.0
+margin_bottom = 4320.0
+texture = ExtResource( 5 )
+stretch_mode = 2
+script = ExtResource( 6 )
+
+[node name="Fundo23" type="TextureRect" parent="Fundo1"]
+material = SubResource( 14 )
+margin_left = 5760.0
+margin_top = 4320.0
+margin_right = 7680.0
+margin_bottom = 5400.0
+texture = ExtResource( 5 )
+stretch_mode = 2
+script = ExtResource( 6 )
+
+[node name="Fundo24" type="TextureRect" parent="Fundo1"]
+material = SubResource( 14 )
+margin_left = 5760.0
+margin_top = 5400.0
+margin_right = 7680.0
+margin_bottom = 6480.0
+texture = ExtResource( 5 )
+stretch_mode = 2
+script = ExtResource( 6 )
+
+[node name="Fundo14" type="TextureRect" parent="Fundo1"]
+material = SubResource( 14 )
+margin_left = 3840.0
+margin_top = 1080.0
+margin_right = 5760.0
+margin_bottom = 2160.0
+texture = ExtResource( 5 )
+stretch_mode = 2
+script = ExtResource( 6 )
+
+[node name="Fundo13" type="TextureRect" parent="Fundo1"]
+material = SubResource( 14 )
+margin_left = 3840.0
+margin_right = 5760.0
+margin_bottom = 1080.0
+texture = ExtResource( 5 )
+stretch_mode = 2
+script = ExtResource( 6 )
+
+[node name="Fundo12" type="TextureRect" parent="Fundo1"]
+material = SubResource( 14 )
+margin_left = 1920.0
+margin_top = 5400.0
+margin_right = 3840.0
+margin_bottom = 6480.0
+texture = ExtResource( 5 )
+stretch_mode = 2
+script = ExtResource( 6 )
+
+[node name="Fundo11" type="TextureRect" parent="Fundo1"]
+material = SubResource( 14 )
+margin_left = 1920.0
+margin_top = 4320.0
+margin_right = 3840.0
+margin_bottom = 5400.0
+texture = ExtResource( 5 )
+stretch_mode = 2
+script = ExtResource( 6 )
+
+[node name="Fundo10" type="TextureRect" parent="Fundo1"]
+material = SubResource( 14 )
+margin_left = 1920.0
+margin_top = 3240.0
+margin_right = 3840.0
+margin_bottom = 4320.0
+texture = ExtResource( 5 )
+stretch_mode = 2
+script = ExtResource( 6 )
+
+[node name="Fundo9" type="TextureRect" parent="Fundo1"]
+material = SubResource( 14 )
+margin_left = 1920.0
+margin_top = 2160.0
+margin_right = 3840.0
+margin_bottom = 3240.0
+texture = ExtResource( 5 )
+stretch_mode = 2
+script = ExtResource( 6 )
+
+[node name="Fundo8" type="TextureRect" parent="Fundo1"]
+material = SubResource( 14 )
+margin_left = 1920.0
+margin_top = 1080.0
+margin_right = 3840.0
+margin_bottom = 2160.0
+texture = ExtResource( 5 )
+stretch_mode = 2
+script = ExtResource( 6 )
+
+[node name="Fundo7" type="TextureRect" parent="Fundo1"]
+material = SubResource( 14 )
+margin_left = 1920.0
+margin_right = 3840.0
+margin_bottom = 1080.0
+texture = ExtResource( 5 )
+stretch_mode = 2
+script = ExtResource( 6 )
+
+[node name="Fundo6" type="TextureRect" parent="Fundo1"]
+material = SubResource( 14 )
+margin_top = 5400.0
+margin_right = 1920.0
+margin_bottom = 6480.0
+texture = ExtResource( 5 )
+stretch_mode = 2
+script = ExtResource( 6 )
+
+[node name="Fundo5" type="TextureRect" parent="Fundo1"]
+material = SubResource( 14 )
+margin_top = 4320.0
+margin_right = 1920.0
+margin_bottom = 5400.0
+texture = ExtResource( 5 )
+stretch_mode = 2
+script = ExtResource( 6 )
+
+[node name="Fundo4" type="TextureRect" parent="Fundo1"]
+material = SubResource( 14 )
+margin_top = 3240.0
+margin_right = 1920.0
+margin_bottom = 4320.0
+texture = ExtResource( 5 )
+stretch_mode = 2
+script = ExtResource( 6 )
+
+[node name="Fundo3" type="TextureRect" parent="Fundo1"]
+material = SubResource( 14 )
+margin_top = 2160.0
+margin_right = 1920.0
+margin_bottom = 3240.0
+texture = ExtResource( 5 )
+stretch_mode = 2
+script = ExtResource( 6 )
+
+[node name="Fundo2" type="TextureRect" parent="Fundo1"]
+material = SubResource( 14 )
+margin_top = 1080.0
+margin_right = 1920.0
+margin_bottom = 2160.0
+texture = ExtResource( 5 )
+stretch_mode = 2
+script = ExtResource( 6 )
+
+[node name="Mapajogo" type="Sprite" parent="."]
+position = Vector2( 3, 18 )
+texture = ExtResource( 1 )
+
+[node name="Poste" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/Poste"]
+polygon = PoolVector2Array( 100, 2334, 99, 2215, 124, 2216, 123, 2335 )
+
+[node name="Poste2" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/Poste2"]
+position = Vector2( 193, -223 )
+polygon = PoolVector2Array( 100, 2334, 99, 2215, 124, 2215, 123, 2335 )
+
+[node name="Poste3" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/Poste3"]
+position = Vector2( 0, -256 )
+polygon = PoolVector2Array( 100, 2334, 99, 2215, 124, 2215, 123, 2335 )
+
+[node name="Poste4" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/Poste4"]
+position = Vector2( 0, -547 )
+polygon = PoolVector2Array( 100, 2334, 99, 2215, 124, 2215, 123, 2335 )
+
+[node name="Poste5" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/Poste5"]
+position = Vector2( -1024, -2714 )
+polygon = PoolVector2Array( 100, 2334, 99, 2215, 124, 2215, 123, 2335 )
+
+[node name="Poste6" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/Poste6"]
+position = Vector2( -607, -2013 )
+polygon = PoolVector2Array( 100, 2334, 99, 2215, 124, 2215, 123, 2335 )
+
+[node name="Poste7" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/Poste7"]
+position = Vector2( -926, -2019 )
+polygon = PoolVector2Array( 100, 2334, 99, 2215, 124, 2215, 123, 2335 )
+
+[node name="Poste8" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/Poste8"]
+position = Vector2( -1185, -1854 )
+polygon = PoolVector2Array( 100, 2334, 99, 2215, 124, 2215, 123, 2335 )
+
+[node name="Poste9" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/Poste9"]
+position = Vector2( -797, -1597 )
+polygon = PoolVector2Array( 100, 2334, 99, 2215, 124, 2215, 123, 2335 )
+
+[node name="Poste10" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/Poste10"]
+position = Vector2( -1024, -1532 )
+polygon = PoolVector2Array( 100, 2334, 99, 2215, 124, 2215, 123, 2335 )
+
+[node name="Poste11" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/Poste11"]
+position = Vector2( -1185, -2398 )
+polygon = PoolVector2Array( 100, 2334, 99, 2215, 124, 2215, 123, 2335 )
+
+[node name="Poste12" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/Poste12"]
+position = Vector2( 387, -2013 )
+polygon = PoolVector2Array( 100, 2334, 99, 2215, 124, 2215, 123, 2335 )
+
+[node name="Poste13" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/Poste13"]
+position = Vector2( -224, -1728 )
+polygon = PoolVector2Array( 100, 2334, 99, 2215, 124, 2215, 123, 2335 )
+
+[node name="Poste14" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/Poste14"]
+position = Vector2( -223, -1473 )
+polygon = PoolVector2Array( 100, 2334, 99, 2215, 124, 2215, 123, 2335 )
+
+[node name="Poste15" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/Poste15"]
+position = Vector2( -1, -1471 )
+polygon = PoolVector2Array( 100, 2334, 99, 2215, 124, 2215, 123, 2335 )
+
+[node name="Poste16" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/Poste16"]
+position = Vector2( -415, -1754 )
+polygon = PoolVector2Array( 100, 2334, 99, 2215, 111, 2176, 126, 2153, 166, 2146, 204, 2156, 234, 2171, 246, 2202, 229, 2225, 183, 2257, 170, 2255, 165, 2227, 147, 2223, 129, 2215, 123, 2335 )
+
+[node name="Poste17" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/Poste17"]
+position = Vector2( -705, -1217 )
+polygon = PoolVector2Array( 100, 2334, 99, 2215, 124, 2215, 123, 2335 )
+
+[node name="Poste18" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/Poste18"]
+position = Vector2( 385, -2208 )
+polygon = PoolVector2Array( 100, 2334, 99, 2215, 124, 2215, 123, 2335 )
+
+[node name="Poste19" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/Poste19"]
+position = Vector2( 704, -2204 )
+polygon = PoolVector2Array( 100, 2334, 99, 2215, 124, 2215, 123, 2335 )
+
+[node name="Poste20" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/Poste20"]
+position = Vector2( 701, -2021 )
+polygon = PoolVector2Array( 100, 2334, 99, 2215, 124, 2215, 123, 2335 )
+
+[node name="Poste21" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/Poste21"]
+position = Vector2( -605, -2208 )
+polygon = PoolVector2Array( 100, 2334, 99, 2215, 124, 2215, 123, 2335 )
+
+[node name="Poste22" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/Poste22"]
+position = Vector2( -480, -2493 )
+polygon = PoolVector2Array( 100, 2334, 99, 2215, 124, 2215, 123, 2335 )
+
+[node name="Poste23" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/Poste23"]
+position = Vector2( 961, -1859 )
+polygon = PoolVector2Array( 100, 2334, 99, 2215, 124, 2215, 123, 2335 )
+
+[node name="Poste24" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/Poste24"]
+position = Vector2( 961, -2400 )
+polygon = PoolVector2Array( 100, 2334, 99, 2215, 124, 2215, 123, 2335 )
+
+[node name="Poste25" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/Poste25"]
+position = Vector2( 385, -2495 )
+polygon = PoolVector2Array( 100, 2334, 99, 2215, 124, 2215, 123, 2335 )
+
+[node name="Poste26" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/Poste26"]
+position = Vector2( -862, -2876 )
+polygon = PoolVector2Array( 100, 2334, 99, 2215, 124, 2215, 123, 2335 )
+
+[node name="Poste27" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/Poste27"]
+position = Vector2( -480, -2876 )
+polygon = PoolVector2Array( 100, 2334, 99, 2215, 124, 2215, 124, 2239, 186, 2240, 186, 2266, 124, 2266, 123, 2335 )
+
+[node name="Poste28" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/Poste28"]
+position = Vector2( 799, -2719 )
+polygon = PoolVector2Array( 100, 2334, 99, 2215, 124, 2215, 123, 2335 )
+
+[node name="Poste29" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/Poste29"]
+position = Vector2( 642, -2878 )
+polygon = PoolVector2Array( 100, 2334, 99, 2215, 124, 2215, 123, 2335 )
+
+[node name="Poste30" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/Poste30"]
+position = Vector2( 385, -2881 )
+polygon = PoolVector2Array( 100, 2336, 99, 2215, 124, 2215, 123, 2336 )
+
+[node name="Poste31" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/Poste31"]
+position = Vector2( -1, -1729 )
+polygon = PoolVector2Array( 100, 2334, 99, 2215, 124, 2215, 123, 2335 )
+
+[node name="Poste32" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/Poste32"]
+position = Vector2( 545, -1694 )
+polygon = PoolVector2Array( 91, 2397, 65, 2397, 66, 2340, 89, 2325, 106, 2315, 105, 2254, 81, 2265, -50, 2265, -54, 2187, 82, 2187, 87, 2213, 123, 2213, 128, 2314, 159, 2283, 188, 2270, 220, 2283, 250, 2329, 215, 2380, 181, 2387, 123, 2335 )
+
+[node name="Poste33" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/Poste33"]
+position = Vector2( 799, -1534 )
+polygon = PoolVector2Array( 100, 2334, 99, 2215, 124, 2215, 123, 2335 )
+
+[node name="Poste34" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/Poste34"]
+position = Vector2( 479, -1216 )
+polygon = PoolVector2Array( 100, 2334, 99, 2215, 124, 2215, 123, 2335 )
+
+[node name="Poste35" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/Poste35"]
+position = Vector2( 194, -1535 )
+polygon = PoolVector2Array( 73, 2416, 65, 2378, 50, 2380, 35, 2363, 40, 2340, 62, 2313, 95, 2301, 99, 2215, 124, 2215, 124, 2309, 136, 2332, 152, 2358, 142, 2377, 124, 2386, 108, 2383, 117, 2414, 85, 2422 )
+
+[node name="Poste36" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/Poste36"]
+position = Vector2( -223, -1216 )
+polygon = PoolVector2Array( 100, 2334, 99, 2215, 124, 2215, 123, 2335 )
+
+[node name="Poste37" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/Poste37"]
+position = Vector2( 0, -1216 )
+polygon = PoolVector2Array( 100, 2334, 99, 2215, 124, 2215, 123, 2335 )
+
+[node name="Poste38" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/Poste38"]
+position = Vector2( -125, -832 )
+polygon = PoolVector2Array( 100, 2334, 99, 2215, 124, 2215, 123, 2335 )
+
+[node name="Poste39" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/Poste39"]
+position = Vector2( -1, -831 )
+polygon = PoolVector2Array( 100, 2334, 99, 2215, 124, 2215, 123, 2335 )
+
+[node name="Poste40" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/Poste40"]
+position = Vector2( 193, -830 )
+polygon = PoolVector2Array( 100, 2334, 99, 2215, 124, 2215, 123, 2335 )
+
+[node name="Poste41" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/Poste41"]
+position = Vector2( -320, -3039 )
+polygon = PoolVector2Array( 100, 2334, 99, 2215, 124, 2215, 123, 2335 )
+
+[node name="Poste42" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/Poste42"]
+position = Vector2( -703, -3041 )
+polygon = PoolVector2Array( 100, 2334, 99, 2215, 124, 2215, 123, 2335 )
+
+[node name="Poste43" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/Poste43"]
+position = Vector2( 97, -3040 )
+polygon = PoolVector2Array( 100, 2334, 99, 2215, 124, 2215, 123, 2335 )
+
+[node name="Poste44" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/Poste44"]
+position = Vector2( 480, -3042 )
+polygon = PoolVector2Array( 105, 2449, 114, 2421, 97, 2414, 80, 2413, 70, 2396, 73, 2376, 105, 2342, 99, 2215, 124, 2215, 123.516, 2273.06, 125, 2335, 131, 2337, 154, 2349, 171, 2362, 189, 2395, 177, 2411, 154, 2422, 138, 2419, 152, 2449, 144, 2456, 128, 2458, 115, 2458 )
+
+[node name="Poste45" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/Poste45"]
+position = Vector2( -127, -537 )
+polygon = PoolVector2Array( 100, 2327, 98, 2208, 124, 2208, 123.516, 2273.06, 123, 2329 )
+
+[node name="Poste46" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/Poste46"]
+position = Vector2( -1344, -255 )
+polygon = PoolVector2Array( 100, 2334, 99, 2215, 124, 2215, 123, 2335 )
+
+[node name="Poste47" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/Poste47"]
+position = Vector2( -1344, -671 )
+polygon = PoolVector2Array( 100, 2334, 99, 2215, 124, 2215, 123, 2335 )
+
+[node name="Poste48" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/Poste48"]
+position = Vector2( -1822, -2529 )
+polygon = PoolVector2Array( 100, 2334, 99, 2215, 124, 2215, 123, 2335 )
+
+[node name="Poste49" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/Poste49"]
+position = Vector2( -2207, -2527 )
+polygon = PoolVector2Array( 100, 2334, 99, 2215, 124, 2215, 123, 2335 )
+
+[node name="Poste50" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/Poste50"]
+position = Vector2( -2559, -2531 )
+polygon = PoolVector2Array( 100, 2334, 99, 2215, 124, 2215, 123, 2335 )
+
+[node name="Poste51" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/Poste51"]
+position = Vector2( -1951, -2590 )
+polygon = PoolVector2Array( 100, 2334, 99, 2217, 69, 2237, 54, 2237, 35, 2215, 34, 2178, 47, 2163, 63, 2156, 81, 2163, 93, 2177, 94, 2206, 99, 2215, 124, 2215, 123, 2335 )
+
+[node name="Poste52" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/Poste52"]
+position = Vector2( -2079, -2849 )
+polygon = PoolVector2Array( 100, 2334, 99, 2215, 124, 2215, 134, 2202, 136, 2179, 146, 2175, 152, 2166, 179, 2160, 202, 2167, 216, 2183, 217, 2207, 192, 2221, 179, 2266, 170, 2266, 162, 2219, 144, 2215, 124, 2216, 123, 2335 )
+
+[node name="Poste53" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/Poste53"]
+position = Vector2( -1632, -3104 )
+polygon = PoolVector2Array( 100, 2334, 99, 2215, 124, 2215, 123, 2335 )
+
+[node name="Arvore1" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/Arvore1"]
+polygon = PoolVector2Array( -663, -667, -593, -639, -584, -608, -604, -581, -626, -581, -625, -566, -647, -555, -663, -555, -660, -572, -666, -584, -706, -595, -719, -620, -717, -645, -705, -657, -696, -655, -685, -662 )
+
+[node name="Arvore2" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/Arvore2"]
+position = Vector2( -224, 384 )
+polygon = PoolVector2Array( -663, -667, -593, -639, -584, -608, -604, -581, -626, -581, -625, -566, -647, -555, -663, -555, -660, -572, -666, -584, -706, -595, -719, -620, -717, -645, -705, -657, -696, -655, -685, -662 )
+
+[node name="Arvore3" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/Arvore3"]
+position = Vector2( -320, 962 )
+polygon = PoolVector2Array( -663, -667, -593, -639, -584, -608, -604, -581, -626, -581, -625, -566, -647, -555, -663, -555, -660, -572, -666, -584, -706, -595, -719, -620, -717, -645, -705, -657, -696, -655, -685, -662 )
+
+[node name="Arvore4" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/Arvore4"]
+position = Vector2( 737, -97 )
+polygon = PoolVector2Array( -663, -667, -593, -639, -584, -608, -604, -581, -626, -581, -625, -566, -647, -555, -663, -555, -660, -572, -666, -584, -706, -595, -719, -620, -717, -645, -705, -657, -696, -655, -685, -662 )
+
+[node name="Arvore5" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/Arvore5"]
+position = Vector2( 1530, 545 )
+polygon = PoolVector2Array( -663, -667, -593, -639, -584, -608, -604, -581, -626, -581, -625, -566, -647, -555, -663, -555, -660, -572, -666, -584, -706, -595, -719, -620, -717, -645, -705, -657, -696, -655, -685, -662 )
+
+[node name="Arvore6" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/Arvore6"]
+position = Vector2( 991, 608 )
+polygon = PoolVector2Array( -663, -667, -593, -639, -584, -608, -604, -581, -626, -581, -625, -566, -647, -555, -663, -555, -660, -572, -666, -584, -706, -595, -719, -620, -717, -645, -705, -657, -696, -655, -685, -662 )
+
+[node name="Arvore7" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/Arvore7"]
+position = Vector2( 1634, 960 )
+polygon = PoolVector2Array( -663, -667, -593, -639, -584, -608, -604, -581, -626, -581, -625, -566, -647, -555, -663, -555, -660, -572, -666, -584, -706, -595, -719, -620, -717, -645, -705, -657, -696, -655, -685, -662 )
+
+[node name="Arvore8" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/Arvore8"]
+position = Vector2( 863, 1598 )
+polygon = PoolVector2Array( -663, -667, -593, -639, -584, -608, -604, -581, -626, -581, -625, -566, -647, -555, -663, -555, -660, -572, -666, -584, -706, -595, -719, -620, -717, -645, -705, -657, -696, -655, -685, -662 )
+
+[node name="Arvore9" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/Arvore9"]
+position = Vector2( 1344, 1377 )
+polygon = PoolVector2Array( -663, -667, -593, -639, -584, -608, -604, -581, -626, -581, -625, -566, -647, -555, -663, -555, -660, -572, -666, -584, -706, -595, -719, -620, -717, -645, -705, -657, -696, -655, -685, -662 )
+
+[node name="Arvore10" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/Arvore10"]
+position = Vector2( 383, 1508 )
+polygon = PoolVector2Array( -663, -667, -593, -639, -584, -608, -604, -581, -626, -581, -625, -566, -647, -555, -663, -555, -660, -572, -666, -584, -706, -595, -719, -620, -717, -645, -705, -657, -696, -655, -685, -662 )
+
+[node name="Arvore11" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/Arvore11"]
+position = Vector2( -36, 1525 )
+polygon = PoolVector2Array( -628, -661, -611, -651, -593, -639, -577, -606, -587, -589, -609, -578, -626, -581, -611, -551, -622, -543, -647, -540, -663, -555, -660, -572, -666, -584, -675, -584, -697, -601, -688, -610, -692, -619, -687, -625, -680, -637, -669, -648, -659, -657 )
+
+[node name="Arvore12" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/Arvore12"]
+position = Vector2( -198, 1174 )
+polygon = PoolVector2Array( -628, -661, -611, -651, -593, -639, -577, -606, -587, -589, -609, -578, -626, -581, -611, -551, -622, -543, -647, -540, -663, -555, -660, -572, -666, -584, -675, -584, -697, -601, -688, -610, -692, -619, -687, -625, -680, -637, -669, -648, -659, -657 )
+
+[node name="Arvore13" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/Arvore13"]
+position = Vector2( 855, 1173 )
+polygon = PoolVector2Array( -628, -661, -611, -651, -593, -639, -577, -606, -587, -589, -609, -578, -626, -581, -611, -551, -622, -543, -647, -540, -663, -555, -660, -572, -666, -584, -675, -584, -697, -601, -688, -610, -692, -619, -687, -625, -680, -637, -669, -648, -659, -657 )
+
+[node name="Arvore14" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/Arvore14"]
+position = Vector2( 990, 1080 )
+polygon = PoolVector2Array( -628, -661, -611, -651, -593, -639, -577, -606, -587, -589, -609, -578, -626, -581, -611, -551, -622, -543, -647, -540, -663, -555, -660, -572, -666, -584, -675, -584, -697, -601, -688, -610, -692, -619, -687, -625, -680, -637, -669, -648, -659, -657 )
+
+[node name="Arvore15" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/Arvore15"]
+position = Vector2( -3, 981 )
+polygon = PoolVector2Array( -628, -661, -611, -651, -593, -639, -577, -606, -587, -589, -609, -578, -626, -581, -611, -551, -622, -543, -647, -540, -663, -555, -660, -572, -666, -584, -675, -584, -697, -601, -688, -610, -692, -619, -687, -625, -680, -637, -669, -648, -659, -657 )
+
+[node name="Arvore16" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/Arvore16"]
+position = Vector2( 1178, 1455 )
+polygon = PoolVector2Array( -665, -719, -614, -721, -573, -720, -573, -663, -627, -662, -612, -648, -589, -627, -576, -601, -587, -589, -609, -578, -626, -581, -611, -551, -622, -543, -647, -540, -663, -555, -660, -572, -666, -584, -675, -584, -697, -601, -688, -610, -692, -619, -687, -625, -680, -637, -669, -648, -664, -674 )
+
+[node name="Arvore17" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/Arvore17"]
+position = Vector2( -101, 500 )
+polygon = PoolVector2Array( -628, -661, -611, -651, -593, -639, -577, -606, -587, -589, -609, -578, -626, -581, -611, -551, -622, -543, -647, -540, -663, -555, -660, -572, -666, -584, -675, -584, -697, -601, -688, -610, -692, -619, -687, -625, -680, -637, -669, -648, -659, -657 )
+
+[node name="Arvore18" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/Arvore18"]
+position = Vector2( 154, 501 )
+polygon = PoolVector2Array( -628, -661, -611, -651, -593, -639, -577, -606, -587, -589, -609, -578, -626, -581, -611, -551, -622, -543, -647, -540, -663, -555, -660, -572, -666, -584, -675, -584, -697, -601, -688, -610, -692, -619, -687, -625, -680, -637, -669, -648, -659, -657 )
+
+[node name="Arvore19" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/Arvore19"]
+position = Vector2( 29, 214 )
+polygon = PoolVector2Array( -628, -661, -611, -651, -593, -639, -577, -606, -587, -589, -609, -578, -626, -581, -611, -551, -622, -543, -647, -540, -663, -555, -660, -572, -666, -584, -675, -584, -697, -601, -688, -610, -692, -619, -687, -625, -680, -637, -669, -648, -659, -657 )
+
+[node name="Arvore20" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/Arvore20"]
+position = Vector2( 156, -45 )
+polygon = PoolVector2Array( -628, -661, -611, -651, -593, -639, -577, -606, -587, -589, -609, -578, -626, -581, -611, -551, -622, -543, -647, -540, -663, -555, -660, -572, -666, -584, -675, -584, -697, -601, -688, -610, -692, -619, -687, -625, -680, -637, -669, -648, -659, -657 )
+
+[node name="Arvore21" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/Arvore21"]
+position = Vector2( 1308, 245 )
+polygon = PoolVector2Array( -628, -661, -611, -651, -593, -639, -577, -606, -587, -589, -609, -578, -626, -581, -611, -551, -622, -543, -647, -540, -663, -555, -660, -572, -666, -584, -675, -584, -697, -601, -688, -610, -692, -619, -687, -625, -680, -637, -669, -648, -659, -657 )
+
+[node name="Arvore22" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/Arvore22"]
+position = Vector2( 1277, 469 )
+polygon = PoolVector2Array( -628, -661, -611, -651, -593, -639, -577, -606, -587, -589, -609, -578, -626, -581, -611, -551, -622, -543, -647, -540, -663, -555, -660, -572, -666, -584, -675, -584, -697, -601, -688, -610, -692, -619, -687, -625, -680, -637, -669, -648, -659, -657 )
+
+[node name="Arvore23" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/Arvore23"]
+position = Vector2( 1371, 1075 )
+polygon = PoolVector2Array( -628, -661, -611, -651, -593, -639, -577, -606, -587, -589, -609, -578, -626, -581, -611, -551, -622, -543, -647, -540, -663, -555, -660, -572, -666, -584, -675, -584, -697, -601, -688, -610, -692, -619, -687, -625, -680, -637, -669, -648, -659, -657 )
+
+[node name="Arvore24" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/Arvore24"]
+position = Vector2( -1, 610 )
+polygon = PoolVector2Array( -1016, -1743, -1017, -1752, -1007, -1759, -997, -1770, -972, -1774, -952, -1766, -945, -1758, -937, -1753, -937, -1741, -935, -1730, -942, -1718, -956, -1713, -963, -1708, -971, -1695, -969, -1694, -966, -1695, -961, -1694, -946, -1692, -947, -1652, -1004, -1652, -1004, -1693, -989, -1693, -988, -1712, -997, -1717, -1011, -1719, -1016, -1727 )
+
+[node name="Arvore25" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/Arvore25"]
+position = Vector2( -3, 1 )
+polygon = PoolVector2Array( -1016, -1743, -1017, -1752, -1007, -1759, -997, -1770, -972, -1774, -952, -1766, -945, -1758, -937, -1753, -937, -1741, -935, -1730, -942, -1718, -956, -1713, -963, -1708, -971, -1695, -969, -1694, -966, -1695, -961, -1694, -946, -1692, -947, -1652, -1004, -1652, -1004, -1693, -989, -1693, -988, -1712, -997, -1717, -1011, -1719, -1016, -1727 )
+
+[node name="Arvore26" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/Arvore26"]
+position = Vector2( 1983, 609 )
+polygon = PoolVector2Array( -1016, -1743, -1017, -1752, -1007, -1759, -997, -1770, -972, -1774, -952, -1766, -945, -1758, -937, -1753, -937, -1741, -935, -1730, -942, -1718, -956, -1713, -963, -1708, -971, -1695, -969, -1694, -966, -1695, -961, -1694, -946, -1692, -947, -1652, -1004, -1652, -1004, -1693, -989, -1693, -988, -1712, -997, -1717, -1011, -1719, -1016, -1727 )
+
+[node name="Arvore27" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/Arvore27"]
+position = Vector2( 1982, 1 )
+polygon = PoolVector2Array( -1016, -1743, -1017, -1752, -1007, -1759, -997, -1770, -972, -1774, -952, -1766, -945, -1758, -937, -1753, -937, -1741, -935, -1730, -942, -1718, -956, -1713, -963, -1708, -971, -1695, -969, -1694, -966, -1695, -961, -1694, -946, -1692, -947, -1652, -1004, -1652, -1004, -1693, -989, -1693, -988, -1712, -997, -1717, -1011, -1719, -1016, -1727 )
+
+[node name="Moita_grande" type="StaticBody2D" parent="Mapajogo"]
+position = Vector2( -73, 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mapajogo/Moita_grande"]
+position = Vector2( -758.5, -1115 )
+shape = SubResource( 4 )
+
+[node name="Moita_grande2" type="StaticBody2D" parent="Mapajogo"]
+position = Vector2( -73, 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mapajogo/Moita_grande2"]
+position = Vector2( -566, -1115 )
+shape = SubResource( 4 )
+
+[node name="Moita_grande3" type="StaticBody2D" parent="Mapajogo"]
+position = Vector2( -73, 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mapajogo/Moita_grande3"]
+position = Vector2( -375, -1114 )
+shape = SubResource( 4 )
+
+[node name="Moita_grande4" type="StaticBody2D" parent="Mapajogo"]
+position = Vector2( -73, 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mapajogo/Moita_grande4"]
+position = Vector2( 9, -1115 )
+shape = SubResource( 4 )
+
+[node name="Moita_grande5" type="StaticBody2D" parent="Mapajogo"]
+position = Vector2( -73, 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mapajogo/Moita_grande5"]
+position = Vector2( 137, -1113 )
+shape = SubResource( 4 )
+
+[node name="Moita_grande6" type="StaticBody2D" parent="Mapajogo"]
+position = Vector2( -73, 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mapajogo/Moita_grande6"]
+position = Vector2( 553, -1114 )
+shape = SubResource( 4 )
+
+[node name="Moita_grande7" type="StaticBody2D" parent="Mapajogo"]
+position = Vector2( -73, 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mapajogo/Moita_grande7"]
+position = Vector2( 745, -1116 )
+shape = SubResource( 4 )
+
+[node name="Moita_grande8" type="StaticBody2D" parent="Mapajogo"]
+position = Vector2( -73, 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mapajogo/Moita_grande8"]
+position = Vector2( 937, -1112 )
+shape = SubResource( 4 )
+
+[node name="Moita_grande9" type="StaticBody2D" parent="Mapajogo"]
+position = Vector2( -73, 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mapajogo/Moita_grande9"]
+position = Vector2( 1928, 805 )
+shape = SubResource( 4 )
+
+[node name="Moita_grande10" type="StaticBody2D" parent="Mapajogo"]
+position = Vector2( -73, 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mapajogo/Moita_grande10"]
+position = Vector2( 1961, 1061 )
+shape = SubResource( 4 )
+
+[node name="Moita_grande11" type="StaticBody2D" parent="Mapajogo"]
+position = Vector2( -73, 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mapajogo/Moita_grande11"]
+position = Vector2( 1961, 1061 )
+shape = SubResource( 4 )
+
+[node name="Moita_grande12" type="StaticBody2D" parent="Mapajogo"]
+position = Vector2( -73, 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mapajogo/Moita_grande12"]
+position = Vector2( 265, 2277 )
+shape = SubResource( 4 )
+
+[node name="Moita_grande13" type="StaticBody2D" parent="Mapajogo"]
+position = Vector2( -73, 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mapajogo/Moita_grande13"]
+position = Vector2( 297, 2150 )
+shape = SubResource( 4 )
+
+[node name="Moita_grande14" type="StaticBody2D" parent="Mapajogo"]
+position = Vector2( -73, 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mapajogo/Moita_grande14"]
+position = Vector2( 264, 2020 )
+shape = SubResource( 4 )
+
+[node name="Moita_grande15" type="StaticBody2D" parent="Mapajogo"]
+position = Vector2( -73, 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mapajogo/Moita_grande15"]
+position = Vector2( 299, 1893 )
+shape = SubResource( 4 )
+
+[node name="Moita_grande16" type="StaticBody2D" parent="Mapajogo"]
+position = Vector2( -73, 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mapajogo/Moita_grande16"]
+position = Vector2( 266, 1765 )
+shape = SubResource( 4 )
+
+[node name="Moita_grande17" type="StaticBody2D" parent="Mapajogo"]
+position = Vector2( -73, 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mapajogo/Moita_grande17"]
+position = Vector2( 297, 1637 )
+shape = SubResource( 4 )
+
+[node name="Moita_grande18" type="StaticBody2D" parent="Mapajogo"]
+position = Vector2( -73, 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mapajogo/Moita_grande18"]
+position = Vector2( 264, 1510 )
+shape = SubResource( 4 )
+
+[node name="Moita_grande19" type="StaticBody2D" parent="Mapajogo"]
+position = Vector2( -73, 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mapajogo/Moita_grande19"]
+position = Vector2( 169, 422 )
+shape = SubResource( 4 )
+
+[node name="Moita_grande20" type="StaticBody2D" parent="Mapajogo"]
+position = Vector2( -73, 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mapajogo/Moita_grande20"]
+position = Vector2( -24, 418 )
+shape = SubResource( 4 )
+
+[node name="Moita_grande21" type="StaticBody2D" parent="Mapajogo"]
+position = Vector2( -73, 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mapajogo/Moita_grande21"]
+position = Vector2( -22, -26 )
+shape = SubResource( 4 )
+
+[node name="Moita_grande22" type="StaticBody2D" parent="Mapajogo"]
+position = Vector2( -73, 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mapajogo/Moita_grande22"]
+position = Vector2( 169, -25 )
+shape = SubResource( 4 )
+
+[node name="Chafariz" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/Chafariz"]
+position = Vector2( 0, 1825 )
+polygon = PoolVector2Array( -32, -1658, -33, -1620, -14, -1600, 13, -1600, 31, -1615, 33, -1657, 18, -1675, 1, -1688, -17, -1677 )
+
+[node name="Chafariz2" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/Chafariz2"]
+polygon = PoolVector2Array( -32, -1658, -33, -1620, -14, -1600, 13, -1600, 31, -1615, 33, -1657, 18, -1675, 1, -1688, -17, -1677 )
+
+[node name="Casa_na_arvore" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/Casa_na_arvore"]
+polygon = PoolVector2Array( -1563, 1357, -1336, 1358, -1334, 1200, -1297, 1182, -1296, 1147, -1317, 1131, -1348, 1120, -1395, 1108, -1396, 1081, -1407, 1058, -1452, 1049, -1467, 1055, -1501, 1041, -1541, 1046, -1558, 1082, -1539, 1109, -1549, 1133, -1530, 1162, -1504, 1170, -1501, 1179, -1549, 1183, -1565, 1202, -1564, 1227, -1565, 1260, -1549, 1282, -1532, 1301, -1532, 1355 )
+
+[node name="Biblioteca" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/Biblioteca"]
+polygon = PoolVector2Array( 256, -767, 255, -537, -321, -538, -321, -227, -294, -228, -293, -295, -248, -295, -247, -228, -198, -226, -196, -297, -151, -297, -150, -225, -122, -225, -123, -197, -37, -195, -37, -225, 164, -224, 165, -193, 251, -193, 248, -227, 280, -228, 282, -296, 330, -295, 331, -227, 356, -227, 356, -192, 444, -192, 443, -228, 448, -228, 449, -609, 485, -608, 484, -637, 448, -637, 448, -767 )
+
+[node name="Outdoor" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/Outdoor"]
+polygon = PoolVector2Array( -1210, 1187, -1208, 1096, -1064, 1097, -1064, 1188, -1068, 1193, -1121, 1194, -1121, 1267, -1128, 1275, -1142, 1275, -1151, 1267, -1153, 1193, -1203, 1193 )
+
+[node name="Outdoor2" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/Outdoor2"]
+position = Vector2( 2529, -735 )
+polygon = PoolVector2Array( -1210, 1187, -1208, 1096, -1064, 1097, -1064, 1188, -1068, 1193, -1121, 1194, -1121, 1267, -1128, 1275, -1142, 1275, -1151, 1267, -1153, 1193, -1203, 1193 )
+
+[node name="Outdoor3" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/Outdoor3"]
+position = Vector2( -256, -1759 )
+polygon = PoolVector2Array( -1210, 1187, -1208, 1096, -1064, 1097, -1064, 1188, -1068, 1193, -1121, 1194, -1121, 1267, -1128, 1275, -1142, 1275, -1151, 1267, -1153, 1193, -1203, 1193 )
+
+[node name="Outdoor4" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/Outdoor4"]
+position = Vector2( -64, -2174 )
+polygon = PoolVector2Array( -1210, 1187, -1208, 1096, -1064, 1097, -1064, 1188, -1068, 1193, -1121, 1194, -1121, 1267, -1128, 1275, -1142, 1275, -1151, 1267, -1153, 1193, -1203, 1193 )
+
+[node name="Outdoor5" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/Outdoor5"]
+position = Vector2( 2401, -64 )
+polygon = PoolVector2Array( -1210, 1187, -1208, 1096, -1064, 1097, -1064, 1188, -1068, 1193, -1121, 1194, -1121, 1267, -1128, 1275, -1142, 1275, -1151, 1267, -1153, 1193, -1203, 1193 )
+
+[node name="Basquete" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/Basquete"]
+polygon = PoolVector2Array( -1791, 1106, -1783, 1102, -1767, 1102, -1762, 1106, -1762, 1124, -1766, 1139, -1771, 1142, -1772, 1166, -1763, 1166, -1763, 1181, -1790, 1181, -1789, 1166, -1780, 1166, -1781, 1140, -1787, 1139, -1791, 1123 )
+
+[node name="Basquete2" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/Basquete2"]
+position = Vector2( 95, -1 )
+polygon = PoolVector2Array( -1790, 1106, -1791, 1094, -1784, 1092, -1771, 1092, -1761, 1096, -1762, 1106, -1765, 1127, -1771, 1132, -1771, 1165, -1763, 1166, -1763, 1183, -1790, 1183, -1789, 1165, -1781, 1165, -1780, 1132, -1790, 1125 )
+
+[node name="Florzinha" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/Florzinha"]
+polygon = PoolVector2Array( -202, 350, -191, 381, -128, 382, -128, 353, -189, 353, -196, 346, -200, 336, -201, 269, -190, 285, -187, 319, -161, 319, -161, 259, -166, 258, -172, 245, -180, 235, -191, 235, -198, 246, -208, 235, -213, 242, -212, 335, -219, 344, -214, 351 )
+
+[node name="Florzinha2" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/Florzinha2"]
+position = Vector2( 320, 1 )
+polygon = PoolVector2Array( -192, 354, -192, 382, -128, 382, -128, 354, -107, 350, -102, 343, -108, 337, -106, 239, -111, 235, -117, 239, -128, 234, -139, 233, -147, 240, -147, 252, -159, 257, -159, 318, -129, 319, -117, 333, -123, 345, -128, 354 )
+
+[node name="Florzinha3" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/Florzinha3"]
+position = Vector2( -170, -446 )
+polygon = PoolVector2Array( -208, 353, -209, 380, -124, 380, -124, 354 )
+
+[node name="Florzinha4" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/Florzinha4"]
+position = Vector2( 162, -95 )
+polygon = PoolVector2Array( -192, 354, -192, 382, -128, 382, -128, 353 )
+
+[node name="Florzinha5" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/Florzinha5"]
+position = Vector2( 1601, 1345 )
+polygon = PoolVector2Array( -192, 354, -192, 382, -128, 382, -128, 353 )
+
+[node name="Florzinha6" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/Florzinha6"]
+position = Vector2( 1730, 1024 )
+polygon = PoolVector2Array( -192, 354, -192, 382, -104, 382, -106, 356 )
+
+[node name="Florzinha7" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/Florzinha7"]
+position = Vector2( 1957, 1024 )
+polygon = PoolVector2Array( -192, 354, -192, 382, -104, 382, -106, 356 )
+
+[node name="Florzinha8" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/Florzinha8"]
+position = Vector2( 1250, 960 )
+polygon = PoolVector2Array( -192, 354, -192, 382, -104, 382, -106, 356 )
+
+[node name="Florzinha9" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/Florzinha9"]
+position = Vector2( 1638, 708 )
+polygon = PoolVector2Array( -192, 354, -192, 382, -104, 382, -106, 356 )
+
+[node name="Florzinha10" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/Florzinha10"]
+position = Vector2( 1925, 705 )
+polygon = PoolVector2Array( -192, 354, -192, 382, -104, 382, -106, 356 )
+
+[node name="Florzinha11" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/Florzinha11"]
+position = Vector2( 2658, -928 )
+polygon = PoolVector2Array( -192, 354, -192, 382, -104, 382, -106, 356 )
+
+[node name="Florzinha12" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/Florzinha12"]
+position = Vector2( 2438, -928 )
+polygon = PoolVector2Array( -192, 354, -192, 382, -104, 382, -106, 356 )
+
+[node name="Florzinha13" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/Florzinha13"]
+position = Vector2( 2437, -1120 )
+polygon = PoolVector2Array( -192, 354, -192, 382, -104, 382, -106, 356 )
+
+[node name="Florzinha14" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/Florzinha14"]
+position = Vector2( 2660, -1120 )
+polygon = PoolVector2Array( -192, 354, -192, 382, -104, 382, -106, 356 )
+
+[node name="Florzinha15" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/Florzinha15"]
+position = Vector2( 161, -256 )
+polygon = PoolVector2Array( -192, 354, -192, 382, -128, 382, -128, 353 )
+
+[node name="Florzinha16" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/Florzinha16"]
+position = Vector2( 1, -317 )
+polygon = PoolVector2Array( -190, 351, -196, 334, -168, 335, -166, 326, -173, 304, -183, 295, -209, 297, -215, 300, -212, 398, -220, 410, -191, 410, -190, 475, -161, 477, -161, 417, -191, 408, -191, 380, -73, 378, -71, 336, -119, 337, -132, 351 )
+
+[node name="Cama_elastica" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/Cama_elastica"]
+polygon = PoolVector2Array( -592, 623, -604, 614, -609, 590, -609, 527, -597, 506, -573, 489, -547, 489, -522, 505, -512, 530, -512, 556, -512, 568, -514, 597, -518, 613, -530, 623, -550, 631, -569, 631 )
+
+[node name="Banheiro" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/Banheiro"]
+polygon = PoolVector2Array( -602, 1477, -594, 1468, -484, 1468, -484, 1568, -604, 1568 )
+
+[node name="Semafaro" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/Semafaro"]
+polygon = PoolVector2Array( -502, 1291, -492, 1291, -492, 1304, -486, 1304, -486, 1362, -483, 1363, -482, 1388, -491, 1388, -493, 1435, -503, 1435, -504, 1389, -513, 1389, -513, 1362, -503, 1362, -507, 1356, -507, 1305, -502, 1305 )
+
+[node name="Semafaro2" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/Semafaro2"]
+position = Vector2( 1889, -1152 )
+polygon = PoolVector2Array( -502, 1291, -492, 1291, -492, 1304, -486, 1304, -486, 1362, -483, 1363, -482, 1388, -491, 1388, -493, 1435, -503, 1435, -504, 1389, -513, 1389, -513, 1362, -503, 1362, -507, 1356, -507, 1305, -502, 1305 )
+
+[node name="Semafaro3" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/Semafaro3"]
+position = Vector2( 1664, -1276 )
+polygon = PoolVector2Array( -502, 1291, -492, 1291, -492, 1304, -486, 1304, -486, 1362, -483, 1363, -482, 1388, -491, 1388, -493, 1435, -503, 1435, -504, 1389, -513, 1389, -513, 1362, -503, 1362, -507, 1356, -507, 1305, -502, 1305 )
+
+[node name="Semafaro4" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/Semafaro4"]
+position = Vector2( 993, -2243 )
+polygon = PoolVector2Array( -502, 1291, -492, 1291, -492, 1304, -486, 1304, -486, 1362, -483, 1363, -482, 1388, -491, 1388, -493, 1435, -503, 1435, -504, 1389, -513, 1389, -513, 1362, -503, 1362, -507, 1356, -507, 1305, -502, 1305 )
+
+[node name="Semafaro5" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/Semafaro5"]
+position = Vector2( 160, -2240 )
+polygon = PoolVector2Array( -502, 1291, -492, 1291, -492, 1304, -486, 1304, -486, 1362, -483, 1363, -482, 1388, -491, 1388, -493, 1435, -503, 1435, -504, 1389, -513, 1389, -513, 1362, -503, 1362, -507, 1356, -507, 1305, -502, 1305 )
+
+[node name="Semafaro6" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/Semafaro6"]
+position = Vector2( 64, -2460 )
+polygon = PoolVector2Array( -502, 1291, -492, 1291, -492, 1304, -486, 1304, -486, 1362, -483, 1363, -482, 1388, -491, 1388, -493, 1435, -503, 1435, -504, 1389, -513, 1389, -513, 1362, -503, 1362, -507, 1356, -507, 1305, -502, 1305 )
+
+[node name="Semafaro7" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/Semafaro7"]
+position = Vector2( -896, -1628 )
+polygon = PoolVector2Array( -502, 1291, -492, 1291, -492, 1304, -486, 1304, -486, 1362, -483, 1363, -482, 1388, -491, 1388, -493, 1435, -503, 1435, -504, 1389, -513, 1389, -513, 1362, -503, 1362, -507, 1356, -507, 1305, -502, 1305 )
+
+[node name="Semafaro8" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/Semafaro8"]
+position = Vector2( -672, -1503 )
+polygon = PoolVector2Array( -502, 1291, -492, 1291, -492, 1304, -486, 1304, -486, 1362, -483, 1363, -482, 1388, -491, 1388, -493, 1435, -503, 1435, -504, 1389, -513, 1389, -513, 1362, -503, 1362, -507, 1356, -507, 1305, -502, 1305 )
+
+[node name="Balanco" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/Balanco"]
+polygon = PoolVector2Array( -2004, 395, -1868, 395, -1868, 404, -1873, 405, -1869, 434, -1871, 477, -2000, 478, -2006, 434, -2006, 406 )
+
+[node name="Balanco2" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/Balanco2"]
+position = Vector2( -285, -832 )
+polygon = PoolVector2Array( -2004, 395, -1868, 395, -1868, 404, -1873, 405, -1869, 434, -1871, 477, -2000, 478, -2006, 434, -2006, 406 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/StaticBody2D"]
+polygon = PoolVector2Array( 1318, -573, 1317, -660, 1461, -663, 1463, -525, 2558, -524, 2560, -96, 2464, -95, 2468, -149, 2492, -151, 2493, -173, 2517, -173, 2517, -149, 2538, -149, 2537, -480, 2462, -480, 2465, -337, 2456, -327, 2454, -176, 2405, -175, 2404, -212, 2369, -220, 2333, -212, 2333, -173, 1927, -173, 1927, -212, 1891, -223, 1853, -212, 1853, -175, 1825, -175, 1816, -166, 1629, -167, 1618, -178, 1615, -244, 1460, -244, 1460, -144, 1480, -144, 1480, -171, 1503, -171, 1503, -153, 1526, -153, 1526, -161, 1533, -161, 1535, -96, 1439, -97, 1440, -491, 1390, -484, 1374, -493, 1375, -566 )
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/StaticBody2D2"]
+polygon = PoolVector2Array( -1169, 1629, -1182, 1618, -1184, 1407, -803, 1410, -802, 1466, -707, 1466, -707, 1588, -803, 1590, -803, 1736, -1025, 1737, -1025, 1626, -1053, 1626, -1053, 1579, -1090, 1579, -1089, 1630 )
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/StaticBody2D3"]
+polygon = PoolVector2Array( -447, 1475, -448, 1679, -434, 1692, -356, 1691, -356, 1642, -316, 1641, -315, 1691, -274, 1691, -271, 1630, -175, 1630, -175, 1694, -143, 1694, -133, 1681, -132, 1475 )
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/StaticBody2D4"]
+polygon = PoolVector2Array( -1149, 1837, -934, 1839, -932, 1991, -1151, 1991 )
+
+[node name="StaticBody2D5" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/StaticBody2D5"]
+polygon = PoolVector2Array( -767, 1836, -545, 1837, -546, 1993, -766, 1993 )
+
+[node name="StaticBody2D6" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/StaticBody2D6"]
+polygon = PoolVector2Array( -448, 1931, -449, 2048, -896, 2046, -895, 2367, -407, 2367, -405, 2372, -394, 2373, -389, 2363, -390, 2337, -747, 2335, -747, 2296, -802, 2295, -804, 2230, -751, 2238, -724, 2238, -685, 2208, -658, 2208, -620, 2205, -620, 2193, -609, 2193, -609, 2174, -449, 2174, -448, 2222, -502, 2222, -502, 2244, -495, 2251, -494, 2269, -465, 2269, -464, 2252, -447, 2237, -423, 2237, -422, 2169, -377, 2169, -375, 2237, -350, 2237, -350, 2171, -258, 2171, -257, 2235, -223, 2235, -222, 2171, -131, 2170, -130, 2236, -48, 2236, -117, 2256, -160, 2339, -160, 2368, -37, 2368, -38, 2336, -4, 2337, -4, 2318, -12, 2255, -3, 2249, -3, 2223, -16, 2214, -39, 2215, -37, 2079, -5, 2080, -5, 2063, -12, 2001, -4, 1992, -3, 1966, -16, 1959, -30, 1969, -29, 1992, -20, 2001, -20, 2049, -63, 2048, -64, 1929, -380, 1930, -400, 1907, -421, 1918 )
+
+[node name="StaticBody2D7" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/StaticBody2D7"]
+polygon = PoolVector2Array( 2559, -767, 2563, 833, 2562, 833, 2494, 833, 2493, 786, 2434, 786, 2434, 831, 2399, 831, 2399, 785, 2336, 784, 2338, 831, 2301, 830, 2302, 787, 2241, 786, 2240, 929, 2220, 929, 2220, 1090, 2176, 1090, 2177, 1152, 1920, 1152, 1921, 1472, 1600, 1471, 1599, 1792, 1279, 1791, 1281, 1406, 1307, 1406, 1307, 1390, 1300, 1390, 1300, 1343, 1339, 1343, 1339, 1314, 1308, 1314, 1308, 1304, 1310, 1295, 1304, 1288, 1296, 1286, 1289, 1288, 1282, 1294, 1282, 1304, 1284, 1305, 1284, 1314, 1252, 1314, 1253, 1343, 1291, 1343, 1291, 1390, 1281, 1390, 1281, 1378, 958, 1378, 942, 1443, 806, 1443, 806, 1504, 758, 1503, 759, 1440, 350, 1441, 352, 2110, 358, 2131, 388, 2142, 434, 2134, 441, 2110, 441, 2050, 485, 2050, 485, 2110, 542, 2110, 543, 2202, 515, 2201, 516, 2267, 545.26, 2267.04, 549, 2394, 572, 2393, 571, 2383, 565, 2382, 564, 2332, 939, 2334, 958, 2334, 959, 2112, 1280, 2112, 1274, 1801, 1593, 1805, 1925, 1477, 2563, 833 )
+
+[node name="StaticBody2D8" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/StaticBody2D8"]
+polygon = PoolVector2Array( 957, 2335, 958, 2429, -931, 2431, -929, 2310, -959, 2310, -959, 2112, -1218, 2111, -1217, 1960, -1281, 1960, -1279, 1794, -1602, 1793, -1601, 1471, -1919, 1471, -1919, 1152, -2239, 1152, -2243, 832, -2560, 830, -2563, -769, -2495, -759, -2306, -750, -2308, -769, -2243, -769, -2240, -1087, -2146, -1086, -2144, -1051, -1950, -1051, -1952, -1091, -1920, -1091, -1921, -1410, -1852, -1408, -1852, -1317, -1828, -1315, -1827, -1407, -1604, -1405, -1192, -1968, -895, -2261, 923, -2282, 960, -2086, 1269, -2086, 1278, -1734, 2139, -1268, 1271, -1738, 1313, -2201, 1139, -2244, 969, -2354, -955, -2367, -1603, -1790, -1619, -1427, -1924, -1439, -2302, -1084, -2304, -790, -2318, -902, -2486, -908, -2593, -780, -2564, 850, -1849, 1666, -964, 2499, 1029, 2522, 1099, 2426 )
+
+[node name="StaticBody2D9" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/StaticBody2D9"]
+position = Vector2( -928, -2208 )
+polygon = PoolVector2Array( 100, 2334, 99, 2215, 124, 2215, 123, 2335 )
+
+[node name="StaticBody2D10" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/StaticBody2D10"]
+polygon = PoolVector2Array( -541, 674, -540, 733, -483, 733, -484, 675 )
+
+[node name="StaticBody2D11" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/StaticBody2D11"]
+polygon = PoolVector2Array( -448, 705, -448, 765, -356, 764, -356, 712, -388, 712, -388, 704 )
+
+[node name="StaticBody2D12" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/StaticBody2D12"]
+polygon = PoolVector2Array( -640, 723, -627, 712, -622, 712, -608, 723, -608, 754, -614, 756, -639, 757 )
+
+[node name="StaticBody2D13" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/StaticBody2D13"]
+polygon = PoolVector2Array( -575, 753, -563, 745, -556, 745, -545, 753, -545, 788, -576, 788 )
+
+[node name="StaticBody2D14" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/StaticBody2D14"]
+polygon = PoolVector2Array( -408, 602, -408, 640, -295, 640, -295, 603, -297, 614, -318, 614, -318, 603, -383, 602, -382, 614, -405, 613 )
+
+[node name="StaticBody2D15" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/StaticBody2D15"]
+polygon = PoolVector2Array( -470, 1116, -470, 1084, -478, 1085, -479, 1057, -469, 1057, -469, 1046, -460, 1046, -460, 1057, -451, 1057, -451, 1081, -443, 1081, -442, 1044, -446, 1039, -447, 996, -308, 996, -306, 1038, -311, 1043, -312, 1082, -312, 1086, -435, 1084, -460, 1084, -460, 1118 )
+
+[node name="StaticBody2D16" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/StaticBody2D16"]
+polygon = PoolVector2Array( -751, 22, -751, 50, -767, 57, -768, 82, -741, 94, -700, 95, -684, 81, -675, 79, -675, 57, -687, 55, -689, 21 )
+
+[node name="StaticBody2D17" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/StaticBody2D17"]
+polygon = PoolVector2Array( 384, 674, 383, 732, 477, 733, 479, 673 )
+
+[node name="StaticBody2D18" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/StaticBody2D18"]
+polygon = PoolVector2Array( 352, 575, 392, 566, 392, 547, 406, 547, 406, 563, 447, 556, 447, 571, 406, 582, 406, 601, 394, 602, 394, 585, 352, 595 )
+
+[node name="StaticBody2D19" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/StaticBody2D19"]
+polygon = PoolVector2Array( 657, 279, 718, 279, 719, 307, 734, 311, 734, 332, 720, 334, 707, 350, 668, 351, 643, 336, 643, 309, 657, 307 )
+
+[node name="StaticBody2D20" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/StaticBody2D20"]
+polygon = PoolVector2Array( 674, 8, 672, 93, 736, 92, 735, 10 )
+
+[node name="StaticBody2D21" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/StaticBody2D21"]
+polygon = PoolVector2Array( 191, 157, 190, 90, 207, 93, 219, 90, 215, 81, 215, -15, 207, -20, 202, -14, 188, -23, 174, -16, 166, 8, 170, 17, 170, 33, 122, 32, 121, 19, 102, 20, 73, 20, 71, 60, 189, 61, 188, 85, 182, 95, 160, 99, 160, 160 )
+
+[node name="StaticBody2D22" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/StaticBody2D22"]
+polygon = PoolVector2Array( -840, -1696, -839, -1501, -814, -1467, -813, -1427, -757, -1426, -709, -1427, -708, -1366, -684, -1338, -684, -1300, -628, -1299, -625, -1366, -586, -1367, -586, -1241, -439, -1240, -428, -1211, -427, -1171, -371, -1171, -370, -1239, -330, -1240, -330, -1178, -35, -1176, -33, -1465, -100, -1464, -99, -1534, -163, -1536, -164, -1567, -126, -1568, -127, -1663, -168, -1663, -167, -1686, -459, -1685, -581, -1686, -671, -1686, -714, -1722, -854, -1724, -865, -1697 )
+
+[node name="StaticBody2D23" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/StaticBody2D23"]
+polygon = PoolVector2Array( 35, -1174, 355, -1174, 357, -1238, 415, -1235, 416, -1211, 404, -1211, 389, -1154, 390, -1030, 402, -1028, 408, -1171, 458, -1170, 463, -1212, 439, -1212, 471, -1239, 581, -1237, 581, -1368, 637, -1368, 648, -1343, 630, -1340, 629, -1298, 684, -1297, 684, -1337, 663, -1338, 672, -1362, 708, -1368, 709, -1495, 760, -1495, 776, -1470, 759, -1468, 757, -1428, 811, -1427, 809, -1467, 790, -1469, 802, -1489, 834, -1495, 838, -1692, 864, -1721, 702, -1721, 701, -1697, 731, -1696, 670, -1694, 167, -1691, 164, -1660, 155, -1660, 129, -1652, 129, -1570, 159, -1568, 159, -1535, 96, -1534, 96, -1468, 36, -1468, 31, -1285 )
+
+[node name="StaticBody2D24" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/StaticBody2D24"]
+polygon = PoolVector2Array( 832, -1778, 834, -1956, 711, -1958, 706, -2119, 646, -2119, 641, -2244, 581, -2244, 581, -2310, 96, -2310, 96, -2204, 97, -2179, 194, -2176, 195, -1885, 102, -1883, 100, -1765, 412, -1765, 693, -1763, 701, -1779, 729, -1777 )
+
+[node name="StaticBody2D25" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/StaticBody2D25"]
+polygon = PoolVector2Array( -839, -1780, -836, -1958, -712, -1960, -709, -2118, -650, -2118, -644, -2246, -579, -2247, -582, -2310, -92, -2309, 94, -2180, 89, -1970, 35, -1970, 35, -2033, -35, -2032, -37, -1973, -91, -1973, -95, -2171, -198, -2174, -194, -1887, -103, -1887, -101, -1765, -439, -1765, -668, -1765, -731, -1780 )
+
+[node name="StaticBody2D26" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/StaticBody2D26"]
+polygon = PoolVector2Array( -26, -1772, -27, -1731, 25, -1731, 25, -1773 )
+
+[node name="StaticBody2D27" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/StaticBody2D27"]
+polygon = PoolVector2Array( -840, -1860, -965, -1863, -965, -1831, -1048, -1831, -1050, -1859, -1125, -1859, -1141, -1821, -1142, -1779, -1194, -1779, -1188, -1751, -1186, -1658, -1186, -1582, -1189, -1561, -1122, -1561, -1122, -1370, -1093, -1368, -1093, -1251, -1207, -1253, -1207, -1316, -1263, -1316, -1263, -1256, -1310, -1253, -1436, -1253, -1438, -1312, -1474, -1309, -1477, -1256, -1566, -1254, -1563, -1312, -1600, -1313, -1599, -1729, -1285, -1725, -1285, -2062 )
+
+[node name="StaticBody2D28" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/StaticBody2D28"]
+polygon = PoolVector2Array( -1703, -1318, -1703, -1357, -1787, -1357, -1787, -1317 )
+
+[node name="Moita_pequena" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/Moita_pequena"]
+polygon = PoolVector2Array( -1183, -1190, -1180, -1159, -1124, -1158, -1123, -1190, -1149, -1200 )
+
+[node name="StaticBody2D29" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/StaticBody2D29"]
+polygon = PoolVector2Array( 834, -1858, 965, -1858, 966, -1825, 1051, -1824, 1051, -1861, 1124, -1861, 1153, -1840, 1156, -1823, 1139, -1819, 1139, -1779, 1195, -1779, 1184, -1745, 1184, -1568, 1181, -1473, 1183, -1423, 1144, -1423, 1144, -1452, 1121, -1452, 1122, -933, 1121, -931, 1156, -930, 1156, -897, 1242, -897, 1242, -930, 1311, -930, 1312, -774, 1369, -774, 1369, -769, 1414, -769, 1414, -775, 1535, -776, 1536, -803, 1559, -805, 1559, -839, 1534, -839, 1536, -974, 1528, -974, 1527, -1003, 1504, -1003, 1503, -977, 1503, -972, 1182, -977, 1182, -1016, 1155, -1015, 1155, -975, 1141, -975, 1142, -1056, 1182, -1057, 1183, -1116, 1161, -1127, 1140, -1128, 1140, -1217, 1186, -1217, 1185, -1252, 1209, -1252, 1209, -1320, 1258, -1320, 1258, -1249, 1305, -1250, 1306, -1320, 1353, -1320, 1353, -1250, 1759, -1252, 1763, -1218, 1790, -1218, 1792, -900, 1818, -900, 1819, -968, 1864, -968, 1864, -898, 1915, -898, 1915, -968, 1961, -968, 1961, -896, 2123, -900, 2123, -850, 2113, -850, 2113, -833, 2155, -832, 2155, -776, 2138, -776, 2130, -770, 2114, -765, 2114, -705, 2155, -705, 2156, -590, 1761, -589, 1761, -620, 1736, -620, 1736, -590, 1728, -590, 1729, -545, 2176, -545, 2177, -1093, 2143, -1091, 2145, -1272, 1920, -1276, 1917, -1406, 1761, -1409, 1758, -1562, 1593, -1562, 1596, -1727, 1279, -1727, 1276, -1879, 825, -1882 )
+
+[node name="Moita_pequena2" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/Moita_pequena2"]
+position = Vector2( -190, 320 )
+polygon = PoolVector2Array( -1183, -1190, -1180, -1159, -1124, -1158, -1123, -1190, -1149, -1200 )
+
+[node name="StaticBody2D30" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/StaticBody2D30"]
+polygon = PoolVector2Array( -2176, 826, -2174, 990, -2146, 991, -2145, 925, -2118, 926, -2117, 889, -2124, 889, -2124, 902, -2145, 901, -2146, 868, -2147, 826 )
+
+[node name="StaticBody2D31" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/StaticBody2D31"]
+polygon = PoolVector2Array( -2176, 1034, -2114, 1033, -2112, 1078, -2176, 1078 )
+
+[node name="StaticBody2D32" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/StaticBody2D32"]
+polygon = PoolVector2Array( -2049, 1024, -1985, 1024, -1986, 1085, -2049, 1085 )
+
+[node name="StaticBody2D33" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/StaticBody2D33"]
+polygon = PoolVector2Array( -2079, 926, -2079, 988, -1985, 991, -1983, 924 )
+
+[node name="StaticBody2D34" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/StaticBody2D34"]
+polygon = PoolVector2Array( -1994, 817, -2040, 817, -2055, 826, -2076, 826, -2076, 844, -2078, 845, -2078, 859, -2076, 864, -2051, 864, -2045, 862, -1989, 862, -1986, 847, -1986, 844, -1991, 835, -1988, 832, -1988, 822 )
+
+[node name="StaticBody2D35" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/StaticBody2D35"]
+polygon = PoolVector2Array( -2494, 766, -2369, 766, -2368, 735, -2359, 735, -2357, 741, -2347, 741, -2347, 731, -2336, 731, -2336, 707, -2479, 707, -2480, 275, -2460, 275, -2460, 600, -2436, 600, -2431, 531, -2431, 526, -2433, 510, -2401, 509, -2401, 462, -2365, 463, -2367, 510, -2239, 508, -2239, 530, -2336, 529, -2334, 612, -2274, 620, -2275, 578, -2277, 566, -2211, 566, -2205, 281, -2161, 280, -2160, 448, -2095, 448, -2092, 284, -2077, 282, -2077, 318, -2019, 317, -2019, 347, -1985, 348, -1984, 337, -2007, 339, -2005, 295, -1901, 295, -1902, 338, -1952, 337, -1951, 349, -1893, 349, -1894, 279, -1825, 281, -1824, 575, -1856, 574, -1871, 607, -1893, 608, -1897, 595, -1910, 595, -1910, 609, -1902, 613, -1905, 619, -1904, 625, -1900, 627, -1896, 624, -1892, 626, -1894, 629, -1888, 630, -1883, 630, -1881, 627, -1880, 621, -1874, 622, -1870, 620, -1868, 614, -1870, 610, -1855, 621, -1827, 622, -1826, 599, -1796, 599, -1791, 576, -1792, 529, -1791, 524, -1791, 518, -1779, 501, -1761, 501, -1762, 461, -1728, 461, -1727, 501, -1602, 501, -1602, 527, -1694, 526, -1694, 597, -1667, 598, -1667, 565, -1597, 566, -1595, 598, -1572, 598, -1569, 569, -1571, 499, -1567, 278, -1522, 278, -1522, 705, -1661, 708, -1661, 730, -1652, 741, -1630, 740, -1629, 763, -1503, 765, -1505, 260, -1569, 257, -1569, 224, -1636, 191, -1638, 174, -1661, 174, -1694, 161, -1823, 222, -1823, 257, -2207, 258, -2209, 224, -2337, 162, -2465, 226, -2463, 259, -2496, 260 )
+
+[node name="StaticBody2D37" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/StaticBody2D37"]
+polygon = PoolVector2Array( -2142, 543, -2143, 559, -2110, 560, -2109, 573, -2083, 572, -2083, 560, -2049, 560, -2050, 541, -2083, 541, -2084, 524, -2094, 517, -2108, 523, -2108, 542 )
+
+[node name="StaticBody2D38" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/StaticBody2D38"]
+position = Vector2( -65, 64 )
+polygon = PoolVector2Array( -2142, 543, -2143, 559, -2110, 560, -2109, 573, -2083, 572, -2083, 560, -2049, 560, -2050, 541, -2083, 541, -2084, 524, -2094, 517, -2108, 523, -2108, 542 )
+
+[node name="StaticBody2D39" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/StaticBody2D39"]
+polygon = PoolVector2Array( -1910, 544, -1905, 554, -1905, 560, -1900, 564, -1894, 566, -1882, 566, -1878, 557, -1872, 557, -1869, 553, -1869, 546, -1873, 542, -1878, 542, -1882, 548, -1894, 548, -1894, 535, -1899, 531, -1906, 530, -1910, 535 )
+
+[node name="StaticBody2D36" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/StaticBody2D36"]
+polygon = PoolVector2Array( -2301, -751, -2146, -747, -2146, -454, -2335, -448, -2336, -491, -2325, -493, -2324, -522, -2304, -522, -2304, -498, -2165, -498, -2163, -714, -2215, -715, -2213, -676, -2267, -676, -2264, -716, -2308, -716, -2308, -658, -2287, -666, -2279, -664, -2273, -654, -2274, -629, -2283, -625, -2282, -564, -2273, -556, -2273, -547, -2298, -546, -2299, -562, -2293, -563, -2295, -625, -2306, -625, -2308, -591, -2367, -591, -2368, -659, -2434, -660, -2435, -593, -2467, -593, -2470, -544, -2494, -543, -2493, -716, -2509, -715, -2508, -494, -2463, -495, -2466, -525, -2441, -524, -2439, -501, -2433, -496, -2435, -434, -2464, -436, -2465, -452, -2531, -449, -2528, -728, -2516, -749 )
+
+[node name="StaticBody2D40" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/StaticBody2D40"]
+polygon = PoolVector2Array( -1661, -247, -1661, -195, -1538, -192, -1542, -271, -1595, -270, -1595, -247 )
+
+[node name="StaticBody2D41" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/StaticBody2D41"]
+polygon = PoolVector2Array( -1570, -322, -1538, -321, -1539, -635, -1569, -639, -1569, -781, -1585, -801, -1582, -1055, -1601, -1056, -1599, -1166, -1539, -1164, -1539, -1196, -1599, -1197, -1599, -1226, -1738, -1226, -1736, -1250, -1759, -1275, -1781, -1264, -1765, -1257, -1767, -1235, -1774, -1229, -1792, -1228, -1792, -1049, -1805, -1049, -1806, -1055, -1811, -1056, -1810, -1051, -1838, -1050, -1838, -1055, -1843, -1055, -1843, -1050, -1868, -1051, -1868, -1072, -1860, -1079, -1859, -1105, -1872, -1114, -1880, -1111, -1886, -1105, -1886, -1096, -1883, -1093, -1885, -1083, -1883, -1078, -1877, -1074, -1875, -1051, -1887, -1057, -1907, -1077, -1921, -1081, -1932, -1080, -1938, -1075, -1945, -1066, -1949, -1057, -1947, -1048, -1951, -1044, -2161, -1045, -2167, -813, -2167, -802, -2111, -802, -2103, -786, -2089, -785, -2085, -796, -2085, -829, -2107, -829, -2118, -904, -2117, -962, -2070, -961, -2070, -901, -2047, -902, -2047, -875, -1956, -874, -1952, -979, -1893, -980, -1893, -995, -1851, -996, -1849, -964, -1789, -964, -1787, -897, -1727, -896, -1729, -979, -1662, -978, -1661, -895, -1630, -895, -1632, -829, -1659, -828, -1659, -782, -1689, -787, -1696, -797, -1718, -797, -1732, -783, -1758, -783, -1760, -641, -1787, -639, -1789, -626, -1787, -383, -1726, -383, -1717, -370, -1709, -369, -1701, -379, -1701, -414, -1781, -415, -1781, -609, -1759, -609, -1757, -450, -1697, -451, -1694, -525, -1632, -525, -1632, -448, -1572, -450, -1570, -610, -1551, -610, -1551, -413, -1598, -413, -1598, -385, -1566, -384 )
+
+[node name="StaticBody2D42" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/StaticBody2D42"]
+polygon = PoolVector2Array( -1948, -806, -1943, -810, -1927, -809, -1919, -831, -1827, -831, -1827, -808, -1796, -808, -1796, -777, -1800, -771, -1817, -771, -1819, -775, -1819, -788, -1855, -788, -1855, -803, -1889, -803, -1889, -787, -1923, -787, -1924, -775, -1931, -771, -1946, -771, -1948, -774 )
+
+[node name="StaticBody2D43" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/StaticBody2D43"]
+polygon = PoolVector2Array( -318, -1117, -317, -1071, -315, -1027, -308, -1028, -308, -1042, -252, -1042, -252, -1025, -179, -1025, -179, -1117 )
+
+[node name="StaticBody2D44" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/StaticBody2D44"]
+polygon = PoolVector2Array( -159, -1087, -149, -1087, -148, -1098, -143, -1098, -141, -1088, -130, -1088, -130, -1061, -140, -1061, -140, -1026, -150, -1026, -150, -1060, -159, -1060 )
+
+[node name="StaticBody2D45" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/StaticBody2D45"]
+polygon = PoolVector2Array( 1952, 730, 1949, 673, 1971, 672, 1969, 635, 2042, 637, 2042, 574, 2086, 574, 2088, 636, 2157, 636, 2158, 668, 2177, 669, 2176, 639, 2206, 637, 2206, 577, 2195, 578, 2198, 545, 2174, 543, 2175, 509, 2241, 508, 2242, 673, 2262, 672, 2262, 634, 2306, 636, 2332, 626, 2333, 574, 2373, 574, 2375, 624, 2392, 634, 2442, 635, 2442, 670, 2427, 672, 2434, 734, 2499, 733, 2496, 419, 2462, 419, 2465, 273, 2238, 273, 2240, 415, 2176, 416, 2174, 365, 1954, 362, 1953, 413, 1889, 418, 1891, 734 )
+
+[node name="StaticBody2D46" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/StaticBody2D46"]
+polygon = PoolVector2Array( 1888, 1040, 1888, 866, 1983, 865, 1984, 830, 1924, 831, 1922, 788, 1986, 782, 2145, 781, 2165, 789, 2175, 808, 2174, 828, 2145, 830, 2143, 867, 2176, 868, 2175, 896, 2145, 896, 2143, 931, 2168, 930, 2165, 961, 2143, 961, 2142, 1054, 2082, 1054, 2082, 1021, 2054, 1012, 2054, 961, 2014, 961, 2015, 1022, 2004, 1022, 2003, 1053, 1985, 1053, 1985, 926, 1926, 927, 1921, 890, 1907, 891, 1908, 1039 )
+
+[node name="StaticBody2D47" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/StaticBody2D47"]
+polygon = PoolVector2Array( -109, -142, -100, -153, -94, -154, -90, -145, -84, -144, -81, -109, -74, -97, -75, -75, -81, -69, -107, -69, -107, -74, -112, -75, -116, -97, -109, -102 )
+
+[node name="StaticBody2D48" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/StaticBody2D48"]
+position = Vector2( 192, 1 )
+polygon = PoolVector2Array( -109, -142, -100, -153, -94, -154, -90, -145, -84, -144, -81, -109, -74, -97, -75, -75, -81, -69, -107, -69, -107, -74, -112, -75, -116, -97, -109, -102 )
+
+[node name="Florzinha17" type="StaticBody2D" parent="Mapajogo"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mapajogo/Florzinha17"]
+position = Vector2( 615, -448 )
+polygon = PoolVector2Array( -192, 354, -192, 382, -109, 382, -109, 355 )
+
+[node name="Ginasio_01" type="Area2D" parent="Mapajogo"]
+collision_layer = 256
+collision_mask = 256
+
+[node name="Change_ginasio_01" type="CollisionShape2D" parent="Mapajogo/Ginasio_01"]
+position = Vector2( -1696.5, 511.125 )
+shape = SubResource( 1 )
+
+[node name="Ginasio_02" type="Area2D" parent="Mapajogo"]
+collision_layer = 256
+collision_mask = 256
+
+[node name="Change_ginasio_02" type="CollisionShape2D" parent="Mapajogo/Ginasio_02"]
+position = Vector2( 1330, -1281 )
+shape = SubResource( 2 )
+
+[node name="Change_ginasio_03" type="CollisionShape2D" parent="Mapajogo/Ginasio_02"]
+position = Vector2( 1468.55, -1280 )
+shape = SubResource( 2 )
+
+[node name="Change_ginasio_04" type="CollisionShape2D" parent="Mapajogo/Ginasio_02"]
+position = Vector2( 1941, -934 )
+shape = SubResource( 2 )
+
+[node name="Change_ginasio_05" type="CollisionShape2D" parent="Mapajogo/Ginasio_02"]
+position = Vector2( 1960.22, -928 )
+shape = SubResource( 2 )
+
+[node name="Ginasio_03" type="Area2D" parent="Mapajogo"]
+collision_layer = 256
+collision_mask = 256
+
+[node name="Change_ginasio_04" type="CollisionShape2D" parent="Mapajogo/Ginasio_03"]
+position = Vector2( 782, 1446 )
+shape = SubResource( 15 )
+
+[node name="Change_ginasio_05" type="CollisionShape2D" parent="Mapajogo/Ginasio_03"]
+position = Vector2( 463, 2081 )
+shape = SubResource( 15 )
+
+[node name="Biblioteca1" type="Area2D" parent="Mapajogo"]
+position = Vector2( -270, -261 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mapajogo/Biblioteca1"]
+position = Vector2( -0.5, -11.5 )
+shape = SubResource( 5 )
+one_way_collision_margin = 0.0
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Mapajogo/Biblioteca1"]
+position = Vector2( 576.5, -10.5 )
+shape = SubResource( 5 )
+one_way_collision_margin = 0.0
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Mapajogo/Biblioteca1"]
+position = Vector2( 96.5, -11.5 )
+shape = SubResource( 5 )
+one_way_collision_margin = 0.0
+
+[node name="CarWash" type="Area2D" parent="Mapajogo"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mapajogo/CarWash"]
+position = Vector2( -224, 1655 )
+shape = SubResource( 6 )
+
+[node name="Market" type="Area2D" parent="Mapajogo"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mapajogo/Market"]
+position = Vector2( 2063, 597 )
+shape = SubResource( 7 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Mapajogo/Market"]
+position = Vector2( 2352, 598 )
+shape = SubResource( 7 )
+
+[node name="Store" type="Area2D" parent="Mapajogo"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mapajogo/Store"]
+position = Vector2( 2032.5, 978.5 )
+shape = SubResource( 8 )
+
+[node name="Office" type="Area2D" parent="Mapajogo"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mapajogo/Office"]
+position = Vector2( 0, -2010.5 )
+shape = SubResource( 9 )
+
+[node name="Label" type="Label" parent="Mapajogo"]
+margin_left = -232.0
+margin_top = -337.0
+margin_right = -174.0
+margin_bottom = -312.0
+rect_scale = Vector2( 2, 2 )
+text = "Library"
+align = 1
+valign = 1
+
+[node name="SoundLobby" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 3 )
+
+[node name="Park" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 4 )
+
+[node name="LivroBalaoUm" type="Area2D" parent="."]
+position = Vector2( 80, 783 )
+collision_layer = 4
+collision_mask = 256
+
+[node name="LivroUm" type="CollisionShape2D" parent="LivroBalaoUm"]
+shape = SubResource( 11 )
+disabled = true
+
+[node name="LivroBalaoDois" type="Area2D" parent="."]
+position = Vector2( 462, 74 )
+collision_layer = 4
+collision_mask = 256
+
+[node name="LivroDois" type="CollisionShape2D" parent="LivroBalaoDois"]
+position = Vector2( 0, -9.53674e-07 )
+shape = SubResource( 11 )
+disabled = true
+
+[node name="LivroBalaoTres" type="Area2D" parent="."]
+position = Vector2( 976, 74 )
+collision_layer = 4
+collision_mask = 256
+
+[node name="LivroTres" type="CollisionShape2D" parent="LivroBalaoTres"]
+shape = SubResource( 11 )
+disabled = true
+
+[node name="LivroBalaoQuatro" type="Area2D" parent="."]
+position = Vector2( 1590, 74 )
+collision_layer = 4
+collision_mask = 256
+
+[node name="LivroQuatro" type="CollisionShape2D" parent="LivroBalaoQuatro"]
+shape = SubResource( 11 )
+disabled = true
+
+[node name="LivroBalaoCinco" type="Area2D" parent="."]
+position = Vector2( 2000, 69 )
+collision_layer = 4
+collision_mask = 256
+
+[node name="LivroCinco" type="CollisionShape2D" parent="LivroBalaoCinco"]
+position = Vector2( 4.125, 0 )
+shape = SubResource( 11 )
+disabled = true
+
+[connection signal="body_entered" from="Mapajogo/Ginasio_01" to="." method="_on_Ginasio_01_body_entered"]
+[connection signal="body_entered" from="Mapajogo/Ginasio_02" to="." method="_on_Ginasio_02_body_entered"]
+[connection signal="body_entered" from="Mapajogo/Ginasio_03" to="." method="_on_Ginasio_03_body_entered"]
+[connection signal="body_entered" from="Mapajogo/Biblioteca1" to="." method="_on_Biblioteca1_body_entered"]
+[connection signal="body_entered" from="Mapajogo/CarWash" to="." method="_on_CarWash_body_entered"]
+[connection signal="body_entered" from="Mapajogo/Market" to="." method="_on_Market_body_entered"]
+[connection signal="body_entered" from="Mapajogo/Store" to="." method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Mapajogo/Office" to="." method="_on_Office_body_entered"]
+[connection signal="body_entered" from="LivroBalaoUm" to="." method="_on_LivroBalaoUm_body_entered"]
+[connection signal="body_entered" from="LivroBalaoDois" to="." method="_on_LivroBalaoDois_body_entered"]
+[connection signal="body_entered" from="LivroBalaoTres" to="." method="_on_LivroBalaoTres_body_entered"]
+[connection signal="body_entered" from="LivroBalaoQuatro" to="." method="_on_LivroBalaoQuatro_body_entered"]
+[connection signal="body_entered" from="LivroBalaoCinco" to="." method="_on_LivroBalaoCinco_body_entered"]

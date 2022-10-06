@@ -7,6 +7,11 @@ onready var conteudo = preload("res://Cenas/Outros/Conteudo/Conteudo.tscn").inst
 var playerPosition = Vector2(16,310)
 var NPC1Position = Vector2(927, 320)
 
+func _input(event):
+	if event.is_action_pressed("pause"):
+		set_visible(!get_tree().paused)
+		get_tree().paused = !get_tree().paused
+
 var player
 var NPC1
 

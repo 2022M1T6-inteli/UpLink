@@ -8,6 +8,11 @@ onready var hud_colunas2 = preload("res://Cenas/Ginasio-03/HUD_Colunas2.tscn").i
 
 var playerPosition = Vector2(525,215)
 
+func _input(event):
+	if event.is_action_pressed("pause"):
+		set_visible(!get_tree().paused)
+		get_tree().paused = !get_tree().paused
+
 var estrela1
 var estrela2
 var estrela3
@@ -46,7 +51,7 @@ func _on_Area2D_body_entered(body):
 		player.position = playerPosition
 
 func _on_End_body_entered(body):
-	get_tree().change_scene("res://Cenas/Lobby/Lobby.tscn")
+	get_tree().change_scene("res://Cenas/Outros/TurnBasedCombat.tscn")
 
 #colocar pergunta 1 ao iniciar
 

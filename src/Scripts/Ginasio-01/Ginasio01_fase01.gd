@@ -9,6 +9,11 @@ onready var preLivro = preload("res://Cenas/Outros/Books/LivroPreenchidoAbsorver
 # DEFININDO A POSIÇÃO DO PLAYER E DOS LIVROS QUE SERÃO CONSUMIDOS
 var playerPosition = Vector2(12,878)
 
+func _input(event):
+	if event.is_action_pressed("pause"):
+		set_visible(!get_tree().paused)
+		get_tree().paused = !get_tree().paused
+
 var livroPosition1 = Vector2(80, 783)
 var livroPosition2 = Vector2(462, 79)
 var livroPosition3 = Vector2(976, 74)

@@ -13,6 +13,11 @@ func iniciarPlayer(posicao):
 	player.position = posicao
 	return player
 
+func _input(event):
+	if event.is_action_pressed("pause"):
+		set_visible(!get_tree().paused)
+		get_tree().paused = !get_tree().paused
+
 func _ready():
 	$SoundX.play()
 #	$Player/Camera.current = false

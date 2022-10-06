@@ -8,6 +8,22 @@
 
 config_version=4
 
+_global_script_classes=[ {
+"base": "Resource",
+"class": "BDQuiz",
+"language": "GDScript",
+"path": "res://Scripts/Quiz/bd_quiz.gd"
+}, {
+"base": "Resource",
+"class": "QuizQuestion",
+"language": "GDScript",
+"path": "res://Scripts/Quiz/resource_quesions.gd"
+} ]
+_global_script_class_icons={
+"BDQuiz": "",
+"QuizQuestion": ""
+}
+
 [application]
 
 config/name="Refatoração"

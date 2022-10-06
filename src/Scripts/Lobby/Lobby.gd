@@ -4,31 +4,31 @@ onready var prePlayer = preload("res://Cenas/Outros/Player/Player.tscn")
 onready var preLivro = preload("res://Cenas/Outros/Books/LivroPreenchidoAbsorver.tscn")
 onready var hud = preload("res://Cenas/Ginasio-01/Ginasio01_HUD.tscn")
 onready var conteudo = preload("res://Cenas/Outros/Conteudo/Conteudo.tscn").instance()
-
 var player
 var livro
-
 var playerPosition = Vector2(0, 340)
-
 var livroPosition1 = Vector2(80, 783)
 var livroPosition2 = Vector2(462, 79)
 var livroPosition3 = Vector2(976, 74)
 var livroPosition4 = Vector2(1590, 73)
 var livroPosition5 = Vector2(2000, 69)
-
 var statusBalaoUm = true
 var statusBalaoDois = true
 var statusBalaoTres = true
 var statusBalaoQuatro = true
 var statusBalaoCinco = true
-
+var bibliotecastatus = false
 var livro1
 var livro2
 var livro3
 var livro4
 var livro5
-
 var statusDynamic = true
+
+func _input(event):
+	if event.is_action_pressed("pause"):
+		set_visible(!get_tree().paused)
+		get_tree().paused = !get_tree().paused
 
 func ativarDinamicaLivros():
 	Global.numLivros = 0
@@ -40,8 +40,8 @@ func ativarDinamicaLivros():
 	livro3 = iniciarLivro(livroPosition3)
 	livro4 = iniciarLivro(livroPosition4)
 	livro5 = iniciarLivro(livroPosition5)
-
 # FUNÇÃO PARA INSTANCIAR O LIVRO
+
 func iniciarLivro(posicao):
 	livro = preLivro.instance()
 	livro.position = posicao
@@ -63,7 +63,6 @@ func _ready():
 		
 	$SoundLobby.play()
 	$Park.play()
-
 	#inicialização da variável como nó e criação desse nó Player
 	player = iniciarPlayer(Global.playerPosition)
 	add_child(player)
@@ -75,62 +74,73 @@ func _ready():
 		add_child(conteudo)
 		Global.current_dialogo = Global.dialogo["language"]["eng"]["instructions"]["instrucAfterGym1"]
 		conteudo.load_Instru()
+		
 	elif Global.preGinasio == "Ginasio03":
 		add_child(conteudo)
 		Global.current_dialogo = Global.dialogo["language"]["eng"]["instructions"]["instrucAfterGym2"]
 		conteudo.load_Instru()
+		
 	elif Global.preGinasio == "Ginasio<3":
 		add_child(conteudo)
 		Global.current_dialogo = Global.dialogo["language"]["eng"]["instructions"]["instrucAfterGym3"]
 		conteudo.load_Instru()
-	
+		
+	elif Global.preGinasio == "GinasioBiblioteca":
+		statusBalaoUm = false
+		statusBalaoDois = false
+		statusBalaoTres = false
+		statusBalaoQuatro = false
+		statusBalaoCinco = false
+		
 #Função responsável por fazer com que variável receba o nó chamando a cena correta e definindo sua posição
 func iniciarPlayer(posicao):
 	var player = prePlayer.instance()
 	player.position = posicao
 	return player
-
+	
 func _process(delta):
 	if Global.numLivrosLobby == 5 and statusDynamic and Global.Gin01_enabled == true:
 		statusDynamic = false
 		yield(get_tree().create_timer(4.0),"timeout")
 		remove_child(conteudo)
 		add_child(conteudo)
+		bibliotecastatus = true
+		
 		Global.current_dialogo = Global.dialogo["language"]["eng"]["instructions"]["collectedBooksLobby"]
 		conteudo.load_Instru()
 		
 func _on_Office_body_entered(body):
-	if Global.preGinasio == "Ginasio<3": 
+	if Global.preGinasio == "Ginasio<3":
 		get_tree().change_scene("res://Cenas/Outros/Credits.tscn")
 		Global.playerPosition = Vector2(45, -1929)
-	else: 
+	else:
 		add_child(conteudo)
 		Global.current_dialogo = Global.dialogo["language"]["eng"]["instructions"]["cantbuilding"]
 		conteudo.load_Instru()
-
 #Funções abaixo são para transições de cenas para os ginásios e demais espaços
 func _on_Ginasio_01_body_entered(body):
 	Global.playerPosition = Vector2(783, 1370)
-	
 	if Global.numLivrosLobby >= 5 and statusDynamic == false and Global.Gin01_enabled == true:
 		hud_ginasio01.resetLivrosPreenchidos()
 		get_tree().change_scene("res://Cenas/Ginasio-01/Ginasio01_fase01.tscn")
-		Global.dinamicaLobbyCondition = false 
-
+		Global.dinamicaLobbyCondition = false
+		
 func _on_Ginasio_02_body_entered(body):
 	if Global.Gin01_enabled == false:
 		get_tree().change_scene("res://Cenas/Ginasio-02/Ginasio02_fase01.tscn")
 		Global.playerPosition = Vector2(1230, -1220)
-
+		
 func _on_Ginasio_03_body_entered(body):
 	if Global.Gin02_enabled == false:
 		get_tree().change_scene("res://Cenas/Ginasio-03/Ginasio03_fase03.tscn")
 		Global.playerPosition = Vector2(1889, -118)
-
+		
 func _on_Biblioteca1_body_entered(body):
-	get_tree().change_scene("res://Cenas/Biblioteca/Inventario.tscn")
-	Global.playerPosition = Vector2(-4, -87)
-
+	if bibliotecastatus == true:
+		get_tree().change_scene("res://Cenas/Biblioteca/Inventario.tscn")
+		Global.playerPosition = Vector2(-4, -87)
+		hud_ginasio01.resetLivrosPreenchidos()
+		
 func _on_CarWash_body_entered(body):
 	get_tree().change_scene("res://Cenas/Outros/CarWash.tscn")
 	Global.playerPosition = Vector2(-225, 1758)
@@ -138,7 +148,6 @@ func _on_CarWash_body_entered(body):
 func _on_Market_body_entered(body):
 	get_tree().change_scene("res://Cenas/Outros/Market.tscn")
 	Global.playerPosition = Vector2(2207, 703)
-
 #func _on_Office_body_entered(body):
 #	get_tree().change_scene("res://Cenas/Office/Office.tscn")
 #	Global.playerPosition = Vector2(45, -1929)
@@ -151,7 +160,6 @@ func _on_LivroBalaoUm_body_entered(player): #livro de baixo
 		Global.current_dialogo = Global.dialogo["language"]["eng"]["dialogo"]["contentLobby"]["intro"]
 		conteudo.load_balao()
 		statusBalaoUm = false
-
 func _on_LivroBalaoDois_body_entered(body):
 	if statusBalaoDois == true:
 		Global.numLivrosLobby+=1
@@ -159,7 +167,6 @@ func _on_LivroBalaoDois_body_entered(body):
 		Global.current_dialogo = Global.dialogo["language"]["eng"]["dialogo"]["contentLobby"]["lean"]
 		conteudo.load_balao()
 		statusBalaoDois = false
-
 func _on_LivroBalaoTres_body_entered(body):
 	if statusBalaoTres == true:
 		Global.numLivrosLobby+=1
@@ -167,7 +174,6 @@ func _on_LivroBalaoTres_body_entered(body):
 		Global.current_dialogo = Global.dialogo["language"]["eng"]["dialogo"]["contentLobby"]["hcd"]
 		conteudo.load_balao()
 		statusBalaoTres = false
-
 func _on_LivroBalaoQuatro_body_entered(body):
 	if statusBalaoQuatro == true:
 		Global.numLivrosLobby+=1
@@ -184,16 +190,3 @@ func _on_LivroBalaoCinco_body_entered(body):
 		conteudo.load_balao()
 		statusBalaoCinco = false
 
-func _input(event):
-	if event.is_action_pressed("pause"):
-#		set_visible(!get_tree().paused)
-#		get_tree().paused = !get_tree().paused
-		remove_child(conteudo)
-	if 	Global.resume_pause == true:
-		add_child(conteudo)
-		Global.resume_pause = false 
-		
-
-		
-	
-		

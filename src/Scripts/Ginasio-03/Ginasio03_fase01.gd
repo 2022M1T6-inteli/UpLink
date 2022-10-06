@@ -9,7 +9,10 @@ var playerPosition = Vector2(525,215)
 
 var player
 
-
+func _input(event):
+	if event.is_action_pressed("pause"):
+		set_visible(!get_tree().paused)
+		get_tree().paused = !get_tree().paused
 
 func _ready():
 	
