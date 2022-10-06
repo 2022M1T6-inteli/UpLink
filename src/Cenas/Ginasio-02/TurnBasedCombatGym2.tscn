@@ -1,15 +1,15 @@
 [gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://8-bit Arcade In.ttf" type="DynamicFontData" id=1]
-[ext_resource path="res://Scripts/Combat/TurnBasedCombatGym3.gd" type="Script" id=2]
-[ext_resource path="res://Resources/bd.Quiz3.tres" type="Resource" id=3]
-[ext_resource path="res://Resources/Mentor1.tres" type="Resource" id=4]
+[ext_resource path="res://Resources/Mentor2.tres" type="Resource" id=2]
+[ext_resource path="res://Images/NPC's/Mentor2Gym.png" type="Texture" id=3]
+[ext_resource path="res://Resources/bd.Quiz2.tres" type="Resource" id=4]
 [ext_resource path="res://Images/Sprite-oldmage.png" type="Texture" id=5]
 [ext_resource path="res://Images/Resized_test.png" type="Texture" id=6]
 [ext_resource path="res://Images/startups_from_hell__underground_arena.png" type="Texture" id=7]
 [ext_resource path="res://Images/Sprite-0003.png" type="Texture" id=8]
 [ext_resource path="res://Scripts/Cabin-Regular.ttf" type="DynamicFontData" id=9]
-[ext_resource path="res://Images/boss01.png" type="Texture" id=10]
+[ext_resource path="res://Scripts/Combat/TurnBasedCombatGym2.gd" type="Script" id=10]
 
 [sub_resource type="StyleBoxFlat" id=1]
 
@@ -123,9 +123,9 @@ font_data = ExtResource( 1 )
 font_data = ExtResource( 9 )
 
 [node name="Node2D" type="Node2D"]
-script = ExtResource( 2 )
-enemy = ExtResource( 4 )
-bd_Quiz = ExtResource( 3 )
+script = ExtResource( 10 )
+enemy = ExtResource( 2 )
+bd_Quiz2 = ExtResource( 4 )
 color_right = Color( 0.360784, 1, 0, 1 )
 color_wrong = Color( 1, 0, 0, 1 )
 
@@ -134,6 +134,92 @@ margin_right = 1024.0
 margin_bottom = 545.0
 texture = ExtResource( 7 )
 expand = true
+
+[node name="Mentor" type="TextureRect" parent="."]
+margin_left = 632.0
+margin_top = 104.0
+margin_right = 2232.0
+margin_bottom = 1544.0
+rect_scale = Vector2( 0.18, 0.18 )
+texture = ExtResource( 3 )
+
+[node name="ProgressBar" type="ProgressBar" parent="Mentor"]
+modulate = Color( 0.243137, 1, 0.176471, 1 )
+self_modulate = Color( 0.552941, 1, 0.0627451, 1 )
+margin_left = 444.0
+margin_top = -133.0
+margin_right = 1377.0
+input_pass_on_modal_close_click = false
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_styles/fg = SubResource( 1 )
+max_value = 1000.0
+step = 1.0
+value = 100.0
+percent_visible = false
+
+[node name="Label" type="Label" parent="Mentor/ProgressBar"]
+margin_left = 0.445068
+margin_top = -0.333282
+margin_right = 933.445
+margin_bottom = 132.667
+
+[node name="Mentor" type="TextureRect" parent="Mentor"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 577.779
+margin_top = 222.222
+margin_right = 1155.78
+margin_bottom = 799.222
+texture = ExtResource( 5 )
+
+[node name="ProgressBar" type="ProgressBar" parent="Mentor/Mentor"]
+modulate = Color( 0.243137, 1, 0.176471, 1 )
+self_modulate = Color( 0.552941, 1, 0.0627451, 1 )
+margin_left = -956.0
+margin_top = -325.0
+margin_right = -23.0
+margin_bottom = -192.0
+input_pass_on_modal_close_click = false
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_styles/fg = SubResource( 1 )
+max_value = 1000.0
+step = 1.0
+value = 100.0
+percent_visible = false
+
+[node name="Label" type="Label" parent="Mentor/Mentor/ProgressBar"]
+margin_left = 0.445313
+margin_top = -0.333252
+margin_right = 933.445
+margin_bottom = 132.667
+
+[node name="Mentor" type="TextureRect" parent="Mentor/Mentor"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = -688.888
+margin_top = -58.6666
+margin_right = -332.888
+margin_bottom = 919.333
+texture = ExtResource( 5 )
+
+[node name="ProgressBar" type="ProgressBar" parent="Mentor/Mentor/Mentor"]
+modulate = Color( 0.243137, 1, 0.176471, 1 )
+self_modulate = Color( 0.552941, 1, 0.0627451, 1 )
+margin_left = -356.0
+margin_top = -311.0
+margin_right = 577.0
+margin_bottom = -178.0
+input_pass_on_modal_close_click = false
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_styles/fg = SubResource( 1 )
+max_value = 1000.0
+step = 1.0
+value = 100.0
+percent_visible = false
+
+[node name="Label" type="Label" parent="Mentor/Mentor/Mentor/ProgressBar"]
+margin_left = 0.444824
+margin_top = -0.111084
+margin_right = 933.445
+margin_bottom = 132.889
 
 [node name="ColorRect" type="ColorRect" parent="."]
 margin_top = 535.0
@@ -244,6 +330,7 @@ margin_right = -15.0
 margin_bottom = -15.0
 custom_fonts/font = SubResource( 6 )
 text = "hello"
+autowrap = true
 
 [node name="game_over" type="Panel" parent="."]
 visible = false
@@ -255,7 +342,7 @@ margin_left = 409.0
 margin_top = 42.0
 margin_right = 625.0
 margin_bottom = 110.0
-text = "Você acertou"
+text = "Você perdeu! Você acertou"
 align = 1
 valign = 1
 
@@ -277,92 +364,6 @@ text = "Jogar Novamente"
 margin_right = 598.0
 margin_bottom = 137.0
 custom_fonts/normal_font = SubResource( 10 )
-
-[node name="Mentor" type="TextureRect" parent="."]
-margin_left = 632.0
-margin_top = 104.0
-margin_right = 2232.0
-margin_bottom = 1544.0
-rect_scale = Vector2( 0.18, 0.18 )
-texture = ExtResource( 10 )
-
-[node name="ProgressBar" type="ProgressBar" parent="Mentor"]
-modulate = Color( 0.243137, 1, 0.176471, 1 )
-self_modulate = Color( 0.552941, 1, 0.0627451, 1 )
-margin_left = 444.0
-margin_top = -133.0
-margin_right = 1377.0
-input_pass_on_modal_close_click = false
-custom_colors/font_color = Color( 1, 1, 1, 1 )
-custom_styles/fg = SubResource( 1 )
-max_value = 1000.0
-step = 1.0
-value = 100.0
-percent_visible = false
-
-[node name="Label" type="Label" parent="Mentor/ProgressBar"]
-margin_left = 0.445068
-margin_top = -0.333282
-margin_right = 933.445
-margin_bottom = 132.667
-
-[node name="Mentor" type="TextureRect" parent="Mentor"]
-modulate = Color( 1, 1, 1, 0 )
-margin_left = 577.779
-margin_top = 222.222
-margin_right = 1155.78
-margin_bottom = 799.222
-texture = ExtResource( 5 )
-
-[node name="ProgressBar" type="ProgressBar" parent="Mentor/Mentor"]
-modulate = Color( 0.243137, 1, 0.176471, 1 )
-self_modulate = Color( 0.552941, 1, 0.0627451, 1 )
-margin_left = -956.0
-margin_top = -325.0
-margin_right = -23.0
-margin_bottom = -192.0
-input_pass_on_modal_close_click = false
-custom_colors/font_color = Color( 1, 1, 1, 1 )
-custom_styles/fg = SubResource( 1 )
-max_value = 1000.0
-step = 1.0
-value = 100.0
-percent_visible = false
-
-[node name="Label" type="Label" parent="Mentor/Mentor/ProgressBar"]
-margin_left = 0.445313
-margin_top = -0.333252
-margin_right = 933.445
-margin_bottom = 132.667
-
-[node name="Mentor" type="TextureRect" parent="Mentor/Mentor"]
-modulate = Color( 1, 1, 1, 0 )
-margin_left = -688.888
-margin_top = -58.6666
-margin_right = -332.888
-margin_bottom = 919.333
-texture = ExtResource( 5 )
-
-[node name="ProgressBar" type="ProgressBar" parent="Mentor/Mentor/Mentor"]
-modulate = Color( 0.243137, 1, 0.176471, 1 )
-self_modulate = Color( 0.552941, 1, 0.0627451, 1 )
-margin_left = -356.0
-margin_top = -311.0
-margin_right = 577.0
-margin_bottom = -178.0
-input_pass_on_modal_close_click = false
-custom_colors/font_color = Color( 1, 1, 1, 1 )
-custom_styles/fg = SubResource( 1 )
-max_value = 1000.0
-step = 1.0
-value = 100.0
-percent_visible = false
-
-[node name="Label" type="Label" parent="Mentor/Mentor/Mentor/ProgressBar"]
-margin_left = 0.444824
-margin_top = -0.111084
-margin_right = 933.445
-margin_bottom = 132.889
 
 [connection signal="pressed" from="ColorRect2/question_holder/Button" to="." method="_on_Button_pressed"]
 [connection signal="pressed" from="ColorRect2/question_holder/Button2" to="." method="_on_Button2_pressed"]

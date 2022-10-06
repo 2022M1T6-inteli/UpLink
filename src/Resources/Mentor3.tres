@@ -1,11 +1,11 @@
 [gd_resource type="Resource" load_steps=3 format=2]
 
 [ext_resource path="res://Scripts/Combat/Mentors.gd" type="Script" id=1]
-[ext_resource path="res://Images/NPC's/Mentor2Gym.png" type="Texture" id=2]
+[ext_resource path="res://Images/NPC's/Mentor3Gym.png" type="Texture" id=2]
 
 [resource]
 script = ExtResource( 1 )
 name = "Mentor2"
 texture = ExtResource( 2 )
-health = 160
-damage = 25
+health = 360
+damage = 11

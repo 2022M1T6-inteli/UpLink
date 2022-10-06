@@ -57,7 +57,7 @@ func _on_Area2D_body_entered(body):
 			Global.current_dialogo = Global.dialogo["language"]["eng"]["dialogo"]["preBoss02"]["talk01"]
 			conteudo.load_dialogo()
 			yield(get_tree().create_timer(10.0),"timeout")
-			get_tree().change_scene("res://Cenas/Outros/TurnBasedCombat.tscn")
+			get_tree().change_scene("res://Cenas/Ginasio-02/TurnBasedCombatGym2.tscn")
 			
 		elif Global.stepGin02PreBoss == 2:
 			add_child(conteudo)
@@ -72,7 +72,7 @@ func _on_Area2D_body_entered(body):
 
 func _on_Area2D_body_exited(body):
 	if body.name == "Player" and Global.stepGin02PreBoss == 1:
-		get_tree().change_scene("res://Cenas/Outros/TurnBasedCombat.tscn")
+		get_tree().change_scene("res://Cenas/Ginasio-02/TurnBasedCombatGym2.tscn")
 	elif body.name == "Player" and Global.stepGin02PreBoss == 2:
 		get_tree().change_scene("res://Cenas/Lobby/Lobby.tscn")
 		Global.preGinasio = "Ginasio03"

@@ -10,9 +10,19 @@ config_version=4
 
 _global_script_classes=[ {
 "base": "Resource",
-"class": "BDQuiz",
+"class": "BDQuiz1",
 "language": "GDScript",
-"path": "res://Scripts/Quiz/bd_quiz.gd"
+"path": "res://Scripts/Quiz/bd_quiz1.gd"
+}, {
+"base": "Resource",
+"class": "BDQuiz2",
+"language": "GDScript",
+"path": "res://Scripts/Quiz/bd_quiz2.gd"
+}, {
+"base": "Resource",
+"class": "BDQuiz3",
+"language": "GDScript",
+"path": "res://Scripts/Quiz/bd_quiz3.gd"
 }, {
 "base": "Resource",
 "class": "QuizQuestion",
@@ -20,7 +30,9 @@ _global_script_classes=[ {
 "path": "res://Scripts/Quiz/resource_quesions.gd"
 } ]
 _global_script_class_icons={
-"BDQuiz": "",
+"BDQuiz1": "",
+"BDQuiz2": "",
+"BDQuiz3": "",
 "QuizQuestion": ""
 }
 

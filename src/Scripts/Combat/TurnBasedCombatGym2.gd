@@ -1,5 +1,3 @@
-
-
 extends Node2D
 
 export(Resource) var enemy = null #exportando o "Mentor"
@@ -9,7 +7,7 @@ var current_enemy_health = 0
 
 enum QuestionType {TEXT, IMAGE, VIDEO, AUDIO}
 
-export (Resource) var bd_Quiz # acesso ao banco de dados
+export (Resource) var bd_Quiz2 # acesso ao banco de dados
 export (Color) var color_right
 export (Color) var color_wrong
 
@@ -31,7 +29,7 @@ func _ready() -> void:
 	current_Dellman_health = Global.current_health
 	current_enemy_health = enemy.health
 	
-	quiz_shuffle=randomize_array(bd_Quiz.bd)
+	quiz_shuffle=randomize_array(bd_Quiz2.bd)
 	load_quiz()
 	
 	
@@ -50,7 +48,7 @@ func enemy_turn(): #chamando a vez do mento
 
 func load_quiz() -> void:
 	
-	if index >= bd_Quiz.bd.size() or current_Dellman_health == 0:
+	if index >= bd_Quiz2.bd.size() or current_Dellman_health == 0:
 		print("Acabaram as perguntas")
 		game_over()
 		return # comando para sair da função
@@ -58,19 +56,19 @@ func load_quiz() -> void:
 	question_texts.text = str(quiz_shuffle[index].question_info) # declarando que question_text vai receber a var bd do nosso bd_quiz, precisamos declarar qual o item e fazemos pelo index, depois pegamos o texto através da question_info definada no script "res_question" que exporta as variaves das perguntas
 	print(question_texts)
 	
-	var options = randomize_array(bd_Quiz.bd[index].options)
+	var options = randomize_array(bd_Quiz2.bd[index].options)
 	
 	for i in range(4):
 		buttons[i].text=str(options[i]) # preenchendo os buttons com as options ou alternativas
 		buttons[i].connect("pressed", self, "buttons_answer", [buttons[i]]) # criando o sinal pressed nesse mesmo scrpit, com a func buttons_answer, passando o próprio botão como argumento
 		
-	match bd_Quiz.bd[index].type:
+	match bd_Quiz2.bd[index].type:
 		QuestionType.TEXT: # se o question type for texto, escona o panel
 			$Textbox/Label.show()
 
 func buttons_answer(button) -> void:
 	print(button.text)
-	if bd_Quiz.bd[index].correct == button.text:
+	if bd_Quiz2.bd[index].correct == button.text:
 		button.modulate = color_right
 		correct += 1
 		current_enemy_health = max(0, current_enemy_health - Global.damage1)
@@ -103,13 +101,13 @@ func randomize_array(array: Array) -> Array: #funcao para randomizar um array
 
 func game_over() -> void: #arrumar
 	$game_over.show() 
-	$game_over/txt_result.text=str(correct, "/", bd_Quiz.bd.size())
+	$game_over/txt_result.text=str(correct, "/", bd_Quiz2.bd.size())
 
 func _on_button_restart_pressed():
 	get_tree().reload_current_scene()
 	
 func _process(delta):
-	if current_enemy_health <= 0:
+	if current_enemy_health <= 0 or index==16:
 		Global.ginasio3final += 1
 		print(Global.stepGin)
 		if Global.stepGin == 1:
@@ -133,5 +131,3 @@ func _process(delta):
 #			Global.preGinasio = "Ginasio<3"
 #			Global.Gin03_enabled = false
 #			Global.dinamicaLobbyCondition = false
-		
-#

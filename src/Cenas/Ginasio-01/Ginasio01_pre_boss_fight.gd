@@ -72,7 +72,7 @@ func _on_Area2D_body_entered(body):
 
 func _on_Area2D_body_exited(body):
 	if body.name == "Player" and Global.stepGin01PreBoss == 1:
-		get_tree().change_scene("res://Cenas/Outros/TurnBasedCombat.tscn")
+		get_tree().change_scene("res://Cenas/Ginasio-01/TurnBasedCombatGym1.tscn")
 	elif body.name == "Player" and Global.stepGin01PreBoss == 2:
 		get_tree().change_scene("res://Cenas/Lobby/Lobby.tscn")
 		Global.preGinasio = "Ginasio02"

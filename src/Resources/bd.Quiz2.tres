@@ -1,0 +1,23 @@
+[gd_resource type="Resource" load_steps=18 format=2]
+
+[ext_resource path="res://Scripts/Quiz/bd_quiz2.gd" type="Script" id=1]
+[ext_resource path="res://Resources/Questão 11.tres" type="Resource" id=2]
+[ext_resource path="res://Resources/Questão 12.tres" type="Resource" id=3]
+[ext_resource path="res://Resources/Questão 14.tres" type="Resource" id=4]
+[ext_resource path="res://Resources/Questão 27.tres" type="Resource" id=5]
+[ext_resource path="res://Resources/Questão 15.tres" type="Resource" id=6]
+[ext_resource path="res://Resources/Questão 10.tres" type="Resource" id=7]
+[ext_resource path="res://Resources/Questão 9.tres" type="Resource" id=8]
+[ext_resource path="res://Resources/Questão 13.tres" type="Resource" id=9]
+[ext_resource path="res://Resources/Questão 25.tres" type="Resource" id=10]
+[ext_resource path="res://Resources/Questão 26.tres" type="Resource" id=11]
+[ext_resource path="res://Resources/Questão 16.tres" type="Resource" id=12]
+[ext_resource path="res://Resources/Questão 28.tres" type="Resource" id=13]
+[ext_resource path="res://Resources/Questão 29.tres" type="Resource" id=14]
+[ext_resource path="res://Resources/Questão 31.tres" type="Resource" id=15]
+[ext_resource path="res://Resources/Questão 32.tres" type="Resource" id=16]
+[ext_resource path="res://Resources/Questão 30.tres" type="Resource" id=17]
+
+[resource]
+script = ExtResource( 1 )
+bd = [ ExtResource( 8 ), ExtResource( 7 ), ExtResource( 2 ), ExtResource( 3 ), ExtResource( 9 ), ExtResource( 4 ), ExtResource( 6 ), ExtResource( 12 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 5 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 17 ), ExtResource( 15 ), ExtResource( 16 ) ]

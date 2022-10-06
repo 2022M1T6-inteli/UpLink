@@ -51,7 +51,7 @@ func _on_Area2D_body_entered(body):
 
 func _on_End_body_entered(body):
 	
-	get_tree().change_scene("res://Cenas/Outros/TurnBasedCombat.tscn")
+	get_tree().change_scene("res://Cenas/Ginasio-03/TurnBasedCombatGym3.tscn")
 
 func _on_Area2D1_body_entered(body):
 	add_child(conteudo) 

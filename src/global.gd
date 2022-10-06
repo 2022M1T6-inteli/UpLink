@@ -62,9 +62,9 @@ var count = 0
 
 
 #variaveis boss fiht
-var current_health = 300
-var total_health = 300
-var damage1 = 250
+var current_health = 200
+var total_health = 200
+var damage1 = 10
 var damage2 = 250
 var damage3 = 250
 var damage4 = 250
@@ -107,7 +107,7 @@ onready var dialogo = {"preLobbyRoomInstru01": ["Fale com todas as pessoas da sa
 									  "“What happened to our ever so glorious island?” The people couldn’t help but wonder…"],
 							"instructions": {
 								"collectBooksLobby":["Agora você deverá explorar o mapa e coletar cinco livros, com isso aprenderá sobre o modelo de produtos, suas inspirações e seu modo de trabalho."],
-								"collectedBooksLobby":["Parabéns!! Agora que você achou os livros, a biblioteca no centro do mapa foi desbloqueada, de maneira que você poderá aprender mais sobre os temas abordados durante sua aventura, vá até uma casa no lado esquerdo do mapa, , lá você encontrará o ginásio 1 e seu mentor."],
+								"collectedBooksLobby":["Parabéns!! Agora que você achou os livros, vá biblioteca no centro do mapa foi desbloqueada, de maneira que você poderá aprender mais sobre os temas abordados durante sua aventura, vá até uma casa no lado esquerdo do mapa, , lá você encontrará o ginásio 1 e seu mentor."],
 								"gym1":["Parabéns! Você está no ginásio 1, dentro do ginásio 1, existem 3 labirintos que você deverá atravessar, ao longo do trajeto você aprenderá um pouco das maturidades de vision, roadmap, backlog, stakeholders e data driven"],
 								"gym1-outros": ["Colete os 5 livros e ache o fim do labirinto"],
 								"instrucAfterGym1":["Agora procure um prédio de dois andares no canto superior direito, lá você entrará no ginásio 2 e encontrará seu mentor"],

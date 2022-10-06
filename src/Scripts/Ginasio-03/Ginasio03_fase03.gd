@@ -82,7 +82,7 @@ func _on_Area2D4_body_entered(body):
 #func _on_Area2D5_body_entered(body): # nn util só teste
 #	add_child(balao)
 #	balao.load_Instru('ginasio3fase35')
-#	# tirar pergunta 5
+	# tirar pergunta 5
 
 
 
