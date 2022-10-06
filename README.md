@@ -14,7 +14,6 @@
 - <a href="https://www.linkedin.com/in/victorbarq/">Vivian Midori Shibata	</a>;
 - <a href="https://www.linkedin.com/in/yuri-toledo-964123230/">Yuri Freitas Angelo Toledo</a>;
 ## Descrição
-📜 Descrição curta sobre o que seu projeto faz.
 <br><br>
 O jogo Zero to Hero, desenvolvido por alunos do Instituto de Tecnologia e Liderança, visa atender os interesses da sua empresa parceira - a Dell - no objetivo de capacitar e mensurar a maturidade dos funcionários quanto ao novo modelo de desenvolvimento de software, chamado 'Modelo por Produtos'. Nesse sentido, o programa tem o intuito de não só capacitar o colaborador, mas mensurar o aprendizado adquirido por ele, a fim de definir a maturidade do time como um todo. O jogo se passará em 2030 em	um mundo apocalíptico, onde a população foi infectada por um vírus que leva as pessoas a terem um pensamento retrógrado e o jogador terá que desenvolver um antídoto. Esse antídoto é uma mudança de mindset, se referindo a mudança cultural que a Dell deseja intensificar nos seus processos.
 <br><br>
@@ -22,8 +21,6 @@ O jogo Zero to Hero, desenvolvido por alunos do Instituto de Tecnologia e Lidera
 <img src="https://github.com/2022M1T6/Projeto2/blob/main/imagens/zerotoheroimagem.png" alt="NOME DO JOGO" border="0">
 </p>
 
-
-💡 De um a dois parágrafos sobre o que é seu projeto e o que ele faz.
 <br><br>
 Um jogo educativo, divertido e simples de uma forma que o funcionário consiga aprender mais facilmente utilizando uma forma descontraída de adquirir conhecimento com o intuito de auxiliar a Dell na transição desse novo modelo. Esse jogo será exploratório, com perguntas e minigames, onde o integrante irá adquirir as competências necessárias para que o mesmo consiga passar de fase.
 <br><br>
