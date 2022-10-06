@@ -1,0 +1,10 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Scripts/Quiz/resource_quesions.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+question_info = "Which of the following documents is considered a necessary outcome for all Deployment KPIs maturity levels?"
+type = 0
+options = [ "Change ticket", "Deployment SLA Document", "Security assessment", "BDD" ]
+correct = "Deployment SLA Document"

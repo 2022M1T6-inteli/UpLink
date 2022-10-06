@@ -1,0 +1,10 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Scripts/Quiz/resource_quesions.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+question_info = "Complete the sentence: A Product Team should have, at a minimum, a … to evolve to Quality KPIs maturity level 2:"
+type = 0
+options = [ "Quality assurance team", "E2E test plan", "Code Coverage Metrics", "Defect Management Process" ]
+correct = "Defect Management Process"

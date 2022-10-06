@@ -1,0 +1,67 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Scripts/Outros/Balao.gd" type="Script" id=1]
+[ext_resource path="res://Images/Dialogo/DialogueBox.png" type="Texture" id=2]
+
+[sub_resource type="DynamicFontData" id=5]
+font_path = "res://Fontes/ConnectionII.otf"
+
+[sub_resource type="DynamicFont" id=4]
+size = 28
+font_data = SubResource( 5 )
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_scale = Vector2( 2, 2 )
+
+[node name="box" type="Control" parent="."]
+margin_right = 1024.0
+margin_bottom = 614.0
+rect_scale = Vector2( 2, 2 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="TextureRect" type="TextureRect" parent="box"]
+margin_left = 182.0
+margin_top = 103.0
+margin_right = 879.0
+margin_bottom = 492.0
+texture = ExtResource( 2 )
+expand = true
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="ColorRect" type="ColorRect" parent="box/TextureRect"]
+margin_left = 34.0
+margin_top = 61.0
+margin_right = 665.0
+margin_bottom = 332.0
+color = Color( 0.145098, 0.152941, 0.192157, 0.85098 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="box"]
+margin_left = 226.0
+margin_top = 176.0
+margin_right = 839.0
+margin_bottom = 434.0
+custom_colors/default_color = Color( 1, 1, 1, 1 )
+custom_colors/selection_color = Color( 0.964706, 0.945098, 0.945098, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = SubResource( 4 )
+bbcode_enabled = true
+bbcode_text = "Para subirmos o nosso nivel de visao precisamos ter em mente aquilo que buscamos e entender como isso impacta em nosso projeto.
+
+Parabéns Dellman, você está mais perto de entender o que precisa ser feito!"
+text = "Para subirmos o nosso nivel de visao precisamos ter em mente aquilo que buscamos e entender como isso impacta em nosso projeto.
+
+Parabéns Dellman, você está mais perto de entender o que precisa ser feito!"
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Tween" type="Tween" parent="box"]
+
+[connection signal="tween_completed" from="box/Tween" to="box" method="_on_Tween_tween_completed"]

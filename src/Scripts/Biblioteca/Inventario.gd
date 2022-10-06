@@ -1,5 +1,10 @@
 extends Node2D
 
+func _input(event):
+	if event.is_action_pressed("pause"):
+		set_visible(!get_tree().paused)
+		get_tree().paused = !get_tree().paused
+
 func _ready():
 	
 	if Global.fase1finished==true:  #usar booleana
@@ -64,3 +69,5 @@ func _on_Button_1_pressed():
 
 func _on_quit_pressed():
 	get_tree().change_scene("res://Cenas/Lobby/Lobby.tscn")
+	Global.preGinasio == "GinasioBiblioteca"
+	Global.dinamicaLobbyCondition = false

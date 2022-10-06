@@ -1,0 +1,149 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Images/Ginasio-02/Ginasio02_fase03.png" type="Texture" id=1]
+[ext_resource path="res://Cenas/Ginasio-02/MinigameBola.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Sons/SoundX.mp3" type="AudioStream" id=3]
+[ext_resource path="res://Scripts/Ginasio-02/Ginasio02_fase03.gd" type="Script" id=5]
+
+[sub_resource type="RectangleShape2D" id=11]
+extents = Vector2( 20.3125, 36 )
+
+[sub_resource type="RectangleShape2D" id=12]
+extents = Vector2( 19.1563, 36.5 )
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 5 )
+
+[node name="MapaDificil" type="Sprite" parent="."]
+position = Vector2( 757, 384 )
+scale = Vector2( 1.5, 1.5 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Node2D" parent="MapaDificil" instance=ExtResource( 2 )]
+position = Vector2( -94.3415, -61.4397 )
+scale = Vector2( 0.527656, 0.574634 )
+
+[node name="Node2D2" parent="MapaDificil" instance=ExtResource( 2 )]
+position = Vector2( -16.7063, -24.7466 )
+scale = Vector2( 0.557473, 0.564074 )
+
+[node name="Node2D3" parent="MapaDificil" instance=ExtResource( 2 )]
+position = Vector2( -16.7063, 16.2133 )
+rotation = 3.14159
+scale = Vector2( 0.542717, -0.569299 )
+
+[node name="Node2D5" parent="MapaDificil" instance=ExtResource( 2 )]
+position = Vector2( 24.5681, -24.7466 )
+rotation = 3.14159
+scale = Vector2( 0.542717, -0.569299 )
+
+[node name="Node2D6" parent="MapaDificil" instance=ExtResource( 2 )]
+position = Vector2( 62.8943, -24.7466 )
+rotation = 3.14159
+scale = Vector2( 0.542717, -0.569299 )
+
+[node name="Node2D7" parent="MapaDificil" instance=ExtResource( 2 )]
+position = Vector2( 63.877, 16.2133 )
+rotation = 3.14159
+scale = Vector2( 0.542717, -0.569299 )
+
+[node name="Node2D8" parent="MapaDificil" instance=ExtResource( 2 )]
+position = Vector2( -95.3242, 16.2133 )
+rotation = 3.14159
+scale = Vector2( 0.542717, -0.569299 )
+
+[node name="Node2D9" parent="MapaDificil" instance=ExtResource( 2 )]
+position = Vector2( -55.0325, 16.2133 )
+rotation = 3.14159
+scale = Vector2( 0.542717, -0.569299 )
+
+[node name="Node2D10" parent="MapaDificil" instance=ExtResource( 2 )]
+position = Vector2( -56.0153, 55.4664 )
+rotation = 3.14159
+scale = Vector2( 0.542717, -0.569299 )
+
+[node name="Node2D11" parent="MapaDificil" instance=ExtResource( 2 )]
+position = Vector2( -56.0153, 94.7196 )
+rotation = 3.14159
+scale = Vector2( 0.542717, -0.569299 )
+
+[node name="Node2D12" parent="MapaDificil" instance=ExtResource( 2 )]
+position = Vector2( -17.689, 94.7196 )
+rotation = 3.14159
+scale = Vector2( 0.542717, -0.569299 )
+
+[node name="Node2D13" parent="MapaDificil" instance=ExtResource( 2 )]
+position = Vector2( 22.6027, 94.7196 )
+rotation = 3.14159
+scale = Vector2( 0.542717, -0.569299 )
+
+[node name="Node2D14" parent="MapaDificil" instance=ExtResource( 2 )]
+position = Vector2( -95.3242, -23.8932 )
+rotation = 3.14159
+scale = Vector2( 0.542717, -0.569299 )
+
+[node name="Node2D15" parent="MapaDificil" instance=ExtResource( 2 )]
+position = Vector2( 22.6027, 16.2133 )
+rotation = 3.14159
+scale = Vector2( 0.542717, -0.569299 )
+
+[node name="Node2D16" parent="MapaDificil" instance=ExtResource( 2 )]
+position = Vector2( 62.8943, 94.7196 )
+rotation = 3.14159
+scale = Vector2( 0.542717, -0.569299 )
+
+[node name="Node2D17" parent="MapaDificil" instance=ExtResource( 2 )]
+position = Vector2( -16.7063, -63.9997 )
+rotation = 3.14159
+scale = Vector2( 0.542717, -0.569299 )
+
+[node name="ChangePreBoss" type="Area2D" parent="MapaDificil"]
+position = Vector2( 479.569, 12.7999 )
+scale = Vector2( 0.982724, 0.85333 )
+collision_layer = 256
+collision_mask = 256
+
+[node name="ChangePreBoss" type="CollisionShape2D" parent="MapaDificil/ChangePreBoss"]
+position = Vector2( 11, -3 )
+shape = SubResource( 11 )
+
+[node name="Area2D2" type="Area2D" parent="MapaDificil"]
+position = Vector2( -489.396, 6.82664 )
+scale = Vector2( 0.982724, 0.85333 )
+collision_layer = 256
+collision_mask = 256
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MapaDificil/Area2D2"]
+position = Vector2( 4.84375, -3.5 )
+shape = SubResource( 12 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="MapaDificil"]
+position = Vector2( -504.137, -255.999 )
+scale = Vector2( 0.982724, 0.85333 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="MapaDificil/StaticBody2D"]
+polygon = PoolVector2Array( -1, 329, 215, 329, 215, 482, 359, 483, 358, 253, 396, 253, 396, 341, 435, 341, 435, 392, 398, 392, 398, 431, 555, 431, 555, 480, 737, 481, 736, 337, 756, 337, 1026, 337, 1026, 601, 983.848, 600.959, 0, 600 )
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="MapaDificil"]
+position = Vector2( -504.137, -255.999 )
+scale = Vector2( 0.982724, 0.85333 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="MapaDificil/StaticBody2D2"]
+polygon = PoolVector2Array( 0, 271, 216, 270, 216.545, 143.749, 357.649, 143.749, 357, 205, 439, 205, 440, 297, 473, 297, 474, 203, 519, 203, 519, 248, 561, 248, 561, 205, 597, 204, 598, 300, 637, 300, 639.858, 143.749, 737.545, 143.749, 737, 281, 1026, 281, 1027, 339, 1025, 0, 0, 1, 0, 329 )
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="MapaDificil"]
+position = Vector2( -504.137, -255.999 )
+scale = Vector2( 0.982724, 0.85333 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="MapaDificil/StaticBody2D3"]
+polygon = PoolVector2Array( 479, 341, 479, 391, 601, 390, 601, 439, 644, 439, 643, 338 )
+
+[node name="SoundX" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 3 )
+
+[connection signal="body_entered" from="MapaDificil/ChangePreBoss" to="." method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="MapaDificil/ChangePreBoss" to="." method="_on_ChangePreBoss_body_entered"]
+[connection signal="body_entered" from="MapaDificil/Area2D2" to="." method="_on_Area2D2_body_entered"]

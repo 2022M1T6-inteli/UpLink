@@ -1,0 +1,10 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Scripts/Quiz/resource_quesions.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+question_info = "When a Product Team attains Backlog Maturity level 4, which of the below actions is considered ideal for the Product Team to maintain this standard?"
+type = 0
+options = [ "Requirements workshops", "Backlog cleanup", "Stakeholder mapping", "Data storytelling leveraging backlog metrics" ]
+correct = "Data storytelling leveraging backlog metrics"

@@ -1,0 +1,42 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Fontes/DroidSans.tres" type="DynamicFont" id=1]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+
+[node name="Control" type="Control" parent="."]
+margin_right = 1026.0
+margin_bottom = 602.0
+rect_pivot_offset = Vector2( -358, 0 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control"]
+margin_left = 522.0
+margin_right = 609.0
+margin_bottom = 46.0
+custom_fonts/normal_font = ExtResource( 1 )
+text = "Double
+Diamond"
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="Control"]
+margin_left = 349.0
+margin_right = 436.0
+margin_bottom = 46.0
+custom_fonts/normal_font = ExtResource( 1 )
+text = "Lean"
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="Control"]
+margin_left = 610.0
+margin_right = 734.0
+margin_bottom = 64.0
+custom_fonts/normal_font = ExtResource( 1 )
+text = "Human 
+Centered
+"
+
+[node name="RichTextLabel4" type="RichTextLabel" parent="Control"]
+margin_left = 410.0
+margin_right = 557.0
+margin_bottom = 46.0
+custom_fonts/normal_font = ExtResource( 1 )
+text = "Extreme
+Programming"

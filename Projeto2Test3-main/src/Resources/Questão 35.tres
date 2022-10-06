@@ -1,0 +1,10 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Scripts/Quiz/resource_quesions.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+question_info = "Regarding Data Driven Product Team Maturity, which of the following statements is TRUE?"
+type = 0
+options = [ "Growth Board Inputs are an expected outcome to maintain Data Driven maturity level 4.", "Product KPIs are not important for any Data Driven maturity levels.", "Outcome based roadmap should be considered as a consulting material for the Product Team already at maturity level 1.", "One of the recommended actions for the team to evolve from maturity level 1 to 2 is to collaborate with data analytics team to identify opportunities from their insights" ]
+correct = "Growth Board Inputs are an expected outcome to maintain Data Driven maturity level 4."

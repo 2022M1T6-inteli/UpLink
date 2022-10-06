@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/DarkScene.mp3-132d8c92b2470d338e3c9f42b14aa271.mp3str"
+
+[deps]
+
+source_file="res://Sons/DarkScene.mp3"
+dest_files=[ "res://.import/DarkScene.mp3-132d8c92b2470d338e3c9f42b14aa271.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

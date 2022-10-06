@@ -1,0 +1,91 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Cenas/Lobby/PreLobbyHouse.gd" type="Script" id=1]
+[ext_resource path="res://Images/Lobby/PreLobbyHouse.png" type="Texture" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 19.5, 84.25 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 114.25, 10 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 34.25, 49.25 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 34.25, 48.75 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 32.75, 47.5 )
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 34, 48.5 )
+
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 32.5, 49.75 )
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="mapa" type="Sprite" parent="."]
+position = Vector2( 462, 337 )
+texture = ExtResource( 2 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="mapa"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="mapa/StaticBody2D"]
+polygon = PoolVector2Array( -431, -92, -432, -220, 425, -220, 427, 302, 106, 304, 107, 338, 460, 338, 457, -336, -463, -338, -458, -91 )
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="mapa/StaticBody2D"]
+polygon = PoolVector2Array( -460, -97, -457, 333, 102, 333, -120, 332, -120, 306, -429, 306, -431, 91, -455, 90 )
+
+[node name="PreLobbyRoom" type="Area2D" parent="mapa"]
+
+[node name="PreLobbyRoom" type="CollisionShape2D" parent="mapa/PreLobbyRoom"]
+position = Vector2( -456, 0.75 )
+shape = SubResource( 1 )
+
+[node name="Lobby" type="Area2D" parent="mapa"]
+
+[node name="Lobby" type="CollisionShape2D" parent="mapa/Lobby"]
+position = Vector2( -9.25, 333 )
+shape = SubResource( 2 )
+
+[node name="NPC" type="Area2D" parent="mapa"]
+
+[node name="NPC" type="CollisionShape2D" parent="mapa/NPC"]
+position = Vector2( -304.25, -159.25 )
+shape = SubResource( 3 )
+
+[node name="NPC1" type="Area2D" parent="mapa"]
+
+[node name="NPC1" type="CollisionShape2D" parent="mapa/NPC1"]
+position = Vector2( -205.25, -158.75 )
+shape = SubResource( 4 )
+
+[node name="NPC2" type="Area2D" parent="mapa"]
+
+[node name="NPC2" type="CollisionShape2D" parent="mapa/NPC2"]
+position = Vector2( -105.75, -159.5 )
+shape = SubResource( 5 )
+
+[node name="NPC3" type="Area2D" parent="mapa"]
+
+[node name="NPC3" type="CollisionShape2D" parent="mapa/NPC3"]
+position = Vector2( -4, -160.5 )
+shape = SubResource( 6 )
+
+[node name="NPC4" type="Area2D" parent="mapa"]
+
+[node name="NPC4" type="CollisionShape2D" parent="mapa/NPC4"]
+position = Vector2( 98.5, -163.75 )
+shape = SubResource( 7 )
+
+[connection signal="body_entered" from="mapa/PreLobbyRoom" to="." method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="mapa/PreLobbyRoom" to="." method="_on_PreLobbyRoom_body_entered"]
+[connection signal="body_entered" from="mapa/Lobby" to="." method="_on_Lobby_body_entered"]
+[connection signal="body_entered" from="mapa/NPC" to="." method="_on_NPC_body_entered"]
+[connection signal="body_entered" from="mapa/NPC1" to="." method="_on_NPC1_body_entered"]
+[connection signal="body_entered" from="mapa/NPC2" to="." method="_on_NPC2_body_entered"]
+[connection signal="body_entered" from="mapa/NPC3" to="." method="_on_NPC3_body_entered"]
+[connection signal="body_entered" from="mapa/NPC4" to="." method="_on_NPC4_body_entered"]

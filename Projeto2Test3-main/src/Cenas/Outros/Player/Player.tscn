@@ -1,0 +1,135 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://Scripts/Outros/Player/Player.gd" type="Script" id=1]
+[ext_resource path="res://Images/Outros/Light.png" type="Texture" id=2]
+[ext_resource path="res://Images/Outros/Player.png" type="Texture" id=3]
+[ext_resource path="res://Cenas/Outros/Balao.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Cenas/Outros/Balao2.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Cenas/Outros/Balao3.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Sons/Footstep.mp3" type="AudioStream" id=7]
+
+[sub_resource type="Animation" id=3]
+resource_name = "Baixo"
+length = 0.6
+tracks/0/type = "value"
+tracks/0/path = NodePath("Player_sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 43, 44, 45, 46, 47, 42 ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "Cima"
+length = 0.55
+tracks/0/type = "value"
+tracks/0/path = NodePath("Player_sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 31, 32, 33, 34, 35, 30 ]
+}
+
+[sub_resource type="Animation" id=7]
+resource_name = "Direita"
+length = 0.55
+tracks/0/type = "value"
+tracks/0/path = NodePath("Player_sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 25, 26, 27, 28, 29, 24 ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "Esquerda"
+length = 0.55
+tracks/0/type = "value"
+tracks/0/path = NodePath("Player_sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 37, 38, 39, 40, 41, 36 ]
+}
+
+[sub_resource type="Animation" id=6]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Player_sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+
+[node name="Player" type="KinematicBody2D"]
+position = Vector2( 27, 524 )
+scale = Vector2( 2, 2 )
+collision_layer = 257
+collision_mask = 257
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Camera" type="Camera2D" parent="."]
+scale = Vector2( 10, 10 )
+current = true
+zoom = Vector2( 0.5, 0.5 )
+
+[node name="Control" parent="Camera" instance=ExtResource( 4 )]
+
+[node name="Control2" parent="Camera" instance=ExtResource( 5 )]
+
+[node name="Control3" parent="Camera" instance=ExtResource( 6 )]
+
+[node name="Player_sprite" type="Sprite" parent="."]
+position = Vector2( -4.5, 7.56 )
+scale = Vector2( 0.42, 0.42 )
+texture = ExtResource( 3 )
+hframes = 24
+vframes = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/Baixo = SubResource( 3 )
+anims/Cima = SubResource( 4 )
+anims/Direita = SubResource( 7 )
+anims/Esquerda = SubResource( 5 )
+anims/RESET = SubResource( 6 )
+
+[node name="Lanterna" type="Light2D" parent="."]
+enabled = false
+texture = ExtResource( 2 )
+texture_scale = 0.5
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PoolVector2Array( -14, 13.5, -12.5, 18, -10.5, 24, 2, 24, 5, 13.5 )
+
+[node name="FootSteps" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 7 )
+area_mask = 257

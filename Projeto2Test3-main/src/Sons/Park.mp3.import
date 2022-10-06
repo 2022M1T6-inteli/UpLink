@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Park.mp3-607424e61e7a9a9e084647961460254d.mp3str"
+
+[deps]
+
+source_file="res://Sons/Park.mp3"
+dest_files=[ "res://.import/Park.mp3-607424e61e7a9a9e084647961460254d.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -17,8 +17,8 @@ func set_visible(is_visible):
 
 #Função que desativa a visibilidade da cena PauseMenu
 func _on_Resume_button_up():
-	#set_visible(!get_tree().paused)
-	#get_tree().paused = !get_tree().paused
+	set_visible(!get_tree().paused)
+	get_tree().paused = !get_tree().paused
 	get_tree().paused = false
 	set_visible(false)
 

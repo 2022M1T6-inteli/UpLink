@@ -1,0 +1,137 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://Images/Ginasio-01/Ginasio01_fase01.png" type="Texture" id=1]
+[ext_resource path="res://Sons/DarkScene.mp3" type="AudioStream" id=2]
+[ext_resource path="res://Scripts/Ginasio-01/Ginasio01_fase01.gd" type="Script" id=3]
+[ext_resource path="res://Cenas/Outros/Balao.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Cenas/Outros/Transição_out.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Cenas/Outros/Transição_in.tscn" type="PackedScene" id=6]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 37, 49.75 )
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 21.375, 18 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 18.875, 22.0158 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 22.5, 19.8447 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 21.5, 16 )
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 22.5, 26.2816 )
+
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 18.5, 17.4369 )
+
+[node name="Cena1" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="Labirinto1" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+offset = Vector2( 1032, 506.863 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Labirinto1"]
+position = Vector2( -2.0315, -6.8495 )
+scale = Vector2( 2.0315, 1.71238 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Labirinto1/StaticBody2D"]
+polygon = PoolVector2Array( 681, 492, 620, 492, 619.262, 387.093, 682.27, 387.093, 683, 362, 620, 360, 623.2, 265.624, 682.27, 265.624, 682, 240, 619, 239, 619, 213, 544, 213, 544, 306, 560, 306, 560.193, 232.921, 599.573, 232.921, 602, 434, 544, 435, 544.441, 461.842, 599.573, 461.842, 599.573, 517.905, 682.27, 517.905 )
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Labirinto1/StaticBody2D"]
+polygon = PoolVector2Array( 4, 548, 283, 548, 284, 427, 451, 427, 449.929, 508.051, 339.666, 508.051, 338, 484, 436, 484, 434.177, 452.499, 304.224, 452.499, 303, 547, 489, 547, 489.309, 387.093, 245.155, 386.582, 245.155, 442.645, 60.0697, 442.645, 60, 417, 229, 417, 229.403, 321.686, 115.201, 321.686, 117, 212, 246, 212, 246, 261, 227, 260, 225.465, 237.593, 130.953, 237.593, 131, 296, 245, 296, 246, 360, 283, 360, 283, 218, 300, 218, 303, 359, 572, 362, 572.007, 387.093, 508.999, 387.093, 509, 546, 545, 546, 548, 499, 564, 499, 565, 549, 718, 549, 721.65, 452.499, 654.704, 452.499, 656, 427, 721, 427, 721.65, 321.686, 658.642, 321.686, 656, 297, 722, 297, 721, 222, 818, 221, 816, 511, 798, 512, 800.409, 419.796, 768.905, 419.796, 767, 399, 802, 399, 800.409, 302.999, 768.905, 302.999, 767, 280, 801, 278, 800.409, 246.937, 741.34, 242.265, 739, 343, 770, 343, 768.905, 368.405, 737.402, 368.405, 738, 465, 769, 465, 768.905, 489.873, 741.34, 489.873, 740, 547, 853, 549, 853, 343, 959, 343, 957.928, 513.233, 902.797, 513.233, 902, 404, 920, 404, 920, 489, 947, 490, 942.176, 368.405, 871.293, 368.405, 874, 548, 1015, 548, 1014, 563, 3, 562 )
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="Labirinto1/StaticBody2D"]
+polygon = PoolVector2Array( 244.17, 508.635, 3.95348, 506.883, 3, 1, 1016, 0, 1016.01, 23.3452, 874.739, 21.0093, 875, 119, 856, 119, 854.556, 20.4253, 818.622, 19.8413, 818, 119, 801, 119, 799.917, 22.1772, 571.022, 20.4253, 572, 120, 551, 120, 550.348, 21.5933, 268.782, 21.5933, 267, 98, 347, 97, 346, 59, 364, 59, 365, 98, 443, 97, 444, 59, 460, 60, 457.805, 125.468, 249.093, 125.468, 248.108, 21.0093, 19.2131, 19.8413, 20, 52, 140, 52, 142, 37, 158, 37, 157.042, 76.4876, 125.046, 77.0716, 124, 119, 107, 120, 105.356, 77.0716, 19.2131, 77.6556, 21, 480, 243, 481 )
+
+[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="Labirinto1/StaticBody2D"]
+polygon = PoolVector2Array( 186.085, 387.093, 60.0697, 387.093, 60, 157, 193, 157, 193, 67, 212, 67, 212, 156, 498, 156, 499, 59, 517, 58, 517, 157, 606, 157, 607, 53, 707, 53, 708, 119, 690, 119, 690.146, 78.7497, 623.2, 78.7497, 625, 155, 743, 154, 744, 58, 762, 58, 763, 155, 912, 156, 913, 59, 928, 59, 929, 128, 968, 127, 969.742, 153.5, 926.425, 153.5, 926.425, 181.531, 871.293, 181.531, 872, 278, 1000, 276, 1001.25, 237.593, 910.673, 237.593, 910, 213, 1000, 212, 1001, 59, 1016, 60, 1015, 546, 999, 546, 997.308, 302.999, 851.603, 302.999, 851.603, 181.531, 690.146, 181.531, 690, 212, 673, 212, 674.394, 181.531, 508.999, 181.531, 505.061, 331.03, 394.798, 331.03, 393, 212, 459, 213, 458, 278, 443, 278, 442.053, 237.593, 410.55, 237.593, 409, 304, 490, 304, 489.309, 181.531, 359.356, 181.531, 358, 324, 339, 325, 335.728, 181.531, 75.8216, 181.531, 76, 361, 188, 362 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Labirinto1/StaticBody2D"]
+position = Vector2( -14.7519, 524.474 )
+scale = Vector2( 0.492247, 0.583983 )
+shape = SubResource( 2 )
+
+[node name="Area2D" type="Area2D" parent="Labirinto1"]
+position = Vector2( -2.0315, -6.8495 )
+scale = Vector2( 2.0315, 1.71238 )
+collision_layer = 256
+collision_mask = 256
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Labirinto1/Area2D"]
+position = Vector2( 1020.94, 40.8647 )
+shape = SubResource( 1 )
+
+[node name="Control" parent="Labirinto1" instance=ExtResource( 4 )]
+visible = false
+margin_left = -2.0315
+margin_top = -6.8495
+margin_right = -2.03149
+margin_bottom = -6.84949
+
+[node name="LivroBalaoUm" type="Area2D" parent="Labirinto1"]
+collision_layer = 4
+collision_mask = 256
+
+[node name="LivroUm" type="CollisionShape2D" parent="Labirinto1/LivroBalaoUm"]
+light_mask = 256
+position = Vector2( 80, 783.126 )
+shape = SubResource( 3 )
+
+[node name="LivroBalaoDois" type="Area2D" parent="Labirinto1"]
+collision_layer = 4
+collision_mask = 256
+
+[node name="LivroDois" type="CollisionShape2D" parent="Labirinto1/LivroBalaoDois"]
+position = Vector2( 462.5, 83.8447 )
+shape = SubResource( 4 )
+
+[node name="LivroBalaoTres" type="Area2D" parent="Labirinto1"]
+collision_layer = 4
+collision_mask = 256
+
+[node name="LivroTres" type="CollisionShape2D" parent="Labirinto1/LivroBalaoTres"]
+position = Vector2( 973.5, 65 )
+shape = SubResource( 5 )
+
+[node name="LivroBalaoQuatro" type="Area2D" parent="Labirinto1"]
+collision_layer = 4
+collision_mask = 256
+
+[node name="LivroQuatro" type="CollisionShape2D" parent="Labirinto1/LivroBalaoQuatro"]
+position = Vector2( 1590.5, 73.4079 )
+shape = SubResource( 6 )
+
+[node name="LivroBalaoCinco" type="Area2D" parent="Labirinto1"]
+position = Vector2( -21, 10 )
+collision_layer = 4
+collision_mask = 256
+
+[node name="LivroCinco" type="CollisionShape2D" parent="Labirinto1/LivroBalaoCinco"]
+position = Vector2( 2012.5, 64.5631 )
+shape = SubResource( 7 )
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+position = Vector2( 512, 300 )
+color = Color( 0, 0, 0, 1 )
+
+[node name="DarkScene" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 2 )
+
+[node name="CanvasLayer" parent="." instance=ExtResource( 6 )]
+visible = false
+
+[node name="CanvasLayer2" parent="." instance=ExtResource( 5 )]
+visible = false
+
+[connection signal="body_entered" from="Labirinto1/Area2D" to="." method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Labirinto1/LivroBalaoUm" to="." method="_on_LivroBalaoUm_body_entered"]
+[connection signal="body_exited" from="Labirinto1/LivroBalaoUm" to="." method="_on_LivroBalaoUm_body_exited"]
+[connection signal="body_entered" from="Labirinto1/LivroBalaoDois" to="." method="_on_LivroBalaoDois_body_entered"]
+[connection signal="body_entered" from="Labirinto1/LivroBalaoTres" to="." method="_on_LivroBalaoTres_body_entered"]
+[connection signal="body_entered" from="Labirinto1/LivroBalaoQuatro" to="." method="_on_LivroBalaoQuatro_body_entered"]
+[connection signal="body_entered" from="Labirinto1/LivroBalaoCinco" to="." method="_on_LivroBalaoCinco_body_entered"]

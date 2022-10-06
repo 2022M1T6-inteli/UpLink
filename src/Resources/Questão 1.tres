@@ -1,0 +1,10 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://Scripts/Quiz/resource_quesions.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+question_info = "How does a team move from level 1 to level 2?"
+type = 0
+options = [ "By starting to hold Product Vision workshops", "By becoming aware of the Product Vision they are working on and understanding how it reflects on the goal of their development efforts.", "By requiring Product Vision rationale for all items in the Product Backlog.", "By using Product Vision to shape Product Decisions." ]
+correct = "By becoming aware of the Product Vision they are working on and understanding how it reflects on the goal of their development efforts."

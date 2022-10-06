@@ -1,0 +1,129 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://Scripts/Ginasio-01/Ginasio01_fase02.gd" type="Script" id=1]
+[ext_resource path="res://Images/Ginasio-01/Ginasio01_fase02.png" type="Texture" id=2]
+[ext_resource path="res://Cenas/Outros/Transição_in.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Cenas/Outros/Transição_out.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Sons/DarkScene.mp3" type="AudioStream" id=5]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 27.5, 64 )
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 21.375, 18 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 25, 23 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 25.5, 24.5 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 21.5, 17 )
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 24, 22.5 )
+
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 20.5, 22.5 )
+
+[node name="Cenas2" type="Node2D"]
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_horizontal_guides_": [ 616.0, 200.0, 56.0, 256.0, 752.0 ],
+"_edit_vertical_guides_": [ 432.0, 1360.0, 896.0, 520.0, 2000.0 ]
+}
+
+[node name="Labirinto2" type="Sprite" parent="."]
+position = Vector2( 1038, 514 )
+texture = ExtResource( 2 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Labirinto2"]
+position = Vector2( -1033.14, -518.931 )
+scale = Vector2( 2.02663, 1.73266 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Labirinto2/StaticBody2D"]
+polygon = PoolVector2Array( 995, 18, 19, 16, 20, 238, 61, 238, 59, 55, 79, 55, 78, 331, 114, 331, 114, 167, 185, 167, 184, 266, 318, 266, 317, 284, 170, 285, 171, 181, 129, 181, 130, 333, 188, 333, 187, 346, 61, 346, 60, 256, 20, 256, 20, 386, 650, 387, 649, 451, 778, 452, 778, 468, 743, 468, 745, 510, 726, 510, 726, 467, 633, 468, 633, 508, 616, 508, 616, 468, 521, 468, 520, 508, 504, 508, 504, 468, 409, 469, 409, 510, 391, 510, 391, 467, 297, 469, 298, 508, 282, 508, 282, 469, 187, 469, 187, 508, 170, 508, 171, 453, 633, 452, 634, 403, 75, 402, 77, 510, 59, 510, 57, 401, 4, 401, 4, 6, 1014, 7, 1015, 125, 871, 125, 872, 228, 912, 229, 912, 164, 928, 163, 928, 244, 855, 244, 855, 110, 1001, 109, 1001, 72, 815, 71, 817, 287, 952, 287, 953, 164, 971, 163, 968, 301, 799, 302, 798, 72, 650, 69, 649, 288, 466, 290, 466, 112, 593, 112, 593, 233, 522, 234, 523, 163, 539, 163, 538, 218, 577, 218, 580, 125, 479, 125, 482, 277, 633, 275, 634, 55, 1001, 56 )
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Labirinto2/StaticBody2D"]
+polygon = PoolVector2Array( 225, 334, 225, 346, 371, 347, 372, 204, 244, 204, 244, 110, 129, 110, 129, 70, 282, 70, 282, 162, 408, 162, 409, 346, 686, 347, 688, 411, 960, 412, 960, 397, 705, 396, 702, 116, 743, 116, 744, 357, 1001, 355, 1000, 452, 816, 452, 818, 466, 846, 468, 846, 508, 865, 508, 865, 467, 1000, 467, 1001, 547, 918, 547, 917, 511, 958, 511, 957, 500, 902, 500, 901, 543, 688, 544, 688, 505, 673, 505, 671, 543, 577, 542, 577, 505, 559, 505, 559, 543, 468, 544, 468, 505, 449, 504, 448, 546, 356, 546, 356, 505, 338, 505, 338, 544, 241, 544, 241, 505, 225, 504, 225, 544, 133, 544, 134, 451, 116, 451, 113, 544, 22, 544, 21, 441, 3, 441, 4, 562, 1017, 561, 1017, 163, 997, 164, 996, 340, 760, 340, 759, 103, 685, 103, 686, 331, 428, 331, 425, 148, 356, 148, 356, 68, 602, 69, 602, 56, 338, 56, 338, 147, 300, 147, 300, 55, 116, 56, 116, 126, 224, 125, 228, 217, 356, 217, 356, 331 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Labirinto2/StaticBody2D"]
+position = Vector2( -12.5134, 428.781 )
+scale = Vector2( 0.49343, 0.577147 )
+shape = SubResource( 2 )
+
+[node name="Area2D" type="Area2D" parent="Labirinto2"]
+position = Vector2( -1033.14, -518.931 )
+scale = Vector2( 2.02663, 1.73266 )
+collision_layer = 256
+collision_mask = 256
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Labirinto2/Area2D"]
+position = Vector2( 1033, 145 )
+shape = SubResource( 1 )
+
+[node name="LivroBalaoUm" type="Area2D" parent="Labirinto2"]
+collision_layer = 4
+collision_mask = 256
+
+[node name="LivroUm" type="CollisionShape2D" parent="Labirinto2/LivroBalaoUm"]
+position = Vector2( 324, 235 )
+shape = SubResource( 3 )
+
+[node name="LivroBalaoDois" type="Area2D" parent="Labirinto2"]
+collision_layer = 4
+collision_mask = 256
+
+[node name="LivroDois" type="CollisionShape2D" parent="Labirinto2/LivroBalaoDois"]
+position = Vector2( -610.5, 105 )
+shape = SubResource( 4 )
+
+[node name="LivroBalaoTres" type="Area2D" parent="Labirinto2"]
+collision_layer = 4
+collision_mask = 256
+
+[node name="LivroTres" type="CollisionShape2D" parent="Labirinto2/LivroBalaoTres"]
+position = Vector2( -519.5, -460 )
+shape = SubResource( 5 )
+
+[node name="LivroBalaoQuatro" type="Area2D" parent="Labirinto2"]
+collision_layer = 4
+collision_mask = 256
+
+[node name="LivroQuatro" type="CollisionShape2D" parent="Labirinto2/LivroBalaoQuatro"]
+position = Vector2( -152, -313.5 )
+shape = SubResource( 6 )
+
+[node name="LivroBalaoCinto" type="Area2D" parent="Labirinto2"]
+position = Vector2( -30, 12 )
+collision_layer = 4
+collision_mask = 256
+
+[node name="LivroCinco" type="CollisionShape2D" parent="Labirinto2/LivroBalaoCinto"]
+position = Vector2( 998, -268 )
+shape = SubResource( 7 )
+
+[node name="CanvasLayer" parent="." instance=ExtResource( 3 )]
+visible = false
+
+[node name="CanvasLayer2" parent="." instance=ExtResource( 4 )]
+visible = false
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+position = Vector2( 4.85999, -4.93103 )
+scale = Vector2( 2.02663, 1.73266 )
+color = Color( 0, 0, 0, 1 )
+
+[node name="DarkScene2" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 5 )
+
+[connection signal="body_entered" from="Labirinto2/Area2D" to="." method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Labirinto2/LivroBalaoUm" to="." method="_on_LivroBalaoUm_body_entered"]
+[connection signal="body_entered" from="Labirinto2/LivroBalaoDois" to="." method="_on_LivroBalaoDois_body_entered"]
+[connection signal="body_entered" from="Labirinto2/LivroBalaoTres" to="." method="_on_LivroBalaoTres_body_entered"]
+[connection signal="body_entered" from="Labirinto2/LivroBalaoQuatro" to="." method="_on_LivroBalaoQuatro_body_entered"]
+[connection signal="body_entered" from="Labirinto2/LivroBalaoCinto" to="." method="_on_LivroBalaoCinto_body_entered"]

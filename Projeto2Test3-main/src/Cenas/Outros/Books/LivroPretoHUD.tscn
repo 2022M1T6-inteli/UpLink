@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="StreamTexture" id=1]
+flags = 4
+
+[node name="Sprite" type="Sprite"]
+scale = Vector2( 0.025, 0.025 )
+texture = SubResource( 1 )

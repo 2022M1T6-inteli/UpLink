@@ -15,6 +15,11 @@ var livroPosition3 = Vector2(1100, 326)
 var livroPosition4 = Vector2(1288, 326)
 var livroPosition5 = Vector2(1680, 256)
 
+func _input(event):
+	if event.is_action_pressed("pause"):
+		set_visible(!get_tree().paused)
+		get_tree().paused = !get_tree().paused
+
 # DECLARANDO VARIÁVEIS
 var player
 var livro

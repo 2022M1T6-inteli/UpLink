@@ -10,6 +10,11 @@ func _on_Area2D2_body_entered():
 
 var playerPosition = Vector2(50, 290)
 
+func _input(event):
+	if event.is_action_pressed("pause"):
+		set_visible(!get_tree().paused)
+		get_tree().paused = !get_tree().paused
+
 var player
 
 func iniciarPlayer(posicao):

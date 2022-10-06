@@ -1,0 +1,124 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Images/Ginasio-02/Ginasio02_fase01.png" type="Texture" id=1]
+[ext_resource path="res://Cenas/Ginasio-02/MinigameBola.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Sons/SoundX.mp3" type="AudioStream" id=3]
+[ext_resource path="res://Scripts/Ginasio-02/Ginasio02_fase01.gd" type="Script" id=5]
+
+[sub_resource type="RectangleShape2D" id=12]
+extents = Vector2( 23.2658, 36 )
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 5 )
+
+[node name="MapaFacil2" type="Sprite" parent="."]
+position = Vector2( 752, 360 )
+scale = Vector2( 1.5, 1.5 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="MapaFacil2"]
+position = Vector2( -495.421, -239.746 )
+scale = Vector2( 0.975239, 0.812698 )
+
+[node name="CollisionPolygon2D7" type="CollisionPolygon2D" parent="MapaFacil2/StaticBody2D"]
+polygon = PoolVector2Array( 564.396, 254.395, 564.396, 292.539, 598.234, 293.77, 598.234, 255.625 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="MapaFacil2/StaticBody2D"]
+polygon = PoolVector2Array( 0, 348, 0, 599, 750, 600, 1029, 601, 1025, 344, 732, 345, 735, 494, 599, 493, 597.208, 451.27, 359.318, 452.5, 360, 496, 218, 497, 219, 394 )
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="MapaFacil2/StaticBody2D"]
+polygon = PoolVector2Array( 1.00003, 348, 2.00003, 273, 205, 225, 207.219, 137.5, 737.687, 137.5, 736.358, 179.05, 733, 284, 753, 284, 1025, 280, 1026, 345, 1024, 155, 1025, 2, 751, 1, 182, 2, -3, 0, -1.99997, 233 )
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="MapaFacil2/StaticBody2D"]
+polygon = PoolVector2Array( 317.277, 342.988, 318.302, 206.406, 351, 206, 359, 196, 360, 143, 522, 143, 522, 205, 362, 205, 352.14, 206.406, 353.166, 344.219 )
+
+[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="MapaFacil2/StaticBody2D"]
+polygon = PoolVector2Array( 564.396, 143.652, 640, 143, 643, 207, 681, 207, 681, 344, 648, 344, 647, 394, 599, 395, 599, 346, 643, 344, 641.3, 196.563, 564.396, 196.563 )
+
+[node name="CollisionPolygon2D5" type="CollisionPolygon2D" parent="MapaFacil2/StaticBody2D"]
+polygon = PoolVector2Array( 400.334, 255.625, 516.203, 255.625, 516.203, 295, 400.334, 295 )
+
+[node name="CollisionPolygon2D6" type="CollisionPolygon2D" parent="MapaFacil2/StaticBody2D"]
+polygon = PoolVector2Array( 441.349, 354.063, 516.203, 354.063, 516.203, 392.207, 441.349, 393.438 )
+
+[node name="Area2D2" type="Area2D" parent="MapaFacil2"]
+position = Vector2( -480.793, 10.5651 )
+scale = Vector2( 0.975239, 0.812698 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MapaFacil2/Area2D2"]
+position = Vector2( 7, 0 )
+shape = SubResource( 12 )
+
+[node name="ChangeFase02" type="Area2D" parent="MapaFacil2"]
+position = Vector2( 473.966, 17.8793 )
+scale = Vector2( 0.975239, 0.812698 )
+
+[node name="ChangeFase02" type="CollisionShape2D" parent="MapaFacil2/ChangeFase02"]
+position = Vector2( 13.0468, 1.99994 )
+shape = SubResource( 12 )
+
+[node name="Node2D" parent="MapaFacil2" instance=ExtResource( 2 )]
+position = Vector2( -8.77716, 102.4 )
+scale = Vector2( 0.500678, -0.517076 )
+
+[node name="Node2D2" parent="MapaFacil2" instance=ExtResource( 2 )]
+position = Vector2( -49.7372, 103.213 )
+scale = Vector2( 0.500678, -0.517076 )
+
+[node name="Node2D3" parent="MapaFacil2" instance=ExtResource( 2 )]
+position = Vector2( -89.722, 103.213 )
+scale = Vector2( 0.500678, -0.517076 )
+
+[node name="Node2D4" parent="MapaFacil2" instance=ExtResource( 2 )]
+position = Vector2( 31.2076, -56.0761 )
+scale = Vector2( 0.500678, -0.517076 )
+
+[node name="Node2D5" parent="MapaFacil2" instance=ExtResource( 2 )]
+position = Vector2( -89.722, 64.2031 )
+scale = Vector2( 0.500678, -0.517076 )
+
+[node name="Node2D6" parent="MapaFacil2" instance=ExtResource( 2 )]
+position = Vector2( 32.1829, 62.5777 )
+scale = Vector2( 0.500678, -0.517076 )
+
+[node name="Node2D7" parent="MapaFacil2" instance=ExtResource( 2 )]
+position = Vector2( 111.177, 23.5682 )
+scale = Vector2( 0.500678, -0.517076 )
+
+[node name="Node2D8" parent="MapaFacil2" instance=ExtResource( 2 )]
+position = Vector2( 112.152, -16.254 )
+scale = Vector2( 0.500678, -0.517076 )
+
+[node name="Node2D9" parent="MapaFacil2" instance=ExtResource( 2 )]
+position = Vector2( 112.152, -56.0761 )
+scale = Vector2( 0.500678, -0.517076 )
+
+[node name="Node2D10" parent="MapaFacil2" instance=ExtResource( 2 )]
+position = Vector2( -47.7867, 24.3809 )
+scale = Vector2( 0.500678, -0.517076 )
+
+[node name="Node2D11" parent="MapaFacil2" instance=ExtResource( 2 )]
+position = Vector2( 32.1829, 23.5682 )
+scale = Vector2( 0.500678, -0.517076 )
+
+[node name="Node2D12" parent="MapaFacil2" instance=ExtResource( 2 )]
+position = Vector2( 31.2076, -16.254 )
+scale = Vector2( 0.500678, -0.517076 )
+
+[node name="Node2D13" parent="MapaFacil2" instance=ExtResource( 2 )]
+position = Vector2( -88.7467, -56.0761 )
+scale = Vector2( 0.500678, -0.517076 )
+
+[node name="Node2D14" parent="MapaFacil2" instance=ExtResource( 2 )]
+position = Vector2( 32.1829, 102.4 )
+scale = Vector2( 0.500678, -0.517076 )
+
+[node name="SoundX" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 3 )
+
+[connection signal="body_entered" from="MapaFacil2/Area2D2" to="." method="_on_Area2D2_body_entered"]
+[connection signal="body_entered" from="MapaFacil2/ChangeFase02" to="." method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="MapaFacil2/ChangeFase02" to="." method="_on_ChangeFase02_body_entered"]
