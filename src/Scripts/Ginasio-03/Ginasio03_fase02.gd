@@ -80,3 +80,12 @@ func _on_Area2D6_body_entered(body):
 		add_child(conteudo)
 #		conteudo.load_Instru('Tutorial')
 		statusTutorial = false 
+
+func _input(event):
+	if event.is_action_pressed("pause"):
+#		set_visible(!get_tree().paused)
+#		get_tree().paused = !get_tree().paused
+		remove_child(conteudo)
+	if 	Global.resume_pause == true:
+		add_child(conteudo)
+		Global.resume_pause = false 

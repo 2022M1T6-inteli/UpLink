@@ -42,4 +42,13 @@ func _on_Area2D_body_entered(body):
 	Global.preGinasio = "Ginasio<3"
 	Global.Gin03_enabled = false 
 	Global.dinamicaLobbyCondition = false
+
+#func _input(event):
+#	if event.is_action_pressed("pause"):
+##		set_visible(!get_tree().paused)
+##		get_tree().paused = !get_tree().paused
+#		remove_child(conteudo)
+#	if 	Global.resume_pause == true:
+#		add_child(conteudo)
+#		Global.resume_pause = false 
 	

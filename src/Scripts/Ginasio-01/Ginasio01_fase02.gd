@@ -89,14 +89,12 @@ func _on_Area2D_body_entered(body):
 	get_tree().change_scene("res://Cenas/Ginasio-01/Ginasio01_fase03.tscn")
 	hud_ginasio01.resetLivrosPreenchidos()
 
-
 func _on_LivroBalaoUm_body_entered(body):
 		if statusBalaoUm == true:
 			add_child(conteudo)
 			Global.current_dialogo = Global.dialogo["language"]["eng"]["dialogo"]["contentGym1Level2"]["star1"]
 			conteudo.load_balao()
 			statusBalaoUm = false
-
 
 func _on_LivroBalaoDois_body_entered(body):
 	if statusBalaoDois == true:
@@ -120,10 +118,18 @@ func _on_LivroBalaoQuatro_body_entered(body):
 		conteudo.load_balao()
 		statusBalaoQuatro = false
 
-
 func _on_LivroBalaoCinto_body_entered(body):
 	if statusBalaoCinco == true:
 		add_child(conteudo)
 		Global.current_dialogo = Global.dialogo["language"]["eng"]["dialogo"]["contentGym1Level2"]["star5"]
 		conteudo.load_balao()
 		statusBalaoCinco = false
+
+func _input(event):
+	if event.is_action_pressed("pause"):
+#		set_visible(!get_tree().paused)
+#		get_tree().paused = !get_tree().paused
+		remove_child(conteudo)
+	if 	Global.resume_pause == true:
+		add_child(conteudo)
+		Global.resume_pause = false 

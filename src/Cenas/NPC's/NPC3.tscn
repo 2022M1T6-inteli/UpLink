@@ -10,10 +10,10 @@ height = 32.0
 position = Vector2( 0, 5 )
 
 [node name="Mentor1" type="Sprite" parent="."]
-position = Vector2( 13, -5 )
+position = Vector2( 0, -5 )
 scale = Vector2( 1, 0.875 )
 texture = ExtResource( 1 )
-hframes = 16
+hframes = 24
 vframes = 6
 frame = 2
 

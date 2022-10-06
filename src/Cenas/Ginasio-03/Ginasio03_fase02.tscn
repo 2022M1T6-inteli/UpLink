@@ -85,7 +85,6 @@ shape = SubResource( 2 )
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
 light_mask = 256
 position = Vector2( 581.015, 1106.38 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 2 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Area2D"]

@@ -64,6 +64,15 @@ func _on_Area2D4_body_entered(body):
 	add_child(conteudo) 
 	Global.current_dialogo = Global.dialogo["language"]["eng"]["dialogo"]["instructionsGym3"]["XP"]["instrucaoDois"]
 	conteudo.load_balao()
+
+func _input(event):
+	if event.is_action_pressed("pause"):
+#		set_visible(!get_tree().paused)
+#		get_tree().paused = !get_tree().paused
+		remove_child(conteudo)
+	if 	Global.resume_pause == true:
+		add_child(conteudo)
+		Global.resume_pause = false 
 	
 
 #func _on_Area2D5_body_entered(body):

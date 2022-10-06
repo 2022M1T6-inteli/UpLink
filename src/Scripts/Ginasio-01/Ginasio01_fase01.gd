@@ -31,7 +31,6 @@ var livro3
 var livro4
 var livro5
 
-
 func _ready():
 #	 ATIVANDO O HUD DO GINÁSIO
 	hud_ginasio01.ativarHUDGinasio01()
@@ -72,7 +71,12 @@ func _ready():
 func _process(delta):
 #	 AUMENTANDO O RANGE DA LANTERNA DE ACORDO COM A VARIÁVEL GLOBAL
 	player.lanterna.texture_scale = Global.percentVisionGinasio01
-
+	
+#	if Global.pause_esc == true:
+#		$CanvasLayer.disconnect()
+	
+#	if Global.resume_pause == true:
+#		$CanvasLayer.disconnect()
 
 # FUNÇÃO PARA INSTANCIAR O PLAYER
 func iniciarPlayer(posicao):
@@ -131,3 +135,12 @@ func _on_LivroBalaoCinco_body_entered(body):
 		Global.current_dialogo = Global.dialogo["language"]["eng"]["dialogo"]["contentGym1Level1"]["star5"]
 		conteudo.load_balao()
 		statusBalaoCinco = false
+		
+func _input(event):
+	if event.is_action_pressed("pause"):
+#		set_visible(!get_tree().paused)
+#		get_tree().paused = !get_tree().paused
+		remove_child(conteudo)
+	if 	Global.resume_pause == true:
+		add_child(conteudo)
+		Global.resume_pause = false 

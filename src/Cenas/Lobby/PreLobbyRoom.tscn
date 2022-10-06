@@ -1,10 +1,25 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Images/Lobby/PreLobbyRoom.png" type="Texture" id=1]
 [ext_resource path="res://Cenas/Lobby/PreLobbyRoom.gd" type="Script" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 18.5, 80 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 24.75, 28.75 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 37, 28.5 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 26.5, 62.5 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 29.25, 60.5 )
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 45.125, 28 )
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 2 )
@@ -33,4 +48,42 @@ polygon = PoolVector2Array( -381, -336, 427, -336, 427, -216, -325, -216, -325, 
 [node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="mapa/StaticBody2D"]
 polygon = PoolVector2Array( 459, 88, 459, -96, 435, -96, 435, -224, 459, -224 )
 
+[node name="NPC" type="Area2D" parent="."]
+
+[node name="NPC" type="CollisionShape2D" parent="NPC"]
+position = Vector2( 108, 70 )
+shape = SubResource( 2 )
+
+[node name="NPC1" type="Area2D" parent="."]
+
+[node name="NPC1" type="CollisionShape2D" parent="NPC1"]
+position = Vector2( 88, 544 )
+shape = SubResource( 3 )
+
+[node name="NPC2" type="Area2D" parent="."]
+
+[node name="NPC2" type="CollisionShape2D" parent="NPC2"]
+position = Vector2( 293.5, 193.5 )
+shape = SubResource( 4 )
+
+[node name="NPC3" type="Area2D" parent="."]
+
+[node name="NPC3" type="CollisionShape2D" parent="NPC3"]
+modulate = Color( 1, 0, 0.470588, 1 )
+self_modulate = Color( 0.921569, 0.0901961, 0.0901961, 1 )
+position = Vector2( 450.75, 187.5 )
+shape = SubResource( 5 )
+
+[node name="NPC4" type="Area2D" parent="."]
+
+[node name="NPC4" type="CollisionShape2D" parent="NPC4"]
+position = Vector2( 96, 416 )
+shape = SubResource( 6 )
+
 [connection signal="body_entered" from="mapa/PreLobbyHouse" to="." method="_on_PreLobbyHouse_body_entered"]
+[connection signal="body_entered" from="NPC" to="." method="_on_NPC_body_entered"]
+[connection signal="body_exited" from="NPC" to="." method="_on_NPC_body_exited"]
+[connection signal="body_entered" from="NPC1" to="." method="_on_NPC1_body_entered"]
+[connection signal="body_entered" from="NPC2" to="." method="_on_NPC2_body_entered"]
+[connection signal="body_entered" from="NPC3" to="." method="_on_NPC3_body_entered"]
+[connection signal="body_entered" from="NPC4" to="." method="_on_NPC4_body_entered"]

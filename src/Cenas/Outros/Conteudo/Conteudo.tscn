@@ -33,9 +33,9 @@ texture = ExtResource( 1 )
 expand = true
 
 [node name="ColorRectBalao" type="ColorRect" parent="Balao/TextureBalao"]
-margin_left = 34.0
+margin_left = 32.4615
 margin_top = 61.0
-margin_right = 665.0
+margin_right = 663.462
 margin_bottom = 332.0
 color = Color( 0.145098, 0.152941, 0.192157, 0.85098 )
 

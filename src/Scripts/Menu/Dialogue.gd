@@ -39,7 +39,7 @@ func load_dialog():
 	dialog_index += 1
 
 	if dialog_index > 3:
-		get_tree().change_scene("res://Cenas/Lobby/Lobby.tscn")
+		get_tree().change_scene("res://Cenas/Lobby/PreLobbyRoom.tscn")
 
 func _on_Tween_tween_completed(_object, _key):
 	finished = true

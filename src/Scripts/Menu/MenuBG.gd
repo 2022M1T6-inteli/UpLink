@@ -13,7 +13,7 @@ func _on_QuitButton_button_up():
 
 #começar o jogo
 func _on_StartButton_button_up():
-	get_tree().change_scene("res://Cenas/Menu/Dialogue.tscn")
+	get_tree().change_scene("res://Cenas/Lobby/Instruction.tscn")
 	#$Botton.play()
 	
 
