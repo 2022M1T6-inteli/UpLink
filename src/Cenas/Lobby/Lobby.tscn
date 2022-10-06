@@ -25,13 +25,13 @@ shader_param/scroll_speed = 0.02
 extents = Vector2( 29.5, 23.5 )
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 122.5, 49.125 )
+extents = Vector2( 48, 48 )
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 171.225, 30.625 )
 
 [sub_resource type="RectangleShape2D" id=15]
-extents = Vector2( 29, 48.5 )
+extents = Vector2( 29, 32.25 )
 
 [sub_resource type="RectangleShape2D" id=5]
 extents = Vector2( 20.5, 21.5 )
@@ -1411,7 +1411,11 @@ collision_layer = 256
 collision_mask = 256
 
 [node name="Change_ginasio_01" type="CollisionShape2D" parent="Mapajogo/Ginasio_01"]
-position = Vector2( -1696.5, 511.125 )
+position = Vector2( -1747, 478 )
+shape = SubResource( 1 )
+
+[node name="Change_ginasio_02" type="CollisionShape2D" parent="Mapajogo/Ginasio_01"]
+position = Vector2( -2379, 478 )
 shape = SubResource( 1 )
 
 [node name="Ginasio_02" type="Area2D" parent="Mapajogo"]
@@ -1439,7 +1443,7 @@ collision_layer = 256
 collision_mask = 256
 
 [node name="Change_ginasio_04" type="CollisionShape2D" parent="Mapajogo/Ginasio_03"]
-position = Vector2( 782, 1446 )
+position = Vector2( 782, 1462.25 )
 shape = SubResource( 15 )
 
 [node name="Change_ginasio_05" type="CollisionShape2D" parent="Mapajogo/Ginasio_03"]
