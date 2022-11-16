@@ -25,7 +25,11 @@ Um jogo educativo, divertido e simples de uma forma que o funcionário consiga a
 <br><br>
 May the force be with you!
 
-## 🛠 Estrutura de pastas
+## 🎮 Jogue agora
+
+Para acessar o jogo diretamente do seu navegador entre no seguinte link: [Up Link](https://2022m1t6-inteli.github.io/UpLink/)
+
+## 📁 Estrutura de pastas
 |-->docs<br>
 |-->documentos<br>
   &emsp;|-->outros<br>
