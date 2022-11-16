@@ -27,7 +27,7 @@ May the force be with you!
 
 ## 🎮 Jogue agora
 
-Para acessar o jogo diretamente do seu navegador entre no seguinte link: [Up Link](https://2022m1t6-inteli.github.io/UpLink/)
+Para acessar o jogo diretamente do seu navegador entre no seguinte link: [Game Zero To Hero](https://2022m1t6-inteli.github.io/UpLink/)
 
 ## 📁 Estrutura de pastas
 |-->docs<br>
