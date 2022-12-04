@@ -144,6 +144,6 @@ polygon = PoolVector2Array( 479, 341, 479, 391, 601, 390, 601, 439, 644, 439, 64
 [node name="SoundX" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 3 )
 
-[connection signal="body_entered" from="MapaDificil/ChangePreBoss" to="." method="_on_Area2D_body_entered"]
 [connection signal="body_entered" from="MapaDificil/ChangePreBoss" to="." method="_on_ChangePreBoss_body_entered"]
+[connection signal="body_entered" from="MapaDificil/ChangePreBoss" to="." method="_on_Area2D_body_entered"]
 [connection signal="body_entered" from="MapaDificil/Area2D2" to="." method="_on_Area2D2_body_entered"]
